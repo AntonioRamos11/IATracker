@@ -1,0 +1,8 @@
+graph TD
+    A[Data Collection] --> B[PDF Storage]
+    B --> C[Processing Pipeline]
+    C --> D[Vector Database]
+    C --> E[Metadata Database]
+    D --> F[API Layer]
+    E --> F
+    F --> G[Web Dashboard]

@@ -1,0 +1,30 @@
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+#build from source 
+sudo apt install postgresql-server-dev-15 git make gcc
+git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git
+cd pgvector
+make
+sudo make install
+
+
+CREATE TABLE paper_vectors (
+    id SERIAL PRIMARY KEY,
+    title TEXT,
+    metadata JSONB,
+    embedding vector(768)  -- 768-d embeddings (OpenAI's model size)
+);
+
+--config 
+CREATE ROLE iatracker WITH LOGIN PASSWORD 'Chappie1101';
+GRANT USAGE ON SCHEMA public TO iatracker;  -- Grant usage on the public schema
+GRANT SELECT, INSERT, UPDATE, DELETE ON paper_vectors TO iatracker; -- Grant specific permissions on the table
+
+this not
+"""CREATE DATABASE ai_papers;
+ALTER TABLE paper_vectors
+ALTER COLUMN embedding TYPE vector(384)
+USING embedding::vector(384);
+
+"""

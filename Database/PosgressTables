@@ -1,0 +1,14 @@
+CREATE TABLE papers (
+    id UUID PRIMARY KEY,
+    title TEXT,
+    authors JSONB,
+    abstract TEXT,
+    pdf_path TEXT UNIQUE,
+    source VARCHAR(50),
+    published_date DATE,
+    vector_data JSONB,
+    summary TEXT,
+    keywords JSONB
+);
+
+CREATE INDEX idx_paper_vectors ON papers USING ivfflat (vector_data vector_l2_ops);
