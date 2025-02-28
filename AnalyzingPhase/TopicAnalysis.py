@@ -230,7 +230,7 @@ if __name__ == "__main__":
         current_year = datetime.now().year
         results = analyzer.analyze_trends(years=list(range(current_year-5, current_year+1)))
         if results is not None:
-            emerging = analyzer.get_emerging_topics()
+            emerging = analyzer.get_emerging_topics(threshold=0.5)
             print("Emerging Topics:\n", emerging)
         else:
             print("Not enough data for analysis.")

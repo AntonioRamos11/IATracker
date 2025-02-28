@@ -1,4 +1,5 @@
-import feedparser,time
+import feedparser
+import time
 import urllib.parse
 import requests
 from requests.adapters import HTTPAdapter
@@ -10,24 +11,15 @@ import socks
 from stem.control import Controller
 import socket
 
-
-from storedata import store_pdf
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
+6
 class ArXivAPIError(Exception):
     """Custom exception for arXiv API errors"""
     pass
 
-"""def connect_tor():
-    Switch to a new Tor identity to change IP.
-    with Controller.from_port(port=9051) as controller:
-        controller.authenticate(password="your-tor-password")
-        controller.signal(2)  # New identity
 
-socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
-socket.socket = socks.socksocket"""
 
 def create_session() -> requests.Session:
     """Create a requests session with realistic headers to avoid blocks."""
@@ -39,7 +31,7 @@ def create_session() -> requests.Session:
         allowed_methods=["GET"]
     )
     session.mount('https://', HTTPAdapter(max_retries=retries))
-    """
+
     session.headers.update({
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/pdf',
@@ -47,8 +39,7 @@ def create_session() -> requests.Session:
         'Accept-Language': 'en-US,en;q=0.9',
         'Referer': 'https://arxiv.org/',
         'Connection': 'keep-alive',
-    })"""
-    session.headers.update(get_random_headers())
+    })
 
     # Add cookies to the session
     cookies = [
@@ -91,23 +82,9 @@ def construct_pdf_url(arxiv_id: str) -> str:
 
 import random
 def smart_delay():
-    delay = random.uniform(10, 20)  # Random delay between 3-10 seconds
+    delay = random.uniform(10, 20)  # Random delay between 10-20 seconds
     print(f"Sleeping for {delay:.2f} seconds to avoid detection...")
     time.sleep(delay)
-
-
-from fake_useragent import UserAgent
-import requests
-
-def get_random_headers():
-    ua = UserAgent()
-    return {
-        'User-Agent': ua.random,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Referer': 'https://arxiv.org/',
-        'DNT': '1'  # Do Not Track
-    }
 
 def parse_arxiv_entry(entry) -> Dict:
     """Parse individual arXiv entry with error handling"""
@@ -127,31 +104,12 @@ def parse_arxiv_entry(entry) -> Dict:
         logger.error(f"Failed to parse entry: {e}")
         return None
 
-import undetected_chromedriver as uc
-
-def solve_captcha_manually(pdf_url):
-    """Opens the URL in a real browser to solve the CAPTCHA manually."""
-    options = uc.ChromeOptions()
-    driver = uc.Chrome(options=options)
-
-    driver.get(pdf_url)
-    print("Solve the CAPTCHA manually, then press Enter in the terminal...")
-    input()  # Wait for user confirmation
-
-    final_url = driver.current_url
-    driver.quit()
-
-    logger.info(f"Final URL after solving CAPTCHA: {final_url}")
-    
-    return final_url if final_url.endswith(".pdf") else None
 def get_arxiv_papers(
     query: str = "artificial intelligence",
     max_results: int = 1000,
     category: str = "cs.AI",
     batch_size: int = 10,
-    pause_duration: int = 30,
-    max_retries: int = 20
-
+    pause_duration: int = 30
 ) -> List[Dict]:
     """
     Fetch papers from arXiv API with enhanced error handling and retries
@@ -197,47 +155,21 @@ def get_arxiv_papers(
             feed = feedparser.parse(response.content)
             validate_arxiv_response(feed)
             
-            """# Process entries
-            for entry in feed.entries:
-                parsed = parse_arxiv_entry(entry)
-                if parsed:
-                    
-                    pdf_url = solve_captcha_manually(parsed['pdf'])
-                    if pdf_url: 
-                        pdf_path = store_pdf(parsed['pdf'], 'arxiv', parsed['title'])
-                        parsed['pdf_path'] = pdf_path
-                        papers.append(parsed)
-                    else:
-                        print("Failed to bypass CAPTCHA.")
-            """
             # Process entries
             for entry in feed.entries:
                 parsed = parse_arxiv_entry(entry)
                 if parsed:
-                    retries = 0
-                    while retries < max_retries:
-                        resultado = store_pdf(parsed['pdf'], 'arxiv', parsed['title'])
-                        if resultado:
-                            papers.append(parsed)
-                            break
-                        else:
-                            retries += 1
-                            logger.warning(f"Retrying {parsed['title']} ({retries}/{max_retries})")
-                            time.sleep(400)  # Wait before retrying
-                    if retries == max_retries:
-                        logger.error(f"Failed to fetch {parsed['title']} after {max_retries} retries")
+                    papers.append(parsed)
             
-            logger.info(f"Successfully fetched {len(feed.entries)} papers in batch starting at {start}")
-
             logger.info(f"Successfully fetched {len(feed.entries)} papers in batch starting at {start}")
             
             # Update start for next batch
             start += batch_size
             
             # Pause between batches
-            if start < max_results: 
-                logger.info(f"Pausing for {pause_duration} seconds to avoid getting banned")
-                smart_delay()
+            #wait from a enter from a input
+            input("Press Enter to continue...")
+                        
         
         logger.info(f"Successfully fetched a total of {len(papers)} papers")
         return papers
@@ -249,17 +181,21 @@ def get_arxiv_papers(
         logger.error(f"Unexpected error: {e}")
         raise ArXivAPIError(f"Failed to fetch papers: {e}") from e
 
+def save_pdf_links(papers: List[Dict], filename: str) -> None:
+    """Save PDF links to a file for manual download"""
+    with open(filename, 'w') as f:
+        for paper in papers:
+            f.write(f"{paper['pdf']}\n")
+    logger.info(f"Saved PDF links to {filename}")
+
 # Example usage
 if __name__ == "__main__":
     try:
         max_results = 1000
-        papers = get_arxiv_papers(max_results=max_results, batch_size=5, pause_duration=30)   
+        papers = get_arxiv_papers(max_results=max_results, batch_size=5, pause_duration=30)
+        save_pdf_links(papers, "pdf_links.txt")
         for idx, paper in enumerate(papers[:max_results], 1):
             print(f"{idx}. {paper['title']}")
             print(f"   PDF: {paper['pdf']}\n")
     except ArXivAPIError as e:
         print(f"Error fetching papers: {e}")
-
-
-
-    

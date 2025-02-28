@@ -95,6 +95,7 @@ class VectorStore:
     def store_embeddings(self, documents: List[Dict[str, Any]]) -> None:
         """Store batch of documents with embeddings"""
         if not documents:
+            logger.info("No documents to store")
             return
 
         # Generate embeddings in batch
@@ -131,14 +132,17 @@ class VectorStore:
     def process_directory(self, processed_dir: Path) -> None:
         """Process all JSON files in directory"""
         batch = []
+        file_count = 0
         for json_file in processed_dir.glob("*.json"):
             try:
                 with open(json_file, "r") as f:
                     data = json.load(f)
                     self._validate_document(data)
                     batch.append(data)
+                    file_count += 1
 
                 if len(batch) >= Configuration.BATCH_SIZE:
+                    logger.info(f"Storing batch of {len(batch)} documents")
                     self.store_embeddings(batch)
                     batch = []
 
@@ -151,7 +155,10 @@ class VectorStore:
 
         # Process remaining documents
         if batch:
+            logger.info(f"Storing final batch of {len(batch)} documents")
             self.store_embeddings(batch)
+
+        logger.info(f"Processed a total of {file_count} files")
 
     def _validate_document(self, doc: Dict) -> None:
         """Validate document structure"""

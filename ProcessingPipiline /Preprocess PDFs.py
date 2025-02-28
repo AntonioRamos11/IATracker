@@ -109,11 +109,11 @@ def process_pdf(file_path: Path) -> Optional[Dict[str, Any]]:
             return metadata
 
     except Exception as e:
-        logger.error(f"Failed to process {file_path.name}: {str(e)}")
-        # Move problematic files to quarantine
-        quarantine_path = processed_dir / "quarantine" / file_path.name
-        quarantine_path.parent.mkdir(exist_ok=True)
-        file_path.rename(quarantine_path)
+        logger.error(f"Failed to process {file_path.name}: {e}", exc_info=True)
+        if "Encrypted" in str(e) or "not found" in str(e):  
+            quarantine_path = processed_dir / "quarantine" / file_path.name
+            quarantine_path.parent.mkdir(exist_ok=True)
+            file_path.rename(quarantine_path)
         return None
 
 def process_pdfs_parallel(pdf_dir: Path, max_workers: int = 4):
