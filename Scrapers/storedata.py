@@ -4,27 +4,57 @@ import requests
 import re
 import mimetypes
 import logging
-
+import time
+import random
+import ratelimiter as ratelimiter
+import undetected_chromedriver as uc
+from ratelimiter import RateLimiter
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+from fake_useragent import UserAgent
 
-import RateLimiter
-import random
-limiter = RateLimiter(max_calls=3, period=300)  # 3 solicitudes cada 5 minutos
+def get_random_headers():
+    ua = UserAgent()
+    return {
+        'User-Agent': ua.random,
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Referer': 'https://arxiv.org/',
+        'DNT': '1'  # Do Not Track
+    }
+
+limiter = RateLimiter(max_calls=3, period=300)  # 3 requests every 5 minutes
+
+def solve_captcha_manually(pdf_url):
+    """Opens the URL in a real browser to solve the CAPTCHA manually."""
+    options = uc.ChromeOptions()
+    driver = uc.Chrome(options=options)
+
+    driver.get(pdf_url)
+    print("Solve the CAPTCHA manually, then press Enter in the terminal...")
+    input()  # Wait for user confirmation
+
+    final_url = driver.current_url
+    driver.quit()
+
+    logger.info(f"Final URL after solving CAPTCHA: {final_url}")
+    
+    return final_url if final_url.endswith(".pdf") else None
 
 def safe_download(url, max_retries=3):
     for _ in range(max_retries):
         limiter.wait()
         
-        response = requests.get(url, stream=True)
-
+        response = requests.get(url, stream=True,headers=get_random_headers())
         
         if response and response.status_code == 200:
-            return response.content
+            if "CAPTCHA" in response.text:
+                captcha_solution = solve_captcha_manually(url)
+                
+            else:
+                return response.content
         
-        if "CAPTCHA" in response.text:
-            captcha_solution = solve_captcha()
-            # Implementar lógica para enviar solución de CAPTCHA
+       
         
         time.sleep(random.uniform(2, 5))
     
@@ -37,6 +67,11 @@ def is_html_content(content: bytes) -> bool:
 
 def store_pdf(pdf_url: str, source: str, title: str) -> str:
     """Store PDF with content-based hashing and title in filename"""
+    content = safe_download(pdf_url)
+    
+    if content is None:
+        logger.error(f"Failed to download content from {pdf_url}")
+        return None
 
     # Check if the content is HTML
     if is_html_content(content):
