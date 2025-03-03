@@ -9,7 +9,10 @@ from datetime import datetime
 import socks
 from stem.control import Controller
 import socket
-
+import hashlib
+import re
+import pathlib
+from ArXivDownloader import ArXivDownloader
 
 from storedata import store_pdf
 # Configure logging
@@ -145,13 +148,12 @@ def solve_captcha_manually(pdf_url):
     
     return final_url if final_url.endswith(".pdf") else None
 def get_arxiv_papers(
-    query: str = "artificial intelligence",
-    max_results: int = 1000,
+    query: str = "robotics with AI",
+    max_results: int = 300,
     category: str = "cs.AI",
     batch_size: int = 10,
     pause_duration: int = 30,
-    max_retries: int = 20
-
+    max_retries: int = 3
 ) -> List[Dict]:
     """
     Fetch papers from arXiv API with enhanced error handling and retries
@@ -162,6 +164,7 @@ def get_arxiv_papers(
         category: arXiv category filter (default: cs.AI)
         batch_size: Number of results to fetch per batch
         pause_duration: Duration to pause between batches (in seconds)
+        max_retries: Maximum number of retries for fetching a PDF
     
     Returns:
         List of paper dictionaries
@@ -173,6 +176,7 @@ def get_arxiv_papers(
         
         papers = []
         start = 0
+        downloader = ArXivDownloader()
         
         while start < max_results:
             # Build API URL with parameters
@@ -197,45 +201,38 @@ def get_arxiv_papers(
             feed = feedparser.parse(response.content)
             validate_arxiv_response(feed)
             
-            """# Process entries
-            for entry in feed.entries:
-                parsed = parse_arxiv_entry(entry)
-                if parsed:
-                    
-                    pdf_url = solve_captcha_manually(parsed['pdf'])
-                    if pdf_url: 
-                        pdf_path = store_pdf(parsed['pdf'], 'arxiv', parsed['title'])
-                        parsed['pdf_path'] = pdf_path
-                        papers.append(parsed)
-                    else:
-                        print("Failed to bypass CAPTCHA.")
-            """
             # Process entries
             for entry in feed.entries:
                 parsed = parse_arxiv_entry(entry)
                 if parsed:
                     retries = 0
                     while retries < max_retries:
-                        resultado = store_pdf(parsed['pdf'], 'arxiv', parsed['title'])
-                        if resultado:
+                        pdf_content = downloader.download_pdf(parsed['arxiv_id'])
+                        if pdf_content:
+                            # Save the PDF content to a file
+                            file_hash = hashlib.sha256(pdf_content).hexdigest()[:16]
+                            clean_title = re.sub(r'[^\w\s-]', '', parsed['title']).strip().replace(' ', '_').replace('\n', '')
+                            save_path = pathlib.Path(f"papers/arxiv/{clean_title}_{file_hash}.pdf")
+                            save_path.parent.mkdir(parents=True, exist_ok=True)
+                            with open(save_path, "wb") as f:
+                                f.write(pdf_content)
+                            parsed['pdf_path'] = str(save_path)
                             papers.append(parsed)
                             break
                         else:
                             retries += 1
                             logger.warning(f"Retrying {parsed['title']} ({retries}/{max_retries})")
-                            time.sleep(400)  # Wait before retrying
+                            time.sleep(5)  # Wait before retrying
                     if retries == max_retries:
                         logger.error(f"Failed to fetch {parsed['title']} after {max_retries} retries")
             
-            logger.info(f"Successfully fetched {len(feed.entries)} papers in batch starting at {start}")
-
             logger.info(f"Successfully fetched {len(feed.entries)} papers in batch starting at {start}")
             
             # Update start for next batch
             start += batch_size
             
             # Pause between batches
-            if start < max_results: 
+            if start < max_results:
                 logger.info(f"Pausing for {pause_duration} seconds to avoid getting banned")
                 smart_delay()
         
@@ -252,7 +249,7 @@ def get_arxiv_papers(
 # Example usage
 if __name__ == "__main__":
     try:
-        max_results = 1000
+        max_results = 300
         papers = get_arxiv_papers(max_results=max_results, batch_size=5, pause_duration=30)   
         for idx, paper in enumerate(papers[:max_results], 1):
             print(f"{idx}. {paper['title']}")

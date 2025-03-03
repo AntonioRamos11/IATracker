@@ -25,5 +25,8 @@ IATracker is a research aggregator and analysis tool designed to fetch, process,
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/IATracker.git
-cd IATracker
+    git clone https://github.com/yourusername/IATracker.git
+    cd IATracker
+
+
+    fuck the captcha aasnd arvix i have to do a captcha solver asnd i will do it fuck u
