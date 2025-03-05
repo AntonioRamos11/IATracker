@@ -29,4 +29,9 @@ IATracker is a research aggregator and analysis tool designed to fetch, process,
     cd IATracker
 
 
-    fuck the captcha aasnd arvix i have to do a captcha solver asnd i will do it fuck u
+
+
+
+--
+To do 
+Get better representions of the topics  

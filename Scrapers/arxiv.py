@@ -245,18 +245,206 @@ def get_arxiv_papers(
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
         raise ArXivAPIError(f"Failed to fetch papers: {e}") from e
+    
+from Topic_Refiner import TopicRefiner
+    
+def extract_trending_topics_from_report(report_path):
+    """
+    Extract trending topics from the topic analysis report with improved names.
+    
+    Args:
+        report_path: Path to the trend report file
+    
+    Returns:
+        Dictionary of trending topics suitable for arXiv queries
+    """
+    # Initialize trending topics dictionary
+    trending_topics = {}
+    
+    try:
+        # Use your existing TopicRefiner to get better topic names
+        refiner = TopicRefiner()
+        refined_topics = refiner.refine_topics_from_report(report_path)
+        
+        # Convert refined topics to the format needed for ArXiv searches
+        for topic in refined_topics:
+            topic_id = topic['original_id']
+            
+            # Create a clean key from the refined title
+            clean_title = topic['refined_title'].lower().replace(' ', '_').replace('&', 'and')
+            topic_key = f"topic_{topic_id}_{clean_title}"
+            
+            # Get top terms for the query
+            top_terms = topic['top_terms'][:4]  # Use top 4 terms
+            
+            # Determine appropriate category based on refined title
+            category = "cs.AI"  # Default
+            if any(term in topic['refined_title'].lower() for term in ["language", "attention", "transformer"]):
+                category = "cs.CL"
+            elif any(term in topic['refined_title'].lower() for term in ["graph", "network"]):
+                category = "cs.LG"
+            elif any(term in topic['refined_title'].lower() for term in ["quantum"]):
+                category = "quant-ph"
+            elif any(term in topic['refined_title'].lower() for term in ["retrieval", "dense"]):
+                category = "cs.IR"
+            elif any(term in topic['refined_title'].lower() for term in ["time", "series", "forecast"]):
+                category = "cs.LG"
+            
+            # Create topic entry with improved representation
+            trending_topics[topic_key] = {
+                "query": " OR ".join(top_terms),  # Using OR for broader results
+                "category": category,
+                "description": topic['refined_title'],
+                "original_terms": top_terms  # Keep original terms for reference
+            }
+            
+        print(f"Extracted {len(trending_topics)} trending topics with refined names")
+        return trending_topics
+        
+    except Exception as e:
+        print(f"Error extracting topics from report: {e}")
+        # Return default topics as fallback
+        return {
+            "explainable_ai": {
+                "query": "explainable OR classification OR deep",
+                "category": "cs.AI",
+                "description": "Explainable AI and Classification Techniques"
+            },
+            # Add other default topics...
+        }
 
-# Example usage
+import re
+import json
+from pathlib import Path
+def scrape_trending_topics(max_results_per_topic=100, batch_size=10):
+    """
+    Scrape papers from trending topics identified in the topic analysis.
+    """
+    # Try to load topics from the latest trend report
+    trend_reports = list(Path("./trend_cache").glob("trend_report_*.txt"))
+    if trend_reports:
+        # Get the most recent report
+        latest_report = max(trend_reports, key=lambda p: p.stat().st_mtime)
+        print(f"Using report: {latest_report.name}")
+        
+        # Extract topics with our improved TopicRefiner approach
+        trending_topics = extract_trending_topics_from_report(latest_report)
+    else:
+        # Use default topics if no report is available
+        print("No trend report found, using default topics")
+        trending_topics = {
+            # Default topics...
+        }
+    
+    all_papers = {}
+    
+    for topic_name, topic_info in trending_topics.items():
+        print(f"\nScraping papers for trend: {topic_info['description']}...")
+        print(f"Query: {topic_info['query']}, Category: {topic_info['category']}")
+        
+        try:
+            # Use the existing get_arxiv_papers function with separate query and category
+            papers = get_arxiv_papers(
+                query=topic_info['query'],
+                category=topic_info['category'],
+                max_results=max_results_per_topic,
+                batch_size=batch_size,
+                pause_duration=30
+            )
+            
+            # Add topic metadata to each paper
+            for paper in papers:
+                if 'metadata' not in paper:
+                    paper['metadata'] = {}
+                paper['metadata']['topic'] = topic_name
+                paper['metadata']['topic_description'] = topic_info['description']
+            
+            print(f"Successfully fetched {len(papers)} papers for {topic_info['description']}")
+            all_papers[topic_name] = papers
+            
+        except Exception as e:
+            logger.error(f"Failed to fetch papers for {topic_name}: {e}")
+    
+    return all_papers
+
+def analyze_topic_coverage(all_papers):
+    """
+    Analyze the coverage of papers across trending topics.
+    
+    Args:
+        all_papers: Dictionary of papers by topic
+        
+    Returns:
+        Summary of paper coverage by topic
+    """
+    coverage = {}
+    
+    for topic, papers in all_papers.items():
+        # Count papers by year
+        years = {}
+        for paper in papers:
+            year = paper['published'].year
+            years[year] = years.get(year, 0) + 1
+        
+        coverage[topic] = {
+            "total": len(papers),
+            "by_year": years,
+            "sample_titles": [p["title"] for p in papers[:3]]
+        }
+    
+    return coverage
+
 if __name__ == "__main__":
     try:
-        max_results = 300
-        papers = get_arxiv_papers(max_results=max_results, batch_size=5, pause_duration=30)   
-        for idx, paper in enumerate(papers[:max_results], 1):
-            print(f"{idx}. {paper['title']}")
-            print(f"   PDF: {paper['pdf']}\n")
+        # Choose between general search or trend-focused search
+        search_mode = "trends"  # or "general"
+        
+        if search_mode == "general":
+            max_results = 100
+            papers = get_arxiv_papers(
+                query="artificial intelligence", 
+                max_results=max_results, 
+                batch_size=5, 
+                pause_duration=30
+            )
+            
+            for idx, paper in enumerate(papers[:max_results], 1):
+                print(f"{idx}. {paper['title']}")
+                print(f"   PDF: {paper['pdf']}\n")
+                
+        elif search_mode == "trends":
+            # Use the trend-based search
+            trend_papers = scrape_trending_topics(
+                max_results_per_topic=50,  # 50 papers per topic
+                batch_size=5              # Fetch in batches of 5
+            )
+            
+            # Analyze the coverage
+            coverage = analyze_topic_coverage(trend_papers)
+            
+            # Print a summary
+            print("\n===== TREND COVERAGE SUMMARY =====")
+            for topic, stats in coverage.items():
+                print(f"\n{topic.upper()} - Total: {stats['total']} papers")
+                print(f"  Topic: {stats.get('description', 'Unknown')}")
+                if stats['by_year']:
+                    print(f"  Years: {', '.join([f'{y}: {c}' for y, c in stats['by_year'].items()])}")
+                print("  Sample titles:")
+                for title in stats['sample_titles']:
+                    print(f"    - {title}")
+            
+            # Save all papers to database
+            saved_count = 0
+            for topic, papers in trend_papers.items():
+                for paper in papers:
+                    if "pdf_path" in paper:  # If paper was successfully downloaded
+                        # Add topic tag to metadata
+                        paper["metadata"] = paper.get("metadata", {})
+                        paper["metadata"]["topic"] = topic
+                        store_pdf(paper)
+                        saved_count += 1
+            
+            print(f"\nSaved {saved_count} papers to database with topic tags")
+            
     except ArXivAPIError as e:
         print(f"Error fetching papers: {e}")
-
-
-
-    
