@@ -18,6 +18,18 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import seaborn as sns
 from matplotlib.colors import ListedColormap
+import time
+import random
+import re
+import requests
+import feedparser
+import hashlib
+import pathlib
+from collections import defaultdict
+import urllib.parse
+
+# Import the TopicRefiner
+# from topic_refiner import TopicRefiner
 
 # Configure logging
 logging.basicConfig(
@@ -517,6 +529,388 @@ def search_empty_or_zero_files(processed_dir: Path):
     # Log the files with the shortest length
     for file in shortest_files:
         logger.info(f"File with shortest length ({shortest_length} characters): {file}")
+
+class ArXivAPIError(Exception):
+    """Custom exception for ArXiv API errors"""
+    pass
+
+def smart_delay():
+    """Implement smart delay to avoid rate limiting"""
+    base_delay = random.uniform(20, 40)
+    time.sleep(base_delay)
+
+def parse_entry(entry):
+    """Parse ArXiv feed entry into structured data"""
+    try:
+        arxiv_id = entry.id.split('/abs/')[-1]
+        
+        # Parse authors
+        authors = [author.name for author in entry.authors]
+        
+        # Get PDF URL
+        pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
+        
+        # Build structured data
+        return {
+            "title": entry.title,
+            "authors": authors,
+            "summary": entry.summary,
+            "published": entry.published,
+            "updated": entry.updated,
+            "arxiv_id": arxiv_id,
+            "pdf": pdf_url,
+            "categories": [tag.term for tag in entry.tags],
+            "metadata": {}  # Initialize empty metadata for extensions
+        }
+    except Exception as e:
+        logger.error(f"Failed to parse entry: {e}")
+        return None
+
+def get_arxiv_papers(
+    query: str = "robotics with AI",
+    max_results: int = 300,
+    category: str = "cs.AI",
+    batch_size: int = 10,
+    pause_duration: int = 30,
+    max_retries: int = 3
+) -> List[Dict]:
+    papers = []
+    start = 0
+    downloader = ArXivDownloader()
+    
+    try:
+        while start < max_results:
+            # Properly format the search query for ArXiv API
+            search_query = f"all:({query}) AND cat:{category}"
+            
+            # Use urllib.parse.urlencode for proper URL parameter encoding
+            params = urllib.parse.urlencode({
+                'search_query': search_query,
+                'start': start,
+                'max_results': batch_size,
+                'sortBy': 'submittedDate',
+                'sortOrder': 'descending'
+            })
+            
+            logger.info(f"Fetching batch starting at {start} with query: {search_query}")
+            
+            # Send request with properly encoded parameters
+            feed = feedparser.parse(f"http://export.arxiv.org/api/query?{params}")
+            
+            # Check for errors
+            if hasattr(feed, 'status') and feed.status != 200:
+                logger.error(f"Error {feed.status} from ArXiv API: {feed.get('bozo_exception', 'Unknown error')}")
+                break
+                
+            if not feed.entries:
+                logger.warning(f"No more results found for query: {search_query}")
+                break
+            
+            # Process entries
+            for entry in feed.entries:
+                parsed = parse_entry(entry)
+                
+                if parsed:
+                    # Attempt to download PDF
+                    retries = 0
+                    while retries < max_retries:
+                        pdf_content = downloader.download_pdf(parsed['arxiv_id'])
+                        if pdf_content:
+                            # Save PDF and add path to metadata
+                            file_hash = hashlib.md5(pdf_content).hexdigest()[:10]
+                            clean_title = re.sub(r'[^\w\s-]', '', parsed['title']).strip().replace(' ', '_').replace('\n', '')
+                            save_path = pathlib.Path(f"papers/arxiv/{clean_title}_{file_hash}.pdf")
+                            save_path.parent.mkdir(parents=True, exist_ok=True)
+                            with open(save_path, "wb") as f:
+                                f.write(pdf_content)
+                            parsed['pdf_path'] = str(save_path)
+                            papers.append(parsed)
+                            break
+                        else:
+                            retries += 1
+                            logger.warning(f"Retrying {parsed['title']} ({retries}/{max_retries})")
+                            time.sleep(5)  # Wait before retrying
+                    if retries == max_retries:
+                        logger.error(f"Failed to fetch {parsed['title']} after {max_retries} retries")
+            
+            logger.info(f"Successfully fetched {len(feed.entries)} papers in batch starting at {start}")
+            
+            # Update start for next batch
+            start += batch_size
+            
+            # Pause between batches
+            if start < max_results:
+                logger.info(f"Pausing for {pause_duration} seconds to avoid getting banned")
+                smart_delay()
+        
+        logger.info(f"Successfully fetched a total of {len(papers)} papers")
+        return papers
+    
+    except requests.exceptions.RequestException as e:
+        logger.error(f"HTTP error occurred: {e}")
+        raise ArXivAPIError(f"API request failed: {e}") from e
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}")
+        raise ArXivAPIError(f"Failed to fetch papers: {e}") from e
+
+def extract_trending_topics_from_report(report_path):
+    """
+    Extract trending topics from the topic analysis report.
+    
+    Args:
+        report_path: Path to the trend report file
+    
+    Returns:
+        Dictionary of trending topics suitable for arXiv queries
+    """
+    # Initialize trending topics dictionary
+    trending_topics = {}
+    
+    try:
+        # Read the trend report file
+        with open(report_path, 'r') as f:
+            content = f.read()
+        
+        # Pattern to match topic sections
+        topic_pattern = r'### Topic (\d+): ([^\n]+)\n- Document count: (\d+)\n- Key terms and weights:(.*?)(?=\n\n|\Z)'
+        
+        # Find all topic sections
+        topics = re.findall(topic_pattern, content, re.DOTALL)
+        
+        for topic_id, topic_name, doc_count, terms_section in topics:
+            # Skip topics with too few documents (optional)
+            if int(doc_count) < 15:
+                continue
+                
+            # Extract the key terms with highest weights
+            term_lines = re.findall(r'  - ([^:]+): ([0-9.]+)', terms_section)
+            
+            # Filter out very long terms (likely hashes or file identifiers)
+            valid_terms = [(term.strip(), float(weight)) for term, weight in term_lines 
+                          if len(term) < 30 and not term.endswith('.pdf')]
+            
+            # Sort by weight and get top terms
+            valid_terms.sort(key=lambda x: x[1], reverse=True)
+            top_terms = [term for term, _ in valid_terms[:5]]
+            
+            # Skip if no valid terms found
+            if not top_terms:
+                continue
+            
+            # Clean up the topic name by removing numeric prefix and underscores
+            clean_name = re.sub(r'^\d+_', '', topic_name).replace('_', ' ')
+            
+            # Create topic key
+            topic_key = f"topic_{topic_id}_{clean_name.lower().replace(' ', '_')}"
+            
+            # Determine appropriate category based on topic terms
+            category = "cs.AI"  # Default
+            if any(term in " ".join(top_terms).lower() for term in ["language", "attention", "transformer", "llm"]):
+                category = "cs.CL"
+            elif any(term in " ".join(top_terms).lower() for term in ["graph", "network", "neural"]):
+                category = "cs.LG"
+            elif any(term in " ".join(top_terms).lower() for term in ["quantum"]):
+                category = "quant-ph"
+            elif any(term in " ".join(top_terms).lower() for term in ["time", "series", "forecast"]):
+                category = "cs.LG"
+            
+            # Create topic entry
+            trending_topics[topic_key] = {
+                "query": " OR ".join(top_terms),  # Using OR for broader results
+                "category": category,
+                "description": clean_name.title(),
+                "original_terms": top_terms
+            }
+            
+        print(f"Extracted {len(trending_topics)} trending topics from report")
+        return trending_topics
+        
+    except Exception as e:
+        print(f"Error extracting topics from report: {e}")
+        # Return default topics as fallback
+        return {
+            "explainable_ai": {
+                "query": "explainable OR classification OR deep",
+                "category": "cs.AI",
+                "description": "Explainable AI and Classification Techniques"
+            },
+            "efficient_attention": {
+                "query": "efficient OR attention OR transformer",
+                "category": "cs.CL",
+                "description": "Efficient Attention Mechanisms"
+            },
+            # Add other default topics as needed
+        }
+
+def scrape_trending_topics(max_results_per_topic=100, batch_size=10):
+    """
+    Scrape papers from trending topics identified in the topic analysis.
+    
+    Args:
+        max_results_per_topic: Maximum number of papers to fetch per topic
+        batch_size: Number of results to fetch per batch
+    
+    Returns:
+        Dictionary mapping topic names to lists of fetched papers
+    """
+    # Try to load topics from the latest trend report
+    trend_reports = list(Path("./trend_cache").glob("trend_report_*.txt"))
+    if trend_reports:
+        # Get the most recent report
+        latest_report = max(trend_reports, key=lambda p: p.stat().st_mtime)
+        print(f"Using report: {latest_report.name}")
+        
+        # Extract topics with our improved TopicRefiner approach
+        trending_topics = extract_trending_topics_from_report(latest_report)
+    else:
+        # Use default topics if no report is available
+        print("No trend report found, using default topics")
+        trending_topics = {
+            "explainable_ai": {
+                "query": "explainable OR classification OR deep",
+                "category": "cs.AI",
+                "description": "Explainable AI and Classification Techniques"
+            },
+            "efficient_attention": {
+                "query": "efficient OR attention OR transformer",
+                "category": "cs.CL",
+                "description": "Efficient Attention Mechanisms"
+            }
+            # Add more default topics as needed
+        }
+    
+    all_papers = {}
+    
+    for topic_name, topic_info in trending_topics.items():
+        print(f"\nScraping papers for trend: {topic_info['description']}...")
+        print(f"Query: {topic_info['query']}, Category: {topic_info['category']}")
+        
+        try:
+            # Use the existing get_arxiv_papers function with separate query and category
+            papers = get_arxiv_papers(
+                query=topic_info['query'],
+                category=topic_info['category'],
+                max_results=max_results_per_topic,
+                batch_size=batch_size,
+                pause_duration=30
+            )
+            
+            # Add topic metadata to each paper
+            for paper in papers:
+                if 'metadata' not in paper:
+                    paper['metadata'] = {}
+                paper['metadata']['topic'] = topic_name
+                paper['metadata']['topic_description'] = topic_info['description']
+            
+            print(f"Successfully fetched {len(papers)} papers for {topic_info['description']}")
+            all_papers[topic_name] = papers
+            
+        except Exception as e:
+            logger.error(f"Failed to fetch papers for {topic_name}: {e}")
+    
+    return all_papers
+
+def analyze_topic_coverage(all_papers):
+    """
+    Analyze the coverage of papers across trending topics.
+    
+    Args:
+        all_papers: Dictionary of papers by topic
+        
+    Returns:
+        Summary of paper coverage by topic
+    """
+    coverage = {}
+    
+    for topic, papers in all_papers.items():
+        # Count papers by year
+        years = defaultdict(int)
+        for paper in papers:
+            if 'published' in paper and paper['published']:
+                try:
+                    year = int(paper['published'].split('-')[0])  # Extract year from date
+                    years[year] += 1
+                except (ValueError, IndexError, AttributeError):
+                    # Handle cases where published date isn't properly formatted
+                    pass
+        
+        # Get topic description if available
+        topic_description = ""
+        if papers and 'metadata' in papers[0] and 'topic_description' in papers[0]['metadata']:
+            topic_description = papers[0]['metadata']['topic_description']
+        else:
+            topic_description = topic.replace('_', ' ').title()
+        
+        coverage[topic] = {
+            "total": len(papers),
+            "by_year": dict(years),  # Convert defaultdict to regular dict for json serialization
+            "sample_titles": [p["title"] for p in papers[:3] if "title" in p],
+            "description": topic_description
+        }
+    
+    return coverage
+
+def store_pdf(paper):
+    """
+    Store paper data and PDF in the database.
+    
+    Args:
+        paper: Paper dictionary with metadata and file path
+        
+    Returns:
+        Success status
+    """
+    try:
+        # Add your database connection and storage logic here
+        # For now, just log it
+        logger.info(f"Would store paper in database: {paper['title']}, Topic: {paper['metadata'].get('topic_description', 'Unknown')}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Failed to store paper in database: {e}")
+        return False
+
+# ArXiv PDF downloader class
+class ArXivDownloader:
+    def __init__(self):
+        self.session = requests.Session()
+        self.captcha_auth = None
+        
+    def _get_headers(self, referer=None):
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Accept-Encoding": "gzip, deflate, br",
+            "DNT": "1",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1"
+        }
+        if referer:
+            headers["Referer"] = referer
+        return headers
+    
+    def download_pdf(self, arxiv_id):
+        """Download a PDF from arXiv"""
+        pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
+        
+        try:
+            response = self.session.get(
+                pdf_url,
+                headers=self._get_headers(pdf_url),
+                timeout=10
+            )
+            
+            if response.status_code == 200 and b"%PDF" in response.content[:1024]:
+                return response.content
+            else:
+                logger.warning(f"Failed to download PDF for {arxiv_id}: Status {response.status_code}")
+                return None
+                
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Download error: {str(e)}")
+            return None
+
 if __name__ == "__main__":
     db_config = {
         "dbname": "ai_papers",
@@ -552,5 +946,57 @@ if __name__ == "__main__":
         search_empty_or_zero_files(processed_dir)
         print("Search completed")
         
+        # Choose between general search or trend-focused search
+        search_mode = "trends"  # or "general"
+        
+        if search_mode == "general":
+            max_results = 100
+            papers = get_arxiv_papers(
+                query="artificial intelligence", 
+                max_results=max_results, 
+                batch_size=5, 
+                pause_duration=30
+            )
+            
+            for idx, paper in enumerate(papers[:max_results], 1):
+                print(f"{idx}. {paper['title']}")
+                print(f"   PDF: {paper['pdf']}\n")
+                
+        elif search_mode == "trends":
+            # Use the trend-based search
+            trend_papers = scrape_trending_topics(
+                max_results_per_topic=50,  # 50 papers per topic
+                batch_size=5              # Fetch in batches of 5
+            )
+            
+            # Analyze the coverage
+            coverage = analyze_topic_coverage(trend_papers)
+            
+            # Print a summary
+            print("\n===== TREND COVERAGE SUMMARY =====")
+            for topic, stats in coverage.items():
+                print(f"\n{topic.upper()} - Total: {stats['total']} papers")
+                print(f"  Topic: {stats.get('description', 'Unknown')}")
+                if stats['by_year']:
+                    print(f"  Years: {', '.join([f'{y}: {c}' for y, c in stats['by_year'].items()])}")
+                print("  Sample titles:")
+                for title in stats['sample_titles']:
+                    print(f"    - {title}")
+            
+            # Save all papers to database
+            saved_count = 0
+            for topic, papers in trend_papers.items():
+                for paper in papers:
+                    if "pdf_path" in paper:  # If paper was successfully downloaded
+                        # Add topic tag to metadata
+                        paper["metadata"] = paper.get("metadata", {})
+                        paper["metadata"]["topic"] = topic
+                        store_pdf(paper)
+                        saved_count += 1
+            
+            print(f"\nSaved {saved_count} papers to database with topic tags")
+            
     except TrendAnalysisError as e:
         print(f"Analysis failed: {str(e)}")
+    except ArXivAPIError as e:
+        print(f"Error fetching papers: {e}")

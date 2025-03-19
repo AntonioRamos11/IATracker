@@ -441,7 +441,13 @@ if __name__ == "__main__":
                         # Add topic tag to metadata
                         paper["metadata"] = paper.get("metadata", {})
                         paper["metadata"]["topic"] = topic
-                        store_pdf(paper)
+                        
+                        # Fix: Add the missing parameters to store_pdf
+                        store_pdf(
+                            paper=paper,
+                            source="arxiv",
+                            title=paper.get("title", "Untitled Paper")
+                        )
                         saved_count += 1
             
             print(f"\nSaved {saved_count} papers to database with topic tags")

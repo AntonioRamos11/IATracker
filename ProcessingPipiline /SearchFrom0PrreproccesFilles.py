@@ -25,7 +25,7 @@ def search_empty_or_zero_files(processed_dir: Path):
                 # Compare the length of the text
                 text_length = len(text)
                 if text_length < shortest_length:
-                    shortest_length = text_length
+                    shortest_length = text_l    ength
                     shortest_files = [json_file]
                 elif text_length == shortest_length:
                     shortest_files.append(json_file)

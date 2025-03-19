@@ -42,7 +42,7 @@ def extract_arxiv_id(file_path: Path) -> Optional[str]:
         return filename.split('-')[1]
     return None
 
-def process_pdf(file_path: Path) -> Optional[Dict[str, Any]]:
+def process_pdf(file_path: Path) -> Dict[str, Any]:
     """Process a single PDF file with robust error handling"""
     content_hash = generate_content_hash(file_path)
     output_path = processed_dir / f"{content_hash}.json"
@@ -50,7 +50,7 @@ def process_pdf(file_path: Path) -> Optional[Dict[str, Any]]:
     # Skip already processed files
     if output_path.exists():
         logger.info(f"Skipping already processed file: {file_path.name}")
-        return None
+        return {"status": "skipped", "path": file_path, "content_hash": content_hash}
 
     try:
         with fitz.open(file_path) as doc:
@@ -106,7 +106,12 @@ def process_pdf(file_path: Path) -> Optional[Dict[str, Any]]:
                 }, f, ensure_ascii=False, indent=2)
             
             os.replace(temp_path, output_path)
-            return metadata
+            return {
+                "status": "processed",
+                "content_hash": content_hash,
+                "title": metadata["title"],
+                # ...other metadata...
+            }
 
     except Exception as e:
         logger.error(f"Failed to process {file_path.name}: {e}", exc_info=True)
@@ -114,12 +119,17 @@ def process_pdf(file_path: Path) -> Optional[Dict[str, Any]]:
             quarantine_path = processed_dir / "quarantine" / file_path.name
             quarantine_path.parent.mkdir(exist_ok=True)
             file_path.rename(quarantine_path)
-        return None
+        return {"status": "failed", "path": file_path, "error": str(e)}
 
 def process_pdfs_parallel(pdf_dir: Path, max_workers: int = 4):
     """Process PDFs in parallel with resource limits"""
     pdf_files = list(pdf_dir.glob("*.pdf"))
     logger.info(f"Found {len(pdf_files)} PDF files to process")
+    
+    # Initialize counters
+    new_processed_count = 0
+    skipped_count = 0
+    failed_count = 0
     
     with ProcessPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(process_pdf, f): f for f in pdf_files}
@@ -128,16 +138,33 @@ def process_pdfs_parallel(pdf_dir: Path, max_workers: int = 4):
             file_path = futures[future]
             try:
                 result = future.result()
-                if result:
+                if result["status"] == "processed":
                     logger.info(f"Processed {file_path.name} → {result['content_hash']}")
+                    new_processed_count += 1
+                elif result["status"] == "skipped":
+                    skipped_count += 1
+                else:  # failed
+                    failed_count += 1
             except Exception as e:
                 logger.error(f"Processing failed for {file_path.name}: {str(e)}")
+                failed_count += 1
+    
+    # Log summary with counts
+    logger.info("=" * 50)
+    logger.info(f"PDF Processing Summary:")
+    logger.info(f"  Total files found:    {len(pdf_files)}")
+    logger.info(f"  Newly processed:      {new_processed_count}")
+    logger.info(f"  Already processed:    {skipped_count}")
+    logger.info(f"  Failed to process:    {failed_count}")
+    logger.info("=" * 50)
+    
+    return new_processed_count, skipped_count, failed_count
 
 if __name__ == "__main__":
     try:
         pdf_dir, processed_dir = configure_paths()
-        process_pdfs_parallel(pdf_dir)
-        logger.info("PDF processing completed")
+        new_count, skipped_count, failed_count = process_pdfs_parallel(pdf_dir)
+        logger.info(f"PDF processing completed. New: {new_count}, Skipped: {skipped_count}, Failed: {failed_count}")
     except Exception as e:
         logger.error(f"Fatal error in main process: {str(e)}", exc_info=True)
         raise SystemExit(1) from e
