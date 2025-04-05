@@ -209,7 +209,7 @@ class TrendAnalyzer:
             df = self._fetch_papers()
             df["year"] = df["published"].dt.year
             embeddings = self._validate_embeddings(df["embedding"].tolist())
-            topic_model = self._get_topic_model()
+            topic_model = self._get_topic_model()s
             
             # Check if the model is fitted; BERTopic sets the attribute 'topics_' once fitted
             if not hasattr(topic_model, "topics_"):

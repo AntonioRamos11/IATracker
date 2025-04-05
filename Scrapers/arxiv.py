@@ -444,7 +444,7 @@ if __name__ == "__main__":
                         
                         # Fix: Add the missing parameters to store_pdf
                         store_pdf(
-                            paper=paper,
+                           paper=paper,
                             source="arxiv",
                             title=paper.get("title", "Untitled Paper")
                         )

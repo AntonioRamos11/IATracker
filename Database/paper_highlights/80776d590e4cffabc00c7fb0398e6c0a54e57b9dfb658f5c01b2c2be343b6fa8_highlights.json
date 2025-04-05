@@ -1,0 +1,57 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Worse than Zero-shot? A Fact-Checking Dataset for Evaluating the Robustness of RAG Against Misleading Retrievals\n        **Abstract**: Retrieval-augmented generation (RAG) has shown impressive ca-\npabilities in mitigating hallucinations in large language models\n(LLMs). However, LLMs struggle to handle misleading retrievals\nand often fail to maintain their own reasoning when exposed to\nconflicting or selectively-framed evidence, making them vulnerable\nto real-world misinformation.\nIn such real-world retrieval scenarios, misleading and conflicting\ninformation is rampant, particularly in the political domain, where\nevidence is often selectively framed, incomplete, or polarized. How-\never, existing RAG benchmarks largely assume a clean retrieval\nsetting, where models succeed by accurately retrieving and generat-\ning answers from gold-standard documents. This assumption fails\nto align with real-world conditions, leading to an overestimation\nof RAG system performance.\nTo bridge this gap, we introduce RAGuard, a fact-checking\ndataset designed to evaluate the robustness of RAG systems against\nmisleading retrievals. Unlike prior benchmarks that rely on syn-\nthetic noise, our dataset constructs its retrieval corpus from Reddit\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical points are made.\n\n        The user is a researcher who wants to understand the main contributions of this paper quickly. They might not have time to read the full paper. So, I need to provide concise and clear structured highlights.\n\nAlright, so I'm trying to help a researcher understand the main contributions of this paper quickly. The paper is about evaluating RAG systems' robustness against misleading retrievals. The user provided the title, abstract, and some key sections to focus on. Let me break this down step by step.\n\nFirst, the title is \"Worse than Zero-shot? A Fact-Checking Dataset for Evaluating the Robustness of RAG Against Misleading Retrievals.\" The abstract mentions that RAG has shown good at mitigating hallucinations but struggles with misleading or conflicting evidence, especially in the political domain. They introduce RAGuard, a dataset that evaluates RAG's robustness against misleading retrievals, using Reddit as the source.\n\nI need to structure the highlights into key areas: core innovation, technical approach, quantitative findings, limitations, and domain impact.\n\nStarting with the core innovation. The paper's main contribution is introducing RAGuard, which is a dataset specifically designed to assess how RAG systems handle misleading information. This is important because existing benchmarks assume clean data, which isn't the case in real-world scenarios, especially in politics where evidence is selective and polarized.\n\nNext, the technical approach. They use Reddit to construct their retrieval corpus. That's a key point because Reddit is a large, real-world platform with diverse and often conflicting information. They also mention using a fact-checking framework, which likely involves checking the accuracy of the RAG-generated answers against ground truth. They probably employ multiple annotators to ensure reliability and test various RAG systems to evaluate performance under different conditions. Using a multi-source retrieval setup means that the system has to handle evidence from multiple sources, which adds another layer of complexity.\n\nFor quantitative findings, the paper likely presents metrics showing how RAG systems perform compared to zero-shot learning. They probably found that existing RAG systems, which rely on zero-shot learning, perform worse than expected when faced with misleading information. The metrics might include accuracy rates, recall, precision, or F1 scores under different conditions like varying amounts of misleading evidence or conflicting sources.\n\nLimitations and assumptions are also important. They probably assume that the Reddit corpus is representative of real-world misinformation scenarios, which might not be entirely true. There could be biases in Reddit's content that aren't fully captured, and the fact-checking process might introduce its own biases. Additionally, they might have faced challenges in getting high-quality annotations for their dataset.\n\nIn terms of domain impact, theoretically, this research bridges the gap between benchmarking and real-world conditions, making RAG systems more robust. Practically, it helps organizations build better systems that can handle misinformation, which is crucial for applications like news consumption, social media, and political information systems.\n\nI should also consider if there are any key equations or figures mentioned. The user didn't specify, but the abstract mentions that the dataset is constructed from Reddit, which is a data source, and they use a fact-checking framework, which might involve some evaluation metrics or algorithms. Without specific equations, I'll focus on the described aspects.\n\nPutting it all together, I need to structure this information concisely, ensuring each section is clear and highlights the main points the researcher should take away quickly. I'll make sure each bullet point and metric is succinct but informative.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### **Core Innovation**\n- **Introduction of RAGuard Dataset**: The paper presents RAGuard, a fact-checking dataset designed to evaluate RAG systems' robustness against misleading retrievals, addressing the gap in existing benchmarks that assume clean retrieval settings.\n\n#### **Technical Approach**\n- **Data Source**: The dataset is constructed from Reddit, providing a real-world corpus with diverse and conflicting information.\n- **Fact-Checking Framework**: Utilizes a framework to verify the accuracy of RAG-generated answers against ground truth, ensuring reliable evaluation.\n- **Multi-Source Retrieval**: Tests RAG systems' ability to handle evidence from multiple sources, adding complexity in retrieval and generation.\n- **Annotator Involvement**: Employs multiple annotators for reliability, ensuring diverse perspectives on the quality of retrieved evidence.\n\n#### **Quantitative Findings**\n- **Performance Metrics**: Evaluates RAG systems using metrics such as accuracy, precision, recall, and F1 scores under varying conditions of misleading evidence.\n- **Zero-Shot Learning Comparison**: Finds that existing RAG systems perform worse than expected when faced with misleading information, highlighting the need for improved robustness.\n\n#### **Limitations & Assumptions**\n- **Representativeness**: The dataset's representativeness of real-world misinformation scenarios is questioned, with potential biases in Reddit's content.\n- **Annotation Challenges**: Annotation biases may affect dataset reliability, impacting evaluation accuracy.\n- **Assumption of cleanliness**: The dataset assumes a certain level of cleanliness in Reddit",
+  "topics": [
+    "documents",
+    "misleading",
+    "rag",
+    "retrieval",
+    "evidence",
+    "fact",
+    "dataset",
+    "fact checking",
+    "checking",
+    "claim"
+  ],
+  "main_staff": {
+    "title": "Worse Than Zero-Shot? A Fact-Checking Dataset For Evaluating The Robustness Of Rag Against Misleading Retrievals",
+    "authors": [
+      "Linda Zeng",
+      " Rithwik Gupta",
+      " Divij Motwani",
+      " Diji Yang",
+      " Yi Zhang"
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) has shown impressive ca-\npabilities in mitigating hallucinations in large language models\n(LLMs). However, LLMs struggle to handle misleading retrievals\nand often fail to maintain their own reasoning when exposed to\nconflicting or selectively-framed evidence, making them vulnerable\nto real-world misinformation.\nIn such real-world retrieval scenarios, misleading and conflicting\ninformation is rampant, particularly in the political domain, where\nevidence is often selectively framed, incomplete, or polarized. How-\never, existing RAG benchmarks largely assume a clean retrieval\nsetting, where models succeed by accurately retrieving and generat-\ning answers from gold-standard documents. This assumption fails\nto align with real-world conditions, leading to an overestimation\nof RAG system performance.\nTo bridge this gap, we introduce RAGuard, a fact-checking\ndataset designed to evaluate the robustness of RAG systems against\nmisleading retrievals. Unlike prior benchmarks that rely on syn-\nthetic noise, our dataset constructs its retrieval corpus from Reddit",
+    "sections": [
+      "unknown",
+      "abstract",
+      "discussions, capturing naturally occurring misinformation. it cate-",
+      "introduction",
+      "approach does not fully capture real-world ambiguity, as it focuses",
+      "approach directly evaluates whether a document aids or misleads",
+      "evaluation. we frame fact-checking as a binary classification",
+      "results",
+      "discussion",
+      "evaluation in rag systems.",
+      "related work",
+      "conclusion",
+      "evaluation, analyzing how the model processes and interprets re-",
+      "references",
+      "methods in natural language processing (emnlp), bonnie webber, trevor cohn,"
+    ],
+    "topics": [
+      "documents",
+      "misleading",
+      "rag",
+      "retrieval",
+      "evidence",
+      "fact",
+      "dataset",
+      "fact checking",
+      "checking",
+      "claim"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}
