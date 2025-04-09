@@ -1,0 +1,75 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Success rates may vary based on model architecture and dataset specifics.",
+    "**Dependence on Access:** Performance is influenced by the level of query access available to attackers.",
+    "",
+    "### 5. Domain Impact",
+    "**Theoretical:** Highlights critical vulnerabilities in RAG models, emphasizing the need for robust defense mechanisms.",
+    "**Practical:** Provides actionable insights for developers to enhance model resilience against poisoning attacks.",
+    "**Broader Impact:** Supports the development of secure multimodal AI systems, ensuring reliable and accurate responses in real-world applications.",
+    "",
+    "This structured approach encapsulates the key aspects of the MM-PoisonRAG research paper, emphasizing innovation, methodology, and implications."
+  ],
+  "impact": "",
+  "topics": [
+    "knowledge",
+    "retrieval",
+    "rag",
+    "image",
+    "multimodal",
+    "gpa",
+    "attack",
+    "rt",
+    "lpa",
+    "poisoning"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/MM-PoisonRAG_Disrupting_Multimodal_RAG_with_Local_and_Global_Poisoning__Attacks_f9d0e69e767ca589.pdf",
+    "content_hash": "f9d0e69e767ca589d70e1b93d48c37a3e0e1e537a8ad2f0a160314cf4bba1484",
+    "arxiv_id": null,
+    "title": "MM-PoisonRAG_Disrupting_Multimodal_RAG_with_Local_and_Global_Poisoning__Attacks_f9d0e69e767ca589",
+    "author": "",
+    "creation_date": "D:20250226012458Z",
+    "published": "2025-02-26T01:24:58",
+    "pages": 16,
+    "size": 7597172,
+    "file_mtime": 1740971440.9662774
+  },
+  "main_staff": {
+    "title": "MM-PoisonRAG_Disrupting_Multimodal_RAG_with_Local_and_Global_Poisoning__Attacks_f9d0e69e767ca589",
+    "authors": [
+      ""
+    ],
+    "abstract": "Multimodal large language models (MLLMs)\nequipped with Retrieval Augmented Genera-\ntion (RAG) leverage both their rich parametric\nknowledge and the dynamic, external knowl-\nedge to excel in tasks such as Question An-\nswering. While RAG enhances MLLMs by\ngrounding responses in query-relevant exter-\nnal knowledge, this reliance poses a critical\nyet underexplored safety risk: knowledge poi-\nsoning attacks, where misinformation or ir-\nrelevant knowledge is intentionally injected\ninto external knowledge bases to manipulate\nmodel outputs to be incorrect and even harm-\nful. To expose such vulnerabilities in multi-\nmodal RAG, we propose MM-POISONRAG, a\nnovel knowledge poisoning attack framework\nwith two attack strategies: Localized Poison-\ning Attack (LPA), which injects query-specific\nmisinformation in both text and images for tar-\ngeted manipulation, and Globalized Poison-\ning Attack (GPA) to provide false guidance\nduring MLLM generation to elicit nonsensi-\ncal responses across all queries.\nWe evalu-\nate our attacks across multiple tasks, models,\nand access settings, demonstrating that LPA\nsuccessfully manipulates the MLLM to gen-\nerate attacker-controlled answers, with a suc-\ncess rate of up to 56% on MultiModalQA.\nMoreover, GPA completely disrupts model\ngeneration to 0% accuracy with just a single\nirrelevant knowledge injection.\nOur results\nhighlight the urgent need for robust defenses\nagainst knowledge poisoning to safeguard mul-\ntimodal RAG frameworks.\nCode is avail-\nable at https://github.com/HyeonjeongHa/MM-\nPoisonRAG.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "experiments",
+      "evaluation metrics",
+      "results of localized poisoning attack",
+      "results of globalized poisoning attack",
+      "related work",
+      "methods for diverse tasks, including object detec-",
+      "conclusions and future work",
+      "references"
+    ],
+    "topics": [
+      "knowledge",
+      "retrieval",
+      "rag",
+      "image",
+      "multimodal",
+      "gpa",
+      "attack",
+      "rt",
+      "lpa",
+      "poisoning"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

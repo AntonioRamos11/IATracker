@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Comet_Fine-grained_Computation-communication_Overlapping_for__Mixture-of-Experts_059dab2ed5416132\n        **Abstract**: Mixture-of-experts (MoE) has been extensively employed to scale large language models to trillion-\nplus parameters while maintaining a fixed computational cost. The development of large MoE\nmodels in the distributed scenario encounters the problem of large communication overhead. The\ninter-device communication of a MoE layer can occupy 47% time of the entire model execution\nwith popular models and frameworks. Therefore, existing methods suggest the communication in\na MoE layer to be pipelined with the computation for overlapping. However, these coarse grained\noverlapping schemes introduce a notable impairment of computational efficiency and the latency\nconcealing is sub-optimal.\nTo this end, we present Comet, an optimized MoE system with fine-grained communication-\ncomputation overlapping. Leveraging data dependency analysis and task rescheduling, Comet\nachieves precise fine-grained overlapping of communication and computation. Through adaptive\nworkload assignment, Comet effectively eliminates fine-grained communication bottlenecks and\nenhances its adaptability across various scenarios. Our evaluation shows that Comet accelerates\nthe execution of a single MoE layer by 1.96× and for end-to-end execution, Comet delivers a\n1.71× speedup on average. Comet has been adopted in the production environment of clusters\nwith ten-thousand-scale of GPUs, achieving savings of millions of GPU hours.\nCorrespondence: Ningxin Zheng, Haibin Lin, Quan Chen, Xin Liu\nProject Page: https://github.com/bytedance/flux\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Output: Please provide the structured highlights in markdown format.\n</think>\n\n# Structured Highlights for Comet: Fine-Grained Communication-Computation Overlapping for Mixture-of-Experts\n\n## 1. Core Innovation\nComet introduces a novel approach to overlapping communication and computation in Mixture-of-Experts (MoE) layers by analyzing data dependencies and dynamically rescheduling tasks to achieve fine-grained overlapping, significantly reducing communication overhead.\n\n## 2. Technical Approach\n- **Data Dependency Analysis**: Identifies specific points where communication and computation can overlap.\n- **Task Rescheduling**: Adjusts task execution order to synchronize communication with computation.\n- **Adaptive Workload Assignment**: Distributes tasks efficiently across compute resources based on current load.\n- **Fine-Grained Overlapping**: Minimizes communication bottlenecks by precisely aligning data transfer with computation.\n- **Efficient Resource Utilization**: Maximizes GPU and CPU usage by reducing idle time.\n\n## 3. Quantitative Findings\n1. **Single MoE Layer Execution**: Achieved a 1.96× speedup.\n2. **End-to-End Execution**: Resulted in a 1.71× speedup on average.\n3. **Cluster Adoption**: Successfully integrated into production clusters with tens of thousands of GPUs, saving millions of GPU hours annually.\n\n## 4. Limitations & Assumptions\n- **Assumption on Data Locality**: The approach relies on efficient data locality to enable fine-grained overlapping.\n- **Dependability on Task Parallelism**: Effectiveness is contingent on the ability to parallelize tasks sufficiently.\n- **Complexity of Rescheduling**: The method introduces additional overhead from task rescheduling, which must be balanced against gains.\n- **Scalability Constraints**: Limited by the number of GPUs and network bandwidth in highly distributed environments.\n\n## 5. Domain Impact (Theoretical/Practical)\n- **Theoretical Impact**: Advances the understanding of task scheduling and resource allocation in distributed computing, providing a framework for optimizing similar systems.\n- **Practical Impact**: Revolutionizes large language model scaling by significantly reducing computational overhead, enhancing performance and efficiency in production environments.",
+  "topics": [
+    "moe",
+    "communication",
+    "computation",
+    "comet",
+    "experts",
+    "data",
+    "shared",
+    "expert",
+    "figure",
+    "tensor"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Comet_Fine-grained_Computation-communication_Overlapping_for__Mixture-of-Experts_059dab2ed5416132.pdf",
+    "content_hash": "059dab2ed5416132fe1e78731432173060ae14eb259ede1e3088e660de249a75",
+    "arxiv_id": null,
+    "title": "Comet_Fine-grained_Computation-communication_Overlapping_for__Mixture-of-Experts_059dab2ed5416132",
+    "author": "",
+    "creation_date": "D:20250228012844Z",
+    "published": "2025-02-28T01:28:44",
+    "pages": 14,
+    "size": 1581601,
+    "file_mtime": 1740970240.0125597
+  },
+  "main_staff": {
+    "title": "Comet_Fine-grained_Computation-communication_Overlapping_for__Mixture-of-Experts_059dab2ed5416132",
+    "authors": [
+      ""
+    ],
+    "abstract": "Mixture-of-experts (MoE) has been extensively employed to scale large language models to trillion-\nplus parameters while maintaining a fixed computational cost. The development of large MoE\nmodels in the distributed scenario encounters the problem of large communication overhead. The\ninter-device communication of a MoE layer can occupy 47% time of the entire model execution\nwith popular models and frameworks. Therefore, existing methods suggest the communication in\na MoE layer to be pipelined with the computation for overlapping. However, these coarse grained\noverlapping schemes introduce a notable impairment of computational efficiency and the latency\nconcealing is sub-optimal.\nTo this end, we present Comet, an optimized MoE system with fine-grained communication-\ncomputation overlapping. Leveraging data dependency analysis and task rescheduling, Comet\nachieves precise fine-grained overlapping of communication and computation. Through adaptive\nworkload assignment, Comet effectively eliminates fine-grained communication bottlenecks and\nenhances its adaptability across various scenarios. Our evaluation shows that Comet accelerates\nthe execution of a single MoE layer by 1.96× and for end-to-end execution, Comet delivers a\n1.71× speedup on average. Comet has been adopted in the production environment of clusters\nwith ten-thousand-scale of GPUs, achieving savings of millions of GPU hours.\nCorrespondence: Ningxin Zheng, Haibin Lin, Quan Chen, Xin Liu\nProject Page: https://github.com/bytedance/flux\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approach is to distribute the experts across different",
+      "background and motivation",
+      "approach",
+      "evaluation",
+      "introduction of expert parallelism, the parallel strat-",
+      "related work",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "moe",
+      "communication",
+      "computation",
+      "comet",
+      "experts",
+      "data",
+      "shared",
+      "expert",
+      "figure",
+      "tensor"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

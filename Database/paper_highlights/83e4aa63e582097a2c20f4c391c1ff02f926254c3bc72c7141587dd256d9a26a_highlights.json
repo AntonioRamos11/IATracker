@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Teasing_Apart_Architecture_and_Initial_Weights_as_Sources_of_Inductive__Bias_in_Neural_Networks_83e4aa63e582097a\n        **Abstract**: Artificial neural networks can acquire many aspects of human\nknowledge from data, making them promising as models of\nhuman learning. But what those networks can learn depends\nupon their inductive biases – the factors other than the data\nthat influence the solutions they discover – and the inductive\nbiases of neural networks remain poorly understood, limiting\nour ability to draw conclusions about human learning from the\nperformance of these systems. Cognitive scientists and ma-\nchine learning researchers often focus on the architecture of a\nneural network as a source of inductive bias. In this paper we\nexplore the impact of another source of inductive bias – the\ninitial weights of the network – using meta-learning as a tool\nfor finding initial weights that are adapted for specific prob-\nlems.\nWe evaluate four widely-used architectures – MLPs,\nCNNs, LSTMs, and Transformers – by meta-training 430 dif-\nferent models across three tasks requiring different biases and\nforms of generalization. We find that meta-learning can sub-\nstantially reduce or entirely eliminate performance differences\nacross architectures and data representations, suggesting that\nthese factors may be less important as sources of inductive\nbias than is typically assumed. When differences are present,\narchitectures and data representations that perform well with-\nout meta-learning tend to meta-train more effectively. More-\nover, all architectures generalize poorly on problems that are\nfar from their meta-training experience, underscoring the need\nfor stronger inductive biases for robust generalization.\nKeywords: inductive biases; neural networks; meta-learning\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the understanding.\n</think>\n\n**Core Innovation:** The paper investigates the impact of initial weights on the inductive biases of neural networks by employing meta-learning techniques, which can potentially reduce or eliminate performance disparities between different architectures and data representations.\n\n**Technical Approach:**  \n- **Meta-Learning:** The authors use meta-learning to adapt initial weights for specific problems, optimizing them through a meta-training process.  \n- **Four Architectures:** They evaluate four widely-used architectures: Multi-Layer Perceptrons (MLP), Convolutional Neural Networks (CNN), Long Short-Term Memory networks (LSTM), and Transformers.  \n- **Three Tasks:** The evaluation is conducted across three tasks requiring different biases and forms of generalization.  \n- **430 Different Models:** A total of 430 different models are trained across these architectures and tasks.  \n- **Performance Metrics:** The performance is measured using metrics such as accuracy, loss, and generalization capabilities.\n\n**Quantitative Findings:**  \n1. Meta-learning significantly reduces or eliminates performance differences between architectures and data representations.  \n2. Architectures and data representations that perform well without meta-learning show improved meta-training effectiveness.  \n3. All architectures exhibit poor generalization on problems distant from their meta-training experience, highlighting the need for stronger inductive biases.\n\n**Limitations & Assumptions:**  \n- The study is limited to four specific architectures and three tasks.  \n- The findings are based on empirical evaluation, not theoretical proof.  \n- The impact of initial weights on inductive biases is explored, but other factors may influence generalization.  \n\n**Domain Impact (Theoretical/Practical):**  \n- **Theoretical:** Challenges existing assumptions about the importance of architecture and initial weights as sources of inductive bias.  \n- **Practical:** Provides insights for model design and meta-learning applications, potentially improving generalization through better initial weight selection and meta-training strategies.",
+  "topics": [
+    "meta",
+    "learning",
+    "data",
+    "image",
+    "neural",
+    "task",
+    "meta learning",
+    "training",
+    "architectures",
+    "networks"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Teasing_Apart_Architecture_and_Initial_Weights_as_Sources_of_Inductive__Bias_in_Neural_Networks_83e4aa63e582097a.pdf",
+    "content_hash": "83e4aa63e582097a2c20f4c391c1ff02f926254c3bc72c7141587dd256d9a26a",
+    "arxiv_id": null,
+    "title": "Teasing_Apart_Architecture_and_Initial_Weights_as_Sources_of_Inductive__Bias_in_Neural_Networks_83e4aa63e582097a",
+    "author": "",
+    "creation_date": "D:20250228020424Z",
+    "published": "2025-02-28T02:04:24",
+    "pages": 11,
+    "size": 5540161,
+    "file_mtime": 1740970033.3701699
+  },
+  "main_staff": {
+    "title": "Teasing_Apart_Architecture_and_Initial_Weights_as_Sources_of_Inductive__Bias_in_Neural_Networks_83e4aa63e582097a",
+    "authors": [
+      ""
+    ],
+    "abstract": "Artificial neural networks can acquire many aspects of human\nknowledge from data, making them promising as models of\nhuman learning. But what those networks can learn depends\nupon their inductive biases – the factors other than the data\nthat influence the solutions they discover – and the inductive\nbiases of neural networks remain poorly understood, limiting\nour ability to draw conclusions about human learning from the\nperformance of these systems. Cognitive scientists and ma-\nchine learning researchers often focus on the architecture of a\nneural network as a source of inductive bias. In this paper we\nexplore the impact of another source of inductive bias – the\ninitial weights of the network – using meta-learning as a tool\nfor finding initial weights that are adapted for specific prob-\nlems.\nWe evaluate four widely-used architectures – MLPs,\nCNNs, LSTMs, and Transformers – by meta-training 430 dif-\nferent models across three tasks requiring different biases and\nforms of generalization. We find that meta-learning can sub-\nstantially reduce or entirely eliminate performance differences\nacross architectures and data representations, suggesting that\nthese factors may be less important as sources of inductive\nbias than is typically assumed. When differences are present,\narchitectures and data representations that perform well with-\nout meta-learning tend to meta-train more effectively. More-\nover, all architectures generalize poorly on problems that are\nfar from their meta-training experience, underscoring the need\nfor stronger inductive biases for robust generalization.\nKeywords: inductive biases; neural networks; meta-learning",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results show that a given neural network architecture can re-",
+      "background",
+      "approach",
+      "results",
+      "discussion",
+      "results, showing that meta-learning vastly improves few-shot",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "meta",
+      "learning",
+      "data",
+      "image",
+      "neural",
+      "task",
+      "meta learning",
+      "training",
+      "architectures",
+      "networks"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

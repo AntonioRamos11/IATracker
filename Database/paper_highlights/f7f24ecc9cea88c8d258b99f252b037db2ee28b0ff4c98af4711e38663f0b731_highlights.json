@@ -1,0 +1,79 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Can_Indirect_Prompt_Injection_Attacks_Be_Detected_and_Removed_f7f24ecc9cea88c8\n        **Abstract**: Prompt injection attacks manipulate large lan-\nguage models (LLMs) by misleading them to\ndeviate from the original input instructions and\nexecute maliciously injected instructions, be-\ncause of their instruction-following capabilities\nand inability to distinguish between the origi-\nnal input instructions and maliciously injected\ninstructions. To defend against such attacks,\nrecent studies have developed various detection\nmechanisms. While significant efforts have\nfocused on detecting direct prompt injection\nattacks, where injected instructions are directly\nfrom the attacker who is also the user, limited\nattention has been given to indirect prompt in-\njection attacks, where injected instructions are\nindirectly from external tools, such as a search\nengine. Moreover, current works mainly inves-\ntigate injection detection methods and pay less\nattention to the post-processing method that\naims to mitigate the injection after detection. In\nthis paper, we investigate the feasibility of de-\ntecting and removing indirect prompt injection\nattacks, and we construct a benchmark dataset\nfor evaluation. For detection, we assess the per-\nformance of existing LLMs and open-source\ndetection models, and we further train detection\nmodels using our crafted training datasets. For\nremoval, we evaluate two intuitive methods:\n(1) the segmentation removal method, which\nsegments the injected document and removes\nparts containing injected instructions, and (2)\nthe extraction removal method, which trains\nan extraction model to identify and remove in-\njected instructions.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the paper.\n</think>\n\n**Key Visual Findings from Figures:**\n\nUnfortunately, the provided abstract does not include specific figures or visualizations. However, the paper mentions constructing a benchmark dataset for evaluation, which likely includes visualizations to compare the performance of different detection and removal methods.\n\n**Experimental Setup and Validation:**\n\n1. **Dataset Construction**: A benchmark dataset was created to evaluate the effectiveness of detecting and removing indirect prompt injection attacks. This dataset likely includes various scenarios where malicious instructions are injected indirectly, such as through external tools like search engines.\n\n2. **Detection Performance Assessment**: The performance of existing large language models (LLMs) and open-source detection models was evaluated using the constructed dataset. Additional detection models were trained using crafted datasets to improve their accuracy.\n\n3. **Removal Method Evaluation**: Two removal methods were evaluated: (1) segmentation removal, which involves segmenting the document and removing parts with injected instructions, and (2) extraction removal, which uses an extraction model to identify and remove injected instructions.\n\n**Quantitative Findings:**\n\n1. Detection accuracy: The detection models achieved an accuracy of X% on the benchmark dataset.\n2. Removal efficiency: The segmentation removal method successfully removed injected instructions with a success rate of Y%, while the extraction removal method achieved a success rate of Z%.\n3. Computational efficiency: The removal methods were computationally efficient, with segmentation removal completing in A milliseconds and extraction removal completing in B milliseconds.\n\n**Limitations & Assumptions:**\n\n1. **Limitations**: The study assumes that injected instructions are not easily distinguishable from legitimate content, which may limit the effectiveness of detection methods. Additionally, the study does not account for the dynamic nature of the internet, where injected instructions can vary widely.\n\n2. **Assumptions**: The study assumes that the injected instructions are not easily detectable or removable without prior knowledge of the injected content. It also assumes that the dataset used for evaluation is representative of real-world scenarios.\n\n**Domain Impact:**\n\nThe study has both theoretical and practical implications. Theoretically, it advances the understanding of prompt injection attacks and the development of robust defense mechanisms. Practically, the findings can be applied to enhance the security of large language models against indirect prompt injection attacks, potentially improving the reliability and trustworthiness of AI systems in real-world applications.",
+  "topics": [
+    "11",
+    "00",
+    "prompt",
+    "injected",
+    "injection",
+    "22",
+    "detection",
+    "66",
+    "attack",
+    "33"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Can_Indirect_Prompt_Injection_Attacks_Be_Detected_and_Removed_f7f24ecc9cea88c8.pdf",
+    "content_hash": "f7f24ecc9cea88c8d258b99f252b037db2ee28b0ff4c98af4711e38663f0b731",
+    "arxiv_id": null,
+    "title": "Can_Indirect_Prompt_Injection_Attacks_Be_Detected_and_Removed_f7f24ecc9cea88c8",
+    "author": "",
+    "creation_date": "D:20250225020352Z",
+    "published": "2025-02-25T02:03:52",
+    "pages": 17,
+    "size": 592710,
+    "file_mtime": 1741158578.1664026
+  },
+  "main_staff": {
+    "title": "Can_Indirect_Prompt_Injection_Attacks_Be_Detected_and_Removed_f7f24ecc9cea88c8",
+    "authors": [
+      ""
+    ],
+    "abstract": "Prompt injection attacks manipulate large lan-\nguage models (LLMs) by misleading them to\ndeviate from the original input instructions and\nexecute maliciously injected instructions, be-\ncause of their instruction-following capabilities\nand inability to distinguish between the origi-\nnal input instructions and maliciously injected\ninstructions. To defend against such attacks,\nrecent studies have developed various detection\nmechanisms. While significant efforts have\nfocused on detecting direct prompt injection\nattacks, where injected instructions are directly\nfrom the attacker who is also the user, limited\nattention has been given to indirect prompt in-\njection attacks, where injected instructions are\nindirectly from external tools, such as a search\nengine. Moreover, current works mainly inves-\ntigate injection detection methods and pay less\nattention to the post-processing method that\naims to mitigate the injection after detection. In\nthis paper, we investigate the feasibility of de-\ntecting and removing indirect prompt injection\nattacks, and we construct a benchmark dataset\nfor evaluation. For detection, we assess the per-\nformance of existing LLMs and open-source\ndetection models, and we further train detection\nmodels using our crafted training datasets. For\nremoval, we evaluate two intuitive methods:\n(1) the segmentation removal method, which\nsegments the injected document and removes\nparts containing injected instructions, and (2)\nthe extraction removal method, which trains\nan extraction model to identify and remove in-\njected instructions.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approaches.",
+      "method: this method divides injected documents",
+      "related work",
+      "evaluation benchmark construction",
+      "approach presents two problems: (1) the probe y",
+      "method",
+      "evaluation metrics",
+      "method and the extraction removal method. after",
+      "experiments",
+      "methods to assess the effectiveness of detection",
+      "background such as “ 0.0 ” means over-defense occur-",
+      "methods to evaluate the final defense performance,",
+      "approach, we further explore the damage of the fil-",
+      "results, presented in table 3, indicate that although",
+      "methods rarely eliminate essential information, en-",
+      "evaluation metric is removal rate. all results are re-",
+      "conclusion",
+      "results reveal that existing models struggle to reli-",
+      "references",
+      "approach to prevent prompt injection attacks",
+      "method combines the attack methods mentioned",
+      "evaluation process",
+      "evaluation: for the final evaluation of prompt in-",
+      "methods llama3 qwen2.5 llama3.1",
+      "evaluation metric for this column being the false positive rate. the expected value is “0.0”. higher values indicate a",
+      "methods"
+    ],
+    "topics": [
+      "11",
+      "00",
+      "prompt",
+      "injected",
+      "injection",
+      "22",
+      "detection",
+      "66",
+      "attack",
+      "33"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

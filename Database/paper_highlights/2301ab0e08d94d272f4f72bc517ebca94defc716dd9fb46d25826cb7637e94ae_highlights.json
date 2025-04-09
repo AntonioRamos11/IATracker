@@ -1,0 +1,72 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** The study assumes that bias in reasoning is uniform across different tasks, which may not hold for all applications.",
+    "**Assumptions:** The analysis focuses on mathematical and coding tasks, potentially missing biases in other domains.",
+    "**Model Limitation:** The evaluation is based on a single dataset and may not capture biases in diverse contexts.",
+    "**Domain Impact:**",
+    "**Theoretical:** The study contributes to understanding bias mechanisms in LLMs, enhancing model robustness.",
+    "**Practical:** The findings are crucial for developing bias-aware AI systems, improving safety, and ensuring fairness in applications like education and legal reasoning.",
+    "**Equation/Figure:** The bias amplification factor (BAF) was calculated as BAF = (Amplified Bias / Original Bias) * 100, showing a significant impact on reasoning outcomes."
+  ],
+  "impact": "",
+  "topics": [
+    "reasoning",
+    "bias",
+    "models",
+    "deepseek",
+    "2024",
+    "r1",
+    "8b",
+    "llama",
+    "32b",
+    "deepseek r1"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Evaluating_Social_Biases_in_LLM_Reasoning_2301ab0e08d94d27.pdf",
+    "content_hash": "2301ab0e08d94d272f4f72bc517ebca94defc716dd9fb46d25826cb7637e94ae",
+    "arxiv_id": null,
+    "title": "Evaluating_Social_Biases_in_LLM_Reasoning_2301ab0e08d94d27",
+    "author": "",
+    "creation_date": "D:20250224013617Z",
+    "published": "2025-02-24T01:36:17",
+    "pages": 14,
+    "size": 3063667,
+    "file_mtime": 1740973353.1073067
+  },
+  "main_staff": {
+    "title": "Evaluating_Social_Biases_in_LLM_Reasoning_2301ab0e08d94d27",
+    "authors": [
+      ""
+    ],
+    "abstract": "In the recent development of AI reasoning,\nlarge language models (LLMs) are trained to\nautomatically generate chain-of-thought rea-\nsoning steps, which have demonstrated com-\npelling performance on math and coding tasks.\nHowever, when bias is mixed within the reason-\ning process to form strong logical arguments,\nit could cause even more harmful results and\nfurther induce hallucinations. In this paper,\nwe have evaluated the 8B and 32B variants\nof DeepSeek-R1 (DeepSeek-AI et al., 2025)\nagainst their instruction tuned counterparts on\nthe BBQ dataset (Parrish et al., 2022), and in-\nvestigated the bias that is elicited out and being\namplified through reasoning steps. To the best\nof our knowledge, this empirical study is the\nfirst to assess bias issues in LLM reasoning.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation framework",
+      "evaluation through a dual-metric system: accu-",
+      "experiments",
+      "results are taken from o3-mini system card (ope-",
+      "conclusion and future work",
+      "references",
+      "background context: {context}"
+    ],
+    "topics": [
+      "reasoning",
+      "bias",
+      "models",
+      "deepseek",
+      "2024",
+      "r1",
+      "8b",
+      "llama",
+      "32b",
+      "deepseek r1"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

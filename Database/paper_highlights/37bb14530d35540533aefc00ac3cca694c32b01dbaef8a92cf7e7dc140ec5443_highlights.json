@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: PinLanding_Content-First_Keyword_Landing_Page_Generation_via__Multi-Modal_AI_for_Web-Scale_Discovery_2cfe011ccd\n        **Abstract**: Online platforms like Pinterest hosting vast content collections\ntraditionally rely on manual curation or user-generated search logs\nto create keyword landing pages (KLPs) — topic-centered collec-\ntion pages that serve as entry points for content discovery. While\nmanual curation ensures quality, it doesn’t scale to millions of\ncollections, and search log approaches result in limited topic cov-\nerage and imprecise content matching. In this paper, we present\nPinLanding, a novel content-first architecture that transforms the\nway platforms create topical collections. Instead of deriving top-\nics from user behavior, our system employs a multi-stage pipeline\ncombining vision-language model (VLM) for attribute extraction,\nlarge language model (LLM) for topic generation, and a CLIP-based\ndual-encoder architecture for precise content matching. Our model\nachieves 99.7% Recall@10 on Fashion200K benchmark [16], demon-\nstrating strong attribute understanding capabilities. In production\ndeployment for search engine optimization with 4.2 million shop-\nping landing pages, the system achieves a 4X increase in topic\ncoverage and 14.29% improvement in collection attribute precision\nover the traditional search log-based approach via human evalu-\nation. The architecture can be generalized beyond search traffic\nto power various user experiences, including content discovery\narXiv:2503.00619v1  [cs.IR]  1 Mar 2025\n\nand recommendations, providing a scalable solution to transform\nunstructured content into curated topical collections across any\ncontent domain.\nCCS Concepts\n• Information systems →Information retrieval; Web search-\ning and information discovery; • Computing methodologies\n→Natural language processing; Computer vision; Machine learn-\ning.\nKeywords\nmulti-modal AI, content discovery, content organization, search\nengine optimization, vision-language model, large language model,\nCLIP, web-scale system, keyword landing page\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical. If there are none, explain why.\n\n        Please format according to the provided example.\n\n        The paper is about multi-modal AI for content discovery via keyword landing pages. The user wants structured highlights with specific sections and details.\n\nAlright, I need to help the user by generating structured highlights for the given research paper. The paper is about using multi-modal AI for content discovery via keyword landing pages. The user has provided specific sections to focus on: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact. They also want the highlights to be formatted according to the example they provided.\n\nFirst, I'll start by understanding the paper's abstract. It talks about the challenges in creating keyword landing pages (KLPs) using traditional methods, which either rely on manual curation or search logs. These methods have scalability issues and result in limited topic coverage and imprecise content matching.\n\nThe paper introduces PinLanding, a content-first architecture that uses a multi-stage pipeline combining Vision-Language Models (VLM), Large Language Models (LLM), and CLIP-based dual-encoder for precise content matching. The system achieved 99.7% Recall@10 on the Fashion200K benchmark and improved topic coverage and precision in production use.\n\nSo, the core innovation is the shift from user behavior-based to content-based approach using multi-modal AI. The technical approach involves three stages: VLM for attribute extraction, LLM for topic generation, and CLIP for content matching. The quantitative findings include high recall and significant improvements over traditional methods. The limitations might be the complexity of the system and potential data dependency. The domain impact is significant for search engine optimization and scalable content organization.\n\nI need to structure this into the required sections. For Core Innovation, it's about the shift in approach. Technical Approach should list the components. Quantitative Findings will have specific metrics. Limitations & Assumptions should address possible drawbacks. Domain Impact should cover the broader implications.\n\nI should ensure each section is concise and includes key points. For example, in Core Innovation, highlighting the multi-stage pipeline and the shift from user logs to content. Technical Approach will detail each component briefly. Quantitative Findings will list the metrics, like Recall@10 and the 4X increase in coverage. Limitations might include the complexity and reliance on data quality. Domain Impact will emphasize the benefits for various user experiences.\n\nI also need to remember to mention the key equations or figures if any, but since the paper doesn't provide any, I'll explain why. In this case, the focus is more on the architecture and results rather than mathematical equations.\n\nFinally, I'll make sure the formatting matches the user's example, using headers and bullet points where necessary. I should avoid markdown and keep it in plain text, but since the user provided an example with markdown, I'll follow that structure.\n\nI think I have all the elements covered. Now, I'll draft the structured highlights accordingly.\n</think>\n\n### **Structured Highlights for the Research Paper**\n\n#### **1. Core Innovation**  \nThe paper introduces **PinLanding**, a novel content-first architecture for generating keyword landing pages (KLPs) using multi-modal AI. Unlike traditional methods that rely on user behavior or search logs, PinLanding focuses on creating topic-centered collections directly from content. The system employs a **multi-stage pipeline** combining Vision-Language Models (VLM) for attribute extraction, Large Language Models (LLM) for topic generation, and CLIP-based dual-encoder architecture for precise content matching. This shift from behavior-based to content-based approaches addresses scalability and precision challenges in traditional KLP generation.\n\n---\n\n#### **2. Technical Approach**  \n- **Vision-Language Model (VLM)**: Extracts attributes and descriptions from unstructured content.  \n- **Large Language Model (LLM)**: Generates topics based on extracted attributes.  \n- **CLIP-based dual-encoder architecture**: Matches content with pre-trained vision models for precise attribute understanding.  \n\nThe architecture leverages multi-modal AI to transform unstructured content into structured, topic-centered collections, enabling scalable and efficient content organization.\n\n---\n\n#### **3. Quantitative Findings**  \n- **Fashion200K benchmark**: Achieves **99.7% Recall@10**, demonstrating strong attribute understanding capabilities.  \n- **Production deployment**: Results in a **4X increase in topic coverage** and **14.29% improvement in attribute precision** over traditional search log-based approaches, as evaluated by human subjects.  \n\nThese results highlight the effectiveness of PinLanding in enhancing content discovery and optimization.\n\n---\n\n#### **4. Limitations & Assumptions**  \n- **Complexity**: The multi-stage pipeline requires significant computational resources and expertise to implement.  \n- **Data dependency**: Performance may be influenced by the quality and diversity of input content.  \n- **Scalability**: The system assumes access to large-scale content and metadata for effective topic generation and matching.  \n\nThe architecture is designed for web-scale systems",
+  "topics": [
+    "attribute",
+    "10",
+    "content",
+    "attributes",
+    "search",
+    "based",
+    "product",
+    "generation",
+    "collection",
+    "doi 10"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/PinLanding_Content-First_Keyword_Landing_Page_Generation_via__Multi-Modal_AI_for_Web-Scale_Discovery_2cfe011ccd.pdf",
+    "content_hash": "37bb14530d35540533aefc00ac3cca694c32b01dbaef8a92cf7e7dc140ec5443",
+    "arxiv_id": null,
+    "title": "PinLanding_Content-First_Keyword_Landing_Page_Generation_via__Multi-Modal_AI_for_Web-Scale_Discovery_2cfe011ccd",
+    "author": "",
+    "creation_date": "D:20250304015403Z",
+    "published": "2025-03-04T01:54:03",
+    "pages": 9,
+    "size": 1969650,
+    "file_mtime": 1741417165.7405052
+  },
+  "main_staff": {
+    "title": "PinLanding_Content-First_Keyword_Landing_Page_Generation_via__Multi-Modal_AI_for_Web-Scale_Discovery_2cfe011ccd",
+    "authors": [
+      ""
+    ],
+    "abstract": "Online platforms like Pinterest hosting vast content collections\ntraditionally rely on manual curation or user-generated search logs\nto create keyword landing pages (KLPs) — topic-centered collec-\ntion pages that serve as entry points for content discovery. While\nmanual curation ensures quality, it doesn’t scale to millions of\ncollections, and search log approaches result in limited topic cov-\nerage and imprecise content matching. In this paper, we present\nPinLanding, a novel content-first architecture that transforms the\nway platforms create topical collections. Instead of deriving top-\nics from user behavior, our system employs a multi-stage pipeline\ncombining vision-language model (VLM) for attribute extraction,\nlarge language model (LLM) for topic generation, and a CLIP-based\ndual-encoder architecture for precise content matching. Our model\nachieves 99.7% Recall@10 on Fashion200K benchmark [16], demon-\nstrating strong attribute understanding capabilities. In production\ndeployment for search engine optimization with 4.2 million shop-\nping landing pages, the system achieves a 4X increase in topic\ncoverage and 14.29% improvement in collection attribute precision\nover the traditional search log-based approach via human evalu-\nation. The architecture can be generalized beyond search traffic\nto power various user experiences, including content discovery\narXiv:2503.00619v1  [cs.IR]  1 Mar 2025\n\nand recommendations, providing a scalable solution to transform\nunstructured content into curated topical collections across any\ncontent domain.\nCCS Concepts\n• Information systems →Information retrieval; Web search-\ning and information discovery; • Computing methodologies\n→Natural language processing; Computer vision; Machine learn-\ning.\nKeywords\nmulti-modal AI, content discovery, content organization, search\nengine optimization, vision-language model, large language model,\nCLIP, web-scale system, keyword landing page\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methodology",
+      "results as the final product attributes:",
+      "experiments and results",
+      "evaluation on fashion200k benchmark. we evaluate our",
+      "method",
+      "approach versus the search-based baseline. overall, our method",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "attribute",
+      "10",
+      "content",
+      "attributes",
+      "search",
+      "based",
+      "product",
+      "generation",
+      "collection",
+      "doi 10"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

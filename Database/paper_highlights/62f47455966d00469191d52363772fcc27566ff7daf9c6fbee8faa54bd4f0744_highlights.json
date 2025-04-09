@@ -1,0 +1,69 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** The model may struggle with extreme distributional shifts or rare driving scenarios.",
+    "**Assumptions:** Human feedback is assumed to be consistent and sufficient for model refinement.",
+    "**Domain Impact:**",
+    "The TrajHF framework significantly impacts autonomous driving by enabling personalized and adaptable trajectory generation, enhancing safety and feasibility. It provides a scalable solution for diverse driving conditions, offering a new paradigm in trajectory modeling."
+  ],
+  "impact": "",
+  "topics": [
+    "driving",
+    "human",
+    "trajectory",
+    "preference",
+    "model",
+    "learning",
+    "diffusion",
+    "data",
+    "arxiv",
+    "finetuning"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Finetuning_Generative_Trajectory_Model_with_Reinforcement_Learning_from__Human_Feedback_62f47455966d0046.pdf",
+    "content_hash": "62f47455966d00469191d52363772fcc27566ff7daf9c6fbee8faa54bd4f0744",
+    "arxiv_id": null,
+    "title": "Finetuning_Generative_Trajectory_Model_with_Reinforcement_Learning_from__Human_Feedback_62f47455966d0046",
+    "author": "",
+    "creation_date": "D:20250314010414Z",
+    "published": "2025-03-14T01:04:14",
+    "pages": 15,
+    "size": 1551103,
+    "file_mtime": 1742104331.846669
+  },
+  "main_staff": {
+    "title": "Finetuning_Generative_Trajectory_Model_with_Reinforcement_Learning_from__Human_Feedback_62f47455966d0046",
+    "authors": [
+      ""
+    ],
+    "abstract": "Generating human-like and adaptive trajectories is essential for autonomous driv-\ning in dynamic environments. While generative models have shown promise in\nsynthesizing feasible trajectories, they often fail to capture the nuanced variability\nof human driving styles due to dataset biases and distributional shifts. To address\nthis, we introduce TrajHF, a human feedback-driven finetuning framework for gen-\nerative trajectory models, designed to align motion planning with diverse driving\npreferences. TrajHF incorporates multi-conditional denoiser and reinforcement\nlearning with human feedback to refine multi-modal trajectory generation beyond\nconventional imitation learning. This enables better alignment with human driving\npreferences while maintaining safety and feasibility constraints. TrajHF achieves\nPDMS of 93.95 on NavSim benchmark, significantly exceeding other methods.\nTrajHF sets a new paradigm for personalized and adaptable trajectory generation\nin autonomous driving.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method",
+      "method [35] can be used to perform policy gradient updates with the rl loss function",
+      "experiments",
+      "evaluation experiments. for each scene s ∈s, the two models generate trajectories tm1(s) and",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "driving",
+      "human",
+      "trajectory",
+      "preference",
+      "model",
+      "learning",
+      "diffusion",
+      "data",
+      "arxiv",
+      "finetuning"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

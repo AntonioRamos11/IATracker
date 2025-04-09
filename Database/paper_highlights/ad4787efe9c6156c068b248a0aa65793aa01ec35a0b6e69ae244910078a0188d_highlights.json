@@ -1,0 +1,65 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** DiT-Air offers a scalable solution for text-to-image generation, particularly beneficial for applications requiring efficient deployment across various devices.\n\n**Key Equations/Figures:**\n- Parameter reduction calculation: 66% reduction in MMDiT parameters.\n- Model size comparison: DiT-Air/Lite (1.15B) vs. existing models (e.g., JanusPro-7B: 6.91B, Flux-Dev: 16.9B).\n- Performance metrics: GenEval 82.9, T2I CompBench 59.5.\n\nThese elements highlight the paper's focus on enhancing diffusion models' efficiency and performance through architectural and training innovations.",
+  "topics": [
+    "text",
+    "dit",
+    "model",
+    "air",
+    "dit air",
+    "image",
+    "models",
+    "clip",
+    "layer",
+    "31"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/DiT-Air_Revisiting_the_Efficiency_of_Diffusion_Model_Architecture__Design_in_Text_to_Image_Generation_ad4787efe9c6156c.pdf",
+    "content_hash": "ad4787efe9c6156c068b248a0aa65793aa01ec35a0b6e69ae244910078a0188d",
+    "arxiv_id": null,
+    "title": "DiT-Air_Revisiting_the_Efficiency_of_Diffusion_Model_Architecture__Design_in_Text_to_Image_Generation_ad4787efe9c6156c",
+    "author": "",
+    "creation_date": "D:20250314011707Z",
+    "published": "2025-03-14T01:17:07",
+    "pages": 19,
+    "size": 19235846,
+    "file_mtime": 1742112902.945055
+  },
+  "main_staff": {
+    "title": "DiT-Air_Revisiting_the_Efficiency_of_Diffusion_Model_Architecture__Design_in_Text_to_Image_Generation_ad4787efe9c6156c",
+    "authors": [
+      ""
+    ],
+    "abstract": "In this work, we empirically study Diffusion Transformers\n(DiTs) for text-to-image generation, focusing on architec-\ntural choices, text-conditioning strategies, and training pro-\ntocols. We evaluate a range of DiT-based architectures–\nincluding PixArt-style and MMDiT variants–and compare\nthem with a standard DiT variant which directly processes\nconcatenated text and noise inputs. Surprisingly, our find-\nings reveal that the performance of standard DiT is com-\nparable with those specialized models, while demonstrating\nsuperior parameter-efficiency, especially when scaled up.\nLeveraging the layer-wise parameter sharing strategy, we\nachieve a further reduction of 66% in model size compared\nto an MMDiT architecture, with minimal performance im-\npact. Building on an in-depth analysis of critical compo-\nnents such as text encoders and Variational Auto-Encoders\n(VAEs), we introduce DiT-Air and DiT-Air-Lite. With super-\nvised and reward fine-tuning, DiT-Air achieves state-of-the-\nart performance on GenEval and T2I CompBench, while\nDiT-Air-Lite remains highly competitive, surpassing most\nexisting models despite its compact size.\n1. Introduction\nThe field of text-to-image synthesis has witnessed remark-\nable progress, primarily attributable to the wide adoption\nof diffusion-based models [14, 20]. Diffusion Transform-\ners (DiTs) [33] have emerged as a prominent architectural\nparadigm, combining the iterative denoising process inher-\nent to diffusion models with the representational efficacy\nof transformer networks.\nWhile existing paradigm vari-\nants like PixArt-style models [3–5] and MMDiT from Sta-\nble Diffusion 3 (SD3) [14] have demonstrated strong per-\nformance, key aspects of DiTs—such as the choice of ar-\nchitectural components, text-conditioning mechanisms, and\ntraining strategies—have not been exhaustively explored\nSDXL Base (3.5B)\nPixArt-α (5.3B)\nSD3 Medium (7.65B)\nSD3 (13.6B)\nFlux-Dev (16.9B)\nFlux-Schnell (16.9B)\nJanusPro-7B (6.91B)\nDiT-Air/L-Lite (Ours) (1.15B)\nDiT-Air/XXL (Ours) (5.95B)\nGenEval Score  \nT2I CompBench Score\n30\n35\n40\n45\n50\n55\n60\n65\n50\n55\n60\n65\n70\n75\n80\n85\n90\nbetter\nbetter\nFigure 1.\nComparison of text-to-image generation methods on\ntwo metrics, GenEval and T2I CompBench (higher is better for\nboth). Despite significantly smaller model size, our proposed DiT-\nAir achieves state-of-the-art results. Note that, for our model, we\nreport the full model size including text encoder and VAE. A de-\ntailed parameter breakdown is provided in Appendix G.\nyet [6, 17].\nIn this work, we conduct a comprehensive investiga-\ntion into DiT design choices for text-to-image synthe-\nsis. Beginning with a comparative analysis of the vanilla\nDiT [33], PixArt-α [4], and MMDiT [14], we develop a\nstreamlined architecture.\nThis architecture utilizes con-\ncatenated text and noise inputs (following MMDiT) and\nshared AdaLN parameters (following PixArt-α), eliminat-\ning modality-specific projections. This simplification yields\nsubstantial parameter savings (66% compared to MMDiT\nand 25% compared to PixArt-α), while preserving or en-\nhancing performance. Notably, the resulting architecture,\nnamed DiT-Air, closely resembles the original DiT, allow-\ning us to leverage existing transformer optimizations. In-\nspired by parameter-sharing strategies in NLP models such\n1\narXiv:2503.10618v1  [cs.CV]  13 Mar 2025\n\nFigure 2. Sample images from our proposed DiT-Air, each with the text prompt below it. See Appendix H for more examples.\nas ALBERT [27], we adopt both full block-sharing and\nattention-only sharing schemes to further push the param-\neter efficiency of DiT models. Our ablation studies demon-\nstrate that attention-only sharing provides a compelling\ntrade-off, achieving significant parameter reduction with\nminimal loss in text alignment and generative fidelity.\nIn addition to architectural innovations, DiT-Air bene-\nfits from a thorough analysis of text-conditioning strategies\nand variational autoencoders (VAEs). Specifically, we eval-\nuate three primary types of text encoders: CLIP, large lan-\nguage models (LLMs), and the T5 model. Our study in-\ncludes comprehensive ablations of causal versus bidirec-\ntional CLIP, layer selection strategies for both CLIP and\nLLMs, and a final performance comparison of all three en-\ncoders. We also introduce a refined variational autoencoder\n(VAE) [24] that better preserves fine-grained visual details,\nfurther boosting image quality, especially complex visual\nfeatures.\nFinally, with a progressive training approach, DiT-Air\nachieves new state-of-the-art GenEval [15] and T2I Comp-\nBench [22] scores of 82.9 and 59.5, respectively. As shown\nin Figure 1, our model delivers superior performance with\noutstanding parameter efficiency compared to leading mod-\nels such as SD3, FLUX, and JanusPro. Example generation",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results are provided in figure 2.",
+      "methods [34, 38] further enhanced training and inference",
+      "evaluation protocol. specifically, by fixing other compo-",
+      "evaluation: we evaluate model performance using a com-",
+      "results.2",
+      "references",
+      "results, summarized in table 12, indicate that although in-",
+      "approach effectively reduced structural artifacts, enhanced",
+      "method"
+    ],
+    "topics": [
+      "text",
+      "dit",
+      "model",
+      "air",
+      "dit air",
+      "image",
+      "models",
+      "clip",
+      "layer",
+      "31"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

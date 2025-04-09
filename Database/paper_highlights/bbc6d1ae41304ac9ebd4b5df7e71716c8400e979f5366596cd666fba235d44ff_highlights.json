@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Knowledge-enhanced_Multimodal_ECG_Representation_Learning_with__Arbitrary-Lead_Inputs_bbc6d1ae41304ac9\n        **Abstract**: Recent advances in multimodal ECG represen-\ntation learning center on aligning ECG signals\nwith paired free-text reports. However, subop-\ntimal alignment persists due to the complex-\nity of medical language and the reliance on a\nfull 12-lead setup, which is often unavailable in\nunder-resourced settings. To tackle these issues,\nwe propose K-MERL, a knowledge-enhanced\nmultimodal ECG representation learning frame-\nwork. K-MERL leverages large language mod-\nels to extract structured knowledge from free-\ntext reports and employs a lead-aware ECG\nencoder with dynamic lead masking to accom-\nmodate arbitrary lead inputs. Evaluations on\nsix external ECG datasets show that K-MERL\nachieves state-of-the-art performance in zero-\nshot classification and linear probing tasks,\nwhile delivering an average 16% AUC im-\nprovement over existing methods in partial-lead\nzero-shot classification1.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n</think>\n\n**Knowledge-Enhanced Multimodal ECG Representation Learning with Arbitrary-Lead Inputs**\n\n---\n\n### 1. Core Innovation  \nThe research introduces K-MERL, a framework that integrates large language models with multimodal ECG data to enhance representation learning, addressing the limitations of full 12-lead ECG setups and optimizing performance in zero-shot classification tasks.\n\n---\n\n### 2. Technical Approach  \n- **Knowledge Extraction**: Utilizes large language models to extract structured knowledge from free-text ECG reports.  \n- **Lead-Aware Encoder**: Implements a dynamic lead masking mechanism to handle arbitrary lead inputs effectively.  \n- **Modular Framework**: Combines multimodal data processing with advanced language model integration for comprehensive feature extraction.\n\n---\n\n### 3. Quantitative Findings  \n1. K-MERL achieves **state-of-the-art performance** in zero-shot classification tasks.  \n2. In partial-lead zero-shot classification, it shows an **average 16% AUC improvement** over existing methods.  \n3. Evaluations across **six external datasets** validate its effectiveness and robustness.\n\n---\n\n### 4. Limitations & Assumptions  \n- **Assumption on Data**: Requires paired ECG signals with free-text reports for training.  \n- **Dependence on Large Language Models**: Performance may vary with the quality and availability of language model training data.  \n- **Practical Constraints**: Limited by the need for arbitrary lead availability in under-resourced settings.\n\n---\n\n### 5. Domain Impact (Theoretical/Practical)  \n- **Theoretical**: Advances multimodal healthcare data integration and knowledge graph-based ECG analysis.  \n- **Practical**: Enables effective ECG analysis in resource-limited settings, improving diagnostic accuracy and patient outcomes through enhanced representation learning.",
+  "topics": [
+    "lead",
+    "ecg",
+    "al",
+    "et",
+    "et al",
+    "merl",
+    "cardiac",
+    "12",
+    "learning",
+    "leads"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Knowledge-enhanced_Multimodal_ECG_Representation_Learning_with__Arbitrary-Lead_Inputs_bbc6d1ae41304ac9.pdf",
+    "content_hash": "bbc6d1ae41304ac9ebd4b5df7e71716c8400e979f5366596cd666fba235d44ff",
+    "arxiv_id": null,
+    "title": "Knowledge-enhanced_Multimodal_ECG_Representation_Learning_with__Arbitrary-Lead_Inputs_bbc6d1ae41304ac9",
+    "author": "",
+    "creation_date": "D:20250226012927Z",
+    "published": "2025-02-26T01:29:27",
+    "pages": 16,
+    "size": 1649897,
+    "file_mtime": 1740971401.8756561
+  },
+  "main_staff": {
+    "title": "Knowledge-enhanced_Multimodal_ECG_Representation_Learning_with__Arbitrary-Lead_Inputs_bbc6d1ae41304ac9",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent advances in multimodal ECG represen-\ntation learning center on aligning ECG signals\nwith paired free-text reports. However, subop-\ntimal alignment persists due to the complex-\nity of medical language and the reliance on a\nfull 12-lead setup, which is often unavailable in\nunder-resourced settings. To tackle these issues,\nwe propose K-MERL, a knowledge-enhanced\nmultimodal ECG representation learning frame-\nwork. K-MERL leverages large language mod-\nels to extract structured knowledge from free-\ntext reports and employs a lead-aware ECG\nencoder with dynamic lead masking to accom-\nmodate arbitrary lead inputs. Evaluations on\nsix external ECG datasets show that K-MERL\nachieves state-of-the-art performance in zero-\nshot classification and linear probing tasks,\nwhile delivering an average 16% AUC im-\nprovement over existing methods in partial-lead\nzero-shot classification1.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "method",
+      "approach adaptable and well-positioned to benefit",
+      "approaches (e.g., merl (liu et al., 2024)) are suboptimal: they processes all leads in a lead-agnostic manner and",
+      "experiments",
+      "method outperforms merl with pe while being",
+      "methods",
+      "results of various masking strategies, where all ap-",
+      "conclusion",
+      "evaluation is needed to assess k-merl’s effec-",
+      "references",
+      "related work",
+      "methods such as clocs (kiyasseh et al., 2021)"
+    ],
+    "topics": [
+      "lead",
+      "ecg",
+      "al",
+      "et",
+      "et al",
+      "merl",
+      "cardiac",
+      "12",
+      "learning",
+      "leads"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "They probably didn't test FANformer on every possible dataset, maybe just on specific benchmarks. Assumptions: They assumed periodicity is a key factor for LLMs, which might not hold for all tasks.",
+    "In the domain impact, theoretically, it's about enhancing LLMs through better periodicity modeling, practically, it could be useful for tasks requiring structured data.",
+    "I think I have a rough outline. Now, I need to make sure each section is concise and includes key points, maybe equations where relevant, and references to figures where data is shown.",
+    "</think>",
+    "**FANformer: Improving Large Language Models Through Effective Periodicity Modeling**",
+    "**Core Innovation:**",
+    "FANformer is a novel architecture that integrates Fourier Analysis Network (FAN) into the attention mechanism of Transformers, enhancing periodicity modeling to improve learning efficiency and performance in large language models.",
+    "**Technical Approach:**"
+  ],
+  "impact": "",
+  "topics": [
+    "fanformer",
+    "al",
+    "et al",
+    "et",
+    "transformer",
+    "training",
+    "performance",
+    "modeling",
+    "1b",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/FANformer_Improving_Large_Language_Models_Through_Effective_Periodicity__Modeling_f575d003c335fc3b.pdf",
+    "content_hash": "f575d003c335fc3b6dc4c5bff884e9b40be06928a62da55bfe609ba81b3e4ac5",
+    "arxiv_id": null,
+    "title": "FANformer_Improving_Large_Language_Models_Through_Effective_Periodicity__Modeling_f575d003c335fc3b",
+    "author": "",
+    "creation_date": "D:20250303021109Z",
+    "published": "2025-03-03T02:11:09",
+    "pages": 21,
+    "size": 3122210,
+    "file_mtime": 1740981010.3044488
+  },
+  "main_staff": {
+    "title": "FANformer_Improving_Large_Language_Models_Through_Effective_Periodicity__Modeling_f575d003c335fc3b",
+    "authors": [
+      ""
+    ],
+    "abstract": "Periodicity, as one of the most important basic\ncharacteristics, lays the foundation for facil-\nitating structured knowledge acquisition and\nsystematic cognitive processes within human\nlearning paradigms. However, the potential\nflaws of periodicity modeling in Transformer\naffect the learning efficiency and establishment\nof underlying principles from data for large lan-\nguage models (LLMs) built upon it. In this\npaper, we demonstrate that integrating effective\nperiodicity modeling can improve the learning\nefficiency and performance of LLMs. We in-\ntroduce FANformer, which integrates Fourier\nAnalysis Network (FAN) into attention mecha-\nnism to achieve efficient periodicity modeling,\nby modifying the feature projection process of\nattention mechanism. Extensive experimental",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results on language modeling show that fan-",
+      "introduction",
+      "evaluation",
+      "experiments (section 4.1), followed by a compre-",
+      "results.",
+      "evaluation metrics. 2) the performance of trans-",
+      "results from the 1b-scale fanformer (as shown",
+      "method, sampling 10 generations at temperature",
+      "related work",
+      "conclusion",
+      "approaches for revising the attention mechanism,",
+      "references",
+      "evaluation setup",
+      "evaluation is conducted using the open-instruct evaluation suite, which has been widely adopted for"
+    ],
+    "topics": [
+      "fanformer",
+      "al",
+      "et al",
+      "et",
+      "transformer",
+      "training",
+      "performance",
+      "modeling",
+      "1b",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

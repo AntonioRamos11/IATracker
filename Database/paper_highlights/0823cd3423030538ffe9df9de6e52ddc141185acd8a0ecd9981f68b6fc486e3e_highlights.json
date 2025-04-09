@@ -1,0 +1,69 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Enables efficient and effective perception systems for autonomous vehicles, enhancing safety and decision-making through improved point cloud analysis.",
+  "topics": [
+    "scale",
+    "point",
+    "nomae",
+    "nuscenes",
+    "masked",
+    "pretraining",
+    "voxels",
+    "3d",
+    "learning",
+    "miou"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Multi-Scale_Neighborhood_Occupancy_Masked_Autoencoder_for__Self-Supervised_Learning_in_LiDAR_Point_Clouds_0823cd3423030538.pdf",
+    "content_hash": "0823cd3423030538ffe9df9de6e52ddc141185acd8a0ecd9981f68b6fc486e3e",
+    "arxiv_id": null,
+    "title": "Multi-Scale_Neighborhood_Occupancy_Masked_Autoencoder_for__Self-Supervised_Learning_in_LiDAR_Point_Clouds_0823cd3423030538",
+    "author": "",
+    "creation_date": "D:20250228021142Z",
+    "published": "2025-02-28T02:11:42",
+    "pages": 16,
+    "size": 17968491,
+    "file_mtime": 1740969981.9058259
+  },
+  "main_staff": {
+    "title": "Multi-Scale_Neighborhood_Occupancy_Masked_Autoencoder_for__Self-Supervised_Learning_in_LiDAR_Point_Clouds_0823cd3423030538",
+    "authors": [
+      ""
+    ],
+    "abstract": "Masked autoencoders (MAE) have shown tremendous\npotential for self-supervised learning (SSL) in vision and\nbeyond. However, point clouds from LiDARs used in auto-\nmated driving are particularly challenging for MAEs since\nlarge areas of the 3D volume are empty. Consequently, ex-\nisting work suffers from leaking occupancy information into\nthe decoder and has significant computational complexity,\nthereby limiting the SSL pre-training to only 2D bird’s eye\nview encoders in practice. In this work, we propose the\nnovel neighborhood occupancy MAE (NOMAE) that over-\ncomes the aforementioned challenges by employing masked\noccupancy reconstruction only in the neighborhood of non-\nmasked voxels. We incorporate voxel masking and occu-\npancy reconstruction at multiple scales with our proposed\nhierarchical mask generation technique to capture features\nof objects of different sizes in the point cloud. NOMAEs are\nextremely flexible and can be directly employed for SSL in\nexisting 3D architectures. We perform extensive evaluations\non the nuScenes and Waymo Open datasets for the down-\nstream perception tasks of semantic segmentation and 3D\nobject detection, comparing with both discriminative and\ngenerative SSL methods. The results demonstrate that NO-\nMAE sets the new state-of-the-art on multiple benchmarks\nfor multiple point cloud perception tasks.\n1. Introduction\nSensors that generate point clouds, such as LiDARs or radars,\nhave become a cornerstone in automated driving as they pro-\nvide high-resolution three-dimensional representations of\nthe environment [29]. The rich spatial information repre-\nsented in point clouds enables vehicles to accurately detect\nand classify objects, navigate complex environments, and en-\nhance safety through real-time situational awareness. How-\never, annotated point cloud datasets are significantly smaller\nthan their image-based counterparts, which makes learn-\ning large-scale perception models extremely challenging.\nSelf-supervised learning (SSL) [2, 5–7, 14–17, 21, 22, 32],\nthrough contrastive learning or masked modeling, provides\nData-Efficient\nNuscenes\nObjDet\nNuscenes\nSemSeg\n82\n80\n78\n76\nNoMAE(Ours) \nPTv3 \nUniPAD \n81.8\n80.4\n79.4\nmIoU\n73\n71\n69\n67\nmIoU\nNoMAE(Ours) \nPTv3 \n72.3\n71.3\nWaymo\nSemSeg\n60\n50\n40\n30\nmAP\nNoMAE(Ours)  54.4\n48.1\nUVTR-L 39.0\nSphereFormer  69.9\nUniPAD \nFigure 1. NOMAE enables masking and reconstructing occupancy\nas a self-supervised pretext task for large-scale point clouds. It lim-\nits the reconstruction of masked voxels\nto the neighborhood\nof visible\nvoxels and reconstructs the masked occupancy at mul-\ntiple scales. NOMAE\nachieves state-of-the-art performance on\nnuScenes semantic segmentation, Waymo semantic segmentation,\nand nuScenes object detection tasks, outperforming existing self-\nsupervised methods\nas well as transformer methods\n.\nan effective solution to this problem by learning meaningful\nrepresentations from vast amounts of unlabeled data. SSL\nalso reduces the reliance on arduous annotation processes\nwhile improving performance and generalization. Pioneer-\ning works [24, 27, 45, 47] have successfully employed SSL\nto small-scale indoor point clouds, with more recent efforts\nextending it to large-scale outdoor point clouds [18, 33, 40].\nOutdoor point clouds, however, pose a unique challenge\nfor masked modeling as most of the measured 3D volume\nis empty space. Current approaches resort to reconstructing\nprecise point locations within occupied voxels [18, 33, 40],\nbut this often leaks information to the decoder, signaling that\nthe queried voxel is occupied. Recent methods [26, 43] at-\ntempt to overcome this problem by reconstructing the entire\nscene, but the computational complexity and class imbal-\nance caused by the large number of empty voxels limit these",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approaches to either 2d bird’s-eye-view representations or",
+      "approaches are typically tailored towards small-scale sin-",
+      "abstract encoding of coarser resolution tokens to the tokens",
+      "evaluation protocol that we use for benchmarking. we com-",
+      "method",
+      "methods. following the evaluation protocol of [43, 44], the meth-",
+      "methods",
+      "results are presented in tab. 4. we start from our implemen-",
+      "results are reported on the nuscenes val set with the encoder frozen",
+      "method of point-m2ae [47].",
+      "experiments use msp and hmg. since every scale has a",
+      "method’s ability to benefit from unannotated data. further-",
+      "references"
+    ],
+    "topics": [
+      "scale",
+      "point",
+      "nomae",
+      "nuscenes",
+      "masked",
+      "pretraining",
+      "voxels",
+      "3d",
+      "learning",
+      "miou"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

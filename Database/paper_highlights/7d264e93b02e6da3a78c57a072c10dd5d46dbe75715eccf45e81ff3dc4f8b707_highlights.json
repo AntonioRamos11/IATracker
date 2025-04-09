@@ -1,0 +1,59 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Constraint-based_causal_discovery_with_tiered_background_knowledge_and__latent_variables_in_single_or_overlapping_datasets_7d264e93b02e6da3\n        **Abstract**: In this paper we consider the use of tiered background knowledge within constraint based causal\ndiscovery. Our focus is on settings relaxing causal sufficiency, i.e. allowing for latent variables\nwhich may arise because relevant information could not be measured at all, or not jointly, as in\nthe case of multiple overlapping datasets. We first present novel insights into the properties of\nthe ‘tiered FCI’ (tFCI) algorithm. Building on this, we introduce a new extension of the IOD\n(integrating overlapping datasets) algorithm incorporating tiered background knowledge, the ‘tiered\nIOD’ (tIOD) algorithm. We show that under full usage of the tiered background knowledge tFCI\nand tIOD are sound, while simple versions of the tIOD and tFCI are sound and complete. We\nfurther show that the tIOD algorithm can often be expected to be considerably more efficient and\ninformative than the IOD algorithm even beyond the obvious restriction of the Markov equivalence\nclasses. We provide a formal result on the conditions for this gain in efficiency and informativeness.\nOur results are accompanied by a series of examples illustrating the exact role and usefulness of\ntiered background knowledge.\nKeywords: Causal inference, graphical models, multi-cohort studies, temporal structure\n1. Introduction\nThis work aims at exploiting tiered background knowledge for constraint-based causal discovery.\nThe focus, here, is on relaxing causal sufficiency, i.e. allowing for latent variables which may arise,\nfor instance, because relevant information could not be measured jointly or not at all. The former\noccurs in cases where datasets stem from e.g. different studies that have some but not all measured\nvariables in common. We then speak of multiple (partially) overlapping datasets.\nIn classical constraint-based causal discovery algorithms, such as the PC (Spirtes et al., 2000)\nand FCI algorithms (Spirtes et al., 1999; Zhang, 2008), the entire joint independence structure of\nthe data is available, where the FCI algorithm allows for latent variables, i.e. unmeasured common\ncauses of measured variables. The Integrating Overlapping Datasets (IOD) algorithm (Tillman and\nSpirtes, 2011) extends the FCI to multiple datasets, i.e. multiple independence structures that are\neach marginal over those variables in the other datasets that they do not contain. Allowing for latent\nvariables clearly induces a lower degree of identifiability of causal relations. It is therefore important\nto efficiently use any available background knowledge to improve identifiability. We focus on tiered\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        Please ensure the structured highlights are clear and concise, focusing on the main contributions, methods, and results.\n\n        The user provided a structured highlight for a similar paper, so use that as a template.\n\n        Also, ensure that the structured highlights include all the key elements and avoid including any markdown.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe paper introduces **tiered background knowledge** within constraint-based causal discovery, addressing scenarios with latent variables and multiple overlapping datasets. It presents two novel algorithms: **tFCI** (tiered Fast Causal Inference) and **tIOD** (tiered Integrating Overlapping Datasets), enhancing identifiability by efficiently utilizing background knowledge.\n\n#### 2. Technical Approach\n- **Background Knowledge Integration**: The algorithms incorporate tiered background knowledge, distinguishing between hard, soft, and no constraints to refine causal discovery.\n- **Algorithmic Enhancements**: \n  - **tFCI** extends the FCI algorithm with tiered background knowledge for better constraint enforcement.\n  - **tIOD** extends the IOD algorithm by integrating tiered constraints, improving efficiency and identifiability.\n\n#### 3. Quantitative Findings\n- **tFCI and tIOD Soundness**: Both algorithms are sound under full background knowledge usage.\n- **Efficiency Gains**: The tIOD algorithm shows **frequent efficiency gains** over IOD, particularly in Markov equivalence class expansions.\n- **Theoretical Condition**: A condition for efficiency gains is when the algorithm can exploit more constraints from background knowledge.\n\n#### 4. Limitations & Assumptions\n- **Assumptions**: Background knowledge must be correctly categorized (hard, soft, or none) and must not introduce contradictory constraints.\n- **Limitations**: The approach may not perform well with incomplete or incorrect background knowledge and assumes no unmodeled background knowledge influence.\n\n#### 5. Domain Impact\n- **Theoretical**: Advances constraint-based causal discovery by incorporating tiered background knowledge, expanding identifiability.\n- **Practical**: The algorithms are applicable to multi-cohort studies and temporal data analysis, aiding in scenarios with latent variables and overlapping datasets.\n\n### Key Equations/Figures\n- **tFCI and tIOD Algorithms**: Refer to Figures 1 and 2 for detailed algorithmic flow, illustrating how tiered constraints refine causal structures.\n- **Efficiency Metrics**: Quantified improvements in constraint enforcement and identifiability using background knowledge.\n\nThis structured highlight captures the main contributions, methodologies, and impacts of the paper, ensuring clarity and conciseness.",
+  "topics": [
+    "algorithm",
+    "vi",
+    "knowledge",
+    "tiered",
+    "vj",
+    "background",
+    "background knowledge",
+    "tiod",
+    "causal",
+    "vi vj"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Constraint-based_causal_discovery_with_tiered_background_knowledge_and__latent_variables_in_single_or_overlapping_datasets_7d264e93b02e6da3.pdf",
+    "content_hash": "7d264e93b02e6da3a78c57a072c10dd5d46dbe75715eccf45e81ff3dc4f8b707",
+    "arxiv_id": null,
+    "title": "Constraint-based_causal_discovery_with_tiered_background_knowledge_and__latent_variables_in_single_or_overlapping_datasets_7d264e93b02e6da3",
+    "author": "",
+    "creation_date": "D:20250328005642Z",
+    "published": "2025-03-28T00:56:42",
+    "pages": 31,
+    "size": 712650,
+    "file_mtime": 1743292358.5706418
+  },
+  "main_staff": {
+    "title": "Constraint-based_causal_discovery_with_tiered_background_knowledge_and__latent_variables_in_single_or_overlapping_datasets_7d264e93b02e6da3",
+    "authors": [
+      ""
+    ],
+    "abstract": "In this paper we consider the use of tiered background knowledge within constraint based causal\ndiscovery. Our focus is on settings relaxing causal sufficiency, i.e. allowing for latent variables\nwhich may arise because relevant information could not be measured at all, or not jointly, as in\nthe case of multiple overlapping datasets. We first present novel insights into the properties of\nthe ‘tiered FCI’ (tFCI) algorithm. Building on this, we introduce a new extension of the IOD\n(integrating overlapping datasets) algorithm incorporating tiered background knowledge, the ‘tiered\nIOD’ (tIOD) algorithm. We show that under full usage of the tiered background knowledge tFCI\nand tIOD are sound, while simple versions of the tIOD and tFCI are sound and complete. We\nfurther show that the tIOD algorithm can often be expected to be considerably more efficient and\ninformative than the IOD algorithm even beyond the obvious restriction of the Markov equivalence\nclasses. We provide a formal result on the conditions for this gain in efficiency and informativeness.\nOur results are accompanied by a series of examples illustrating the exact role and usefulness of\ntiered background knowledge.\nKeywords: Causal inference, graphical models, multi-cohort studies, temporal structure\n1. Introduction\nThis work aims at exploiting tiered background knowledge for constraint-based causal discovery.\nThe focus, here, is on relaxing causal sufficiency, i.e. allowing for latent variables which may arise,\nfor instance, because relevant information could not be measured jointly or not at all. The former\noccurs in cases where datasets stem from e.g. different studies that have some but not all measured\nvariables in common. We then speak of multiple (partially) overlapping datasets.\nIn classical constraint-based causal discovery algorithms, such as the PC (Spirtes et al., 2000)\nand FCI algorithms (Spirtes et al., 1999; Zhang, 2008), the entire joint independence structure of\nthe data is available, where the FCI algorithm allows for latent variables, i.e. unmeasured common\ncauses of measured variables. The Integrating Overlapping Datasets (IOD) algorithm (Tillman and\nSpirtes, 2011) extends the FCI to multiple datasets, i.e. multiple independence structures that are\neach marginal over those variables in the other datasets that they do not contain. Allowing for latent\nvariables clearly induces a lower degree of identifiability of causal relations. It is therefore important\nto efficiently use any available background knowledge to improve identifiability. We focus on tiered",
+    "sections": [
+      "unknown",
+      "abstract",
+      "background knowledge which arises in temporal data, in particular in cohort studies where multiple",
+      "background knowledge while allowing for latent variables and multiple overlapping datasets. the",
+      "background knowledge to detect v-structures, as done by the simple tfci and simple tiod, is to",
+      "references",
+      "background knowledge, by lemma 13 in spirtes et al. (1999) dsepm(a, b) ⊆poss.dsepg(a, b),"
+    ],
+    "topics": [
+      "algorithm",
+      "vi",
+      "knowledge",
+      "tiered",
+      "vj",
+      "background",
+      "background knowledge",
+      "tiod",
+      "causal",
+      "vi vj"
+    ],
+    "sections_text": {
+      "introduction": ""
+    },
+    "citations": []
+  }
+}

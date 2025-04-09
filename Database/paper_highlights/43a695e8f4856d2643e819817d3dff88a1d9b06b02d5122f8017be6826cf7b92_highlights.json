@@ -1,0 +1,67 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Say_Less_Mean_More_Leveraging_Pragmatics_in_Retrieval-Augmented__Generation_43a695e8f4856d26\n        **Abstract**: We propose a simple, unsupervised method\nthat injects pragmatic principles in retrieval-\naugmented generation (RAG) frameworks such\nas Dense Passage Retrieval (Karpukhin et al.,\n2020) to enhance the utility of retrieved con-\ntexts. Our approach first identifies which sen-\ntences in a pool of documents retrieved by RAG\nare most relevant to the question at hand, cover\nall the topics addressed in the input question\nand no more, and then highlights these sen-\ntences within their context, before they are pro-\nvided to the LLM, without truncating or alter-\ning the context in any other way. We show\nthat this simple idea brings consistent improve-\nments in experiments on three question an-\nswering tasks (ARC-Challenge, PubHealth and\nPopQA) using five different LLMs. It notably\nenhances relative accuracy by up to 19.7% on\nPubHealth and 10% on ARC-Challenge com-\npared to a conventional RAG system.\n1\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        1. Key equations/figures\n        2. Figures (if any)\n</think>\n\n**Core Innovation:** The paper introduces a method to inject pragmatic principles into retrieval-augmented generation (RAG) systems by selecting and highlighting relevant sentences from retrieved documents before feeding them to an LLM, enhancing the utility of the generated text.\n\n**Technical Approach:**\n- **Selection Criteria:** Identifies sentences from retrieved documents that are most relevant to the query, cover all query topics, and avoid including extraneous information.\n- **Highlighting:** These selected sentences are highlighted within their context without truncating or altering the original document.\n- **Integration:** The highlighted sentences are provided to the LLM for generating responses, maintaining the integrity of the context.\n\n**Quantitative Findings:**\n1. Improved accuracy by 19.7% on the PubHealth dataset compared to conventional RAG systems.\n2. Enhanced performance by 10% on the ARC-Challenge dataset.\n3. Consistent improvements across three question-answering tasks: ARC-Challenge, PubHealth, and PopQA.\n\n**Limitations & Assumptions:**\n- The method assumes that the most relevant sentences are those that cover all query topics without including extra information.\n- It relies on the effectiveness of the LLM in utilizing the highlighted sentences for accurate responses.\n- The approach does not address potential biases in the LLM or the quality of the retrieved documents.\n\n**Domain Impact:**\n- Theoretically, this approach contributes to the field of information retrieval and generation by demonstrating how pragmatic principles can enhance retrieval systems.\n- Practically, it offers a simple, unsupervised method that can be integrated into existing RAG systems, potentially improving their performance across various domains, including healthcare and general knowledge.",
+  "topics": [
+    "evidence",
+    "question",
+    "retrieval",
+    "7b",
+    "al",
+    "et al",
+    "et",
+    "step",
+    "query",
+    "dpr"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Say_Less_Mean_More_Leveraging_Pragmatics_in_Retrieval-Augmented__Generation_43a695e8f4856d26.pdf",
+    "content_hash": "43a695e8f4856d2643e819817d3dff88a1d9b06b02d5122f8017be6826cf7b92",
+    "arxiv_id": null,
+    "title": "Say_Less_Mean_More_Leveraging_Pragmatics_in_Retrieval-Augmented__Generation_43a695e8f4856d26",
+    "author": "",
+    "creation_date": "D:20250228014755Z",
+    "published": "2025-02-28T01:47:55",
+    "pages": 16,
+    "size": 1889203,
+    "file_mtime": 1740971439.35017
+  },
+  "main_staff": {
+    "title": "Say_Less_Mean_More_Leveraging_Pragmatics_in_Retrieval-Augmented__Generation_43a695e8f4856d26",
+    "authors": [
+      ""
+    ],
+    "abstract": "We propose a simple, unsupervised method\nthat injects pragmatic principles in retrieval-\naugmented generation (RAG) frameworks such\nas Dense Passage Retrieval (Karpukhin et al.,\n2020) to enhance the utility of retrieved con-\ntexts. Our approach first identifies which sen-\ntences in a pool of documents retrieved by RAG\nare most relevant to the question at hand, cover\nall the topics addressed in the input question\nand no more, and then highlights these sen-\ntences within their context, before they are pro-\nvided to the LLM, without truncating or alter-\ning the context in any other way. We show\nthat this simple idea brings consistent improve-\nments in experiments on three question an-\nswering tasks (ARC-Challenge, PubHealth and\nPopQA) using five different LLMs. It notably\nenhances relative accuracy by up to 19.7% on\nPubHealth and 10% on ARC-Challenge com-\npared to a conventional RAG system.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results indicate that pragmatics helps the most",
+      "method is complementary when paired with a",
+      "related work",
+      "approach is training free: it uses a set of unsuper-",
+      "methods, especially those based on summarization",
+      "approach: combining step-back",
+      "evaluation & datasets we evaluate our method",
+      "methods and llms for a specific dataset. percentage changes relative to the bm25 without evidence highlighting setting are",
+      "methods outperform vanilla dpr for all k values",
+      "conclusions",
+      "approach is also limited by the fact that it is unsu-",
+      "references",
+      "evaluation criteria",
+      "approach considers an llm generation cor-"
+    ],
+    "topics": [
+      "evidence",
+      "question",
+      "retrieval",
+      "7b",
+      "al",
+      "et al",
+      "et",
+      "step",
+      "query",
+      "dpr"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

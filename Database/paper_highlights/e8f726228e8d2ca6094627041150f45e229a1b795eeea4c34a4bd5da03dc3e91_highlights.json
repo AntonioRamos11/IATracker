@@ -1,0 +1,57 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: On_Fact_and_Frequency_LLM_Responses_to_Misinformation_Expressed_with__Uncertainty_bdab413dbc\n        **Abstract**: We study LLM judgments of misinformation\nexpressed with uncertainty. Our experiments\nstudy the response of three widely used LLMs\n(GPT-4o, LLaMA3, DeepSeek-v2) to misin-\nformation propositions that have been verified\nfalse and then are transformed into uncertain\nstatements according to an uncertainty typol-\nogy. Our results show that after transformation,\nLLMs change their factchecking classification\nfrom false to not-false in 25% of the cases.\nAnalysis reveals that the change cannot be ex-\nplained by predictors to which humans are ex-\npected to be sensitive, i.e., modality, linguistic\ncues, or argumentation strategy. The exception\nis doxastic transformations, which use linguis-\ntic cue phrases such as “It is believed...”. To\ngain further insight, we prompt the LLM to\nmake another judgment about the transformed\nmisinformation statements that is not related to\ntruth value. Specifically, we study LLM esti-\nmates of the frequency with which people make\nthe uncertain statement. We find a small but sig-\nnificant correlation between judgment of fact\nand estimation of frequency.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\nAlright, so I've got this research paper to analyze. The title is \"On Fact and Frequency LLM Responses to Misinformation Expressed with Uncertainty.\" Hmm, okay, so it's about how large language models (LLMs) respond to misinformation that's presented with uncertainty. Interesting.\n\nThe abstract says they studied three LLMs: GPT-4o, LLaMA3, and DeepSeek-v2. They transformed false propositions into uncertain statements using an uncertainty typology. Their experiments showed that about 25% of the time, the LLMs changed their classification from false to not-false. That's a significant shift. They also looked into why this happened and found that it wasn't because of common predictors like modality or linguistic cues. Instead, they noticed something called \"doxastic transformations,\" which use phrases like \"It is believed...\". \n\nAdditionally, they made the LLM estimate the frequency of people making the uncertain statement. They found a small but significant correlation between the judgment of fact and the estimation of frequency. So, the model's estimate of frequency was related to its fact judgment.\n\nNow, I need to structure this into the required format. Let's start with the core innovation. It seems like the key finding here is that LLMs can change their classification from false to not-false when misinformation is presented with uncertainty, and that this is due to specific linguistic cues related to belief, rather than just the typical predictors. So, the innovation is that the change in classification isn't just based on the usual things like modality or argumentation strategy but involves the language used to express uncertainty, specifically doxastic language.\n\nNext, the technical approach. They used three LLMs, which is good because it shows consistency across different models. Their experimental setup involved creating uncertain statements from false propositions. They categorized these transformations into an uncertainty typology, which probably includes different ways of expressing doubt or uncertainty. Then, they analyzed the models' responses, looking at classification changes, linguistic features, and the frequency estimation. They also checked for correlations between fact judgments and frequency estimates.\n\nFor quantitative findings, they mention the 25% shift in classification. They looked at linguistic features like modality, argumentation strategy, and others but found they weren't the main factors. Instead, the doxastic transformations were significant. They also found a small but significant correlation between the models' judgments on fact and their estimates of frequency. I think they might have used statistical tests like Pearson's correlation coefficient for this part.\n\nLimitations and assumptions would include that the study only looks at a specific set of LLMs, so results might not generalize to other models. They also might have assumed that the uncertainty typology they used was comprehensive enough, though the abstract doesn't specify if they tested other types of uncertainty. Additionally, they might have limited their analysis to a single aspect of the LLM's response, focusing on classification and frequency estimation rather than other behaviors.\n\nDomain impact-wise, this is theoretically important because it shows how LLMs handle uncertainty in misinformation, which relates to their reliability as information sources. Practically, it could help in designing better systems to detect and mitigate misinformation by understanding how LLMs process uncertain statements.\n\nI think I've covered all the required sections. Now, I need to make sure each part is clear and concise, using the specified number of sentences and bullet points where needed. Also, highlighting key equations or figures where necessary, but since the abstract doesn't mention specific metrics beyond percentages and correlations, I might not need to include equations here unless more details are provided.\n</think>\n\n**Core Innovation:**  \nThe research highlights that large language models (LLMs) exhibit a 25% shift in classification from false to not-false when misinformation is presented with uncertainty, attributed to linguistic cues like \"It is believed...\" rather than typical predictors like modality or argumentation strategy.\n\n**Technical Approach:**  \n1. **Experimental Setup:** Evaluated three LLMs (GPT-4o, LLaMA3, DeepSeek-v2) with uncertain statements derived from false propositions.  \n2. **Uncertainty Typology:** Categorized transformations into types focusing on linguistic cues related to belief.  \n3. **Analysis:** Assessed classification changes, linguistic features, and frequency estimates, checking for correlations between fact judgments and frequency estimates.\n\n**Quantitative Findings:**  \n1. 25% of LLMs changed classification from false to not-false.  \n2. Linguistic features (modality, argumentation) didn't explain the shift.  \n3. Doxastic transformations (using phrases like \"It is believed...\") were significant.  \n4. Small, significant correlation (likely Pearson's r) between fact and frequency estimates.\n\n**Limitations & Assumptions:**  \n1. Limited to three LLMs, possibly restricting generalizability.  \n2. Assumed uncertainty typology comprehensiveness.  \n3. Focused on classification and frequency, not broader LLM",
+  "topics": [
+    "uncertainty",
+    "false",
+    "llms",
+    "000000",
+    "classification",
+    "et",
+    "et al",
+    "al",
+    "frequency",
+    "llm"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/On_Fact_and_Frequency_LLM_Responses_to_Misinformation_Expressed_with__Uncertainty_bdab413dbc.pdf",
+    "content_hash": "e8f726228e8d2ca6094627041150f45e229a1b795eeea4c34a4bd5da03dc3e91",
+    "arxiv_id": null,
+    "title": "On_Fact_and_Frequency_LLM_Responses_to_Misinformation_Expressed_with__Uncertainty_bdab413dbc",
+    "author": "",
+    "creation_date": "D:20250307013935Z",
+    "published": "2025-03-07T01:39:35",
+    "pages": 9,
+    "size": 365286,
+    "file_mtime": 1741416592.3976371
+  },
+  "main_staff": {
+    "title": "On_Fact_and_Frequency_LLM_Responses_to_Misinformation_Expressed_with__Uncertainty_bdab413dbc",
+    "authors": [
+      ""
+    ],
+    "abstract": "We study LLM judgments of misinformation\nexpressed with uncertainty. Our experiments\nstudy the response of three widely used LLMs\n(GPT-4o, LLaMA3, DeepSeek-v2) to misin-\nformation propositions that have been verified\nfalse and then are transformed into uncertain\nstatements according to an uncertainty typol-\nogy. Our results show that after transformation,\nLLMs change their factchecking classification\nfrom false to not-false in 25% of the cases.\nAnalysis reveals that the change cannot be ex-\nplained by predictors to which humans are ex-\npected to be sensitive, i.e., modality, linguistic\ncues, or argumentation strategy. The exception\nis doxastic transformations, which use linguis-\ntic cue phrases such as “It is believed...”. To\ngain further insight, we prompt the LLM to\nmake another judgment about the transformed\nmisinformation statements that is not related to\ntruth value. Specifically, we study LLM esti-\nmates of the frequency with which people make\nthe uncertain statement. We find a small but sig-\nnificant correlation between judgment of fact\nand estimation of frequency.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "background on uncertainty",
+      "results",
+      "conclusions and outlook",
+      "references"
+    ],
+    "topics": [
+      "uncertainty",
+      "false",
+      "llms",
+      "000000",
+      "classification",
+      "et",
+      "et al",
+      "al",
+      "frequency",
+      "llm"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

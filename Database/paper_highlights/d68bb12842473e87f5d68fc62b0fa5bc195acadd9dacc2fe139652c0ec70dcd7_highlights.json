@@ -1,0 +1,73 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "Currently limited to fixed-length videos.",
+    "Potential scalability issues with extremely long videos.",
+    "**Assumptions:**",
+    "The selection of keyframes is critical for model performance.",
+    "The algorithm assumes static scene changes and gradual motion."
+  ],
+  "impact": "** Directly benefits applications like video summarization, VQA, and visual tasks, enhancing user experience by preserving key information succinctly.\n\nThis structured approach highlights the paper's contributions, methodology, and broader implications, emphasizing the balance between innovation and practical application.",
+  "topics": [
+    "video",
+    "arxiv",
+    "aks",
+    "frames",
+    "language",
+    "understanding",
+    "llava",
+    "7b",
+    "keyframes",
+    "64"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Adaptive_Keyframe_Sampling_for_Long_Video_Understanding_d68bb12842473e87.pdf",
+    "content_hash": "d68bb12842473e87f5d68fc62b0fa5bc195acadd9dacc2fe139652c0ec70dcd7",
+    "arxiv_id": null,
+    "title": "Adaptive_Keyframe_Sampling_for_Long_Video_Understanding_d68bb12842473e87",
+    "author": "",
+    "creation_date": "D:20250303020816Z",
+    "published": "2025-03-03T02:08:16",
+    "pages": 12,
+    "size": 2332136,
+    "file_mtime": 1740981109.6431565
+  },
+  "main_staff": {
+    "title": "Adaptive_Keyframe_Sampling_for_Long_Video_Understanding_d68bb12842473e87",
+    "authors": [
+      ""
+    ],
+    "abstract": "Multimodal large language models (MLLMs) have enabled\nopen-world visual understanding by injecting visual input\nas extra tokens into large language models (LLMs) as con-\ntexts. However, when the visual input changes from a sin-\ngle image to a long video, the above paradigm encoun-\nters difficulty because the vast amount of video tokens has\nsignificantly exceeded the maximal capacity of MLLMs.\nTherefore, existing video-based MLLMs are mostly estab-\nlished upon sampling a small portion of tokens from in-\nput data, which can cause key information to be lost and\nthus produce incorrect answers.\nThis paper presents a\nsimple yet effective algorithm named Adaptive Keyframe\nSampling (AKS). It inserts a plug-and-play module known\nas keyframe selection, which aims to maximize the use-\nful information with a fixed number of video tokens. We\nformulate keyframe selection as an optimization involving\n(1) the relevance between the keyframes and the prompt,\nand (2) the coverage of the keyframes over the video,\nand present an adaptive algorithm to approximate the best\nsolution.",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments on two long video understanding",
+      "methods have sampled video frames to fit mllms; some",
+      "approaches aim to reduce the number of video tokens, but",
+      "approaches on longvideobench (lvb) val and videomme (v-",
+      "method",
+      "results are summarized in ta-",
+      "results are summarized in table 3.",
+      "results in both datasets.",
+      "references",
+      "results of aks (based on three baselines, llava-video-"
+    ],
+    "topics": [
+      "video",
+      "arxiv",
+      "aks",
+      "frames",
+      "language",
+      "understanding",
+      "llava",
+      "7b",
+      "keyframes",
+      "64"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

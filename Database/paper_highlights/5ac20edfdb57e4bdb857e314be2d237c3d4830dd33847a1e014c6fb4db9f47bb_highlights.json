@@ -1,0 +1,64 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Audio-Reasoner_Improving_Reasoning_Capability_in_Large_Audio_Language__Models_0eeac8f81e\n        **Abstract**: Recent advancements in multimodal reasoning have largely overlooked the audio\nmodality. We introduce Audio-Reasoner, a large-scale audio language model\nfor deep reasoning in audio tasks. We meticulously curated a large-scale and\ndiverse multi-task audio dataset with simple annotations. Then, we leverage closed-\nsource models to conduct secondary labeling, QA generation, along with structured\nCOT process. These datasets together form a high-quality reasoning dataset with\n1.2 million reasoning-rich samples, which we name CoTA. Following inference\nscaling principles, we train Audio-Reasoner on CoTA, enabling it to achieve\ngreat logical capabilities in audio reasoning. Experiments show state-of-the-art\nperformance across key benchmarks, including MMAU-mini (+25.42%), AIR-\nBench chat/foundation(+14.57%/+10.13%), and MELD (+8.01%). Our findings\nstress the core of structured CoT training in advancing audio reasoning.\n38.86\n31.5\n41\n34.8\n25.5\n33.1\n39.2\n54.95\n50.98\n42.04\n45.2\n49.9\n56.75\n49.4\n58.55\n48.96\n53.9\n60.06\n64.3\n60.7\n0\n10\n20\n30\n40\n50\n60\n70\nS2TT\nSER\nMMAU-Sound\nMMAU-Music\nMMAU-Speech\nAIRBENCH-Sound\nAIRBENCH-Music\nAIRBENCH-Speech\nwhisperV3-large + Qwen2.5-7B\nAudio-reasoner\nGemini-1.5 pro\nQwen2-Audio-Instruct\nEmoBox\nSALMONN-13B\nBLEU Score / Accuracy\n6.16\n6.28\n5.95\n7.18\n6.99\n6.79\n5.49\n5.06\n6.97\n7.68\n8.05\n8.19\nGPT4 Eval Score\n1.25\n2.50\n3.75\n5.00\n6.25\n7.50\n8.75\n0\n（CoVoST2）\n（MELD）\n（mini）\n（mini）\n（mini）\n（chat）\n（chat）\n（chat）\nFigure 1: Benchmark performance of Audio-Reasoner on tasks of speech emotion recognition (SER),\nspeech-to-text translation (S2TT), MMAU, and AIR-Bench chat. S2TT is measured using BLEU\nwhile SER and MMAU are measured ACC (left axis). AIR-Bench is scored by GPT (right axis).\nTechnical report.\narXiv:2503.02318v1  [cs.SD]  4 Mar 2025\n\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        1. Key visual findings from figures\n- Figure 1 shows the performance of different models on various tasks, with Audio-Reasoner outperforming others by a significant margin.\n\n2. Experimental setup and validation\n- The dataset CoTA consists of 1.2 million reasoning-rich samples.\n- Models were trained using inference scaling principles.\n- The evaluation metrics include BLEU, ACC, and GPT scores.\n\n3. Quantitative findings\n- Audio-Reasoner achieved a 25.42% improvement in MMAU-mini.\n- It improved AIR-Bench chat by 14.57% and MELD by 8.01%.\n\n4. Limitations & Assumptions\n- The dataset may have biases related to the annotation process.\n- Performance may vary across different domains not covered in the benchmark.\n\n5. Domain Impact\n- Theoretically, it advances the field of multimodal reasoning by incorporating audio data.\n- Practically, it can enhance various applications like speech translation and emotion recognition.\n\nBut, I need to make sure that the structured highlights are clear, concise, and follow the required format.\nOkay, so I have this research paper about Audio-Reasoner, which is a large-scale audio language model designed to improve reasoning capabilities in large audio-language models. The user provided the title, abstract, and some figures. They want me to create structured highlights based on specific points: core innovation, technical approach, quantitative findings, limitations, and domain impact.\n\nFirst, I need to understand the key points from the abstract and the figures. The abstract mentions that recent advancements in multimodal reasoning have overlooked the audio modality, so the authors introduced Audio-Reasoner. They created a dataset called CoTA with 1.2 million samples, used inference scaling principles to train the model, and achieved state-of-the-art performance on several benchmarks like MMAU-mini, AIR-Bench chat, and MELD. The figures show performance comparisons across different models, with Audio-Reasoner outperforming others significantly.\n\nNow, for the core innovation, it's about addressing the oversight of the audio modality in multimodal reasoning by introducing Audio-Reasoner with a new dataset and training methodology. That seems straightforward.\n\nThe technical approach should include bullet points. They mention a large-scale, diverse multi-task dataset with 1.2 million samples, using closed-source models for secondary labeling, QA generation, and structured COT process. They also mention inference scaling principles for training. So I can list these as bullet points.\n\nQuantitative findings are given as percentages: 25.42%, 14.57%, and 8.01% improvements on MMAU-mini, AIR-Bench chat, and MELD respectively. I'll list these as numbered points with metrics.\n\nLimitations and assumptions: The dataset might have annotation biases, and performance might vary in domains not covered by the benchmarks. I'll note these as bullet points.\n\nFor domain impact, it's both theoretical and practical. Theoretically, it advances multimodal reasoning by incorporating audio. Practically, it can enhance applications like speech translation and emotion recognition. I'll structure this as two points.\n\nI need to make sure each section is clear, concise, and follows the required format. Also, check that all key metrics and points are included without being too verbose. Maybe I should also ensure that the metrics are correctly placed under quantitative findings and that the figures are referenced properly, like Figure 1.\n\nI think that's a solid plan. Now, I'll structure the highlights accordingly, making sure each part is distinct and follows the user's guidelines.\n</think>\n\n### Structured Highlights for the Research Paper: Audio-Reasoner_Improving_Reasoning_Capability_in_Large_Audio-Language__Models_0eeac8f81e\n\n---\n\n#### 1. **Core Innovation**\n- **Introduction of Audio-Reasoner**: A large-scale audio language model designed to enhance reasoning capabilities in audio-language tasks by addressing the oversight of the audio modality in multimodal reasoning.\n\n---\n\n#### 2. **Technical Approach**\n- **Dataset Development**: Creation of a large-scale, diverse multi-task audio dataset (CoTA) with 1.2 million reasoning-rich samples, featuring simple annotations.\n- **Inference Scaling Principles**: Utilization of closed-source models for secondary labeling, QA generation, and structured COT (Chain of Thought) process.\n- **Training Methodology**: Application of inference scaling principles to train Audio-Reasoner on CoTA, enabling robust logical capabilities in audio reasoning.\n\n---\n\n#### 3. **Quantitative Findings**\n1. **MMAU-mini**: 25.42% improvement in performance.\n2. **AIR-Bench chat**: 14.57% improvement in performance.\n3. **MELD**: 8.01% improvement in performance.\n\n---\n\n#### 4. **Limitations & Assumptions**\n- **Dataset Biases**: Potential annotation biases in Co",
+  "topics": [
+    "audio",
+    "reasoning",
+    "al",
+    "et",
+    "et al",
+    "speech",
+    "arxiv",
+    "reasoner",
+    "audio reasoner",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Audio-Reasoner_Improving_Reasoning_Capability_in_Large_Audio_Language__Models_0eeac8f81e.pdf",
+    "content_hash": "5ac20edfdb57e4bdb857e314be2d237c3d4830dd33847a1e014c6fb4db9f47bb",
+    "arxiv_id": null,
+    "title": "Audio-Reasoner_Improving_Reasoning_Capability_in_Large_Audio_Language__Models_0eeac8f81e",
+    "author": "",
+    "creation_date": "D:20250305050448Z",
+    "published": "2025-03-05T05:04:48",
+    "pages": 27,
+    "size": 2182131,
+    "file_mtime": 1741417037.7558448
+  },
+  "main_staff": {
+    "title": "Audio-Reasoner_Improving_Reasoning_Capability_in_Large_Audio_Language__Models_0eeac8f81e",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent advancements in multimodal reasoning have largely overlooked the audio\nmodality. We introduce Audio-Reasoner, a large-scale audio language model\nfor deep reasoning in audio tasks. We meticulously curated a large-scale and\ndiverse multi-task audio dataset with simple annotations. Then, we leverage closed-\nsource models to conduct secondary labeling, QA generation, along with structured\nCOT process. These datasets together form a high-quality reasoning dataset with\n1.2 million reasoning-rich samples, which we name CoTA. Following inference\nscaling principles, we train Audio-Reasoner on CoTA, enabling it to achieve\ngreat logical capabilities in audio reasoning. Experiments show state-of-the-art\nperformance across key benchmarks, including MMAU-mini (+25.42%), AIR-\nBench chat/foundation(+14.57%/+10.13%), and MELD (+8.01%). Our findings\nstress the core of structured CoT training in advancing audio reasoning.\n38.86\n31.5\n41\n34.8\n25.5\n33.1\n39.2\n54.95\n50.98\n42.04\n45.2\n49.9\n56.75\n49.4\n58.55\n48.96\n53.9\n60.06\n64.3\n60.7\n0\n10\n20\n30\n40\n50\n60\n70\nS2TT\nSER\nMMAU-Sound\nMMAU-Music\nMMAU-Speech\nAIRBENCH-Sound\nAIRBENCH-Music\nAIRBENCH-Speech\nwhisperV3-large + Qwen2.5-7B\nAudio-reasoner\nGemini-1.5 pro\nQwen2-Audio-Instruct\nEmoBox\nSALMONN-13B\nBLEU Score / Accuracy\n6.16\n6.28\n5.95\n7.18\n6.99\n6.79\n5.49\n5.06\n6.97\n7.68\n8.05\n8.19\nGPT4 Eval Score\n1.25\n2.50\n3.75\n5.00\n6.25\n7.50\n8.75\n0\n（CoVoST2）\n（MELD）\n（mini）\n（mini）\n（mini）\n（chat）\n（chat）\n（chat）\nFigure 1: Benchmark performance of Audio-Reasoner on tasks of speech emotion recognition (SER),\nspeech-to-text translation (S2TT), MMAU, and AIR-Bench chat. S2TT is measured using BLEU\nwhile SER and MMAU are measured ACC (left axis). AIR-Bench is scored by GPT (right axis).\nTechnical report.\narXiv:2503.02318v1  [cs.SD]  4 Mar 2025\n\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results validate the effectiveness of our approach in advancing long-context reasoning and inference",
+      "related work",
+      "conclusion and next steps",
+      "experiments",
+      "conclusion",
+      "references",
+      "evaluation of machine translation. in annual meeting of the association for computational",
+      "methodology by first defining the task explicitly, outlining the need for detailed audio descriptions",
+      "results in the <think> section and provide a final reply based on the question. finally, your",
+      "background noise. once the background sound is isolated, i will analyze it in detail to",
+      "background."
+    ],
+    "topics": [
+      "audio",
+      "reasoning",
+      "al",
+      "et",
+      "et al",
+      "speech",
+      "arxiv",
+      "reasoner",
+      "audio reasoner",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

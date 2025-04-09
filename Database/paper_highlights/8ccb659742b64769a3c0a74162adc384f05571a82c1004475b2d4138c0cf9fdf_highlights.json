@@ -1,0 +1,70 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Single-Channel EEG Tokenization Through Time-Frequency Modeling\n        **Abstract**: We introduce TFM-Tokenizer, a novel tokenization framework tai-\nlored for EEG analysis that transforms continuous, noisy brain sig-\nnals into a sequence of discrete, well-represented tokens for various\nEEG tasks. Conventional approaches typically rely on continuous\nembeddings and inter-channel dependencies, which are limited in\ncapturing inherent EEG features such as temporally unpredictable\npatterns and diverse oscillatory waveforms. In contrast, we hy-\npothesize that critical time-frequency features can be effectively\ncaptured from a single channel. By learning tokens that encapsulate\nthese intrinsic patterns within a single channel, our approach yields\na scalable tokenizer adaptable across diverse EEG settings. We inte-\ngrate the TFM-Tokenizer with a transformer-based TFM-Encoder,\nleveraging established pretraining techniques from natural lan-\nguage processing—such as masked token prediction—followed by\ndownstream fine-tuning for various EEG tasks. Experiments across\nfour EEG datasets show that TFM-Token outperforms state-of-the-\nart methods. On TUEV, our approach improves balanced accuracy\nand Cohen’s Kappa by 5% over baselines. Comprehensive analysis\nof the learned tokens demonstrates their ability to capture class-\ndistinctive features, enhance frequency representation, and ability\nto encode time-frequency motifs into distinct tokens, improving\ninterpretability.\nCCS CONCEPTS\n• Computing methodologies →Machine learning approaches;\n• Applied computing →Health care information systems.\nKEYWORDS\nEEG, Tokenization, Deep learning\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n</think>\n\n**Core Innovation:**  \nThe key innovation of TFM-Tokenizer lies in its ability to transform single-channel EEG signals into discrete tokens by focusing on time-frequency features, offering a scalable and adaptable solution for various EEG tasks.\n\n**Technical Approach:**  \n- Leverages time-frequency modeling (TFM) to capture intrinsic patterns in single-channel EEG.  \n- Uses transformer-based architecture for tokenization and encoding, drawing inspiration from NLP techniques.  \n- Implements masked token prediction and fine-tuning for robust performance across diverse datasets.  \n- Enhances interpretability by capturing distinct features and motifs in the data.  \n\n**Quantitative Findings:**  \n1. TFM-Token achieves a 5% improvement in balanced accuracy and Cohen’s Kappa on the TUEV dataset compared to state-of-the-art methods.  \n2. The approach demonstrates superior frequency representation and motif encoding capabilities.  \n3. Comprehensive analysis reveals class-distinguishable features, enhancing interpretability.  \n\n**Limitations & Assumptions:**  \n- Assumes sufficient quality and diversity in the training EEG datasets.  \n- The method may require extensive computational resources for training.  \n- Primarily tested on single-channel data, limiting its application to multi-channel scenarios.  \n\n**Domain Impact:**  \n- Theoretically, TFM-Tokenizer bridges EEG signal analysis with deep learning, opening new avenues for interpreting complex brain signals.  \n- Practically, it provides a robust tool for EEG-based applications like mental health monitoring and brain-computer interfaces, potentially improving diagnostics and user interfaces.",
+  "topics": [
+    "eeg",
+    "tfm",
+    "frequency",
+    "tokenizer",
+    "token",
+    "tfm tokenizer",
+    "tokens",
+    "time",
+    "learning",
+    "encoder"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Single-Channel_EEG_Tokenization_Through_Time-Frequency_Modeling_8ccb659742b64769.pdf",
+    "content_hash": "8ccb659742b64769a3c0a74162adc384f05571a82c1004475b2d4138c0cf9fdf",
+    "arxiv_id": null,
+    "title": "Single-Channel EEG Tokenization Through Time-Frequency Modeling",
+    "author": "Jathurshan Pradeepkumar, Xihao Piao, Zheng Chen, Jimeng Sun",
+    "creation_date": "D:20250225012159Z",
+    "published": "2025-02-25T01:21:59",
+    "pages": 14,
+    "size": 3087104,
+    "file_mtime": 1740972916.905575
+  },
+  "main_staff": {
+    "title": "Single-Channel EEG Tokenization Through Time-Frequency Modeling",
+    "authors": [
+      "Jathurshan Pradeepkumar",
+      " Xihao Piao",
+      " Zheng Chen",
+      " Jimeng Sun"
+    ],
+    "abstract": "We introduce TFM-Tokenizer, a novel tokenization framework tai-\nlored for EEG analysis that transforms continuous, noisy brain sig-\nnals into a sequence of discrete, well-represented tokens for various\nEEG tasks. Conventional approaches typically rely on continuous\nembeddings and inter-channel dependencies, which are limited in\ncapturing inherent EEG features such as temporally unpredictable\npatterns and diverse oscillatory waveforms. In contrast, we hy-\npothesize that critical time-frequency features can be effectively\ncaptured from a single channel. By learning tokens that encapsulate\nthese intrinsic patterns within a single channel, our approach yields\na scalable tokenizer adaptable across diverse EEG settings. We inte-\ngrate the TFM-Tokenizer with a transformer-based TFM-Encoder,\nleveraging established pretraining techniques from natural lan-\nguage processing—such as masked token prediction—followed by\ndownstream fine-tuning for various EEG tasks. Experiments across\nfour EEG datasets show that TFM-Token outperforms state-of-the-\nart methods. On TUEV, our approach improves balanced accuracy\nand Cohen’s Kappa by 5% over baselines. Comprehensive analysis\nof the learned tokens demonstrates their ability to capture class-\ndistinctive features, enhance frequency representation, and ability\nto encode time-frequency motifs into distinct tokens, improving\ninterpretability.\nCCS CONCEPTS\n• Computing methodologies →Machine learning approaches;\n• Applied computing →Health care information systems.\nKEYWORDS\nEEG, Tokenization, Deep learning\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods exhibit limited generalization across tasks and poor scala-",
+      "methods have shown promise [4, 37], they do not scale well to",
+      "related work",
+      "methodology",
+      "experiments and results",
+      "evaluation, we used balanced accuracy, cohen’s kappa coefficient,",
+      "approaches. another advantage of tfm-token is its reduced model",
+      "methods. the retrieval performance, illustrated in figure 3b, shows",
+      "conclusion",
+      "references",
+      "approach for the segmentation of electroencephalography data in eye tracking",
+      "approaches: (1) masked token prediction pretraining followed by",
+      "method",
+      "results shown in table 7 indicate that random masking on the"
+    ],
+    "topics": [
+      "eeg",
+      "tfm",
+      "frequency",
+      "tokenizer",
+      "token",
+      "tfm tokenizer",
+      "tokens",
+      "time",
+      "learning",
+      "encoder"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

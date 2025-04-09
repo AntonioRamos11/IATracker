@@ -1,0 +1,74 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Maybe computational efficiency isn't as high as other methods, or the approach might not capture all nuances of reasoning.",
+    "Domain Impact: Theoretically, it's better for edge devices; practically, it can improve applications like personalization on devices with limited resources.",
+    "I need to structure this into bullet points with equations if needed. I should also think about key figures they might have, like maybe a figure showing improved accuracy or computational efficiency compared to CoT.",
+    "Wait, in the abstract, they mention they attained SOTA, which is state-of-the-art. So maybe a figure comparing their method's performance against others.",
+    "Let me outline each section:"
+  ],
+  "impact": "",
+  "topics": [
+    "reasoning",
+    "rag",
+    "domain",
+    "specific",
+    "cor",
+    "al",
+    "et al",
+    "domain specific",
+    "et",
+    "contexts"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Chain-of-Rank_Enhancing_Large_Language_Models_for_Domain-Specific_RAG__in_Edge_Device_467835f32eefa5c1.pdf",
+    "content_hash": "467835f32eefa5c1375c5f7025165d3f6f06e90d486463a6e67c400015f07c3e",
+    "arxiv_id": null,
+    "title": "Chain-of-Rank_Enhancing_Large_Language_Models_for_Domain-Specific_RAG__in_Edge_Device_467835f32eefa5c1",
+    "author": "",
+    "creation_date": "D:20250224011627Z",
+    "published": "2025-02-24T01:16:27",
+    "pages": 8,
+    "size": 1106455,
+    "file_mtime": 1740973505.1281505
+  },
+  "main_staff": {
+    "title": "Chain-of-Rank_Enhancing_Large_Language_Models_for_Domain-Specific_RAG__in_Edge_Device_467835f32eefa5c1",
+    "authors": [
+      ""
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) with\nlarge language models (LLMs) is especially\nvaluable in specialized domains, where preci-\nsion is critical. To more specialize the LLMs\ninto a target domain, domain-specific RAG has\nrecently been developed by allowing the LLM\nto access the target domain early via finetuning.\nThe domain-specific RAG makes more sense\nin resource-constrained environments like edge\ndevices, as they should perform a specific task\n(e.g. personalization) reliably using only small-\nscale LLMs. While the domain-specific RAG is\nwell-aligned with edge devices in this respect,\nit often relies on widely-used reasoning tech-\nniques like chain-of-thought (CoT). The rea-\nsoning step is useful to understand the given ex-\nternal knowledge, and yet it is computationally\nexpensive and difficult for small-scale LLMs to\nlearn it. Tackling this, we propose the Chain of\nRank (CoR) which shifts the focus from intri-\ncate lengthy reasoning to simple ranking of the\nreliability of input external documents. Then,\nCoR reduces computational complexity while\nmaintaining high accuracy, making it particu-\nlarly suited for resource-constrained environ-\nments. We attain the state-of-the-art (SOTA)",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results in benchmarks, and analyze its efficacy.",
+      "introduction",
+      "related works",
+      "method",
+      "experiments",
+      "evaluation. we set k as 10 for the hotpotqa,",
+      "results). whereas, we see that the proposed cor",
+      "method in terms of the cost for reasoning. to this",
+      "conclusions",
+      "method would be equally effective in more general",
+      "references",
+      "evaluation metric"
+    ],
+    "topics": [
+      "reasoning",
+      "rag",
+      "domain",
+      "specific",
+      "cor",
+      "al",
+      "et al",
+      "domain specific",
+      "et",
+      "contexts"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

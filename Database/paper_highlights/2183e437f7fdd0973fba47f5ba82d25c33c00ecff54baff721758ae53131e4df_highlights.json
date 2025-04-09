@@ -1,0 +1,60 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: FastCuRL_Curriculum_Reinforcement_Learning_with_Progressive_Context__Extension_for_Efficient_Training_R1-like_Reasoning_Models_2183e437f7fdd097\n        **Abstract**: In this paper, we propose FASTCURL, a sim-\nple yet efficient Curriculum Reinforcement\nLearning approach with context window ex-\ntending strategy to accelerate the reinforcement\nlearning training efficiency for R1-like reason-\ning models while enhancing their performance\nin tackling complex reasoning tasks with long\nchain-of-thought rationales, particularly with a\n1.5B parameter language model. FASTCURL\nconsists of two main procedures: length-aware\ntraining data segmentation and context window\nextension training. Specifically, the former first\nsplits the original training data into three differ-\nent levels by the input prompt length, and then\nthe latter leverages segmented training datasets\nwith a progressively increasing context window\nlength to train the reasoning model. Experimen-\ntal results demonstrate that FASTCURL-1.5B-\nPreview surpasses DeepScaleR-1.5B-Preview\nacross all five datasets (including MATH 500,\nAIME 2024, AMC 2023, Minerva Math, and\nOlympiadBench) while only utilizing 50% of\ntraining steps. Furthermore, all training stages\nfor FASTCURL-1.5B-Preview are completed\nusing a single node with 8 GPUs. The code1,\ndataset2, and model checkpoints3 are released.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, include any key citations.\n</think>\n\n**Core Innovation**: The paper introduces FASTCURL, a Curriculum Reinforcement Learning (CRL) approach optimized for training large language models, particularly R1-like models, by enhancing training efficiency through progressive context window extension.\n\n**Technical Approach**:\n- Segments training data based on input prompt lengths into three distinct levels.\n- Implements a context window extension strategy, progressively increasing the context window during training.\n\n**Quantitative Findings**:\n1. Achieves higher performance across five datasets, including MATH 500, AIME 2024, AMC 2023, Minerva Math, and OlympiadBench.\n2. Requires only 50% of the training steps compared to DeepScaleR-1.5B-Preview.\n3. Trains efficiently using a single node with 8 GPUs.\n\n**Limitations & Assumptions**:\n- The effectiveness is demonstrated on specific datasets; broader applicability needs validation.\n- The model's performance may vary with different architectures or tasks.\n\n**Domain Impact**: Theoretically, this approach optimizes resource usage, practically offering faster training with comparable or superior performance, impacting the field of efficient training strategies for reasoning models.",
+  "topics": [
+    "training",
+    "reasoning",
+    "model",
+    "long",
+    "5b",
+    "length",
+    "context",
+    "models",
+    "stage",
+    "math"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/FastCuRL_Curriculum_Reinforcement_Learning_with_Progressive_Context__Extension_for_Efficient_Training_R1-like_Reasoning_Models_2183e437f7fdd097.pdf",
+    "content_hash": "2183e437f7fdd0973fba47f5ba82d25c33c00ecff54baff721758ae53131e4df",
+    "arxiv_id": null,
+    "title": "FastCuRL_Curriculum_Reinforcement_Learning_with_Progressive_Context__Extension_for_Efficient_Training_R1-like_Reasoning_Models_2183e437f7fdd097",
+    "author": "",
+    "creation_date": "D:20250324010155Z",
+    "published": "2025-03-24T01:01:55",
+    "pages": 8,
+    "size": 3364435,
+    "file_mtime": 1742789611.7170966
+  },
+  "main_staff": {
+    "title": "FastCuRL_Curriculum_Reinforcement_Learning_with_Progressive_Context__Extension_for_Efficient_Training_R1-like_Reasoning_Models_2183e437f7fdd097",
+    "authors": [
+      ""
+    ],
+    "abstract": "In this paper, we propose FASTCURL, a sim-\nple yet efficient Curriculum Reinforcement\nLearning approach with context window ex-\ntending strategy to accelerate the reinforcement\nlearning training efficiency for R1-like reason-\ning models while enhancing their performance\nin tackling complex reasoning tasks with long\nchain-of-thought rationales, particularly with a\n1.5B parameter language model. FASTCURL\nconsists of two main procedures: length-aware\ntraining data segmentation and context window\nextension training. Specifically, the former first\nsplits the original training data into three differ-\nent levels by the input prompt length, and then\nthe latter leverages segmented training datasets\nwith a progressively increasing context window\nlength to train the reasoning model. Experimen-\ntal results demonstrate that FASTCURL-1.5B-\nPreview surpasses DeepScaleR-1.5B-Preview\nacross all five datasets (including MATH 500,\nAIME 2024, AMC 2023, Minerva Math, and\nOlympiadBench) while only utilizing 50% of\ntraining steps. Furthermore, all training stages\nfor FASTCURL-1.5B-Preview are completed\nusing a single node with 8 GPUs. The code1,\ndataset2, and model checkpoints3 are released.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology",
+      "evaluation setup",
+      "results",
+      "discussion",
+      "conclusions",
+      "results demonstrate that fastcurl-1.5b-preview",
+      "references"
+    ],
+    "topics": [
+      "training",
+      "reasoning",
+      "model",
+      "long",
+      "5b",
+      "length",
+      "context",
+      "models",
+      "stage",
+      "math"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

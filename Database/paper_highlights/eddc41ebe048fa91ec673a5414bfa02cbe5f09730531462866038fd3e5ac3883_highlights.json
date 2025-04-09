@@ -1,0 +1,93 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** The method may not capture all types of textual relationships, and the reliance on keyword relevance could limit its effectiveness in certain contexts.",
+    "**Assumptions:** The approach assumes that legal cases can be meaningfully compared structurally and that textual relationships are crucial for relevance.",
+    "**Domain-Specific Challenges:** The method may struggle with cases that have unique legal frameworks or precedents not captured by keywords.",
+    "",
+    "### **Domain Impact:**",
+    "**Theoretical Contribution:** Advances the field of legal information retrieval by integrating textual and structural data.",
+    "**Practical Impact:** Enhances the accuracy of case retrieval for law firms, judicial systems, and legal research, aiding in efficient legal research and training.",
+    "",
+    "### **Key Equations/Figures:**",
+    "**Graph-Based Model:** The system uses a graph structure to represent case relationships, with nodes as cases and edges as structural similarities.",
+    "**Similarity Measure:** The similarity between cases is calculated using a combination of textual and structural features, potentially employing equations like:",
+    "\\[",
+    "\\text{Similarity}(C_i, C_j) = \\alpha \\cdot \\text{TextualSimilarity}(C_i, C_j) + \\beta \\cdot \\text{StructuralSimilarity}(C_i, C_j)",
+    "\\]",
+    "where \\(\\alpha\\) and \\(\\beta\\) are weights assigned to textual and structural components, respectively.",
+    "",
+    "This structured approach highlights the key aspects of the research paper, providing a clear and concise overview of the innovation, methodology, and impact."
+  ],
+  "impact": "** Enhances the accuracy of case retrieval for law firms, judicial systems, and legal research, aiding in efficient legal research and training.\n\n---\n\n### **Key Equations/Figures:**\n- **Graph-Based Model:** The system uses a graph structure to represent case relationships, with nodes as cases and edges as structural similarities.\n- **Similarity Measure:** The similarity between cases is calculated using a combination of textual and structural features, potentially employing equations like:\n  \\[\n  \\text{Similarity}(C_i, C_j) = \\alpha \\cdot \\text{TextualSimilarity}(C_i, C_j) + \\beta \\cdot \\text{StructuralSimilarity}(C_i, C_j)\n  \\]\n  where \\(\\alpha\\) and \\(\\beta\\) are weights assigned to textual and structural components, respectively.\n\n---\n\nThis structured approach highlights the key aspects of the research paper, providing a clear and concise overview of the innovation, methodology, and impact.",
+  "topics": [
+    "legal",
+    "lcm",
+    "law",
+    "lcm lai",
+    "lai",
+    "case",
+    "article",
+    "task",
+    "cases",
+    "matching"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/How_Vital_is_the_Jurisprudential_Relevance_Law_Article_Intervened_Legal__Case_Retrieval_and_Matching_eddc41ebe048fa91.pdf",
+    "content_hash": "eddc41ebe048fa91ec673a5414bfa02cbe5f09730531462866038fd3e5ac3883",
+    "arxiv_id": null,
+    "title": "How Vital is the Jurisprudential Relevance: Law Article Intervened Legal Case Retrieval and Matching",
+    "author": "",
+    "creation_date": "D:20250226015703Z",
+    "published": "2025-02-26T01:57:03",
+    "pages": 32,
+    "size": 3345503,
+    "file_mtime": 1740971133.1400948
+  },
+  "main_staff": {
+    "title": "How Vital is the Jurisprudential Relevance: Law Article Intervened Legal Case Retrieval and Matching",
+    "authors": [
+      ""
+    ],
+    "abstract": "1\nHow Vital is the Jurisprudential Relevance: Law Article\nIntervened Legal Case Retrieval and Matching\nNUO XU and PINGHUI WANG∗, MOE KLINNS Lab, Xi’an Jiaotong University, China\nZI LIANG, MOE KLINNS Lab, Xi’an Jiaotong University, China\nJUNZHOU ZHAO, MOE KLINNS Lab, Xi’an Jiaotong University, China\nXIAOHONG GUAN, MOE KLINNS Lab, Xi’an Jiaotong University, China; China and Department of\nAutomation and NLIST Lab, Tsinghua University, China\nLegal case retrieval (LCR) aims to automatically scour for",
+    "sections": [
+      "unknown",
+      "results demonstrate that lcm-lai achieves state-of-the-art performance.",
+      "abstracting with credit is permitted. to copy otherwise, or republish, to post on servers or to redistribute to lists, requires",
+      "introduction",
+      "conclusions in cases. this means that, from the perspective of real-world judicial procedures, similar",
+      "results are in sec. 5. some discussion and conclusion remarks then follow.",
+      "related work",
+      "methodology",
+      "method mentioned in [57] that uses the output of the [cls] token of a bert model pre-trained",
+      "method more commonly utilized in ljp. this enables us to capture a comprehensive range of",
+      "experiments",
+      "evaluation metrics. for different tasks, we introduce the selected suitable labels for perfor-",
+      "discussion of vertical association. we correlated the results of lcr & lcm tasks longitu-",
+      "methods",
+      "conclusions:",
+      "discussion 1: whether lcm-lai benefits from fine-grained",
+      "experiments to discuss whether our lcm-lai model is similarly able to benefit from these additional",
+      "discussion 2: generalizability and limitations",
+      "experiments on chinese legal data: 1) the chinese legal system can effectively represent the civil",
+      "conclusion and future work",
+      "references"
+    ],
+    "topics": [
+      "legal",
+      "lcm",
+      "law",
+      "lcm lai",
+      "lai",
+      "case",
+      "article",
+      "task",
+      "cases",
+      "matching"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

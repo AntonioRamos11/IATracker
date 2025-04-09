@@ -1,0 +1,58 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: More_Documents_Same_Length_Isolating_the_Challenge_of_Multiple__Documents_in_RAG_a1710346a0\n        **Abstract**: Retrieval-augmented generation (RAG) pro-\nvides LLMs with relevant documents.\nAl-\nthough previous studies noted that retrieving\nmany documents can degrade performance,\nthey did not isolate how the quantity of doc-\numents affects performance while controlling\nfor context length. We evaluate various lan-\nguage models on custom datasets derived from\na multi-hop QA task. We keep the context\nlength and position of relevant information con-\nstant while varying the number of documents,\nand find that increasing the document count in\nRAG settings poses significant challenges for\nLLMs. Additionally, our results indicate that\nprocessing multiple documents is a separate\nchallenge from handling long contexts. We\nalso make the datasets and code available1 to\nfacilitate further research in multi-document\nretrieval.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe paper introduces a systematic evaluation of retrieval-augmented generation (RAG) models by varying the number of documents while keeping the context length and information position constant. This controlled approach isolates the challenge of handling multiple documents, providing insights into how document quantity affects performance.\n\n#### 2. Technical Approach\n- **Custom Datasets**: Derived from a multi-hop QA task, designed to maintain consistent context length and information position.\n- **Controlled Variables**: Varying the number of retrieved documents while keeping other factors constant to isolate document quantity effects.\n- **Language Models Tested**: Includes various models, though specific names are not mentioned.\n- **Open Science**: Datasets and code are made publicly available for further research.\n\n#### 3. Quantitative Findings\n1. **Performance Degradation**: Results show a significant decline in performance as the number of documents increases.\n2. **Context Length Impact**: The findings demonstrate that the challenge of handling multiple documents is distinct from managing long contexts.\n3. **Open Science Contribution**: Availability of datasets and code aids reproducibility and further research.\n\n#### 4. Limitations & Assumptions\n- **Assumption of Independence**: The study assumes that document quantity's impact is independent of context length.\n- **Limited Models Tested**: Only specific models were evaluated; broader applicability may vary.\n- **Controlled Variables**: By keeping other factors constant, the study isolates document quantity effects but may not capture real-world variability.\n\n#### 5. Domain Impact\n- **Theoretical Insight**: Highlights the need for better mechanisms to handle multiple documents in RAG systems.\n- **Practical Implications**: The findings are crucial for improving QA systems, especially in scenarios with abundant but relevant information.\n- **Open Science Benefit**: Encourages further research and model development focused on multi-document retrieval.\n\n### Key Equations/Figures\nWhile specific figures are not detailed, the study likely includes metrics such as accuracy rates across different document counts, which are crucial for quantifying performance degradation. The experiments likely involve statistical tests to validate the observed effects, though specific equations are not provided.",
+  "topics": [
+    "documents",
+    "document",
+    "number",
+    "multi",
+    "question",
+    "models",
+    "context",
+    "al",
+    "performance",
+    "et al"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/More_Documents_Same_Length_Isolating_the_Challenge_of_Multiple__Documents_in_RAG_a1710346a0.pdf",
+    "content_hash": "b1d75ba1a145cd5501917d8655c8382eb3aa8ce3eebcf6f1ccb13d0dbb1bb5d7",
+    "arxiv_id": null,
+    "title": "More_Documents_Same_Length_Isolating_the_Challenge_of_Multiple__Documents_in_RAG_a1710346a0",
+    "author": "",
+    "creation_date": "D:20250307014758Z",
+    "published": "2025-03-07T01:47:58",
+    "pages": 5,
+    "size": 723064,
+    "file_mtime": 1741416536.4498305
+  },
+  "main_staff": {
+    "title": "More_Documents_Same_Length_Isolating_the_Challenge_of_Multiple__Documents_in_RAG_a1710346a0",
+    "authors": [
+      ""
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) pro-\nvides LLMs with relevant documents.\nAl-\nthough previous studies noted that retrieving\nmany documents can degrade performance,\nthey did not isolate how the quantity of doc-\numents affects performance while controlling\nfor context length. We evaluate various lan-\nguage models on custom datasets derived from\na multi-hop QA task. We keep the context\nlength and position of relevant information con-\nstant while varying the number of documents,\nand find that increasing the document count in\nRAG settings poses significant challenges for\nLLMs. Additionally, our results indicate that\nprocessing multiple documents is a separate\nchallenge from handling long contexts. We\nalso make the datasets and code available1 to\nfacilitate further research in multi-document\nretrieval.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation",
+      "results: adding documents can hurt",
+      "results are shown in table 1.",
+      "conclusions",
+      "references"
+    ],
+    "topics": [
+      "documents",
+      "document",
+      "number",
+      "multi",
+      "question",
+      "models",
+      "context",
+      "al",
+      "performance",
+      "et al"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

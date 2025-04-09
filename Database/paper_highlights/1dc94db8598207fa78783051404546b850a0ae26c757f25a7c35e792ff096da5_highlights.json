@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Are_Large_Vision_Language_Models_Good_Game_Players_ccc2ab9f05\n        **Abstract**: Large Vision Language Models (LVLMs) have demonstrated remarkable abili-\nties in understanding and reasoning about both visual and textual information.\nHowever, existing evaluation methods for LVLMs, primarily based on bench-\nmarks like Visual Question Answering and image captioning, often fail to cap-\nture the full scope of LVLMs’ capabilities. These benchmarks are limited by\nissues such as inadequate assessment of detailed visual perception, data contami-\nnation, and a lack of focus on multi-turn reasoning. To address these challenges,\nwe propose LVLM-Playground, a game-based evaluation framework designed to\nprovide a comprehensive assessment of LVLMs’ cognitive and reasoning skills\nin structured environments. LVLM-Playground uses a set of games to evaluate\nLVLMs on four core tasks: Perceiving, Question Answering, Rule Following,\nand End-to-End Playing, with each target task designed to assess specific abili-\nties, including visual perception, reasoning, decision-making, etc. Based on this\nframework, we conduct extensive experiments that explore the limitations of cur-\nrent LVLMs, such as handling long structured outputs and perceiving detailed and\ndense elements. Code and data are publicly available at https://github.com/xinke-\nwang/LVLM-Playground.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n**Structured Highlights for Research Paper: \"Are Large Vision Language Models Good Game Players?\"**\n\n---\n\n### **1. Core Innovation**\nLarge Vision Language Models (LVLMs) demonstrate exceptional abilities in understanding and reasoning with both visual and textual data. However, existing evaluation methods fall short by not capturing the full range of LVLM capabilities, particularly in structured environments. The research introduces **LVLM-Playground**, a game-based evaluation framework designed to assess LVLMs across four core tasks: **Perceiving**, **Question Answering**, **Rule Following**, and **End-to-End Playing**. Each task evaluates distinct cognitive and reasoning skills, including visual perception, reasoning, decision-making, and structured output handling.\n\n---\n\n### **2. Technical Approach**\n- **Game-Based Framework**: LVLM-Playground employs a set of games to simulate structured environments, providing a comprehensive evaluation of LVLMs' capabilities.\n- **Four Core Tasks**:\n  - **Perceiving**: Assesses visual perception of detailed and dense elements.\n  - **Question Answering**: Evaluates the model's ability to generate structured responses.\n  - **Rule Following**: Tests reasoning and decision-making skills.\n  - **End-to-End Playing**: Assesses the model's ability to handle multi-turn reasoning and structured tasks.\n- **Public Availability**: Code and data are accessible at [https://github.com/xinke-wang/LVLM-Playground](https://github.com/xinke-wang/LVLM-Playground).\n\n---\n\n### **3. Quantitative Findings**\n- **Perceived Limitations**:\n  1. **Long Structured Outputs**: Current LVLMs struggle with generating extended responses.\n  2. **Detailed Visual Elements**: Models have difficulty processing intricate visual information.\n  3. **Multi-Turn Reasoning**: LVLMs show limitations in sustained reasoning and decision-making.\n\n---\n\n### **4. Limitations & Assumptions**\n- **Limitations**:\n  - LVLMs may lack robust handling of complex structured tasks.\n  - The evaluation framework may not cover all aspects of LVLM capabilities.\n  - Current experiments focus on specific tasks without broader applicability.\n- **Assumptions**:\n  - LVLMs are primarily evaluated through predefined tasks.\n  - The framework assumes structured environments for evaluation.\n\n---\n\n### **5. Domain Impact (Theoretical/Practical)**\n- **Theoretical Impact**: The framework provides a new benchmark for evaluating LVLMs' reasoning and decision-making skills in structured environments, offering a more holistic assessment than current methods.\n- **Practical Impact**: By addressing limitations in handling structured outputs and visual perception, LVLM-Playground paves the way for more realistic applications, such as interactive systems and multi-turn reasoning tasks. The availability of code and data ensures reproducibility and further research opportunities.\n\n--- \n\nThis structured approach highlights the key innovations and contributions of the research, providing a clear and organized summary of the study's findings and implications.",
+  "topics": [
+    "game",
+    "question",
+    "board",
+    "task",
+    "row",
+    "games",
+    "al",
+    "et",
+    "et al",
+    "pieces"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Are_Large_Vision_Language_Models_Good_Game_Players_ccc2ab9f05.pdf",
+    "content_hash": "1dc94db8598207fa78783051404546b850a0ae26c757f25a7c35e792ff096da5",
+    "arxiv_id": null,
+    "title": "Are_Large_Vision_Language_Models_Good_Game_Players_ccc2ab9f05",
+    "author": "",
+    "creation_date": "D:20250305013901Z",
+    "published": "2025-03-05T01:39:01",
+    "pages": 38,
+    "size": 2680991,
+    "file_mtime": 1741419979.02007
+  },
+  "main_staff": {
+    "title": "Are_Large_Vision_Language_Models_Good_Game_Players_ccc2ab9f05",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large Vision Language Models (LVLMs) have demonstrated remarkable abili-\nties in understanding and reasoning about both visual and textual information.\nHowever, existing evaluation methods for LVLMs, primarily based on bench-\nmarks like Visual Question Answering and image captioning, often fail to cap-\nture the full scope of LVLMs’ capabilities. These benchmarks are limited by\nissues such as inadequate assessment of detailed visual perception, data contami-\nnation, and a lack of focus on multi-turn reasoning. To address these challenges,\nwe propose LVLM-Playground, a game-based evaluation framework designed to\nprovide a comprehensive assessment of LVLMs’ cognitive and reasoning skills\nin structured environments. LVLM-Playground uses a set of games to evaluate\nLVLMs on four core tasks: Perceiving, Question Answering, Rule Following,\nand End-to-End Playing, with each target task designed to assess specific abili-\nties, including visual perception, reasoning, decision-making, etc. Based on this\nframework, we conduct extensive experiments that explore the limitations of cur-\nrent LVLMs, such as handling long structured outputs and perceiving detailed and\ndense elements. Code and data are publicly available at https://github.com/xinke-\nwang/LVLM-Playground.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "evaluation for lvlms",
+      "evaluation burden due to the large number of datasets and tasks. in comparison, the proposed lvlm-",
+      "evaluation: tic tac toe involves two players taking turns to place their marks on a 3 × 3 grid, with",
+      "evaluations",
+      "experiments",
+      "results and findings",
+      "conclusion",
+      "references",
+      "approach ensures a fair and consistent evaluation across all models."
+    ],
+    "topics": [
+      "game",
+      "question",
+      "board",
+      "task",
+      "row",
+      "games",
+      "al",
+      "et",
+      "et al",
+      "pieces"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

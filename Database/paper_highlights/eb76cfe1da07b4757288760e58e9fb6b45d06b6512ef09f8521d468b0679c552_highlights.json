@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: FRIDA_to_the_Rescue_Analyzing_Synthetic_Data_Effectiveness_in__Object-Based_Common_Sense_Reasoning_for_Disaster_Response_eb76cfe1da07b475\n        **Abstract**: Large Language Models (LLMs) have the po-\ntential for substantial common sense reasoning.\nHowever, these capabilities are often emergent\nin larger models. This means smaller models\nthat can be run locally are less helpful and ca-\npable with respect to certain reasoning tasks.\nTo meet our problem space requirements, we\nfine-tune smaller LLMs to disaster domains,\nas these domains involve complex and low-\nfrequency physical common sense knowledge.\nWe introduce a pipeline to create Field Ready\nInstruction Decoding Agent (FRIDA) models,\nwhere domain experts and linguists combine\ntheir knowledge to make high-quality seed data\nthat is used to generate synthetic data for fine-\ntuning. We create a set of 130 seed instructions\nfor synthetic generation, a synthetic dataset of\n25000 instructions, and 119 evaluation instruc-\ntions relating to both general and earthquake-\nspecific object affordances. We fine-tune sev-\neral LLaMa and Mistral instruction-tuned mod-\nels and find that FRIDA models outperform\ntheir base models at a variety of sizes. We\nthen run an ablation study to understand which\nkinds of synthetic data most affect performance\nand find that training physical state and object\nfunction common sense knowledge alone im-\nproves over FRIDA models trained on all data.\nWe conclude that the FRIDA pipeline is capable\nof instilling general common sense, but needs\nto be augmented with information retrieval for\nspecific domain knowledge.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\nOkay, so I need to create structured highlights for the given research paper. The user provided the title, abstract, and specific requirements for the format. Let me break this down step by step.\n\nFirst, the paper's title is \"FRIDA_to_the_Rescue_Analyzing_Synthetic_Data_Effectiveness_in_Object-Based_Common_Sense_Reasoning_for_Disaster_Response\". The abstract discusses using smaller models for disaster response, specifically earthquake preparedness. They mention creating FRIDA models by combining expert knowledge and linguists, fine-tuning them, and evaluating their performance.\n\nThe key areas to focus on are: core innovation, technical approach, quantitative findings, limitations, and domain impact.\n\nStarting with the core innovation: The paper introduces FRIDA models, which are field-ready instruction decoding agents. They use a pipeline combining domain experts and linguists to generate synthetic data, which is then used to fine-tune smaller LLMs for disaster response. This seems to be the main contribution.\n\nNext, the technical approach. They used specific LLaMa and Mistral models, fine-tuned them with synthetic data, and evaluated their performance. They created 130 seed instructions, a dataset of 25,000 instructions, and 119 evaluation instructions. They also did an ablation study focusing on physical state and object function knowledge.\n\nFor quantitative findings, the results showed that FRIDA models outperformed base models across different sizes. The ablation study indicated that focusing on physical state and function improved performance. They also mention limitations in their study, like the need for information retrieval for specific domain knowledge.\n\nIn the domain impact, this approach is theoretically valuable for disaster response and practically useful for creating scalable models that can handle real-world scenarios without large computational resources.\n\nI need to make sure each section is concise, using bullet points where needed, and highlight the key metrics and findings. Also, ensure that the language is clear and follows the required structure.\n\nI should also consider if there are any equations or figures mentioned. The abstract doesn't specify any key metrics beyond performance comparisons, but if there were figures, they should be noted here. Since the abstract doesn't include specific numbers beyond the ablation results, I'll focus on the qualitative findings there.\n\nOverall, the goal is to present the paper's contributions and findings in a structured, easy-to-understand format that highlights the main points without getting too detailed.\n</think>\n\n**Structured Highlights for the Research Paper**\n\n---\n\n### **1. Core Innovation**\nThe research introduces **FRIDA (Field Ready Instruction Decoding Agent)**, a novel pipeline designed to enhance smaller language models' common sense reasoning in disaster response scenarios. By integrating domain expertise and linguistic knowledge, FRIDA models are engineered to effectively process synthetic data for tasks like earthquake preparedness.\n\n---\n\n### **2. Technical Approach**\n- **Model Selection**: Fine-tuned using LLaMa and Mistral instruction-tuned models.\n- **Data Creation**: \n  - **Seed Instructions**: 130 tailored for synthetic generation.\n  - **Synthetic Dataset**: 25,000 instructions.\n  - **Evaluation Instructions**: 119 focused on general and earthquake-specific object affordances.\n- **Evaluation**: Compared performance across model sizes and conducted an ablation study focusing on physical state and object function knowledge.\n\n---\n\n### **3. Quantitative Findings**\n- **Performance Improvement**: FRIDA models outperformed base models across various sizes.\n- **Ablation Study**: Models trained solely on physical state and object function knowledge showed enhanced performance compared to comprehensive training.\n\n---\n\n### **4. Limitations & Assumptions**\n- **Assumption**: The study assumes that synthetic data can sufficiently mimic real-world scenarios.\n- **Limitation**: Requires additional domain-specific information retrieval for enhanced accuracy in specialized disaster response contexts.\n\n---\n\n### **5. Domain Impact**\n- **Theoretical Significance**: Advances understanding of leveraging synthetic data for common sense reasoning in disaster response.\n- **Practical Relevance**: Offers a scalable solution for creating efficient, domain-specific models without large computational resources.\n\n---\n\nThis structured approach highlights the paper's core contributions, methodology, and implications, providing a clear overview of the research's strengths and applications.",
+  "topics": [
+    "models",
+    "data",
+    "frida",
+    "object",
+    "synthetic",
+    "fine",
+    "objects",
+    "afrida",
+    "instruction",
+    "8b"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/FRIDA_to_the_Rescue_Analyzing_Synthetic_Data_Effectiveness_in__Object-Based_Common_Sense_Reasoning_for_Disaster_Response_eb76cfe1da07b475.pdf",
+    "content_hash": "eb76cfe1da07b4757288760e58e9fb6b45d06b6512ef09f8521d468b0679c552",
+    "arxiv_id": null,
+    "title": "FRIDA_to_the_Rescue_Analyzing_Synthetic_Data_Effectiveness_in__Object-Based_Common_Sense_Reasoning_for_Disaster_Response_eb76cfe1da07b475",
+    "author": "",
+    "creation_date": "D:20250226020926Z",
+    "published": "2025-02-26T02:09:26",
+    "pages": 13,
+    "size": 1847137,
+    "file_mtime": 1740971029.1795819
+  },
+  "main_staff": {
+    "title": "FRIDA_to_the_Rescue_Analyzing_Synthetic_Data_Effectiveness_in__Object-Based_Common_Sense_Reasoning_for_Disaster_Response_eb76cfe1da07b475",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large Language Models (LLMs) have the po-\ntential for substantial common sense reasoning.\nHowever, these capabilities are often emergent\nin larger models. This means smaller models\nthat can be run locally are less helpful and ca-\npable with respect to certain reasoning tasks.\nTo meet our problem space requirements, we\nfine-tune smaller LLMs to disaster domains,\nas these domains involve complex and low-\nfrequency physical common sense knowledge.\nWe introduce a pipeline to create Field Ready\nInstruction Decoding Agent (FRIDA) models,\nwhere domain experts and linguists combine\ntheir knowledge to make high-quality seed data\nthat is used to generate synthetic data for fine-\ntuning. We create a set of 130 seed instructions\nfor synthetic generation, a synthetic dataset of\n25000 instructions, and 119 evaluation instruc-\ntions relating to both general and earthquake-\nspecific object affordances. We fine-tune sev-\neral LLaMa and Mistral instruction-tuned mod-\nels and find that FRIDA models outperform\ntheir base models at a variety of sizes. We\nthen run an ablation study to understand which\nkinds of synthetic data most affect performance\nand find that training physical state and object\nfunction common sense knowledge alone im-\nproves over FRIDA models trained on all data.\nWe conclude that the FRIDA pipeline is capable\nof instilling general common sense, but needs\nto be augmented with information retrieval for\nspecific domain knowledge.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "background",
+      "methods",
+      "evaluation",
+      "evaluations. additionally, semscore was tested",
+      "results",
+      "evaluation templates than the model “mafrida",
+      "discussion",
+      "related work",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "models",
+      "data",
+      "frida",
+      "object",
+      "synthetic",
+      "fine",
+      "objects",
+      "afrida",
+      "instruction",
+      "8b"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

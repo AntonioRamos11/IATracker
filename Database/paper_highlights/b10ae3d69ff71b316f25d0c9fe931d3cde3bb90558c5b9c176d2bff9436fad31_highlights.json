@@ -1,0 +1,69 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: DocPuzzle_A_Process-Aware_Benchmark_for_Evaluating_Realistic__Long-Context_Reasoning_Capabilities_b10ae3d69ff71b31\n        **Abstract**: We present DocPuzzle, a rigorously con-\nstructed benchmark for evaluating long-context\nreasoning capabilities in large language mod-\nels (LLMs). This benchmark comprises 100\nexpert-level QA problems requiring multi-step\nreasoning over long real-world documents. To\nensure the task quality and complexity, we im-\nplement a human-AI collaborative annotation-\nvalidation pipeline.\nDocPuzzle introduces\nan innovative evaluation framework that miti-\ngates guessing bias through checklist-guided\nprocess analysis, establishing new standards\nfor assessing reasoning capacities in LLMs.\nOur evaluation results show that:\n1) Ad-\nvanced slow-thinking reasoning models like\no1-preview (69.7%) and DeepSeek-R1 (66.3%)\nsignificantly outperform best general instruct\nmodels like Claude 3.5 Sonnet (57.7%); 2) Dis-\ntilled reasoning models like DeepSeek-R1-\nDistill-Qwen-32B (41.3%) falls far behind the\nteacher model, suggesting challenges to main-\ntain the generalization of reasoning capabilities\nrelying solely on distillation.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n**DocPuzzle: A Process-Aware Benchmark for Evaluating Realistic Long-Context Reasoning Capabilities**\n\n---\n\n### 1. Core Innovation\nDocPuzzle is a benchmark designed to evaluate large language models' (LLMs) long-context reasoning capabilities by presenting 100 expert-level QA problems that require multi-step reasoning over real-world documents. The benchmark incorporates a human-AI collaborative annotation and validation pipeline to ensure task quality and complexity.\n\n---\n\n### 2. Technical Approach\n- **Multi-step Reasoning**: Problems involve multiple steps of reasoning, requiring models to analyze and synthesize information from extended contexts.\n- **Real-world Documents**: Questions are based on diverse documents, ensuring the evaluation is relevant to real-world scenarios.\n- **Human-AI Pipeline**: Annotation is done collaboratively between humans and AI to validate the quality and difficulty of the tasks.\n- **Checklist-guided Process Analysis**: An evaluation framework that mitigates guessing bias by guiding the analysis through a checklist.\n\n---\n\n### 3. Quantitative Findings\n1. Advanced slow-thinking models (e.g., o1-preview, DeepSeek-R1) achieve **69.7% and 66.3% accuracy**, respectively, outperforming Claude 3.5 Sonnet's **57.7%**.\n2. Distilled reasoning models (e.g., DeepSeek-R1-Distill-Qwen-32B) achieve **41.3% accuracy**, significantly underperforming the teacher model, highlighting challenges in maintaining reasoning capabilities through distillation alone.\n\n---\n\n### 4. Limitations & Assumptions\n- **Assumption**: The benchmark assumes that multi-step reasoning tasks are representative of real-world reasoning demands.\n- **Limitations**: The evaluation focuses on accuracy but does not account for computational efficiency or reasoning process complexity.\n- **Human Error**: Annotation accuracy may be affected by human bias or variability in validation processes.\n- **Distillation Challenges**: The benchmark highlights limitations in distillation methods for preserving reasoning capabilities.\n\n---\n\n### 5. Domain Impact\n- **Theoretical**: DocPuzzle contributes to understanding how LLMs handle long-context reasoning, offering insights into model architectures and training methods.\n- **Practical**: The benchmark provides a standardized framework for evaluating and improving LLMs' reasoning capabilities, aiding developers in addressing real-world information processing challenges.\n\n---",
+  "topics": [
+    "reasoning",
+    "2024",
+    "al",
+    "et al",
+    "et",
+    "answer",
+    "long",
+    "context",
+    "models",
+    "evaluation"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/DocPuzzle_A_Process-Aware_Benchmark_for_Evaluating_Realistic__Long-Context_Reasoning_Capabilities_b10ae3d69ff71b31.pdf",
+    "content_hash": "b10ae3d69ff71b316f25d0c9fe931d3cde3bb90558c5b9c176d2bff9436fad31",
+    "arxiv_id": null,
+    "title": "DocPuzzle_A_Process-Aware_Benchmark_for_Evaluating_Realistic__Long-Context_Reasoning_Capabilities_b10ae3d69ff71b31",
+    "author": "",
+    "creation_date": "D:20250226012206Z",
+    "published": "2025-02-26T01:22:06",
+    "pages": 11,
+    "size": 529705,
+    "file_mtime": 1740971457.083345
+  },
+  "main_staff": {
+    "title": "DocPuzzle_A_Process-Aware_Benchmark_for_Evaluating_Realistic__Long-Context_Reasoning_Capabilities_b10ae3d69ff71b31",
+    "authors": [
+      ""
+    ],
+    "abstract": "We present DocPuzzle, a rigorously con-\nstructed benchmark for evaluating long-context\nreasoning capabilities in large language mod-\nels (LLMs). This benchmark comprises 100\nexpert-level QA problems requiring multi-step\nreasoning over long real-world documents. To\nensure the task quality and complexity, we im-\nplement a human-AI collaborative annotation-\nvalidation pipeline.\nDocPuzzle introduces\nan innovative evaluation framework that miti-\ngates guessing bias through checklist-guided\nprocess analysis, establishing new standards\nfor assessing reasoning capacities in LLMs.\nOur evaluation results show that:\n1) Ad-\nvanced slow-thinking reasoning models like\no1-preview (69.7%) and DeepSeek-R1 (66.3%)\nsignificantly outperform best general instruct\nmodels like Claude 3.5 Sonnet (57.7%); 2) Dis-\ntilled reasoning models like DeepSeek-R1-\nDistill-Qwen-32B (41.3%) falls far behind the\nteacher model, suggesting challenges to main-\ntain the generalization of reasoning capabilities\nrelying solely on distillation.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation. a sample in docpuzzle consists of a",
+      "related works",
+      "evaluation",
+      "evaluation results",
+      "evaluation bias, we restrict questions to objective",
+      "evaluation method",
+      "experiments",
+      "conclusions",
+      "evaluation method is also proposed to better eval-",
+      "references",
+      "evaluation prompt 1",
+      "evaluation criteria:",
+      "evaluation prompt 2",
+      "evaluation result:\" and strictly output the final",
+      "evaluation prompt 3",
+      "evaluation outcome:\" and output the result strictly"
+    ],
+    "topics": [
+      "reasoning",
+      "2024",
+      "al",
+      "et al",
+      "et",
+      "answer",
+      "long",
+      "context",
+      "models",
+      "evaluation"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

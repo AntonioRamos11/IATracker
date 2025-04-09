@@ -1,0 +1,75 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** LLMs may lack domain-specific knowledge, leading to inaccurate estimates.",
+    "**Assumptions:** The hypothesis must be quantifiable through available data.",
+    "#### 5. Domain Impact",
+    "**Theoretical:** Opens new avenues for scientific hypothesis exploration using internet-scale data.",
+    "**Practical:** Offers a rapid method for testing hypotheses, particularly valuable in fields where data is limited.",
+    "### Key Equations/Figures",
+    "The paper demonstrates the potential of LLMs through:",
+    "**Figure 1:** Example of LLM-generated data for hypothesis testing.",
+    "**Equation:** Linear regression model used to uncover relationships between estimated properties.",
+    "### Conclusion",
+    "LLMs present promising potential for scientific hypothesis exploration by efficiently simulating tabular datasets, supported by increasing model scale and collaborative methods."
+  ],
+  "impact": "",
+  "topics": [
+    "population",
+    "data",
+    "ages",
+    "male",
+    "llms",
+    "population ages",
+    "llm",
+    "female",
+    "dataset",
+    "simulated"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Simulating_Tabular_Datasets_through_LLMs_to_Rapidly_Explore_Hypotheses__about_Real-World_Entities_72b3e45853a555cb.pdf",
+    "content_hash": "72b3e45853a555cb39e7e6f72b832acf564f0b672abd3217ba77878351ade741",
+    "arxiv_id": null,
+    "title": "Simulating_Tabular_Datasets_through_LLMs_to_Rapidly_Explore_Hypotheses__about_Real-World_Entities_72b3e45853a555cb",
+    "author": "",
+    "creation_date": "D:20241128012502Z",
+    "published": "2024-11-28T01:25:02",
+    "pages": 16,
+    "size": 4154271,
+    "file_mtime": 1741158487.832079
+  },
+  "main_staff": {
+    "title": "Simulating_Tabular_Datasets_through_LLMs_to_Rapidly_Explore_Hypotheses__about_Real-World_Entities_72b3e45853a555cb",
+    "authors": [
+      ""
+    ],
+    "abstract": "Do horror writers have worse childhoods than other writers?\nThough biographical details are known about many writers,\nquantitatively exploring such a qualitative hypothesis requires\nsignificant human effort, e.g. to sift through many biographies\nand interviews of writers and to iteratively search for quan-\ntitative features that reflect what is qualitatively of interest.\nThis paper explores the potential to quickly prototype these\nkinds of hypotheses through (1) applying LLMs to estimate\nproperties of concrete entities like specific people, compa-\nnies, books, kinds of animals, and countries; (2) performing\noff-the-shelf analysis methods to reveal possible relationships\namong such properties (e.g. linear regression); and towards\nfurther automation, (3) applying LLMs to suggest the quan-\ntitative properties themselves that could help ground a par-\nticular qualitative hypothesis (e.g. number of adverse child-\nhood events, in the context of the running example). The hope\nis to allow sifting through hypotheses more quickly through\ncollaboration between human and machine. Our experiments\nhighlight that indeed, LLMs can serve as useful estimators of\ntabular data about specific entities across a range of domains,\nand that such estimations improve with model scale. Further,\ninitial experiments demonstrate the potential of LLMs to map\na qualitative hypothesis of interest to relevant concrete vari-\nables that the LLM can then estimate. The conclusion is that\nLLMs offer intriguing potential to help illuminate scientifi-\ncally interesting patterns latent within the internet-scale data\nthey are trained upon.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "background",
+      "approach",
+      "experiments",
+      "approach was to take certain complex properties, such as de-",
+      "discussion and conclusion",
+      "references"
+    ],
+    "topics": [
+      "population",
+      "data",
+      "ages",
+      "male",
+      "llms",
+      "population ages",
+      "llm",
+      "female",
+      "dataset",
+      "simulated"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Implicit_Search_via_Discrete_Diffusion_A_Study_on_Chess_82e22c264d1d9813\n        **Abstract**: In the post-AlphaGo era, there has been a renewed interest in search techniques\nsuch as Monte Carlo Tree Search (MCTS), particularly in their application to\nLarge Language Models (LLMs). This renewed attention is driven by the recogni-\ntion that current next-token prediction models often lack the ability for long-term\nplanning. Is it possible to instill search-like abilities within the models to enhance\ntheir planning abilities without relying on explicit search? We propose DIFFUSE-\nARCH, a model that does implicit search by looking into the future world via\ndiscrete diffusion modeling. We instantiate DIFFUSEARCH on a classical board\ngame, Chess, where explicit search is known to be essential. Through extensive\ncontrolled experiments, we show DIFFUSEARCH outperforms both the searchless\nand explicit search-enhanced policies. Specifically, DIFFUSEARCH outperforms\nthe one-step policy by 19.2% and the MCTS-enhanced policy by 14% on action\naccuracy. Furthermore, DIFFUSEARCH demonstrates a notable 30% enhancement\nin puzzle-solving abilities compared to explicit search-based policies, along with\na significant 540 Elo increase in game-playing strength assessment. These results\nindicate that implicit search via discrete diffusion is a viable alternative to explicit\nsearch over a one-step policy. Codes, datasets, and an interactive chess agent are\npublicly available at https://github.com/HKUNLP/DiffuSearch.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        information is contained. If no equations or figures, mention that.\n        If figures are present, describe them.\n\n        The user wants the highlights to be structured with the following sections:\n        - Core Innovation\n        - Technical Approach\n        - Quantitative Findings\n        - Limitations & Assumptions\n        - Domain Impact\n\n        The user also wants the highlights to be in bullet points, with each section having 1-2 bullet points. Additionally, ensure that the structure is consistent with the provided markdown template, avoiding any markdown except for the headers.\n</think>\n\n**Core Innovation**  \nThe study introduces DIFFUSE-ARCH, a novel model that performs implicit search through discrete diffusion modeling, eliminating the need for explicit search mechanisms in Large Language Models (LLMs). This approach enhances planning abilities without relying on traditional search algorithms.\n\n**Technical Approach**  \n- Utilizes discrete diffusion modeling to simulate future states and inform decision-making.  \n- Employs Monte Carlo Tree Search (MCTS) principles implicitly through diffusion steps.  \n\n**Quantitative Findings**  \n- Outperforms one-step policy by 19.2% in action accuracy.  \n- Achieves 14% improvement over MCTS-enhanced policies.  \n- Demonstrates a 30% increase in puzzle-solving abilities.  \n- Shows a 540 Elo point enhancement in game strength.  \n\n**Limitations & Assumptions**  \n- The model's effectiveness is limited to board games where explicit search is essential.  \n- Diffusion steps may require extensive computational resources.  \n- Results may not generalize to all domains requiring long-term planning.  \n\n**Domain Impact**  \n- Diffusion-based search offers a viable alternative to explicit search, particularly in domains with complex decision-making.  \n- The approach enhances LLMs' strategic reasoning, broadening their applicability in planning tasks.",
+  "topics": [
+    "et",
+    "al",
+    "et al",
+    "xt",
+    "search",
+    "future",
+    "model",
+    "diffusion",
+    "diffusearch",
+    "x0"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Implicit_Search_via_Discrete_Diffusion_A_Study_on_Chess_82e22c264d1d9813.pdf",
+    "content_hash": "82e22c264d1d98131ecf3d2847f836cb30b6cb5c617757cbeee06664fcf3a1ba",
+    "arxiv_id": null,
+    "title": "Implicit_Search_via_Discrete_Diffusion_A_Study_on_Chess_82e22c264d1d9813",
+    "author": "",
+    "creation_date": "D:20250228012816Z",
+    "published": "2025-02-28T01:28:16",
+    "pages": 22,
+    "size": 2806983,
+    "file_mtime": 1740970240.932616
+  },
+  "main_staff": {
+    "title": "Implicit_Search_via_Discrete_Diffusion_A_Study_on_Chess_82e22c264d1d9813",
+    "authors": [
+      ""
+    ],
+    "abstract": "In the post-AlphaGo era, there has been a renewed interest in search techniques\nsuch as Monte Carlo Tree Search (MCTS), particularly in their application to\nLarge Language Models (LLMs). This renewed attention is driven by the recogni-\ntion that current next-token prediction models often lack the ability for long-term\nplanning. Is it possible to instill search-like abilities within the models to enhance\ntheir planning abilities without relying on explicit search? We propose DIFFUSE-\nARCH, a model that does implicit search by looking into the future world via\ndiscrete diffusion modeling. We instantiate DIFFUSEARCH on a classical board\ngame, Chess, where explicit search is known to be essential. Through extensive\ncontrolled experiments, we show DIFFUSEARCH outperforms both the searchless\nand explicit search-enhanced policies. Specifically, DIFFUSEARCH outperforms\nthe one-step policy by 19.2% and the MCTS-enhanced policy by 14% on action\naccuracy. Furthermore, DIFFUSEARCH demonstrates a notable 30% enhancement\nin puzzle-solving abilities compared to explicit search-based policies, along with\na significant 540 Elo increase in game-playing strength assessment. These results\nindicate that implicit search via discrete diffusion is a viable alternative to explicit\nsearch over a one-step policy. Codes, datasets, and an interactive chess agent are\npublicly available at https://github.com/HKUNLP/DiffuSearch.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "experiments and take a deep look into various paradigms to represent and learn the future. when",
+      "methodology",
+      "approach to comparing actions is to measure the best future if one action is taken, which can be",
+      "experiments",
+      "evaluation metrics",
+      "method",
+      "methods, but inferior compared to discrete approaches.",
+      "experiments training the diffusearch s-asa model with a horizon of 4 and the transformer",
+      "related work",
+      "conclusion and discussion",
+      "references",
+      "results in the above formulation as well."
+    ],
+    "topics": [
+      "et",
+      "al",
+      "et al",
+      "xt",
+      "search",
+      "future",
+      "model",
+      "diffusion",
+      "diffusearch",
+      "x0"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

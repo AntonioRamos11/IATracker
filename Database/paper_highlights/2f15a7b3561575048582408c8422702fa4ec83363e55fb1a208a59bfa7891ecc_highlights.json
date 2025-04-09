@@ -1,0 +1,60 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Reasoning_about_Affordances_Causal_and_Compositional_Reasoning_in_LLMs_2f15a7b356157504\n        **Abstract**:  \nWith the rapid progress of Large Language Models (LLMs), it becomes increasingly \nimportant to understand their abilities and limitations. In two experiments, we \ninvestigate the causal and compositional reasoning abilities of LLMs and humans in \nthe domain of object affordances, an area traditionally linked to embodied cognition. \nThe tasks – designed from scratch to avoid data contamination – require decision-\nmakers to select unconventional objects to replace a typical tool for a particular \npurpose, such as using a table tennis racket to dig a hole. In Experiment 1, we evaluated \nGPT-3.5 and GPT-4o, finding that GPT-4o, when given chain-of-thought prompting, \nperformed on par with human participants, while GPT-3.5 lagged significantly. In \nExperiment 2, we introduced two new conditions, Distractor (more object choices, \nincreasing difficulty) and Image (object options presented visually), and evaluated \nClaude 3 Sonnet and Claude 3.5 Sonnet in addition to the GPT models. The Distractor \ncondition significantly impaired performance across humans and models, although \nGPT-4o and Claude 3.5 still performed well above chance. Surprisingly, the Image \ncondition had little impact on humans or GPT-4o, but significantly lowered Claude \n3.5’s accuracy. Qualitative analysis showed that GPT-4o and Claude 3.5 have a \nstronger ability than their predecessors to identify and flexibly apply causally relevant \nobject properties. The improvement from GPT-3.5 and Claude 3 to GPT-4o and \nClaude 3.5 suggests that models are increasingly capable of causal and compositional \nreasoning in some domains, although further mechanistic research is necessary to \nunderstand how LLMs reason. \n \n \n \n1   Introduction \n \nFor a long time scholars have debated whether our conceptual system is grounded in embodiment and \nexperience (Lakoff & Johnson, 1982; Harnad, 1990). The remarkable progress of large language models \n(LLMs; Zheng et al., 2024; Lu et al., 2024; Zhong et al., 2023) in a variety of tasks, despite these models \nbeing trained on text and static images without direct, embodied experience in the real world, has rekindled \nthis debate (Harnad, 2024; Pavlick, 2023). This debate is unlikely to be resolved soon, but an intriguing \nway to explore the issues it raises is to test LLMs in domains that are closely connected to embodiment and \ninteractive experience with the real world. Are LLMs able to perform well on tasks that have been thought \nto depend on embodied experience (Glenberg & Robertson, 2000)? One such approach is to test LLMs in \nthe domain of object affordances and their capacity to reason about objects and their functional properties.  \n \nRecent studies suggest that LLMs have developed increasing sensitivity to object affordances (Jones et al., \n2022; Yiu et al., 2023), which may suggest that they are capable of solving such tasks without embodiment. \nHowever, as LLMs are trained on vast datasets containing extensive knowledge about objects and their \nuses, they might simply be retrieving memorised patterns in the training data when solving object \naffordance tasks. This ties in with a central debate about LLMs' reasoning abilities: do they reason in robust \nways that generalise, or do they mainly memorise (Geirhos et al., 2020; Krakauer & Mitchell, 2023; McCoy \net al., 2023)? To test LLMs' ability to reason and generalise about object affordances, not just memorise \ntypical object uses, we need novel tasks that prevent LLMs from relying on training data patterns. \n\n2 \n \nIn the present study, we address this through a tool innovation task based on Yiu et al. (2023). In our \n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical points are made. Use bold for emphasis where needed.\n</think>\n\n**Structured Highlights for the Research Paper**\n\n1. **Key Innovation**:  \nThe research introduces two experimental setups (Experiment 1 and Experiment 2) to evaluate LLMs' causal and compositional reasoning abilities in object affordances, using tasks that avoid data contamination.\n\n2. **Technical Approach**:  \n- **Experiment 1**: Evaluated GPT-3.5 and GPT-4o with chain-of-thought prompting, comparing human performance with LLMs.  \n- **Experiment 2**: Introduced Distractor and Image conditions with Claude 3 Sonnet and Claude 3.5 Sonnet, alongside GPT models, to assess task difficulty and performance variations.\n\n3. **Quantitative Findings**:  \n   - **Experiment 1**: GPT-4o matched human performance, while GPT-3.5 lagged.  \n   - **Experiment 2**: Distractor condition impaired performance across all participants, while Image had minimal impact on humans but affected GPT-4o and Claude 3.5 differently.  \n   - **Qualitative Analysis**: LLMs demonstrated stronger causal reasoning compared to their predecessors.\n\n4. **Limitations & Assumptions**:  \n   - **Limitations**: Results may be influenced by task design and dataset biases.  \n   - **Assumptions**: LLMs can reason causally, but further research is needed to understand their reasoning mechanisms.\n\n5. **Domain Impact**:  \n   - **Theoretical**: Advances understanding of LLM reasoning and embodied cognition.  \n   - **Practical**: Highlights potential applications in interactive systems, though challenges remain in generalised reasoning.  \n\n**Key Equations/Figures**:  \n- **Figure 1**: Performance comparison between models and humans in Experiment 1.  \n- **Figure 2**: Impact of Distractor and Image conditions on various models in Experiment 2.  \n- **Key Equations**: Not explicitly provided, but the analysis emphasizes the models' ability to apply causal properties flexibly.",
+  "topics": [
+    "gpt",
+    "llms",
+    "models",
+    "gpt 4o",
+    "4o",
+    "claude",
+    "et al",
+    "et",
+    "al",
+    "tasks"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Reasoning_about_Affordances_Causal_and_Compositional_Reasoning_in_LLMs_2f15a7b356157504.pdf",
+    "content_hash": "2f15a7b3561575048582408c8422702fa4ec83363e55fb1a208a59bfa7891ecc",
+    "arxiv_id": null,
+    "title": "Reasoning_about_Affordances_Causal_and_Compositional_Reasoning_in_LLMs_2f15a7b356157504",
+    "author": "Magnus Gjerde",
+    "creation_date": "D:20250223161357+01'00'",
+    "published": "20250223161357+01'00'",
+    "pages": 21,
+    "size": 1108862,
+    "file_mtime": 1740972381.537112
+  },
+  "main_staff": {
+    "title": "Reasoning_about_Affordances_Causal_and_Compositional_Reasoning_in_LLMs_2f15a7b356157504",
+    "authors": [
+      "Magnus Gjerde"
+    ],
+    "abstract": " \nWith the rapid progress of Large Language Models (LLMs), it becomes increasingly \nimportant to understand their abilities and limitations. In two experiments, we \ninvestigate the causal and compositional reasoning abilities of LLMs and humans in \nthe domain of object affordances, an area traditionally linked to embodied cognition. \nThe tasks – designed from scratch to avoid data contamination – require decision-\nmakers to select unconventional objects to replace a typical tool for a particular \npurpose, such as using a table tennis racket to dig a hole. In Experiment 1, we evaluated \nGPT-3.5 and GPT-4o, finding that GPT-4o, when given chain-of-thought prompting, \nperformed on par with human participants, while GPT-3.5 lagged significantly. In \nExperiment 2, we introduced two new conditions, Distractor (more object choices, \nincreasing difficulty) and Image (object options presented visually), and evaluated \nClaude 3 Sonnet and Claude 3.5 Sonnet in addition to the GPT models. The Distractor \ncondition significantly impaired performance across humans and models, although \nGPT-4o and Claude 3.5 still performed well above chance. Surprisingly, the Image \ncondition had little impact on humans or GPT-4o, but significantly lowered Claude \n3.5’s accuracy. Qualitative analysis showed that GPT-4o and Claude 3.5 have a \nstronger ability than their predecessors to identify and flexibly apply causally relevant \nobject properties. The improvement from GPT-3.5 and Claude 3 to GPT-4o and \nClaude 3.5 suggests that models are increasingly capable of causal and compositional \nreasoning in some domains, although further mechanistic research is necessary to \nunderstand how LLMs reason. \n \n \n \n1   Introduction \n \nFor a long time scholars have debated whether our conceptual system is grounded in embodiment and \nexperience (Lakoff & Johnson, 1982; Harnad, 1990). The remarkable progress of large language models \n(LLMs; Zheng et al., 2024; Lu et al., 2024; Zhong et al., 2023) in a variety of tasks, despite these models \nbeing trained on text and static images without direct, embodied experience in the real world, has rekindled \nthis debate (Harnad, 2024; Pavlick, 2023). This debate is unlikely to be resolved soon, but an intriguing \nway to explore the issues it raises is to test LLMs in domains that are closely connected to embodiment and \ninteractive experience with the real world. Are LLMs able to perform well on tasks that have been thought \nto depend on embodied experience (Glenberg & Robertson, 2000)? One such approach is to test LLMs in \nthe domain of object affordances and their capacity to reason about objects and their functional properties.  \n \nRecent studies suggest that LLMs have developed increasing sensitivity to object affordances (Jones et al., \n2022; Yiu et al., 2023), which may suggest that they are capable of solving such tasks without embodiment. \nHowever, as LLMs are trained on vast datasets containing extensive knowledge about objects and their \nuses, they might simply be retrieving memorised patterns in the training data when solving object \naffordance tasks. This ties in with a central debate about LLMs' reasoning abilities: do they reason in robust \nways that generalise, or do they mainly memorise (Geirhos et al., 2020; Krakauer & Mitchell, 2023; McCoy \net al., 2023)? To test LLMs' ability to reason and generalise about object affordances, not just memorise \ntypical object uses, we need novel tasks that prevent LLMs from relying on training data patterns. \n\n2 \n \nIn the present study, we address this through a tool innovation task based on Yiu et al. (2023). In our ",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments, participants (humans and llms) must select alternative objects to accomplish goals typically",
+      "results showed that gpt-4, gpt-3.5, claude, and palm all performed significantly worse in the non-",
+      "evaluation is designed to measure. yiu et al. (2023) argued that solving the tool innovation tasks required",
+      "results indicate that the model is able to translate the image input into a text format which it then uses to",
+      "experiments were designed to address key issues in the debates about llms’ abilities. inspired by yiu et",
+      "methods of probing generalisation in llms. the 20 tasks in this study are novel and they create a tension",
+      "abstract properties that it shared with the typical tool, and they struggled to disregard common use patterns.",
+      "references"
+    ],
+    "topics": [
+      "gpt",
+      "llms",
+      "models",
+      "gpt 4o",
+      "4o",
+      "claude",
+      "et al",
+      "et",
+      "al",
+      "tasks"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

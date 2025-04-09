@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: From_TOWER_to_SPIRE_Adding_the_Speech_Modality_to_a_Text-Only_LLM_c67a68ea1562b15f\n        **Abstract**: Large language models (LLMs) have shown\nremarkable performance and generalization ca-\npabilities across multiple languages and tasks,\nmaking them very attractive targets for multi-\nmodality integration (e.g., images or speech).\nIn this work, we extend an existing LLM to\nthe speech modality via speech discretization\nand continued pre-training. In particular, we\nare interested in multilingual LLMs, such as\nTOWER, as their pre-training setting allows\nus to treat discretized speech input as an ad-\nditional translation language. The resulting\nopen-source model, SPIRE, is able to tran-\nscribe and translate English speech input while\nmaintaining TOWER’s original performance on\ntranslation-related tasks, showcasing that dis-\ncretized speech input integration as an addi-\ntional language is feasible during LLM adapta-\ntion. We make our code and models available\nto the community.\n1\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        **Note:** The user wants the structured highlights to follow the specified format and include key details from the paper.\n\nOkay, so I need to help the user by structuring the research paper's highlights based on the given query. Let me break down what the user is asking for.\n\nFirst, the title is \"From_TOWER_to_SPIRE...\" and the abstract talks about extending a large language model (LLM) to include speech modality. The main focus is on integrating discretized speech into multilingual models like TOWER, resulting in SPIRE.\n\nThe user wants structured highlights with specific sections: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact. Each section has its own requirements, like 1-2 sentences for Core Innovation, bullet points for Technical Approach, numbered metrics for Quantitative Findings, and so on.\n\nI should start by identifying the core innovation. The paper's main contribution is integrating speech into TOWER via discretization and pre-training, leading to SPIRE. So that's the core innovation.\n\nNext, the technical approach. The paper mentions discretizing speech and treating it as an additional language during pre-training. So discretization is key. Also, multilingual adaptation and open-source availability are important points.\n\nFor quantitative findings, I need metrics like inference speed, translation accuracy, and performance on speech tasks. The abstract mentions improved speech transcription and translation accuracy, so those metrics should be included.\n\nLimitations and assumptions would include the need for sufficient pre-training data and computational resources, as well as the model's generalization ability.\n\nLastly, the domain impact: theoretically, it shows feasibility of integrating speech into multilingual models; practically, it's a tool for developers and organizations needing speech processing.\n\nI also need to make sure to include key equations or figures if they're critical, but the abstract doesn't mention any specific metrics or figures beyond what's provided. So maybe the focus is more on the methodology and impact rather than detailed metrics here.\n\nPutting it all together, I'll structure each section with the required elements, ensuring clarity and conciseness. The user wants a clear, organized summary that highlights the key aspects of the research without going into too much detail, as the abstract provides the main points.\n</think>\n\n### Structured Highlights for the Research Paper:  \n**Title**: From_TOWER_to_SPIRE_Adding_the_Speech_Modality_to_a_Text-Only_LLM  \n\n---\n\n#### 1. **Core Innovation**  \nThe paper introduces **SPIRE**, a modified version of the multilingual LLM TOWER, which integrates speech modality by discretizing speech input and incorporating it as an additional language during pre-training. This allows SPIRE to perform speech transcription and translation while maintaining its original performance on translation-related tasks.  \n\n---\n\n#### 2. **Technical Approach**  \n- **Speech Discretization**: Speech input is converted into a discrete set of tokens, enabling the model to treat it as an additional language.  \n- **Multilingual Pre-training**: TOWER's pre-training framework is leveraged to treat discretized speech as an additional translation language.  \n- **Open-Source Availability**: The extended model and code are made publicly available for community use.  \n\n---\n\n#### 3. **Quantitative Findings**  \n- Improved speech transcription accuracy (specific metrics not provided in the abstract but implied by the integration).  \n- Maintained performance on translation-related tasks, demonstrating the feasibility of integrating speech discretization as an additional language.  \n- Enhanced speech input processing capabilities without compromising the original model's performance.  \n\n---\n\n#### 4. **Limitations & Assumptions**  \n- **Assumption**: The model assumes sufficient pre-training data for multilingual adaptation and speech discretization.  \n- **Limitation**: The integration of speech discretization may require significant computational resources and careful tuning of model parameters.  \n- **Assumption**: The model's performance is contingent on the quality of speech discretization and the availability of diverse training data.  \n\n---\n\n#### 5. **Domain Impact (Theoretical/Practical)**  \n- **Theoretical**: The integration of speech into a text-only LLM framework demonstrates the feasibility of multi-modality in LLMs and opens new research avenues for combining different input modalities.  \n- **Practical**: SPIRE provides a practical solution for organizations needing speech processing capabilities without fully transitioning to multi-modal architectures. It is a valuable resource for developers and researchers exploring speech-to-text and speech-to-translation applications.  \n\n--- \n\nThis structured highlights encapsulate the key contributions, methodology, and impact of the research paper while adhering to the specified format.",
+  "topics": [
+    "al",
+    "et",
+    "speech",
+    "et al",
+    "2023",
+    "2024",
+    "text",
+    "model",
+    "language",
+    "arxiv"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/From_TOWER_to_SPIRE_Adding_the_Speech_Modality_to_a_Text-Only_LLM_c67a68ea1562b15f.pdf",
+    "content_hash": "c67a68ea1562b15fad5c0e210904f1894f69e8e8377e62c8e56cbb2bbb8c6274",
+    "arxiv_id": null,
+    "title": "From_TOWER_to_SPIRE_Adding_the_Speech_Modality_to_a_Text-Only_LLM_c67a68ea1562b15f",
+    "author": "",
+    "creation_date": "D:20250314011659Z",
+    "published": "2025-03-14T01:16:59",
+    "pages": 14,
+    "size": 488664,
+    "file_mtime": 1742113236.4558525
+  },
+  "main_staff": {
+    "title": "From_TOWER_to_SPIRE_Adding_the_Speech_Modality_to_a_Text-Only_LLM_c67a68ea1562b15f",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large language models (LLMs) have shown\nremarkable performance and generalization ca-\npabilities across multiple languages and tasks,\nmaking them very attractive targets for multi-\nmodality integration (e.g., images or speech).\nIn this work, we extend an existing LLM to\nthe speech modality via speech discretization\nand continued pre-training. In particular, we\nare interested in multilingual LLMs, such as\nTOWER, as their pre-training setting allows\nus to treat discretized speech input as an ad-\nditional translation language. The resulting\nopen-source model, SPIRE, is able to tran-\nscribe and translate English speech input while\nmaintaining TOWER’s original performance on\ntranslation-related tasks, showcasing that dis-\ncretized speech input integration as an addi-\ntional language is feasible during LLM adapta-\ntion. We make our code and models available\nto the community.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "approaches (xu et al., 2024a; alves et al., 2024;",
+      "experiments",
+      "evaluation setup",
+      "results for the 74m parameter whisper-base",
+      "results",
+      "conclusion",
+      "references",
+      "evaluation."
+    ],
+    "topics": [
+      "al",
+      "et",
+      "speech",
+      "et al",
+      "2023",
+      "2024",
+      "text",
+      "model",
+      "language",
+      "arxiv"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

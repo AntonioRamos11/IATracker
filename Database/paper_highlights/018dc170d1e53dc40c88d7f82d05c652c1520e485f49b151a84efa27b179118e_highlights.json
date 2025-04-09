@@ -1,0 +1,69 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** The proposed model is applicable to real-world scenarios such as search engines, recommendation systems, and multimedia retrieval systems, offering a robust solution for handling multimodal queries and improving retrieval accuracy.\n\n---\n\n#### 6. **Key Equations/Figures:**\n- **Figure 1:** Compares cross-modal retrieval with unimodal queries, feature fusion, and the proposed ReT model, highlighting the enhanced performance of ReT.\n- **Equations:** The model uses a recurrence relation in the form:\n  \\[\n  h_t = \\text{ReT}(h_{t-1}, v_t, t)\n  \\]\n  where \\( h_t \\) is the hidden state at time \\( t \\), \\( v_t \\) is the input feature vector, and \\( \\text{ReT} \\) represents the transformer-based recurrence mechanism with sigmoidal gates.\n\n---\n\nThis structured summary captures the essence of the paper, focusing on its core contributions, technical innovations, and practical implications.",
+  "topics": [
+    "ret",
+    "document",
+    "clip",
+    "visual",
+    "layers",
+    "image",
+    "retrieval",
+    "query",
+    "multimodal",
+    "32"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Recurrence-Enhanced_Vision-and-Language_Transformers_for_Robust__Multimodal_Document_Retrieval_33837ade29.pdf",
+    "content_hash": "018dc170d1e53dc40c88d7f82d05c652c1520e485f49b151a84efa27b179118e",
+    "arxiv_id": null,
+    "title": "Recurrence-Enhanced_Vision-and-Language_Transformers_for_Robust__Multimodal_Document_Retrieval_33837ade29",
+    "author": "",
+    "creation_date": "D:20250305010401Z",
+    "published": "2025-03-05T01:04:01",
+    "pages": 17,
+    "size": 5242264,
+    "file_mtime": 1741420038.2400486
+  },
+  "main_staff": {
+    "title": "Recurrence-Enhanced_Vision-and-Language_Transformers_for_Robust__Multimodal_Document_Retrieval_33837ade29",
+    "authors": [
+      ""
+    ],
+    "abstract": "Cross-modal retrieval is gaining increasing efficacy and in-\nterest from the research community, thanks to large-scale\ntraining, novel architectural and learning designs, and its\napplication in LLMs and multimodal LLMs. In this paper,\nwe move a step forward and design an approach that al-\nlows for multimodal queries – composed of both an image\nand a text – and can search within collections of multi-\nmodal documents, where images and text are interleaved.\nOur model, ReT, employs multi-level representations ex-\ntracted from different layers of both visual and textual back-\nbones, both at the query and document side. To allow for\nmulti-level and cross-modal understanding and feature ex-\ntraction, ReT employs a novel Transformer-based recurrent\ncell that integrates both textual and visual features at dif-\nferent layers, and leverages sigmoidal gates inspired by\nthe classical design of LSTMs. Extensive experiments on\nM2KR and M-BEIR benchmarks show that ReT achieves\nstate-of-the-art performance across diverse settings. Our\nsource code and trained models are publicly available at:\nhttps://github.com/aimagelab/ReT.\n1. Introduction\nRetrieving useful information to satisfy an input query is a\nfundamental problem in Computer Vision and Multimedia.\nIn early years, retrieval was done mostly in unimodal set-\ntings, where a query is expressed either with an image or\nin natural language and the retrievable set of items belongs\nto the same modality [18, 37, 39, 58]. Recently, we have\nbeen experiencing a progressive shift towards multimodal\ndata [30, 44, 46]. Real-world applications currently require\nat least to understand natural language queries to retrieve\nimages, or vice versa [40, 43]. This trend is expected to\ngive rise to the need for retrieval engines capable of han-\ndling more data modalities, such as video and audio [12].\nConcurrently, there is a growing need to give retrieval\n*Equal contribution.\nRetrieval w/\nUnimodal Queries\nFeature Fusion\nRetrieval\nReT (Ours)\nFeat Fusion\nReT\nVisual \nEncoder\nText \nEncoder\nMerge Layer\nVisual \nEncoder\nText \nEncoder\nMerge Layer\nDocument\nQuery\nVisual \nEncoder\nText \nEncoder\nDocument\nQuery\nVisual \nEncoder\nText \nEncoder\nRecurrent\nCell\nQuery\nQuery Side\nWhat’s the \nplayer’s \nnumber?\nFigure 1. Comparison between cross-modal retrieval with uni-\nmodal queries (top left), retrieval with multimodal queries with\nfeature fusion [53] (top right), and our ReT (bottom left). Our",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approach enables retrieval with multimodal queries employing a",
+      "method on most datasets of the m2kr suite.",
+      "evaluation metrics. following the evaluation protocol de-",
+      "approach is applied on the document side.",
+      "results on m2kr. in table 1, we compare our method",
+      "results on the m-beir benchmark.",
+      "approach in challenging retrieval tasks.",
+      "references",
+      "evaluation metrics. jair, 47:853–899, 2013. 2",
+      "experiments with multimodal llms. table 8 shows ad-",
+      "results on m2kr. in fig. 5 we present a qualitative com-",
+      "evaluation with preflmr, we focus exclusively on datasets",
+      "results on sample image-question pairs from infoseek are"
+    ],
+    "topics": [
+      "ret",
+      "document",
+      "clip",
+      "visual",
+      "layers",
+      "image",
+      "retrieval",
+      "query",
+      "multimodal",
+      "32"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

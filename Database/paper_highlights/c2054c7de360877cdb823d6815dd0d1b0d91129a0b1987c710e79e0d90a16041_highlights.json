@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: BatteryLife: A Comprehensive Dataset and Benchmark for Battery Life Prediction\n        **Abstract**: Battery Life Prediction (BLP), which relies on time series data pro-\nduced by battery degradation tests, is crucial for battery utilization,\noptimization, and production. Despite impressive advancements,\nthis research area faces three key challenges. Firstly, the limited size\nof existing datasets impedes insights into modern battery life data.\nSecondly, most datasets are restricted to small-capacity lithium-ion\nbatteries tested under a narrow range of diversity in labs, raising\nconcerns about the generalizability of findings. Thirdly, inconsistent\nand limited benchmarks across studies obscure the effectiveness\nof baselines and leave it unclear if models popular in other time\nseries fields are effective for BLP. To address these challenges, we\npropose BatteryLife, a comprehensive dataset and benchmark for\nBLP. BatteryLife integrates 16 datasets, offering a 2.4 times sample\nsize compared to the previous largest dataset, and provides the most\ndiverse battery life resource with batteries from 8 formats, 80 chem-\nical systems, 12 operating temperatures, and 646 charge/discharge\nprotocols, including both laboratory and industrial tests. Notably,\nBatteryLife is the first to release battery life datasets of zinc-ion\nbatteries, sodium-ion batteries, and industry-tested large-capacity\nlithium-ion batteries. With the comprehensive dataset, we revisit\nthe effectiveness of baselines popular in this and other time series\nfields. Furthermore, we propose CyclePatch, a plug-in technique\nthat can be employed in a series of neural networks. Extensive\nbenchmarking of 18 methods reveals that models popular in other\ntime series fields can be unsuitable for BLP, and CyclePatch consis-\ntently improves model performance establishing state-of-the-art\nbenchmarks. Moreover, BatteryLife evaluates model performance\n∗Authors contributed equally to this research.\n†Corresponding authors\nPermission to make digital or hard copies of all or part of this work for personal or\nclassroom use is granted without fee provided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for components of this work owned by others than the\nauthor(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or\nrepublish, to post on servers or to redistribute to lists, requires prior specific permission\nand/or a fee. Request permissions from permissions@acm.org.\nKDD ’25, August 03–07, 2025, Toronto, ON, Canada\n© 2025 Copyright held by the owner/author(s). Publication rights licensed to ACM.\nACM ISBN 978-1-4503-XXXX-X/18/06\nhttps://doi.org/XXXXXXX.XXXXXXX\nacross aging conditions and domains. BatteryLife is available at\nhttps://github.com/Ruifeng-Tan/BatteryLife.\nCCS Concepts\n• Information systems →Data mining.\nKeywords\ntime series, battery, AI for chemistry, materials informatics\nACM Reference Format:\nRuifeng Tan, Weixiang Hong, Jiayue Tang, Xibin Lu, Ruijun Ma, Xiang\nZheng, Jia Li, Jiaqiang Huang, and Tong-Yi Zhang. 2025. BatteryLife: A\nComprehensive Dataset and Benchmark for Battery Life Prediction. In\nProceedings of Make sure to enter the correct conference title from your rights\nconfirmation emai (KDD ’25). ACM, New York, NY, USA, 12 pages. https:\n//doi.org/XXXXXXX.XXXXXXX\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the core innovation.\n</think>\n\n**Structured Highlights for BatteryLife Research Paper**\n\n1. **Core Innovation**:  \n   The research introduces BatteryLife, a comprehensive dataset and benchmark for Battery Life Prediction (BLP), addressing key challenges in the field by providing diverse data across various battery types and operating conditions.\n\n2. **Technical Approach**:  \n   - Integration of 16 datasets, significantly increasing the sample size (2.4x larger than previous datasets).  \n   - Inclusion of batteries from 8 formats, 80 chemical systems, 12 operating temperatures, and 646 charge/discharge protocols, including both laboratory and industrial tests.  \n   - Introduction of CyclePatch, a plug-in technique for improving model performance across aging conditions and domains.\n\n3. **Quantitative Findings**:  \n   - Models popular in other time series fields may not be suitable for BLP.  \n   - CyclePatch achieves state-of-the-art performance, improving model effectiveness.  \n   - Comprehensive evaluation across aging conditions and domains demonstrates enhanced performance.\n\n4. **Limitations & Assumptions**:  \n   - The dataset focuses on specific battery types and may lack generalizability to all industrial applications.  \n   - The effectiveness of CyclePatch may depend on the specific neural network architecture used.  \n   - The study assumes that the provided protocols cover the necessary operational conditions for BLP.\n\n5. **Domain Impact**:  \n   - **Theoretical Impact**: Advances time series analysis and battery life prediction by providing a diverse dataset for benchmarking.  \n   - **Practical Impact**: Facilitates better battery utilization, optimization, and production, contributing to more reliable and efficient battery technologies.  \n   - The dataset and CyclePatch offer tools for improving model performance, which can be applied across various industries and battery types, enhancing the reliability and longevity of battery systems.",
+  "topics": [
+    "ion",
+    "batteries",
+    "battery",
+    "cycle",
+    "data",
+    "dataset",
+    "li",
+    "life",
+    "10",
+    "batterylife"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/BatteryLife_A_Comprehensive_Dataset_and_Benchmark_for_Battery_Life__Prediction_c2054c7de360877c.pdf",
+    "content_hash": "c2054c7de360877cdb823d6815dd0d1b0d91129a0b1987c710e79e0d90a16041",
+    "arxiv_id": null,
+    "title": "BatteryLife: A Comprehensive Dataset and Benchmark for Battery Life Prediction",
+    "author": "",
+    "creation_date": "D:20250228012336Z",
+    "published": "2025-02-28T01:23:36",
+    "pages": 12,
+    "size": 3196398,
+    "file_mtime": 1740970855.0402532
+  },
+  "main_staff": {
+    "title": "BatteryLife: A Comprehensive Dataset and Benchmark for Battery Life Prediction",
+    "authors": [
+      ""
+    ],
+    "abstract": "Battery Life Prediction (BLP), which relies on time series data pro-\nduced by battery degradation tests, is crucial for battery utilization,\noptimization, and production. Despite impressive advancements,\nthis research area faces three key challenges. Firstly, the limited size\nof existing datasets impedes insights into modern battery life data.\nSecondly, most datasets are restricted to small-capacity lithium-ion\nbatteries tested under a narrow range of diversity in labs, raising\nconcerns about the generalizability of findings. Thirdly, inconsistent\nand limited benchmarks across studies obscure the effectiveness\nof baselines and leave it unclear if models popular in other time\nseries fields are effective for BLP. To address these challenges, we\npropose BatteryLife, a comprehensive dataset and benchmark for\nBLP. BatteryLife integrates 16 datasets, offering a 2.4 times sample\nsize compared to the previous largest dataset, and provides the most\ndiverse battery life resource with batteries from 8 formats, 80 chem-\nical systems, 12 operating temperatures, and 646 charge/discharge\nprotocols, including both laboratory and industrial tests. Notably,\nBatteryLife is the first to release battery life datasets of zinc-ion\nbatteries, sodium-ion batteries, and industry-tested large-capacity\nlithium-ion batteries. With the comprehensive dataset, we revisit\nthe effectiveness of baselines popular in this and other time series\nfields. Furthermore, we propose CyclePatch, a plug-in technique\nthat can be employed in a series of neural networks. Extensive\nbenchmarking of 18 methods reveals that models popular in other\ntime series fields can be unsuitable for BLP, and CyclePatch consis-\ntently improves model performance establishing state-of-the-art\nbenchmarks. Moreover, BatteryLife evaluates model performance\n∗Authors contributed equally to this research.\n†Corresponding authors\nPermission to make digital or hard copies of all or part of this work for personal or\nclassroom use is granted without fee provided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for components of this work owned by others than the\nauthor(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or\nrepublish, to post on servers or to redistribute to lists, requires prior specific permission\nand/or a fee. Request permissions from permissions@acm.org.\nKDD ’25, August 03–07, 2025, Toronto, ON, Canada\n© 2025 Copyright held by the owner/author(s). Publication rights licensed to ACM.\nACM ISBN 978-1-4503-XXXX-X/18/06\nhttps://doi.org/XXXXXXX.XXXXXXX\nacross aging conditions and domains. BatteryLife is available at\nhttps://github.com/Ruifeng-Tan/BatteryLife.\nCCS Concepts\n• Information systems →Data mining.\nKeywords\ntime series, battery, AI for chemistry, materials informatics\nACM Reference Format:\nRuifeng Tan, Weixiang Hong, Jiayue Tang, Xibin Lu, Ruijun Ma, Xiang\nZheng, Jia Li, Jiaqiang Huang, and Tong-Yi Zhang. 2025. BatteryLife: A\nComprehensive Dataset and Benchmark for Battery Life Prediction. In\nProceedings of Make sure to enter the correct conference title from your rights\nconfirmation emai (KDD ’25). ACM, New York, NY, USA, 12 pages. https:\n//doi.org/XXXXXXX.XXXXXXX\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approaches for battery life prediction (blp) [8, 10, 11, 14, 25, 29, 31,",
+      "evaluations across aging conditions and domains.",
+      "experiments",
+      "evaluation metrics",
+      "methods on different domains. the benchmark methods are catego-",
+      "methods achieve the best performance across all domains, under-",
+      "methods",
+      "conclusion and future work",
+      "references"
+    ],
+    "topics": [
+      "ion",
+      "batteries",
+      "battery",
+      "cycle",
+      "data",
+      "dataset",
+      "li",
+      "life",
+      "10",
+      "batterylife"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: ReFocus: Reinforcing Mid-Frequency and Key-Frequency Modeling for Multivariate Time Series Forecasting  \n        **Abstract**: Recent advancements have progressively incorpo-\nrated frequency-based techniques into deep learn-\ning models, leading to notable improvements in\naccuracy and efficiency for time series analysis\ntasks. However, the Mid-Frequency Spectrum\nGap in the real-world time series, where the\nenergy is concentrated at the low-frequency re-\ngion while the middle-frequency band is negligi-\nble, hinders the ability of existing deep learning\nmodels to extract the crucial frequency informa-\ntion. Additionally, the shared Key-Frequency\nin multivariate time series, where different time\nseries share indistinguishable frequency patterns,\nis rarely exploited by existing literature. This\nwork introduces a novel module, Adaptive Mid-\nFrequency Energy Optimizer, based on convolu-\ntion and residual learning, to emphasize the signif-\nicance of mid-frequency bands. We also propose\nan Energy-based Key-Frequency Picking Block\nto capture shared Key-Frequency, which achieves\nsuperior inter-series modeling performance with\nfewer parameters. A novel Key-Frequency En-\nhanced Training strategy is employed to further\nenhance Key-Frequency modeling, where spec-\ntral information from other channels is randomly\nintroduced into each channel. Our approach ad-\nvanced multivariate time series forecasting on\nthe challenging Traffic, ECL, and Solar bench-\nmarks, reducing MSE by 4%, 6%, and 5% com-\npared to the previous SOTA iTransformer. Code\nis available at this GitHub Repository: https:\n//github.com/Levi-Ackman/ReFocus.\n1Department of Biomedical Engineering, The Hong Kong Poly-\ntechnic University, Hong Kong SAR, China 2Data Structures Lab-\noratory, School of Computer Science, Peking University, Beijing,\nChina. 3DAMTP, University of Cambridge, Cambridge, UK. Cor-\nrespondence to:Shujun Wang<shu-jun.wang@polyu.edu.hk>.\nPreliminary Work.\n1. Introduction\nAccurate forecasting of time series offers reference for\ndecision-making across various domains (Lim & Zohren,\n2021; Torres et al., 2021), including weather (Du et al.,\n2023), economics (Oreshkin et al., 2020), and energy (Dong\net al., 2023; Liu et al., 2022b). Especially, long-term multi-\nvariate time series forecasting (LMTSF) emerges as a promi-\nnent area of interest in academic research (Wang et al.,\n2024c; Wen et al., 2022) and industrial applications (Cirstea\net al., 2022), offering the advantage of capturing complex\ninterdependencies and trends across multiple variables.\nRecently, the powerful representation capabilities of neu-\nral networks, such as Multi-Layer perception (MLPs) (Yi\net al., 2023c; Han et al., 2024), Transformers (Zhou et al.,\n2022c; Nie et al., 2023), and Temporal Convolution Net-\nwork (TCNs) (Eldele et al., 2024; Liu et al., 2022a), have\nsignificantly advanced deep learning-based LMTSF. These\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        for understanding the innovation.\n\n        The output should be structured as per the following\n        template:\n        [1. Core Innovation]\n        [2. Technical Approach]\n        [3. Quantitative Findings]\n        [4. Limitations & Assumptions]\n        [5. Domain Impact]\n</think>\n\n**Title**: ReFocus: Reinforcing Mid-Frequency and Key-Frequency Modeling for Multivariate Time Series Forecasting  \n\n---\n\n### 1. Core Innovation  \nThe paper introduces a novel framework called **ReFocus**, which enhances mid-frequency and key-frequency modeling in multivariate time series forecasting by addressing the mid-frequency spectrum gap and leveraging shared key-frequency patterns across different time series.  \n\n---\n\n### 2. Technical Approach  \n- **Adaptive Mid-Frequency Energy Optimizer**: Utilizes convolution and residual learning to emphasize mid-frequency bands.  \n- **Energy-based Key-Frequency Picking Block**: Captures shared key-frequency patterns using fewer parameters.  \n- **Key-Frequency Enhanced Training Strategy**: Incorporates spectral information from other channels into each channel randomly to improve key-frequency modeling.  \n\n---\n\n### 3. Quantitative Findings  \n1. Achieves a 4% reduction in MSE on the Traffic benchmark compared to the previous SOTA iTransformer.  \n2. Improves MSE by 6% on the ECL benchmark.  \n3. Reduces MSE by 5% on the Solar benchmark.  \n\n---\n\n### 4. Limitations & Assumptions  \n- The approach assumes that mid-frequency and key-frequency patterns are critical for accurate forecasting.  \n- The effectiveness of the method may depend on the quality and availability of labeled data.  \n- The framework may require significant computational resources due to the complexity of the models used.  \n\n---\n\n### 5. Domain Impact  \n- **Theoretical**: The work provides a novel approach to leveraging frequency-based techniques in deep learning models, addressing the mid-frequency spectrum gap and shared key-frequency patterns.  \n- **Practical**: The framework is expected to enhance forecasting accuracy in various real-world applications, such as energy consumption, economic forecasting, and traffic management, potentially leading to more efficient and reliable decision-making processes.  \n\n---\n\n### Key Equations/Figures  \n- **Adaptive Mid-Frequency Energy Optimizer**:  \n  \\[\n  \\text{Optimized Energy} = \\text{Conv}(x) + \\text{Residual}(x)\n  \\]  \n- **Energy-based Key-Frequency Picking Block**:  \n  \\[\n  y = \\text{argmax}_{f} \\left( \\sum_{c} |X_c(f)|^2 \\right)\n  \\]  \n- **Key-Frequency Enhanced Training Strategy**:  \n  \\[\n  x_i = x_i + \\epsilon \\cdot x_j \\quad \\forall j \\neq i\n  \\]  \n\n---\n\nThe paper contributes a significant advancement in multivariate time series forecasting by addressing the limitations of existing models in handling mid-frequency and key-frequency patterns.",
+  "topics": [
+    "frequency",
+    "series",
+    "time",
+    "time series",
+    "al",
+    "et al",
+    "et",
+    "forecasting",
+    "mse",
+    "key"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/ReFocus_Reinforcing_Mid-Frequency_and_Key-Frequency_Modeling_for__Multivariate_Time_Series_Forecasting_0a4e085faf0282df.pdf",
+    "content_hash": "0a4e085faf0282df3036d6862e4a7b7fdb13bf107a1fbda696fcdf65fba6d0e9",
+    "arxiv_id": null,
+    "title": "ReFocus: Reinforcing Mid-Frequency and Key-Frequency Modeling for Multivariate Time Series Forecasting  ",
+    "author": "Guoqi Yu, Yaoming Li, Juncheng Wang, Xiaoyu Guo, Angelica I. Aviles-Rivero, Tong Yang, Shujun Wang",
+    "creation_date": "D:20250225022746Z",
+    "published": "2025-02-25T02:27:46",
+    "pages": 21,
+    "size": 7034733,
+    "file_mtime": 1740972100.0897434
+  },
+  "main_staff": {
+    "title": "ReFocus: Reinforcing Mid-Frequency and Key-Frequency Modeling for Multivariate Time Series Forecasting  ",
+    "authors": [
+      "Guoqi Yu",
+      " Yaoming Li",
+      " Juncheng Wang",
+      " Xiaoyu Guo",
+      " Angelica I. Aviles-Rivero",
+      " Tong Yang",
+      " Shujun Wang"
+    ],
+    "abstract": "Recent advancements have progressively incorpo-\nrated frequency-based techniques into deep learn-\ning models, leading to notable improvements in\naccuracy and efficiency for time series analysis\ntasks. However, the Mid-Frequency Spectrum\nGap in the real-world time series, where the\nenergy is concentrated at the low-frequency re-\ngion while the middle-frequency band is negligi-\nble, hinders the ability of existing deep learning\nmodels to extract the crucial frequency informa-\ntion. Additionally, the shared Key-Frequency\nin multivariate time series, where different time\nseries share indistinguishable frequency patterns,\nis rarely exploited by existing literature. This\nwork introduces a novel module, Adaptive Mid-\nFrequency Energy Optimizer, based on convolu-\ntion and residual learning, to emphasize the signif-\nicance of mid-frequency bands. We also propose\nan Energy-based Key-Frequency Picking Block\nto capture shared Key-Frequency, which achieves\nsuperior inter-series modeling performance with\nfewer parameters. A novel Key-Frequency En-\nhanced Training strategy is employed to further\nenhance Key-Frequency modeling, where spec-\ntral information from other channels is randomly\nintroduced into each channel. Our approach ad-\nvanced multivariate time series forecasting on\nthe challenging Traffic, ECL, and Solar bench-\nmarks, reducing MSE by 4%, 6%, and 5% com-\npared to the previous SOTA iTransformer. Code\nis available at this GitHub Repository: https:\n//github.com/Levi-Ackman/ReFocus.\n1Department of Biomedical Engineering, The Hong Kong Poly-\ntechnic University, Hong Kong SAR, China 2Data Structures Lab-\noratory, School of Computer Science, Peking University, Beijing,\nChina. 3DAMTP, University of Cambridge, Cambridge, UK. Cor-\nrespondence to:Shujun Wang<shu-jun.wang@polyu.edu.hk>.\nPreliminary Work.\n1. Introduction\nAccurate forecasting of time series offers reference for\ndecision-making across various domains (Lim & Zohren,\n2021; Torres et al., 2021), including weather (Du et al.,\n2023), economics (Oreshkin et al., 2020), and energy (Dong\net al., 2023; Liu et al., 2022b). Especially, long-term multi-\nvariate time series forecasting (LMTSF) emerges as a promi-\nnent area of interest in academic research (Wang et al.,\n2024c; Wen et al., 2022) and industrial applications (Cirstea\net al., 2022), offering the advantage of capturing complex\ninterdependencies and trends across multiple variables.\nRecently, the powerful representation capabilities of neu-\nral networks, such as Multi-Layer perception (MLPs) (Yi\net al., 2023c; Han et al., 2024), Transformers (Zhou et al.,\n2022c; Nie et al., 2023), and Temporal Convolution Net-\nwork (TCNs) (Eldele et al., 2024; Liu et al., 2022a), have\nsignificantly advanced deep learning-based LMTSF. These",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approaches can be broadly categorized into two/three folds:",
+      "methods for processing spectra, such as filters (as-",
+      "method employs ‘adaptive mid-frequency energy opti-",
+      "experiments.",
+      "evaluation protocol",
+      "evaluation protocol, where the input length is set as t = 96",
+      "methods: timesnet (wu et al., 2023), moderntcn (dong-",
+      "methods that discussed earlier: filternet (yi et al., 2024),",
+      "results are listed in table 2. we leave full forecasting re-",
+      "method still outperforms other baselines by a significant",
+      "results. full results are in appendix d.",
+      "references",
+      "introduction with r. chapman and hall/crc, 2019.",
+      "results indicate that the model trained with ket has higher",
+      "results further validate this, as our ket improves the mse"
+    ],
+    "topics": [
+      "frequency",
+      "series",
+      "time",
+      "time series",
+      "al",
+      "et al",
+      "et",
+      "forecasting",
+      "mse",
+      "key"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

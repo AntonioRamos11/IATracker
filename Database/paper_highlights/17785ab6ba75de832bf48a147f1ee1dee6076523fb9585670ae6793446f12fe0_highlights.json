@@ -1,0 +1,68 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** The effectiveness is context-dependent, potentially lacking adaptability in highly variable scenarios. Additionally, computational overhead may increase with more complex goal sequences."
+  ],
+  "impact": "",
+  "topics": [
+    "goal",
+    "goals",
+    "agent",
+    "st",
+    "td3",
+    "bgt",
+    "final",
+    "fg",
+    "policy",
+    "state"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/A_tale_of_two_goals_leveraging_sequentiality_in_multi-goal_scenarios_17785ab6ba75de83.pdf",
+    "content_hash": "17785ab6ba75de832bf48a147f1ee1dee6076523fb9585670ae6793446f12fe0",
+    "arxiv_id": null,
+    "title": "A_tale_of_two_goals_leveraging_sequentiality_in_multi-goal_scenarios_17785ab6ba75de83",
+    "author": "",
+    "creation_date": "D:20250328010718Z",
+    "published": "2025-03-28T01:07:18",
+    "pages": 15,
+    "size": 451630,
+    "file_mtime": 1743294211.6036947
+  },
+  "main_staff": {
+    "title": "A_tale_of_two_goals_leveraging_sequentiality_in_multi-goal_scenarios_17785ab6ba75de83",
+    "authors": [
+      ""
+    ],
+    "abstract": "Several hierarchical reinforcement learning methods leverage planning to create a graph\nor sequences of intermediate goals, guiding a lower-level goal-conditioned (GC) policy\nto reach some final goals. The low-level policy is typically conditioned on the current\ngoal, with the aim of reaching it as quickly as possible. However, this approach can fail\nwhen an intermediate goal can be reached in multiple ways, some of which may make\nit impossible to continue toward subsequent goals. To address this issue, we introduce\ntwo instances of Markov Decision Process (MDP) where the optimization objective\nfavors policies that not only reach the current goal but also subsequent ones. In the first,\nthe agent is conditioned on both the current and final goals, while in the second, it is\nconditioned on the next two goals in the sequence. We conduct a series of experiments\non navigation and pole-balancing tasks in which sequences of intermediate goals are\ngiven. By evaluating policies trained with TD3 +HER on both the standard GC-MDP\nand our proposed MDPs, we show that, in most cases, conditioning on the next two\ngoals improves stability and sample efficiency over other approaches.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "background & related work",
+      "methods",
+      "experiments",
+      "approaches. we compare their success rate and time-to-goal, as considering an intermediate goal as",
+      "results in dubins hallway",
+      "results in cartpole & pointmaze",
+      "results from its mdp formulation, in which the agent always tries to reach the next goal as quickly",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "goal",
+      "goals",
+      "agent",
+      "st",
+      "td3",
+      "bgt",
+      "final",
+      "fg",
+      "policy",
+      "state"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

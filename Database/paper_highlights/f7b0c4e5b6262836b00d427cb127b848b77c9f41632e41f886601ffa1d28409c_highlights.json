@@ -1,0 +1,83 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Maybe computational complexity, how the method scales with system size, or how it performs with nonlinearities that are hard to model.",
+    "Domain impact: This could be useful for control systems, robotics, process control, etc., where real-time adaptation and constraint satisfaction are crucial.",
+    "I should also think about key equations. Since it's a technical paper, they might have equations for the input design criterion and the estimator. Maybe something like a cost function that includes terms for input energy and constraint violation.",
+    "Putting it all together, the summary should highlight the adaptive input design with constraints, the scale-invariant approach, and the sequential estimation. It should mention the receding horizon and how it improves parameter estimation and input design. Then, touch on the limitations and the impact on various control applications.",
+    "I need to make sure each section is concise and captures the essence without diving into the methods or experiments. Maybe the quantitative findings can be a numbered list with metrics like convergence time or estimation accuracy.",
+    "Wait, in the abstract, they mention demonstrating the ability to design informative experiments online while steering within constraints. So that's a key point about real-time adaptivity and constraint handling.",
+    "I should also note that the approach is for nonlinear systems, which adds complexity compared to linear systems. The scale-invariant aspect helps mitigate some issues with input magnitude.",
+    "In terms of limitations, maybe the method relies on accurate initial parameter estimates or might not handle very high-dimensional systems well.",
+    "For the domain impact, it's applicable to any system where real-time input design and parameter estimation are needed with constraints, like in robotics where you might need to adjust control inputs on the fly without violating safety limits.",
+    "I think that covers the main points. Now, I'll structure this into the required sections with concise bullet points and numbered lists where appropriate.",
+    "</think>",
+    "**Research Paper Summary: Adaptive Input Design for Nonlinear System Identification**",
+    "**Core Innovation:**",
+    "A novel scale-invariant input design criterion is introduced, paired with a sequential parameter estimator, enabling adaptive input design while respecting system constraints during nonlinear system identification.",
+    "**Technical Approach:**",
+    "**Receding Horizon Method:** Utilizes a moving window of data for real-time decision-making.",
+    "**Scale-Invariant Criterion:** Ensures input design is robust to scale variations.",
+    "**Sequential Parameter Estimator:** Continuously updates parameter estimates, facilitating real-time adjustments.",
+    "**Quantitative Findings:**"
+  ],
+  "impact": "",
+  "topics": [
+    "design",
+    "ut",
+    "input",
+    "10",
+    "using",
+    "xt",
+    "constraints",
+    "adaptive",
+    "input design",
+    "state"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Adaptive_Input_Design_for_Nonlinear_System_Identification_with__Operational_Constraints_f7b0c4e5b6262836.pdf",
+    "content_hash": "f7b0c4e5b6262836b00d427cb127b848b77c9f41632e41f886601ffa1d28409c",
+    "arxiv_id": null,
+    "title": "Adaptive_Input_Design_for_Nonlinear_System_Identification_with__Operational_Constraints_f7b0c4e5b6262836",
+    "author": "",
+    "creation_date": "D:20250303014221Z",
+    "published": "2025-03-03T01:42:21",
+    "pages": 8,
+    "size": 572460,
+    "file_mtime": 1740976374.0317702
+  },
+  "main_staff": {
+    "title": "Adaptive_Input_Design_for_Nonlinear_System_Identification_with__Operational_Constraints_f7b0c4e5b6262836",
+    "authors": [
+      ""
+    ],
+    "abstract": "We consider the problem of joint input design and parameter estimation for identifying nonlinear system models through\nthe sequential acquisition of measurements while adhering to system constraints. We utilize a receding horizon approach and\npropose a new scale-invariant input design criterion, which is tailored to continuously updated parameter estimates, along with\na new sequential parameter estimator. We demonstrate the ability of the method to design informative experiments online,\nwhile steering the system within operational constraints.\nKey words: input design, adaptive design, constrained experiments\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "method for nonlinear systems that penalizes designs in",
+      "experiments. for a tractable formulation, we consider a",
+      "method which steers the nonlinear system within oper-",
+      "method",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "design",
+      "ut",
+      "input",
+      "10",
+      "using",
+      "xt",
+      "constraints",
+      "adaptive",
+      "input design",
+      "state"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

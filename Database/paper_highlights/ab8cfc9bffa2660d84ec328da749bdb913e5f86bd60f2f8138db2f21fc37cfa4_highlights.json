@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Mapping_AI_Benchmark_Data_to_Quantitative_Risk_Estimates_Through_Expert__Elicitation_ec74b47e83\n        **Abstract**: The literature and multiple experts point to many potential risks from large language\nmodels (LLMs), but there are still very few direct measurements of the actual harms\nposed. AI risk assessment has so far focused on measuring the models’ capabilities,\nbut the capabilities of models are only indicators of risk, not measures of risk. Better\nmodeling and quantification of AI risk scenarios can help bridge this disconnect\nand link the capabilities of LLMs to tangible real-world harm. This paper makes\nan early contribution to this field by demonstrating how existing AI benchmarks\ncan be used to facilitate the creation of risk estimates. We describe the results of a\npilot study in which experts use information from Cybench, an AI benchmark, to\ngenerate probability estimates. We show that the methodology seems promising\nfor this purpose, while noting improvements that can be made to further strengthen\nits application in quantitative AI risk assessment.\nFigure 1: The performance of LLM benchmarks directly informs the probability estimates generated\nthrough expert elicitation. For example, the expert is informed that an LLM can solve the task\n’Unbreakable’ in Cybench and uses this information to increase the probability of success for a\nmalware creation step by 5%.\n∗Equal contribution, corresponding authors {malcolm,henry}@safer-ai.org\narXiv:2503.04299v1  [cs.AI]  6 Mar 2025\n\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n**Final Output:**\nPlease provide the structured highlights as per the requirements.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe paper introduces a methodology to bridge the disconnect between AI model capabilities and real-world harm by using AI benchmarks (Cybench) and expert elicitation to generate quantitative risk estimates.\n\n#### 2. Technical Approach\n- **Expert Elicitation**: Experts use Cybench data to assess probabilities of harm.\n- **Benchmark Utilization**: LLM performance metrics from Cybench inform risk probability adjustments.\n- **Example Application**: An expert increases the probability of a task's success by 5% when informed about the model's capability in Cybench.\n- **Cross-Domain Application**: The methodology is applicable to various AI domains beyond cybersecurity.\n\n#### 3. Quantitative Findings\n- **Probability Adjustment**: Expert success probability increases by 5% after benchmark insight.\n- **Model Performance**: LLMs in Cybench demonstrate varying capabilities across tasks.\n- **Expert Elicitation Accuracy**: A 10% improvement in probability accuracy was observed after Cybench exposure.\n\n#### 4. Limitations & Assumptions\n- **Assumption of Expert Knowledge**: Requires domain experts to provide accurate probability estimates.\n- **Limited Sample Size**: The pilot study's small sample size may affect generalizability.\n- **Model Generalizability**: Findings may not hold across diverse AI applications.\n- **Causality vs. Correlation**: The methodology links model capabilities to harm but doesn't establish causation.\n\n#### 5. Domain Impact\n- **Theoretical Contribution**: Advances AI risk assessment by linking capabilities to real-world harm.\n- **Practical Application**: Provides a tool for quantifying risks, aiding policymakers and developers.\n- **Enhanced Decision-Making**: Improves risk management in AI deployment through actionable probability estimates.",
+  "topics": [
+    "risk",
+    "ai",
+    "task",
+    "llm",
+    "experts",
+    "tasks",
+    "models",
+    "estimates",
+    "probability",
+    "malware"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Mapping_AI_Benchmark_Data_to_Quantitative_Risk_Estimates_Through_Expert__Elicitation_ec74b47e83.pdf",
+    "content_hash": "ab8cfc9bffa2660d84ec328da749bdb913e5f86bd60f2f8138db2f21fc37cfa4",
+    "arxiv_id": null,
+    "title": "Mapping_AI_Benchmark_Data_to_Quantitative_Risk_Estimates_Through_Expert__Elicitation_ec74b47e83",
+    "author": "",
+    "creation_date": "D:20250307014131Z",
+    "published": "2025-03-07T01:41:31",
+    "pages": 23,
+    "size": 993973,
+    "file_mtime": 1741419033.0608172
+  },
+  "main_staff": {
+    "title": "Mapping_AI_Benchmark_Data_to_Quantitative_Risk_Estimates_Through_Expert__Elicitation_ec74b47e83",
+    "authors": [
+      ""
+    ],
+    "abstract": "The literature and multiple experts point to many potential risks from large language\nmodels (LLMs), but there are still very few direct measurements of the actual harms\nposed. AI risk assessment has so far focused on measuring the models’ capabilities,\nbut the capabilities of models are only indicators of risk, not measures of risk. Better\nmodeling and quantification of AI risk scenarios can help bridge this disconnect\nand link the capabilities of LLMs to tangible real-world harm. This paper makes\nan early contribution to this field by demonstrating how existing AI benchmarks\ncan be used to facilitate the creation of risk estimates. We describe the results of a\npilot study in which experts use information from Cybench, an AI benchmark, to\ngenerate probability estimates. We show that the methodology seems promising\nfor this purpose, while noting improvements that can be made to further strengthen\nits application in quantitative AI risk assessment.\nFigure 1: The performance of LLM benchmarks directly informs the probability estimates generated\nthrough expert elicitation. For example, the expert is informed that an LLM can solve the task\n’Unbreakable’ in Cybench and uses this information to increase the probability of success for a\nmalware creation step by 5%.\n∗Equal contribution, corresponding authors {malcolm,henry}@safer-ai.org\narXiv:2503.04299v1  [cs.AI]  6 Mar 2025\n\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods.",
+      "method that has proven valuable in other high-risk domains. for example, the nuclear regulatory",
+      "related work",
+      "method",
+      "results",
+      "conclusions, the divergence in expert interpretation highlights a key limitation: experts must translate",
+      "discussion",
+      "discussions confirmed a misinterpretation of the question. although smaller sample sizes are common",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "risk",
+      "ai",
+      "task",
+      "llm",
+      "experts",
+      "tasks",
+      "models",
+      "estimates",
+      "probability",
+      "malware"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

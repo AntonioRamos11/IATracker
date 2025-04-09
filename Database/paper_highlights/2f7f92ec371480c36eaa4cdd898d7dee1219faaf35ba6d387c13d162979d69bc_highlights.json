@@ -1,0 +1,71 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: AIR_Complex_Instruction_Generation_via_Automatic_Iterative_Refinement_2f7f92ec371480c3\n        **Abstract**: With the development of large language mod-\nels, their ability to follow simple instructions\nhas significantly improved. However, adhering\nto complex instructions remains a major chal-\nlenge. Current approaches to generating com-\nplex instructions are often irrelevant to the cur-\nrent instruction requirements or suffer from lim-\nited scalability and diversity. Moreover, meth-\nods such as back-translation, while effective\nfor simple instruction generation, fail to lever-\nage the rich knowledge and formatting in hu-\nman written documents. In this paper, we pro-\npose a novel Automatic Iterative Refinement\n(AIR) framework to generate complex instruc-\ntions with constraints, which not only better\nreflects the requirements of real scenarios but\nalso significantly enhances LLMs’ ability to fol-\nlow complex instructions. The AIR framework\nconsists of two stages: 1) Generate an initial\ninstruction from a document; 2) Iteratively re-\nfine instructions with LLM-as-judge guidance\nby comparing the model’s output with the doc-\nument to incorporate valuable constraints. Fi-\nnally, we construct the AIR-10K dataset with\n10K complex instructions and demonstrate that\ninstructions generated with our approach sig-\nnificantly improve the model’s ability to follow\ncomplex instructions, outperforming existing\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, include a brief explanation of the key innovation.\n\n        Finally, structure the answer as a single block without markdown.\n\n        The user wants the response to be in English, and the thinking process to be in Chinese.\n\n        So, I need to process this step by step.\n\n        First, understand the research paper.\n\n        Then, extract the core innovation.\n\n        Next, outline the technical approach with bullet points.\n\n        Then, list quantitative findings with metrics.\n\n        After that, identify the limitations and assumptions.\n\n        Finally, discuss the domain impact both theoretically and practically.\n\n        I need to ensure that all these elements are covered in the structured highlights.\n\n        Also, make sure to include key equations or figures that are pivotal to the innovation.\n\n        Finally, provide a brief explanation of the key innovation.\n\n        Let's start with understanding the research paper.\n\n        The title is about using an iterative refinement framework to generate complex instructions for large language models.\n\n        The abstract mentions that current methods for complex instruction generation are not effective, either being irrelevant or lacking scalability and diversity. Also, back-translation works for simple instructions but not for complex ones because it doesn't use the rich structure in human documents.\n\n        The paper proposes the AIR framework, which has two stages: generating an initial instruction from a document and then iteratively refining it using LLM-as-judge guidance by comparing the model's output with the document to incorporate constraints.\n\n        The dataset built is called AIR-10K with 10K complex instructions, and the results show that the AIR approach significantly improves the model's ability to follow complex instructions, outperforming existing methods.\n\n        So, the key points are:\n\n        - Problem: LLMs struggle with complex instructions\n        - Solution: AIR framework with two stages\n        - Dataset: AIR-10K\n        - Results: Improved performance\n\n        Now, thinking about the structured highlights.\n\n        Core Innovation: The key idea is using an iterative refinement process with LLM guidance to generate and refine complex instructions based on documents.\n\n        Technical Approach: The framework has two main stages. First, generate initial instruction from a document. Second, iteratively refine by comparing with the document and using LLM as a judge.\n\n        Quantitative Findings: AIR-10K dataset has 10K instructions. The results show better performance, but the abstract doesn't provide specific metrics like accuracy or F1 scores, but mentions significant improvement over existing methods.\n\n        Limitations & Assumptions: The paper might assume that the documents are relevant and of good quality. The iterative process might require human supervision or might not scale well. The dataset might not cover all possible scenarios.\n\n        Domain Impact: Theoretically, it advances instruction generation for LLMs. Practically, it helps industries relying on LLMs to follow complex instructions more effectively.\n\n        Now, I need to structure this into the required format, making sure to include key equations if any, but the paper doesn't mention specific equations, so perhaps it's not necessary. Focus on the structured highlights as per the user's instructions.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n1. **Core Innovation**:  \n   The paper introduces the AIR (Automatic Iterative Refinement) framework, which systematically enhances the generation of complex instructions for large language models (LLMs) by iteratively refining initial instructions using human-written documents as a guide.\n\n2. **Technical Approach**:  \n   - **Stage 1**: Generate an initial instruction from a human-written document.  \n   - **Stage 2**: Iteratively refine the instruction by comparing the model's output with the document, incorporating constraints to ensure relevance and effectiveness.\n\n3. **Quantitative Findings**:  \n   - A dataset named AIR-10K was created, containing 10,000 complex instructions.  \n   - The study demonstrates that the AIR framework significantly improves LLMs' ability to follow complex instructions compared to existing methods.\n\n4. **Limitations & Assumptions**:  \n   - The framework assumes the availability and relevance of human-written documents.  \n   - The iterative refinement process may require computational resources and could face scalability issues.  \n   - The dataset may not encompass all possible complex instruction scenarios.\n\n5. **Domain Impact**:  \n   - **Theoretical Impact**: Advances the field of instruction generation for LLMs by introducing an iterative refinement methodology.  \n   - **Practical Impact**: Enhances industries reliant on LLMs, such as education, healthcare, and customer service, by improving the ability to follow detailed and context-specific instructions.  \n\nThis framework addresses the challenge of generating complex instructions by leveraging both human-written documents and iterative refinement, offering a scalable and effective solution.",
+  "topics": [
+    "instruction",
+    "al",
+    "et al",
+    "et",
+    "instructions",
+    "complex",
+    "model",
+    "constraints",
+    "data",
+    "arxiv"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/AIR_Complex_Instruction_Generation_via_Automatic_Iterative_Refinement_2f7f92ec371480c3.pdf",
+    "content_hash": "2f7f92ec371480c36eaa4cdd898d7dee1219faaf35ba6d387c13d162979d69bc",
+    "arxiv_id": null,
+    "title": "AIR_Complex_Instruction_Generation_via_Automatic_Iterative_Refinement_2f7f92ec371480c3",
+    "author": "",
+    "creation_date": "D:20250228020607Z",
+    "published": "2025-02-28T02:06:07",
+    "pages": 20,
+    "size": 1625650,
+    "file_mtime": 1740971474.1204653
+  },
+  "main_staff": {
+    "title": "AIR_Complex_Instruction_Generation_via_Automatic_Iterative_Refinement_2f7f92ec371480c3",
+    "authors": [
+      ""
+    ],
+    "abstract": "With the development of large language mod-\nels, their ability to follow simple instructions\nhas significantly improved. However, adhering\nto complex instructions remains a major chal-\nlenge. Current approaches to generating com-\nplex instructions are often irrelevant to the cur-\nrent instruction requirements or suffer from lim-\nited scalability and diversity. Moreover, meth-\nods such as back-translation, while effective\nfor simple instruction generation, fail to lever-\nage the rich knowledge and formatting in hu-\nman written documents. In this paper, we pro-\npose a novel Automatic Iterative Refinement\n(AIR) framework to generate complex instruc-\ntions with constraints, which not only better\nreflects the requirements of real scenarios but\nalso significantly enhances LLMs’ ability to fol-\nlow complex instructions. The AIR framework\nconsists of two stages: 1) Generate an initial\ninstruction from a document; 2) Iteratively re-\nfine instructions with LLM-as-judge guidance\nby comparing the model’s output with the doc-\nument to incorporate valuable constraints. Fi-\nnally, we construct the AIR-10K dataset with\n10K complex instructions and demonstrate that\ninstructions generated with our approach sig-\nnificantly improve the model’s ability to follow\ncomplex instructions, outperforming existing",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods for instruction generation1.",
+      "introduction",
+      "related work",
+      "approach",
+      "method to construct initial instructions. specifi-",
+      "experiments",
+      "evaluation.",
+      "methods are the most closest to our work.",
+      "method",
+      "method shows marginal improvements over auto-",
+      "results on llama-3-8b-ultrachat",
+      "results on llama-3-8b-tulu",
+      "results of models trained with varying amounts of",
+      "experiments with qwen-2.5-7b-ultrachat as the",
+      "conclusion",
+      "references",
+      "evaluation for large language models.",
+      "results on qwen-2.5-7b-ultrachat",
+      "method even improves the average performance by 1.19 and 0.44 points, respectively. this indicates that"
+    ],
+    "topics": [
+      "instruction",
+      "al",
+      "et al",
+      "et",
+      "instructions",
+      "complex",
+      "model",
+      "constraints",
+      "data",
+      "arxiv"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

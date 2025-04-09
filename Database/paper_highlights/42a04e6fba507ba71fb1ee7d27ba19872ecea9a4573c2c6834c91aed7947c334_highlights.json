@@ -1,0 +1,64 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** The findings have significant implications for the development of secure mLLMs, necessitating robust detection and mitigation methods.  \n- **Countermeasures:** The research underscores the need for improved security measures, such as embedding space protection and robust backdoor detection mechanisms, to safeguard multilingual models against such attacks.",
+  "topics": [
+    "10",
+    "73",
+    "86",
+    "67",
+    "es",
+    "backdoor",
+    "76",
+    "al",
+    "hi",
+    "et"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Char-mander_Use_mBackdoor_A_Study_of_Cross-lingual_Backdoor_Attacks_in__Multilingual_LLMs_42a04e6fba507ba7.pdf",
+    "content_hash": "42a04e6fba507ba71fb1ee7d27ba19872ecea9a4573c2c6834c91aed7947c334",
+    "arxiv_id": null,
+    "title": "Char-mander_Use_mBackdoor_A_Study_of_Cross-lingual_Backdoor_Attacks_in__Multilingual_LLMs_42a04e6fba507ba7",
+    "author": "",
+    "creation_date": "D:20250225022838Z",
+    "published": "2025-02-25T02:28:38",
+    "pages": 16,
+    "size": 10964402,
+    "file_mtime": 1740972087.533045
+  },
+  "main_staff": {
+    "title": "Char-mander_Use_mBackdoor_A_Study_of_Cross-lingual_Backdoor_Attacks_in__Multilingual_LLMs_42a04e6fba507ba7",
+    "authors": [
+      ""
+    ],
+    "abstract": "We explore Cross-lingual Backdoor ATtacks\n(X-BAT) in multilingual Large Language Mod-\nels (mLLMs), revealing how backdoors in-\nserted in one language can automatically trans-\nfer to others through shared embedding spaces.\nUsing toxicity classification as a case study,\nwe demonstrate that attackers can compromise\nmultilingual systems by poisoning data in a\nsingle language, with rare tokens serving as\nspecific effective triggers. Our findings expose\na critical vulnerability in the fundamental ar-\nchitecture that enables cross-lingual transfer in\nthese models. Our code and data are publicly\navailable1.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related works",
+      "experiments",
+      "evaluation strategy",
+      "results",
+      "conclusion",
+      "references",
+      "evaluation prompt"
+    ],
+    "topics": [
+      "10",
+      "73",
+      "86",
+      "67",
+      "es",
+      "backdoor",
+      "76",
+      "al",
+      "hi",
+      "et"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

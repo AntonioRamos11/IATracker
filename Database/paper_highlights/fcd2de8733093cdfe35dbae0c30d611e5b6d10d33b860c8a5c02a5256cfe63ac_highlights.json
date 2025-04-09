@@ -1,0 +1,76 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "They assume there's enough textual info, which makes sense because if you don't have text, it won't help. They also rely on pre-trained models for visual features, so maybe that's a limitation if you don't have good visual data. They only tested on three benchmarks, so it might not work as well in other areas.",
+    "Domain impact: They say it's applicable to industrial settings where product defects are hard to detect without enough data. Humans use manuals, but now machines can do it better with text. So this could help industries save time and money by not needing as much labeling.",
+    "The equation they have is about the accuracy being a function of multi-modal features from visual and text. So, accuracy depends on how well the visual and text features are combined.",
+    "I'm a bit confused about how exactly the meta-learning part works here. Does it mean the model learns how to use both visual and text features on the fly? And how does bidirectional text feature generation help? Maybe it allows the model to get more information from the text in both directions, improving the alignment between visual and text.",
+    "Also, the figures they mention: Figure 1 shows the framework structure, which includes the two modules and the RPN. Figure 2 is about cross-modal alignment, so maybe it shows how visual and text features are aligned before being used for detection.",
+    "They mention that the method surpasses existing approaches, so it's"
+  ],
+  "impact": "",
+  "topics": [
+    "detection",
+    "text",
+    "shot",
+    "object",
+    "rich",
+    "fsod",
+    "typically",
+    "learning",
+    "multi",
+    "domain"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Cross-domain_Few-shot_Object_Detection_with_Multi-modal_Textual__Enrichment_fcd2de8733093cdf.pdf",
+    "content_hash": "fcd2de8733093cdfe35dbae0c30d611e5b6d10d33b860c8a5c02a5256cfe63ac",
+    "arxiv_id": null,
+    "title": "Cross-domain_Few-shot_Object_Detection_with_Multi-modal_Textual__Enrichment_fcd2de8733093cdf",
+    "author": "",
+    "creation_date": "D:20250225015426Z",
+    "published": "2025-02-25T01:54:26",
+    "pages": 41,
+    "size": 7995540,
+    "file_mtime": 1740972534.1932766
+  },
+  "main_staff": {
+    "title": "Cross-domain_Few-shot_Object_Detection_with_Multi-modal_Textual__Enrichment_fcd2de8733093cdf",
+    "authors": [
+      ""
+    ],
+    "abstract": "Advancements in cross-modal feature extraction and integration have significantly\nenhanced performance in few-shot learning tasks. However, current multi-modal object\ndetection (MM-OD) methods often experience notable performance degradation when\nencountering substantial domain shifts. We propose that incorporating rich textual infor-\nmation can enable the model to establish a more robust knowledge relationship between\nvisual instances and their corresponding language descriptions, thereby mitigating the\nchallenges of domain shift. Specifically, we focus on the problem of Cross-Domain Multi-\nModal Few-Shot Object Detection (CDMM-FSOD) and introduce a meta-learning-based\nframework designed to leverage rich textual semantics as an auxiliary modality to achieve\neffective domain adaptation. Our new architecture incorporates two key components: (i)\nA multi-modal feature aggregation module, which aligns visual and linguistic feature\nembeddings to ensure cohesive integration across modalities. (ii) A rich text seman-\ntic rectification module, which employs bidirectional text feature generation to refine\nmulti-modal feature alignment, thereby enhancing understanding of language and its appli-\ncation in object detection. We evaluate the proposed method on three cross-domain object\ndetection benchmarks and demonstrate that it significantly surpasses existing few-shot\nobject detection approaches. The implementation of our method is publicly accessible at:\nhttps://github.com/zshanggu/HTRPN.*\nKeywords: few-shot object detection, semi-supervised learning, region proposal network\n*Partial results of this work is presented at the 2025 Winter Conference on Computer Vision [1].\n1\narXiv:2502.16469v1  [cs.CV]  23 Feb 2025\n\n1 Introduction\nIn real-world industrial settings, many existing deep learning-based object detection methods\nstruggle to detect product defects effectively due to the challenge of data annotation [2–4].\nThese challenges primarily stem from two factors: the limited availability of domain-specific\ntraining data and the significant domain gap between pre-trained datasets which are typically\nsourced from everyday scenarios and the specialized domain of product defect detection.\nEven for humans, identifying subtle product defects can be challenging without prior visual\nexperience in the specific domain. However, human experts often rely on detailed training\nmanuals containing textual instructions and guidelines to bridge this gap. These manuals pro-\nvide critical context and descriptive information, enabling experts to identify defects more\naccurately and consistently annotate images. Inspired by this process, we propose a novel",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methodology that integrates multi-modal rich textual information to enhance object detec-",
+      "methods, often referred to as “learning to learn,” take a fundamentally different approach.",
+      "approach ensures that the model retains its performance on base categories while adapting to",
+      "approaches often rely on relatively simple language inputs, such as class names or basic",
+      "methods, the background is treated as an extra hidden category and is initialized as one of the",
+      "evaluation are built using these datasets. to this end, we build two rich texts to describe",
+      "approaches that demonstrate competitive performance in the field. to ensure a fair and",
+      "method, surpassing their results across the evaluated tasks, further solidifying the potential of",
+      "methods. these include more precise bounding boxes (first row), fewer false positives (second",
+      "references",
+      "method for cross-domain few-shot object detection. in: avidan, s., brostow, g., ciss´e,",
+      "method",
+      "methods are developed or the results are reported by fu et al. ; ‡ indicates the results of mm-"
+    ],
+    "topics": [
+      "detection",
+      "text",
+      "shot",
+      "object",
+      "rich",
+      "fsod",
+      "typically",
+      "learning",
+      "multi",
+      "domain"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

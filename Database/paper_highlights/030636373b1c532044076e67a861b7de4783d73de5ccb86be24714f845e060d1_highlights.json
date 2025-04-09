@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: WebFAQ: A Multilingual Collection of Natural Q&A Datasets for Dense Retrieval\n        **Abstract**: We present WebFAQ, a large-scale collection of open-domain ques-\ntion answering datasets derived from FAQ-style schema.org anno-\ntations. In total, the data collection consists of 96 million natural\nquestion-answer (QA) pairs across 75 languages, including 47 mil-\nlion (49%) non-English samples. WebFAQ further serves as the foun-\ndation for 20 monolingual retrieval benchmarks with a total size\nof 11.2 million QA pairs (5.9 million non-English). These datasets\nare carefully curated through refined filtering and near-duplicate\ndetection, yielding high-quality resources for training and evalu-\nating multilingual dense retrieval models. To empirically confirm\nWebFAQ’s efficacy, we use the collected QAs to fine-tune an in-\ndomain pretrained XLM-RoBERTa model. Through this process of\ndataset-specific fine-tuning, the model achieves significant retrieval\nperformance gains, which generalize – beyond WebFAQ – to other\nmultilingual retrieval benchmarks evaluated in zero-shot setting.\nLast but not least, we utilize WebFAQ to construct a set of QA-\naligned bilingual corpora spanning over 1000 language pairs using\nstate-of-the-art bitext mining and automated LLM-assessed transla-\ntion evaluation. Due to our advanced, automated method of bitext\ndataset generation, the resulting bilingual corpora demonstrate\nhigher translation quality compared to similar datasets. WebFAQ\nand all associated resources are publicly available on GitHub1 and\nHuggingFace.2\nCCS CONCEPTS\n• Information systems →Retrieval models and ranking; Data\nmining.\nKEYWORDS\nQuestion Answering, Dense Retrieval, Multilingual Text Embed-\nding, Cross-Lingual Information Retrieval\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the paper.\n        Ensure that each of the above sections is clearly labeled and that each bullet point is concise.\n</think>\n\n**Core Innovation:**  \nWebFAQ is a multilingual, open-domain QA dataset collection derived from FAQ-style schema.org annotations, designed to enhance dense retrieval models across various languages.\n\n**Technical Approach:**  \n- **Data Collection:** 96 million QA pairs in 75 languages, with 47 million non-English samples.\n- **Monolingual Benchmarks:** 20 benchmarks with 11.2 million QA pairs, focusing on language-specific retrieval.\n- **Quality Assurance:** Refined filtering and near-duplicate detection to ensure high-quality data.\n- **Model Fine-tuning:** XLM-RoBERTa model fine-tuned on WebFAQ datasets for improved retrieval performance.\n- **Bilingual Corpora:** Utilizes advanced bitext mining and LLM-assessed translation evaluation to create QA-aligned corpora spanning over 1000 language pairs.\n\n**Quantitative Findings:**  \n1. XLM-RoBERTa model achieves significant retrieval performance gains after dataset-specific fine-tuning.\n2. The model's gains generalize to other multilingual retrieval benchmarks in zero-shot settings.\n3. QA-aligned bilingual corpora generated using WebFAQ demonstrate higher translation quality compared to similar datasets.\n\n**Limitations & Assumptions:**  \n- The effectiveness of the model may depend on the quality and diversity of the training data.\n- The method for generating bilingual corpora assumes the availability of high-quality bitext data and translation evaluation tools.\n\n**Domain Impact:**  \n- Theoretically, WebFAQ contributes to advancing multilingual retrieval models by providing a large-scale, diverse QA resource.\n- Practically, it supports the development of more robust and versatile retrieval systems applicable across various domains and languages.",
+  "topics": [
+    "retrieval",
+    "datasets",
+    "pairs",
+    "webfaq",
+    "question",
+    "multilingual",
+    "org",
+    "dataset",
+    "language",
+    "10"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/WebFAQ_A_Multilingual_Collection_of_Natural_QA_Datasets_for_Dense__Retrieval_030636373b1c5320.pdf",
+    "content_hash": "030636373b1c532044076e67a861b7de4783d73de5ccb86be24714f845e060d1",
+    "arxiv_id": null,
+    "title": "WebFAQ: A Multilingual Collection of Natural Q&A Datasets for Dense Retrieval",
+    "author": "",
+    "creation_date": "D:20250303014213Z",
+    "published": "2025-03-03T01:42:13",
+    "pages": 10,
+    "size": 1075137,
+    "file_mtime": 1740976396.5852842
+  },
+  "main_staff": {
+    "title": "WebFAQ: A Multilingual Collection of Natural Q&A Datasets for Dense Retrieval",
+    "authors": [
+      ""
+    ],
+    "abstract": "We present WebFAQ, a large-scale collection of open-domain ques-\ntion answering datasets derived from FAQ-style schema.org anno-\ntations. In total, the data collection consists of 96 million natural\nquestion-answer (QA) pairs across 75 languages, including 47 mil-\nlion (49%) non-English samples. WebFAQ further serves as the foun-\ndation for 20 monolingual retrieval benchmarks with a total size\nof 11.2 million QA pairs (5.9 million non-English). These datasets\nare carefully curated through refined filtering and near-duplicate\ndetection, yielding high-quality resources for training and evalu-\nating multilingual dense retrieval models. To empirically confirm\nWebFAQ’s efficacy, we use the collected QAs to fine-tune an in-\ndomain pretrained XLM-RoBERTa model. Through this process of\ndataset-specific fine-tuning, the model achieves significant retrieval\nperformance gains, which generalize – beyond WebFAQ – to other\nmultilingual retrieval benchmarks evaluated in zero-shot setting.\nLast but not least, we utilize WebFAQ to construct a set of QA-\naligned bilingual corpora spanning over 1000 language pairs using\nstate-of-the-art bitext mining and automated LLM-assessed transla-\ntion evaluation. Due to our advanced, automated method of bitext\ndataset generation, the resulting bilingual corpora demonstrate\nhigher translation quality compared to similar datasets. WebFAQ\nand all associated resources are publicly available on GitHub1 and\nHuggingFace.2\nCCS CONCEPTS\n• Information systems →Retrieval models and ranking; Data\nmining.\nKEYWORDS\nQuestion Answering, Dense Retrieval, Multilingual Text Embed-\nding, Cross-Lingual Information Retrieval\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "evaluation of multilingual retrieval systems.",
+      "approach is impractical in a vastly multilingual setting. instead, we",
+      "evaluation",
+      "results on webfaq to those obtained on other multilingual datasets.",
+      "results",
+      "methodology",
+      "discussion",
+      "method does not explicitly address, as it applies detection to the",
+      "conclusion",
+      "approach for bitext generation.",
+      "references"
+    ],
+    "topics": [
+      "retrieval",
+      "datasets",
+      "pairs",
+      "webfaq",
+      "question",
+      "multilingual",
+      "org",
+      "dataset",
+      "language",
+      "10"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

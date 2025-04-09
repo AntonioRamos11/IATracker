@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Q-PART_Quasi-Periodic_Adaptive_Regression_with_Test-time_Training_for__Pediatric_Left_Ventricular_Ejection_Fraction_Regression_f1a760ad47\n        **Abstract**: In this work, we address the challenge of adaptive pedi-\natric Left Ventricular Ejection Fraction (LVEF) assessment.\nWhile Test-time Training (TTT) approaches show promise\nfor this task, they suffer from two significant limitations.\nExisting TTT works are primarily designed for classifica-\ntion tasks rather than continuous value regression, and they\nlack mechanisms to handle the quasi-periodic nature of car-\ndiac signals. To tackle these issues, we propose a novel\nQuasi-Periodic Adaptive Regression with Test-time Train-\ning (Q-PART) framework. In the training stage, the pro-\nposed Quasi-Period Network decomposes the echocardio-\ngram into periodic and aperiodic components within la-\ntent space by combining parameterized helix trajectories\nwith Neural Controlled Differential Equations. During in-\nference, our framework further employs a variance mini-\nmization strategy across image augmentations that simu-\nlate common quality issues in echocardiogram acquisition,\nalong with differential adaptation rates for periodic and\naperiodic components. Theoretical analysis is provided to\ndemonstrate that our variance minimization objective effec-\ntively bounds the regression error under mild conditions.\nFurthermore, extensive experiments across three pediatric\nage groups demonstrate that Q-PART not only significantly\noutperforms existing approaches in pediatric LVEF predic-\ntion, but also exhibits strong clinical screening capability\nwith high mAUROC scores (up to 0.9747) and maintains\ngender-fair performance across all metrics, validating its\nrobustness and practical utility in pediatric echocardiogra-\nphy analysis. The project can be found in Q-PART.\n1. Introduction\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Use the following format for each structured highlight:\n\n        - **Core Innovation**: The main idea behind the innovation.\n        - **Technical Approach**: The methods or techniques used to achieve the innovation.\n        - **Quantitative Findings**: Specific metrics or results.\n        - **Limitations & Assumptions**: What the model doesn't do or the assumptions it makes.\n        - **Domain Impact**: The broader implications for the field.\n</think>\n\n**Core Innovation**: The Q-PART framework addresses two main limitations of Test-time Training (TTT) in regression tasks: its suitability for continuous value prediction and its inability to handle quasi-periodic data. By decomposing signals into periodic and aperiodic components using Quasi-Period Networks and incorporating variance minimization, Q-PART enhances accuracy in LVEF prediction.\n\n**Technical Approach**: \n- **Quasi-Period Network**: Uses parameterized helix trajectories and Neural Controlled Differential Equations for signal decomposition.\n- **Test-time Training (TTT)**: Employs variance minimization across image augmentations to handle quality issues.\n- **Differential Adaptation**: Adjusts learning rates for periodic and aperiodic components during training.\n\n**Quantitative Findings**: \n1. Improved LVEF prediction accuracy across pediatric age groups.\n2. Achieved high mAUROC scores (up to 0.9747) demonstrating strong screening capability.\n3. Maintained gender-fair performance across all metrics, ensuring equitable outcomes.\n\n**Limitations & Assumptions**: \n- Assumes sufficient quality of echocardiograms for effective decomposition.\n- Relys on periodicity assumptions in the data, which may limit performance in non-quasi-periodic scenarios.\n\n**Domain Impact**: The Q-PART framework significantly advances pediatric LVEF assessment by offering a robust, gender-fair, and high-performing solution, validated across diverse age groups. It has the potential to enhance clinical decision-making and improve patient outcomes by providing accurate and reliable regression analysis for echocardiograms.",
+  "topics": [
+    "test",
+    "time",
+    "test time",
+    "training",
+    "lvef",
+    "periodic",
+    "model",
+    "ˆyk",
+    "cardiac",
+    "variance"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Q-PART_Quasi-Periodic_Adaptive_Regression_with_Test-time_Training_for__Pediatric_Left_Ventricular_Ejection_Fraction_Regression_f1a760ad47.pdf",
+    "content_hash": "a552c074eecefce7f8d8daf66f00ee15d744aa1cb4af383f163c545241e569a3",
+    "arxiv_id": null,
+    "title": "Q-PART_Quasi-Periodic_Adaptive_Regression_with_Test-time_Training_for__Pediatric_Left_Ventricular_Ejection_Fraction_Regression_f1a760ad47",
+    "author": "",
+    "creation_date": "D:20250307012941Z",
+    "published": "2025-03-07T01:29:41",
+    "pages": 13,
+    "size": 3118805,
+    "file_mtime": 1741418595.2790473
+  },
+  "main_staff": {
+    "title": "Q-PART_Quasi-Periodic_Adaptive_Regression_with_Test-time_Training_for__Pediatric_Left_Ventricular_Ejection_Fraction_Regression_f1a760ad47",
+    "authors": [
+      ""
+    ],
+    "abstract": "In this work, we address the challenge of adaptive pedi-\natric Left Ventricular Ejection Fraction (LVEF) assessment.\nWhile Test-time Training (TTT) approaches show promise\nfor this task, they suffer from two significant limitations.\nExisting TTT works are primarily designed for classifica-\ntion tasks rather than continuous value regression, and they\nlack mechanisms to handle the quasi-periodic nature of car-\ndiac signals. To tackle these issues, we propose a novel\nQuasi-Periodic Adaptive Regression with Test-time Train-\ning (Q-PART) framework. In the training stage, the pro-\nposed Quasi-Period Network decomposes the echocardio-\ngram into periodic and aperiodic components within la-\ntent space by combining parameterized helix trajectories\nwith Neural Controlled Differential Equations. During in-\nference, our framework further employs a variance mini-\nmization strategy across image augmentations that simu-\nlate common quality issues in echocardiogram acquisition,\nalong with differential adaptation rates for periodic and\naperiodic components. Theoretical analysis is provided to\ndemonstrate that our variance minimization objective effec-\ntively bounds the regression error under mild conditions.\nFurthermore, extensive experiments across three pediatric\nage groups demonstrate that Q-PART not only significantly\noutperforms existing approaches in pediatric LVEF predic-\ntion, but also exhibits strong clinical screening capability\nwith high mAUROC scores (up to 0.9747) and maintains\ngender-fair performance across all metrics, validating its\nrobustness and practical utility in pediatric echocardiogra-\nphy analysis. The project can be found in Q-PART.\n1. Introduction",
+    "sections": [
+      "unknown",
+      "abstract",
+      "evaluation of left ventricular ejection fraction (lvef) for",
+      "methods have explored quasi-periodic signal processing for",
+      "approaches predominantly target classification tasks, pre-",
+      "experiments:",
+      "method achieves consistent improvements across all metrics",
+      "approaches directly predict lvef. our experimental results",
+      "methods like echonet and memsam, their lvef estima-",
+      "approach",
+      "evaluation metrics.",
+      "references",
+      "abstract. in this appendix, we provides supplementary ma-"
+    ],
+    "topics": [
+      "test",
+      "time",
+      "test time",
+      "training",
+      "lvef",
+      "periodic",
+      "model",
+      "ˆyk",
+      "cardiac",
+      "variance"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

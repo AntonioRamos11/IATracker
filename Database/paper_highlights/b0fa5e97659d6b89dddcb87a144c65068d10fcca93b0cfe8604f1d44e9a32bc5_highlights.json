@@ -1,0 +1,57 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Order-Optimal_Projection-Free_Algorithm_for_Adversarially_Constrained__Online_Convex_Optimization_b0fa5e97659d6b89\n        **Abstract**: Projection-based algorithms for constrained Online Convex Optimization (COCO) face\nscalability challenges in high-dimensional settings due to the computational complexity of\nprojecting iterates onto constraint sets. This paper introduces a projection-free algorithm\nfor COCO that achieves state-of-the-art performance guarantees while eliminating the need\nfor projections. By integrating a separation oracle with adaptive Online Gradient Descent\n(OGD) and employing a Lyapunov-driven surrogate function, while dynamically adjusting\nstep sizes using gradient norms, our method jointly optimizes the regret and cumulative\nconstraint violation (CCV). We also use a blocked version of OGD that helps achieve trade-\noﬀs betweeen the regret and CCV with the number of calls to the separation oracle. For\nconvex cost functions, our algorithm attains an optimal regret of O(\n√\nT) and a CCV of\nO(\n√\nT log T ), matching the best-known projection-based results, while only using ˜O(T )\ncalls to the separation oracle. The results also demonstrate a tradeoﬀwhere lower calls to\nthe separation oracle increase the regret and the CCV. In the strongly convex setting, we\nfurther achieve a regret of O(log T ) and a CCV of O(√T log T), while requiring O(T 2) calls\nto the separation oracle. Further, tradeoﬀwith the decreasing oracle calls is studied. These\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Core Innovation\n\nThe paper introduces a projection-free algorithm for Adversarially Constrained Online Convex Optimization (COCO) that achieves optimal regret and constraint violation bounds without requiring projections. The algorithm integrates a separation oracle with adaptive Online Gradient Descent (OGD) and employs a Lyapunov-driven surrogate function to dynamically adjust step sizes, balancing regret and CCV. \n\n### Technical Approach\n\n1. **Separation Oracle Integration**: Uses a separation oracle to replace projections, enabling the algorithm to handle high-dimensional settings efficiently.\n2. **Adaptive Online Gradient Descent (OGD)**: Modifies OGD to adaptively adjust step sizes based on gradient norms, enhancing performance without projections.\n3. **Lyapunov-Driven Surrogate Function**: Employs a dynamically adjusted function to optimize the trade-off between regret and CCV, ensuring balanced performance.\n4. **Blocked OGD**: Implements a blocked version of OGD to trade off regret and CCV against the number of separation oracle calls, offering flexibility in performance tuning.\n5. **Convex Cost Functions**: For convex settings, achieves optimal regret O(√T) and CCV O(√T log T) with O(T) oracle calls. For strongly convex settings, improves to regret O(log T) and CCV O(√T log T) with O(T²) oracle calls.\n\n### Quantitative Findings\n\n1. For convex cost functions:\n   - Regret: O(√T)\n   - Cumulative Constraint Violation (CCV): O(√T log T)\n   - Oracle calls: ˜O(T)\n2. For strongly convex cost functions:\n   - Regret: O(log T)\n   - CCV: O(√T log T)\n   - Oracle calls: O(T²)\n3. Trade-offs between oracle calls, regret, and CCV are demonstrated, showing improved performance with fewer oracle calls at the cost of higher regret and CCV.\n\n### Limitations & Assumptions\n\n1. **Computational Complexity**: The algorithm's reliance on separation oracles may increase computational complexity, especially for strongly convex functions requiring O(T²) calls.\n2. **Convexity Assumption**: The theoretical guarantees primarily hold for convex cost functions, with less explored performance in non-convex settings.\n3. **Dynamic Adjustment**: The adaptive step size adjustment based on gradient norms introduces complexity and may affect convergence in certain scenarios.\n4. ** Oracle Efficiency**: The trade-offs highlight a need for efficient separation oracles to maintain practicality.\n\n### Domain Impact\n\nThe innovation significantly impacts theoretical computer science and optimization, offering scalable solutions for high-dimensional COCO problems. Practically, it enhances applications in machine learning, resource allocation, and sequential decision-making under uncertainty, providing a computationally efficient alternative to projection-based methods. The theoretical advancements contribute to a deeper understanding of online optimization dynamics, while practical implications improve the applicability of COCO algorithms in real-world scenarios.",
+  "topics": [
+    "convex",
+    "ft",
+    "algorithm",
+    "projection",
+    "log",
+    "regret",
+    "gt",
+    "qt",
+    "xt",
+    "strongly"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Order-Optimal_Projection-Free_Algorithm_for_Adversarially_Constrained__Online_Convex_Optimization_b0fa5e97659d6b89.pdf",
+    "content_hash": "b0fa5e97659d6b89dddcb87a144c65068d10fcca93b0cfe8604f1d44e9a32bc5",
+    "arxiv_id": null,
+    "title": "Order-Optimal_Projection-Free_Algorithm_for_Adversarially_Constrained__Online_Convex_Optimization_b0fa5e97659d6b89",
+    "author": "",
+    "creation_date": "D:20250224211805-05'00'",
+    "published": "20250224211805-05'00'",
+    "pages": 24,
+    "size": 284109,
+    "file_mtime": 1740972214.0920289
+  },
+  "main_staff": {
+    "title": "Order-Optimal_Projection-Free_Algorithm_for_Adversarially_Constrained__Online_Convex_Optimization_b0fa5e97659d6b89",
+    "authors": [
+      ""
+    ],
+    "abstract": "Projection-based algorithms for constrained Online Convex Optimization (COCO) face\nscalability challenges in high-dimensional settings due to the computational complexity of\nprojecting iterates onto constraint sets. This paper introduces a projection-free algorithm\nfor COCO that achieves state-of-the-art performance guarantees while eliminating the need\nfor projections. By integrating a separation oracle with adaptive Online Gradient Descent\n(OGD) and employing a Lyapunov-driven surrogate function, while dynamically adjusting\nstep sizes using gradient norms, our method jointly optimizes the regret and cumulative\nconstraint violation (CCV). We also use a blocked version of OGD that helps achieve trade-\noﬀs betweeen the regret and CCV with the number of calls to the separation oracle. For\nconvex cost functions, our algorithm attains an optimal regret of O(\n√\nT) and a CCV of\nO(\n√\nT log T ), matching the best-known projection-based results, while only using ˜O(T )\ncalls to the separation oracle. The results also demonstrate a tradeoﬀwhere lower calls to\nthe separation oracle increase the regret and the CCV. In the strongly convex setting, we\nfurther achieve a regret of O(log T ) and a CCV of O(√T log T), while requiring O(T 2) calls\nto the separation oracle. Further, tradeoﬀwith the decreasing oracle calls is studied. These",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results close the gap between projection-free and projection-based approaches, demonstrat-",
+      "methods while eliminating the need for costly projections.",
+      "approach for adversarial constraints is studied in (garber and kretzu, 2024), where the re-",
+      "results are extended to the case where the cost function is strongly convex (theorem 3).",
+      "references"
+    ],
+    "topics": [
+      "convex",
+      "ft",
+      "algorithm",
+      "projection",
+      "log",
+      "regret",
+      "gt",
+      "qt",
+      "xt",
+      "strongly"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

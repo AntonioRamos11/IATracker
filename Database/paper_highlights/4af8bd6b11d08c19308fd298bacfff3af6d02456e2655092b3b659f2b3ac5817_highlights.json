@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Making_LLMs_Reason_The_Intermediate_Language_Problem_in_Neurosymbolic__Approaches_4af8bd6b11d08c19\n        **Abstract**: Logical reasoning tasks manifest themselves as a challenge to Large Language\nModels (LLMs). Neurosymbolic approaches use LLMs to translate logical rea-\nsoning problems formulated in natural language into a formal intermediate lan-\nguage.\nSubsequently, the usage of symbolic reasoners yields reliable solving\nthereof. However, LLMs often fail in translation due to poorly chosen intermedi-\nate languages.\nWe introduce the intermediate language problem, which is the problem of choos-\ning a suitable formal language representation for neurosymbolic approaches. The-\noretically, we argue that its origins lie in the inability of LLMs to distinguish\nsyntax from semantics and the relative independence of the problem from its rep-\nresentation. We showcase its existence experimentally by contrasting two inter-\nmediate languages, Answer Set Programming and the Python Knowledge Engine.\nIn addition, we demonstrate the effects of varying degrees of supplementary con-\ntext information. Our results show a maximum difference in overall-accuracy of\n53.20% and 49.26% in execution-accuracy. When using the GPT4o-mini LLM we\nbeat the state-of-the-art in overall-accuracy on the ProntoQA dataset by 21.20%\nand by 50.50% on the ProofWriter dataset.\n1\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        If no equations or figures, explain why not.\n\n        **Note:** The user provided an initial draft of structured highlights, but it's not accurate. Please refine it to be accurate based on the provided paper.\n\n        The initial draft was:\n        1. Core Innovation: The paper addresses the issue of translating logical reasoning problems into formal languages by introducing a new intermediate language.\n        2. Technical Approach: Uses LLMs for translation, symbolic reasoners for solving, and GPT4o-mini as the LLM.\n        3. Quantitative Findings: Outperforms state-of-the-art by 21.20% and 50.50%.\n        4. Limitations & Assumptions: The intermediate language's choice is subjective, and the experiments are limited to specific datasets.\n        5. Domain Impact: Theoretically significant for LLMs and neurosymbolic approaches, practically impactful for applications needing logical reasoning.\n\n        The user suggests that the initial draft is not accurate, so refine it based on the paper.\n</think>\n\n1. **Core Innovation**: The paper identifies and addresses the intermediate language problem in neurosymbolic approaches by introducing a formal language that effectively bridges LLMs and symbolic reasoners.\n\n2. **Technical Approach**:\n   - Utilizes large language models (LLMs) for translating logical reasoning problems into formal languages.\n   - Employs symbolic reasoners to solve the translated problems.\n   - Empirical evaluation with GPT4o-mini as the LLM.\n\n3. **Quantitative Findings**:\n   - Achieves a 21.20% improvement in overall accuracy on the ProntoQA dataset.\n   - Outperforms the state-of-the-art by 50.50% on the ProofWriter dataset.\n\n4. **Limitations & Assumptions**:\n   - The choice of intermediate language is subjective and dependent on problem representation.\n   - Experiments are confined to specific datasets, such as ProntoQA and ProofWriter.\n\n5. **Domain Impact**:\n   - Theoretically significant for enhancing LLM capabilities in logical reasoning.\n   - Practically impactful for applications requiring reliable logical reasoning, such as question answering and theorem proving.",
+  "topics": [
+    "language",
+    "problem",
+    "reasoning",
+    "llms",
+    "true",
+    "logic",
+    "pyke",
+    "asp",
+    "al",
+    "example"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Making_LLMs_Reason_The_Intermediate_Language_Problem_in_Neurosymbolic__Approaches_4af8bd6b11d08c19.pdf",
+    "content_hash": "4af8bd6b11d08c19308fd298bacfff3af6d02456e2655092b3b659f2b3ac5817",
+    "arxiv_id": null,
+    "title": "Making_LLMs_Reason_The_Intermediate_Language_Problem_in_Neurosymbolic__Approaches_4af8bd6b11d08c19",
+    "author": "",
+    "creation_date": "D:20250225025258Z",
+    "published": "2025-02-25T02:52:58",
+    "pages": 22,
+    "size": 867817,
+    "file_mtime": 1740971820.897848
+  },
+  "main_staff": {
+    "title": "Making_LLMs_Reason_The_Intermediate_Language_Problem_in_Neurosymbolic__Approaches_4af8bd6b11d08c19",
+    "authors": [
+      ""
+    ],
+    "abstract": "Logical reasoning tasks manifest themselves as a challenge to Large Language\nModels (LLMs). Neurosymbolic approaches use LLMs to translate logical rea-\nsoning problems formulated in natural language into a formal intermediate lan-\nguage.\nSubsequently, the usage of symbolic reasoners yields reliable solving\nthereof. However, LLMs often fail in translation due to poorly chosen intermedi-\nate languages.\nWe introduce the intermediate language problem, which is the problem of choos-\ning a suitable formal language representation for neurosymbolic approaches. The-\noretically, we argue that its origins lie in the inability of LLMs to distinguish\nsyntax from semantics and the relative independence of the problem from its rep-\nresentation. We showcase its existence experimentally by contrasting two inter-\nmediate languages, Answer Set Programming and the Python Knowledge Engine.\nIn addition, we demonstrate the effects of varying degrees of supplementary con-\ntext information. Our results show a maximum difference in overall-accuracy of\n53.20% and 49.26% in execution-accuracy. When using the GPT4o-mini LLM we\nbeat the state-of-the-art in overall-accuracy on the ProntoQA dataset by 21.20%\nand by 50.50% on the ProofWriter dataset.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "experiments. we discuss our findings in section 6, and close with a discussion of our limitations",
+      "related work",
+      "approaches.",
+      "approach.",
+      "experiments",
+      "method",
+      "experiments were conducted on gpt-4o-mini with temperature 0. we measure overall-accuracy,",
+      "results",
+      "results suggest that an increase in context information leads to an increase in accuracy. this can be",
+      "discussion",
+      "references",
+      "methods",
+      "discussion of logic-lm"
+    ],
+    "topics": [
+      "language",
+      "problem",
+      "reasoning",
+      "llms",
+      "true",
+      "logic",
+      "pyke",
+      "asp",
+      "al",
+      "example"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

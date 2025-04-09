@@ -1,0 +1,92 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Early-stage preprint; limited real-world deployment; reliance on synthetic data for training.",
+    "**Assumptions:** Data privacy is prioritized; transportation systems are assumed to be amenable to integration with LLMs.",
+    "**Computational Costs:** High computational requirements for training and inference.",
+    "**Bias:** Potential for model bias if training data is not diverse.",
+    "",
+    "#### 5. **Domain Impact**",
+    "**Theoretical Impact:** Advances self-supervised learning and multi-agent systems in traffic analysis.",
+    "**Practical Impact:** Addresses data privacy, reduces operational costs, and provides actionable insights for traffic management.",
+    "**Broader Implications:** Enhances urban mobility by enabling efficient data analysis and real-time decision-making.",
+    "",
+    "### Key Equations/ Figures:",
+    "**Figure 1:** Illustrates the **architecture of the IDM-GPT framework**, showing its multi-agent and self-supervised components.",
+    "**Figure 2:** Displays **performance metrics** across different traffic scenarios, highlighting accuracy, F1-score, and inference speed.",
+    "This structured format captures the essence of the research paper, emphasizing its core innovation, technical approach, quantitative results, limitations, and domain impact."
+  ],
+  "impact": "** Addresses data privacy, reduces operational costs, and provides actionable insights for traffic management.\n- **Broader Implications:** Enhances urban mobility by enabling efficient data analysis and real-time decision-making.\n\n---\n\n### Key Equations/ Figures:\n- **Figure 1:** Illustrates the **architecture of the IDM-GPT framework**, showing its multi-agent and self-supervised components.\n- **Figure 2:** Displays **performance metrics** across different traffic scenarios, highlighting accuracy, F1-score, and inference speed.\n\nThis structured format captures the essence of the research paper, emphasizing its core innovation, technical approach, quantitative results, limitations, and domain impact.",
+  "topics": [
+    "data",
+    "traffic",
+    "gpt",
+    "agent",
+    "models",
+    "idm",
+    "idm gpt",
+    "llm",
+    "analysis",
+    "transportation"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Independent_Mobility_GPT_IDM-GPT_A_Self-Supervised_Multi-Agent_Large__Language_Model_Framework_for_Customized_Traffic_Mobility_Analysis_Using__Machine_Learning_Models_b0d0a4b2cf39d193.pdf",
+    "content_hash": "b0d0a4b2cf39d193862b2400eb0ded2366bcd6b0448cf75247d4381520f6e9b9",
+    "arxiv_id": null,
+    "title": "Independent Mobility GPT (IDM-GPT): A Self-Supervised Multi-Agent Large Language Model Framework for Customized Traffic Mobility Analysis Using Machine Learning Models",
+    "author": "Fengze Yang, Xiaoyue Cathy Liu, Lingjiu Lu, Bingzhang Wang, Chenxi Liu",
+    "creation_date": "D:20250227010923Z",
+    "published": "2025-02-27T01:09:23",
+    "pages": 24,
+    "size": 491064,
+    "file_mtime": 1740970970.5064716
+  },
+  "main_staff": {
+    "title": "Independent Mobility GPT (IDM-GPT): A Self-Supervised Multi-Agent Large Language Model Framework for Customized Traffic Mobility Analysis Using Machine Learning Models",
+    "authors": [
+      "Fengze Yang",
+      " Xiaoyue Cathy Liu",
+      " Lingjiu Lu",
+      " Bingzhang Wang",
+      " Chenxi Liu"
+    ],
+    "abstract": "With the urbanization process, an increasing number of sensors are being deployed in transportation\nsystems, leading to an explosion of big data. To harness the power of this vast transportation\ndata, various machine learning (ML) and artificial intelligence (AI) methods have been introduced\nto address numerous transportation challenges. However, these methods often require significant\ninvestment in data collection, processing, storage, and the employment of professionals with expertise\nin transportation and ML. Additionally, privacy issues are a major concern when processing data\nfor real-world traffic control and management. To address these challenges, the research team\nproposes an innovative Multi-agent framework named Independent Mobility GPT (IDM-GPT) based\non large language models (LLMs) for customized traffic analysis, management suggestions, and\nprivacy preservation. IDM-GPT efficiently connects users, transportation databases, and ML models\neconomically. IDM-GPT trains, customizes, and applies various LLM-based AI agents for multiple\nfunctions, including user query comprehension, prompts optimization, data analysis, model selection,\nand performance evaluation and enhancement. With IDM-GPT, users without any background in\ntransportation or ML can efficiently and intuitively obtain data analysis and customized suggestions\nin near real-time based on their questions. Experimental results demonstrate that IDM-GPT delivers\nsatisfactory performance across multiple traffic-related tasks, providing comprehensive and actionable\ninsights that support effective traffic management and urban mobility improvement.\n∗Corresponding author.\narXiv:2502.18652v1  [cs.AI]  25 Feb 2025\n\nIndependent Mobility GPT (IDM-GPT)\nA PREPRINT\nKeywords Large Language Models · Traffic Data Analysis · Urban Mobility · Machine Learning\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation, users can utilize the idm-gpt easily and reduce the cost of effort and time.",
+      "approaches, and 2) the emerging role of llms and the multi-agent frameworks in overcoming these challenges. prior",
+      "methodology",
+      "method allows pd to be scored with variance close to human judgments, minimizing the occurrence of ties.",
+      "approach not only safeguards user privacy but also strengthens data handling practices, fostering trust and reliability in",
+      "evaluation criteria c. the desired results criteria c = {c1, c2, ..., cn} consist of n key components. given the initial",
+      "experiments & results evaluation",
+      "evaluation score ranges from 0 to 1, with a threshold ethreshold set at 0.8. the maximum number of epochs is set to 3 for",
+      "evaluation criteria",
+      "evaluation (tre). the nre involves coding algorithms to validate the quality of the data retrieved from databases",
+      "discussions of findings, insights, and suggestions derived from those insights using well-established criteria for llm",
+      "conclusions",
+      "experiments. bingzhang wang was involved in data investigation. chenxi (dylan) liu (corresponding author) was",
+      "references"
+    ],
+    "topics": [
+      "data",
+      "traffic",
+      "gpt",
+      "agent",
+      "models",
+      "idm",
+      "idm gpt",
+      "llm",
+      "analysis",
+      "transportation"
+    ],
+    "sections_text": {
+      "results": ""
+    },
+    "citations": []
+  }
+}

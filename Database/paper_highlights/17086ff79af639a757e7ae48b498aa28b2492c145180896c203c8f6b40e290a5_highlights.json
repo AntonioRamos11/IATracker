@@ -1,0 +1,64 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "The logic may not be suitable for systems with highly non-deterministic behavior, as the over-approximation techniques may lead to false positives.",
+    "The soundness and completeness proofs are currently limited to a specific class of programs, and further research is needed to extend them to more general cases.",
+    "The integration with existing logics may require significant effort to develop and maintain."
+  ],
+  "impact": "",
+  "topics": [
+    "wpr",
+    "c0",
+    "logic",
+    "c1",
+    "proof",
+    "hoare",
+    "hoare logic",
+    "partial",
+    "holds",
+    "c0 c1"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Proof_systems_for_partial_incorrectness_logic_partial_reverse_Hoare__logic_17086ff79af639a7.pdf",
+    "content_hash": "17086ff79af639a757e7ae48b498aa28b2492c145180896c203c8f6b40e290a5",
+    "arxiv_id": null,
+    "title": "Proof_systems_for_partial_incorrectness_logic_partial_reverse_Hoare__logic_17086ff79af639a7",
+    "author": "",
+    "creation_date": "D:20250302205347-05'00'",
+    "published": "20250302205347-05'00'",
+    "pages": 23,
+    "size": 255852,
+    "file_mtime": 1740976127.9191082
+  },
+  "main_staff": {
+    "title": "Proof_systems_for_partial_incorrectness_logic_partial_reverse_Hoare__logic_17086ff79af639a7",
+    "authors": [
+      ""
+    ],
+    "abstract": "arXiv:2502.21053v1  [cs.LO]  28 Feb 2025\nProof systems for partial incorrectness logic\n(partial reverse Hoare logic)\nYukihiro Oda ∗\nMarch 3, 2025\nPartial incorrectness logic (partial reverse Hoare logic) has recently been introduced as\na new Hoare-style logic that over-approximates the weakest pre-conditions of a program\nand a post-condition. It is expected to verify systems where the ﬁnal state must guarantee\nits initial state, such as authentication, secure communication tools and digital sign",
+    "sections": [
+      "unknown",
+      "conclusion is valid.",
+      "conclusion of (axiomrhl), there is a cprhl-proof of [p] c [q].",
+      "references",
+      "methods - 14th international symposium, nfm 2022, pasadena, ca, usa, may 24-27, 2022,"
+    ],
+    "topics": [
+      "wpr",
+      "c0",
+      "logic",
+      "c1",
+      "proof",
+      "hoare",
+      "hoare logic",
+      "partial",
+      "holds",
+      "c0 c1"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

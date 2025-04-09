@@ -1,0 +1,69 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Implicit_Cross-Lingual_Rewarding_for_Efficient_Multilingual_Preference__Alignment_dfa43a8997\n        **Abstract**: Direct Preference Optimization (DPO) has be-\ncome a prominent method for aligning Large\nLanguage Models (LLMs) with human pref-\nerences. While DPO has enabled significant\nprogress in aligning English LLMs, multi-\nlingual preference alignment is hampered by\ndata scarcity. To address this, we propose a\nnovel approach that captures learned prefer-\nences from well-aligned English models by\nimplicit rewards and transfers them to other\nlanguages through iterative training. Specifi-\ncally, we derive an implicit reward model from\nthe logits of an English DPO-aligned model\nand its corresponding reference model. This\nreward model is then leveraged to annotate pref-\nerence relations in cross-lingual instruction-\nresponse pairs, using English instructions to\nevaluate multilingual responses.\nThe anno-\ntated data is subsequently used for multilin-\ngual DPO fine-tuning, facilitating preference\nknowledge transfer from English to other lan-\nguages.\nFine-tuning Llama3 for two itera-\ntions resulted in a 12.72% average improve-\nment in Win Rate and a 5.97% increase in\nLength Control Win Rate across all training\nlanguages on the X-AlpacaEval leaderboard.\nOur findings demonstrate that leveraging exist-\ning English-aligned models can enable efficient\nand effective multilingual preference align-\nment, significantly reducing the need for ex-\ntensive multilingual preference data. The code\nis available at https://github.com/ZNLP/\nImplicit-Cross-Lingual-Rewarding.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        Note: The user is a researcher in NLP looking to understand this paper quickly. They want structured highlights that make it easy to grasp the key concepts without getting bogged down in details.\n</think>\n\n### Structured Highlights for the Research Paper: **Implicit_Cross-Lingual_Rewarding_for_Efficient_Multilingual_Preference__dfa43a8997**\n\n#### 1. Core Innovation\nThe paper introduces **Implicit Cross-Lingual Rewarding (ICLR)**, a method that enables efficient multilingual preference alignment by transferring learned preferences from English models to other languages without requiring extensive multilingual data.\n\n#### 2. Technical Approach\n- **Implicit Reward Model**: Derived from the logits of an English DPO-aligned model and its reference model.\n- **Cross-Lingual Annotation**: Uses English instructions to evaluate multilingual responses, annotating preference relations in instruction-response pairs.\n- **Multilingual DPO Fine-tuning**: Leverages the annotated data for fine-tuning models in other languages, facilitating preference knowledge transfer.\n\n#### 3. Quantitative Findings\n- **Performance Improvement**: Achieved a 12.72% average improvement in Win Rate and a 5.97% increase in Length Control Win Rate across all training languages on the X-AlpacaEval leaderboard.\n- **Efficiency**: Reduced reliance on extensive multilingual preference data, demonstrating the effectiveness of leveraging existing English-aligned models.\n\n#### 4. Limitations & Assumptions\n- **Assumption of Aligned Models**: The method assumes that English models are sufficiently aligned with human preferences.\n- **Potential Data Dependency**: May require sufficient quality in English data for effective cross-lingual transfer.\n- **Iteration Dependency**: The effectiveness may depend on the number of fine-tuning iterations and model architecture.\n\n#### 5. Domain Impact\n- **Theoretical Contribution**: Advances the field of multilingual preference alignment by addressing data scarcity issues.\n- **Practical Impact**: Provides a scalable solution for aligning LLMs with human preferences across languages, enhancing applicability in cross-lingual tasks.\n- **Equation/Figure Note**: The method relies on implicit reward derivation from model logits (see Figure 1 for visualization).\n\nThis structured approach allows researchers to grasp the key concepts and innovations efficiently, aligning with the user's focus on understanding the paper quickly.",
+  "topics": [
+    "model",
+    "reward",
+    "multilingual",
+    "preference",
+    "al",
+    "et",
+    "et al",
+    "english",
+    "dpo",
+    "lingual"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Implicit_Cross-Lingual_Rewarding_for_Efficient_Multilingual_Preference__Alignment_dfa43a8997.pdf",
+    "content_hash": "1962b3f15a0ef124a59b1f8af40840820e8057a43d8eb0a88f886b35a9a7969d",
+    "arxiv_id": null,
+    "title": "Implicit_Cross-Lingual_Rewarding_for_Efficient_Multilingual_Preference__Alignment_dfa43a8997",
+    "author": "",
+    "creation_date": "D:20250307020542Z",
+    "published": "2025-03-07T02:05:42",
+    "pages": 21,
+    "size": 2541740,
+    "file_mtime": 1741418881.922545
+  },
+  "main_staff": {
+    "title": "Implicit_Cross-Lingual_Rewarding_for_Efficient_Multilingual_Preference__Alignment_dfa43a8997",
+    "authors": [
+      ""
+    ],
+    "abstract": "Direct Preference Optimization (DPO) has be-\ncome a prominent method for aligning Large\nLanguage Models (LLMs) with human pref-\nerences. While DPO has enabled significant\nprogress in aligning English LLMs, multi-\nlingual preference alignment is hampered by\ndata scarcity. To address this, we propose a\nnovel approach that captures learned prefer-\nences from well-aligned English models by\nimplicit rewards and transfers them to other\nlanguages through iterative training. Specifi-\ncally, we derive an implicit reward model from\nthe logits of an English DPO-aligned model\nand its corresponding reference model. This\nreward model is then leveraged to annotate pref-\nerence relations in cross-lingual instruction-\nresponse pairs, using English instructions to\nevaluate multilingual responses.\nThe anno-\ntated data is subsequently used for multilin-\ngual DPO fine-tuning, facilitating preference\nknowledge transfer from English to other lan-\nguages.\nFine-tuning Llama3 for two itera-\ntions resulted in a 12.72% average improve-\nment in Win Rate and a 5.97% increase in\nLength Control Win Rate across all training\nlanguages on the X-AlpacaEval leaderboard.\nOur findings demonstrate that leveraging exist-\ning English-aligned models can enable efficient\nand effective multilingual preference align-\nment, significantly reducing the need for ex-\ntensive multilingual preference data. The code\nis available at https://github.com/ZNLP/\nImplicit-Cross-Lingual-Rewarding.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "discussion",
+      "experiments",
+      "experiments focus on spanish (es), russian (ru),",
+      "evaluation and metrics",
+      "approach generalizes well to kto-aligned mod-",
+      "related work",
+      "approach yields relatively coarse reward signals.",
+      "conclusion",
+      "experiments, we used publicly available datasets",
+      "references",
+      "evaluation.",
+      "evaluation details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "approach to other daa-tuned models in english.",
+      "evaluation details",
+      "method successfully transfers learned knowledge",
+      "approach demonstrates efficient multilingual pref-"
+    ],
+    "topics": [
+      "model",
+      "reward",
+      "multilingual",
+      "preference",
+      "al",
+      "et",
+      "et al",
+      "english",
+      "dpo",
+      "lingual"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

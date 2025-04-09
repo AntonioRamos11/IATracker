@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**:  How Do Large Language Monkeys Get Their Power (Laws)? \n        **Abstract**: Recent research across mathematical problem\nsolving, proof assistant programming and mul-\ntimodal jailbreaking documents a striking finding:\nwhen (multimodal) language model tackle a suite\nof tasks with multiple attempts per task – succeed-\ning if any attempt is correct – then the negative log\nof the average success rate scales a power law in\nthe number of attempts. In this work, we identify\nan apparent puzzle: a simple mathematical calcu-\nlation predicts that on each problem, the failure\nrate should fall exponentially with the number of\nattempts. We confirm this prediction empirically,\nraising a question: from where does aggregate\npolynomial scaling emerge? We then answer this\nquestion by demonstrating per-problem exponen-\ntial scaling can be made consistent with aggregate\npolynomial scaling if the distribution of single-\nattempt success probabilities is heavy tailed such\nthat a small fraction of tasks with extremely low\nsuccess probabilities collectively warp the aggre-\ngate success trend into a power law - even as each\nproblem scales exponentially on its own. We fur-\nther demonstrate that this distributional perspec-\ntive explains previously observed deviations from\npower law scaling, and provides a simple method\nfor forecasting the power law exponent with an\norder of magnitude lower relative error, or equiva-\nlently, ∼2 −4 orders of magnitude less inference\ncompute. Overall, our work contributes to a better\nunderstanding of how neural language model per-\nformance improves with scaling inference com-\npute and the development of scaling-predictable\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n### **Core Innovation:**\nThe paper introduces a novel explanation for the observed power law scaling in the success rates of large language models when tackling multiple tasks. It posits that the distribution of single-attempt success probabilities being heavy-tailed leads to aggregate polynomial scaling, even though each problem individually exhibits exponential scaling.\n\n### **Technical Approach:**\n1. **Mathematical Modeling:** The study employs a mathematical model where the success rate per task follows an exponential decay with the number of attempts.\n2. **Probability Distribution:** It assumes a heavy-tailed distribution for single-attempt success probabilities, meaning a small fraction of tasks have very low success rates.\n3. **Aggregation Analysis:** The paper aggregates these individual task behaviors to explain the observed power law scaling in overall success rates.\n\n### **Quantitative Findings:**\n1. **Negative Log Success Rate:** The negative logarithm of the average success rate scales as a power law with the number of attempts.\n2. **Empirical Confirmation:** Experimental results confirm the theoretical prediction of exponential decay in failure rates per task.\n3. **Exponent Estimation:** The model provides a method to estimate the power law exponent with high accuracy, improving upon previous methods by several orders of magnitude.\n\n### **Limitations & Assumptions:**\n1. **Assumption of Heavy-Tailed Distributions:** The analysis relies on the assumption that the success probabilities are heavy-tailed, which may not hold in all scenarios.\n2. **Independence of Tasks:** The model assumes tasks are independent, which might not account for real-world dependencies.\n3. **Simplification of Scaling:** The model simplifies the relationship between compute resources and performance, potentially missing nuanced factors.\n\n### **Domain Impact:**\nThe research enhances understanding of neural language model scaling and provides practical tools for forecasting performance improvements. This is valuable for both theoretical insights and optimizing resource allocation in AI applications.",
+  "topics": [
+    "al",
+    "et",
+    "et al",
+    "power",
+    "log",
+    "scaling",
+    "passi",
+    "2024",
+    "language",
+    "laws"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/How_Do_Large_Language_Monkeys_Get_Their_Power_Laws_f92c1a62f7e7a5aa.pdf",
+    "content_hash": "f92c1a62f7e7a5aac8e9d0622fb4dca3ae85e4b735465c08702e80bf709cae65",
+    "arxiv_id": null,
+    "title": " How Do Large Language Monkeys Get Their Power (Laws)? ",
+    "author": "Rylan Schaeffer, Joshua Kazdan, John Hughes, Jordan Juravsky, Sara Price, Aengus Lynch, Erik Jones, Robert Kirk, Azalia Mirhoseini, Sanmi Koyejo",
+    "creation_date": "D:20250226010449Z",
+    "published": "2025-02-26T01:04:49",
+    "pages": 46,
+    "size": 1949454,
+    "file_mtime": 1740971655.3519363
+  },
+  "main_staff": {
+    "title": " How Do Large Language Monkeys Get Their Power (Laws)? ",
+    "authors": [
+      "Rylan Schaeffer",
+      " Joshua Kazdan",
+      " John Hughes",
+      " Jordan Juravsky",
+      " Sara Price",
+      " Aengus Lynch",
+      " Erik Jones",
+      " Robert Kirk",
+      " Azalia Mirhoseini",
+      " Sanmi Koyejo"
+    ],
+    "abstract": "Recent research across mathematical problem\nsolving, proof assistant programming and mul-\ntimodal jailbreaking documents a striking finding:\nwhen (multimodal) language model tackle a suite\nof tasks with multiple attempts per task – succeed-\ning if any attempt is correct – then the negative log\nof the average success rate scales a power law in\nthe number of attempts. In this work, we identify\nan apparent puzzle: a simple mathematical calcu-\nlation predicts that on each problem, the failure\nrate should fall exponentially with the number of\nattempts. We confirm this prediction empirically,\nraising a question: from where does aggregate\npolynomial scaling emerge? We then answer this\nquestion by demonstrating per-problem exponen-\ntial scaling can be made consistent with aggregate\npolynomial scaling if the distribution of single-\nattempt success probabilities is heavy tailed such\nthat a small fraction of tasks with extremely low\nsuccess probabilities collectively warp the aggre-\ngate success trend into a power law - even as each\nproblem scales exponentially on its own. We fur-\nther demonstrate that this distributional perspec-\ntive explains previously observed deviations from\npower law scaling, and provides a simple method\nfor forecasting the power law exponent with an\norder of magnitude lower relative error, or equiva-\nlently, ∼2 −4 orders of magnitude less inference\ncompute. Overall, our work contributes to a better\nunderstanding of how neural language model per-\nformance improves with scaling inference com-\npute and the development of scaling-predictable",
+    "sections": [
+      "unknown",
+      "abstract",
+      "evaluations of (multimodal) language models.",
+      "references",
+      "evaluation, 2024. url https://arxiv.org/abs/",
+      "evaluation framework for automated red teaming and",
+      "conclusion. since passreciprocal(a,b)@k = 1 −ik, we get"
+    ],
+    "topics": [
+      "al",
+      "et",
+      "et al",
+      "power",
+      "log",
+      "scaling",
+      "passi",
+      "2024",
+      "language",
+      "laws"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Joint Optimal Transport and Embedding for Network Alignment\n        **Abstract**: Network alignment, which aims to find node correspondence across\ndifferent networks, is the cornerstone of various downstream multi-\nnetwork and Web mining tasks. Most of the embedding-based meth-\nods indirectly model cross-network node relationships by contrast-\ning positive and negative node pairs sampled from hand-crafted\nstrategies, which are vulnerable to graph noises and lead to po-\ntential misalignment of nodes. Another line of work based on the\noptimal transport (OT) theory directly models cross-network node\nrelationships and generates noise-reduced alignments. However,\nOT methods heavily rely on fixed, pre-defined cost functions that\nprohibit end-to-end training and are hard to generalize. In this pa-\nper, we aim to unify the embedding and OT-based methods in a\nmutually beneficial manner and propose a joint optimal transport\nand embedding framework for network alignment named JOENA.\nFor one thing (OT for embedding), through a simple yet effective\ntransformation, the noise-reduced OT mapping serves as an adap-\ntive sampling strategy directly modeling all cross-network node\npairs for robust embedding learning. For another (embedding for\nOT), on top of the learned embeddings, the OT cost can be gradu-\nally trained in an end-to-end fashion, which further enhances the\nalignment quality. With a unified objective, the mutual benefits\nof both methods can be achieved by an alternating optimization\nschema with guaranteed convergence. Extensive experiments on\nreal-world networks validate the effectiveness and scalability of\nJOENA, achieving up to 16% improvement in MRR and 20× speedup\ncompared with the state-of-the-art alignment methods.\nCCS Concepts\n• Computing methodologies →Machine learning; • Informa-\ntion systems →Data mining; World Wide Web.\nKeywords\nNetwork Alignment, Optimal Transport, Network Embedding\n∗Both authors contributed equally to this research.\nThis work is licensed under a Creative Commons Attribution 4.0 International License.\nWWW ’25, Sydney, NSW, Australia\n© 2025 Copyright held by the owner/author(s).\nACM ISBN 979-8-4007-1274-6/25/04\nhttps://doi.org/10.1145/3696410.3714937\nACM Reference Format:\nQi Yu, Zhichen Zeng, Yuchen Yan, Lei Ying, R. Srikant, and Hanghang Tong.\n2025. Joint Optimal Transport and Embedding for Network Alignment. In\nProceedings of the ACM Web Conference 2025 (WWW ’25), April 28-May 2,\n2025, Sydney, NSW, Australia. ACM, New York, NY, USA, 12 pages. https:\n//doi.org/10.1145/3696410.3714937\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Core Innovation  \nThe JOENA framework unifies network embedding and optimal transport (OT) by iteratively improving both through adaptive sampling and end-to-end learning, enabling robust network alignment.\n\n### Technical Approach  \n1. **Adaptive Sampling with OT Mapping**: The OT mapping serves as an adaptive sampling strategy for embedding learning, reducing noise and enhancing cross-network relationships.  \n2. **End-to-End Embedding Learning**: The embedding process is trained end-to-end, incorporating the OT cost, which improves alignment quality.  \n3. **Unified Objective Function**: A single objective combines OT and embedding, ensuring mutual benefits and optimized alignment.  \n4. **Alternating Optimization**: The framework alternates between optimizing OT and embedding, ensuring convergence and improved performance.\n\n### Quantitative Findings  \n- **Mean Reciprocal Rank (MRR)**: Improved by up to 16% compared to state-of-the-art methods.  \n- **Speedup**: Achieved a 20× speedup in processing real-world networks.  \n\n### Limitations & Assumptions  \n- **Fixed Network Structure**: The method assumes that the network structure remains consistent across different layers or time periods.  \n- **Scalability**: The approach may face limitations with extremely large networks due to computational constraints.  \n- **Feature Dependency**: The framework relies on node features, which might not be sufficient for networks with sparse or unlabeled data.  \n\n### Domain Impact  \n- **Theoretical**: The integration of OT and embedding provides a novel framework for network alignment, potentially influencing future research in machine learning and network science.  \n- **Practical**: JOENA enhances real-world applications like recommendation systems, social network analysis, and bioinformatics by improving alignment accuracy and efficiency.  \n- **Equation/Figure Reference**: The framework's effectiveness is supported by Figure 1, which illustrates the convergence of JOENA compared to baseline methods, and Equation 1, detailing the unified objective function.",
+  "topics": [
+    "node",
+    "ot",
+    "network",
+    "embedding",
+    "joena",
+    "alignment",
+    "learning",
+    "graph",
+    "based",
+    "eq"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Joint_Optimal_Transport_and_Embedding_for_Network_Alignment_170292444e94af57.pdf",
+    "content_hash": "170292444e94af57a6cd15efdf624911daf39cdc8298893dfe046de50904be07",
+    "arxiv_id": null,
+    "title": "Joint Optimal Transport and Embedding for Network Alignment",
+    "author": "",
+    "creation_date": "D:20250227020338Z",
+    "published": "2025-02-27T02:03:38",
+    "pages": 12,
+    "size": 6217139,
+    "file_mtime": 1740970525.2242548
+  },
+  "main_staff": {
+    "title": "Joint Optimal Transport and Embedding for Network Alignment",
+    "authors": [
+      ""
+    ],
+    "abstract": "Network alignment, which aims to find node correspondence across\ndifferent networks, is the cornerstone of various downstream multi-\nnetwork and Web mining tasks. Most of the embedding-based meth-\nods indirectly model cross-network node relationships by contrast-\ning positive and negative node pairs sampled from hand-crafted\nstrategies, which are vulnerable to graph noises and lead to po-\ntential misalignment of nodes. Another line of work based on the\noptimal transport (OT) theory directly models cross-network node\nrelationships and generates noise-reduced alignments. However,\nOT methods heavily rely on fixed, pre-defined cost functions that\nprohibit end-to-end training and are hard to generalize. In this pa-\nper, we aim to unify the embedding and OT-based methods in a\nmutually beneficial manner and propose a joint optimal transport\nand embedding framework for network alignment named JOENA.\nFor one thing (OT for embedding), through a simple yet effective\ntransformation, the noise-reduced OT mapping serves as an adap-\ntive sampling strategy directly modeling all cross-network node\npairs for robust embedding learning. For another (embedding for\nOT), on top of the learned embeddings, the OT cost can be gradu-\nally trained in an end-to-end fashion, which further enhances the\nalignment quality. With a unified objective, the mutual benefits\nof both methods can be achieved by an alternating optimization\nschema with guaranteed convergence. Extensive experiments on\nreal-world networks validate the effectiveness and scalability of\nJOENA, achieving up to 16% improvement in MRR and 20× speedup\ncompared with the state-of-the-art alignment methods.\nCCS Concepts\n• Computing methodologies →Machine learning; • Informa-\ntion systems →Data mining; World Wide Web.\nKeywords\nNetwork Alignment, Optimal Transport, Network Embedding\n∗Both authors contributed equally to this research.\nThis work is licensed under a Creative Commons Attribution 4.0 International License.\nWWW ’25, Sydney, NSW, Australia\n© 2025 Copyright held by the owner/author(s).\nACM ISBN 979-8-4007-1274-6/25/04\nhttps://doi.org/10.1145/3696410.3714937\nACM Reference Format:\nQi Yu, Zhichen Zeng, Yuchen Yan, Lei Ying, R. Srikant, and Hanghang Tong.\n2025. Joint Optimal Transport and Embedding for Network Alignment. In\nProceedings of the ACM Web Conference 2025 (WWW ’25), April 28-May 2,\n2025, Sydney, NSW, Australia. ACM, New York, NY, USA, 12 pages. https:\n//doi.org/10.1145/3696410.3714937\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods, we seek to explore the complementary roles of two cate-",
+      "methods on six different datasets, which validates the effectiveness",
+      "methodology",
+      "experiments",
+      "methods, including (1) consistency-based methods: isorank [40]",
+      "methods, joena achieves up to 31% and 22% improvement in mrr",
+      "related works",
+      "conclusions",
+      "references",
+      "approaches for more expressiveness in unsupervised graph alignment. arxiv"
+    ],
+    "topics": [
+      "node",
+      "ot",
+      "network",
+      "embedding",
+      "joena",
+      "alignment",
+      "learning",
+      "graph",
+      "based",
+      "eq"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

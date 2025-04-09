@@ -1,0 +1,78 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Current methods perform poorly on PERTURBQA, so the paper is about proving the feasibility of their approach. SUMMER works but maybe not as efficient as other methods. Also, the experiments are limited to specific biological systems, and the framework might require domain expertise.",
+    "Domain impact: Theoretically, it's about integrating LLMs into biological research to make experiments more efficient. Practically, it could help biologists understand perturbation effects better and make predictions.",
+    "Wait, maybe I should think about key visual findings. The paper probably has figures showing performance comparisons between SUMMER and other methods, maybe accuracy plots or heatmaps. But since I don't have the exact figures, I'll note that PERTURBQA has specific tasks and SUMMER performed well.",
+    "Putting it all together, I need to structure it clearly with each section having bullet points or concise statements.",
+    "I think I've got a good grasp now. I'll proceed to write the structured highlights accordingly.",
+    "</think>",
+    "# Structured Highlights for the Research Paper",
+    "## Core Innovation",
+    "The paper introduces the use of large language models (LLMs) to enhance biological perturbation experiments by representing complex biological relationships and aiding in the interpretation of experimental outcomes.",
+    "## Technical Approach"
+  ],
+  "impact": "",
+  "topics": [
+    "gene",
+    "genes",
+    "al",
+    "et al",
+    "et",
+    "set",
+    "llm",
+    "expression",
+    "perturbation",
+    "gene set"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Contextualizing_biological_perturbation_experiments_through_language_24629e5e1480d03e.pdf",
+    "content_hash": "24629e5e1480d03edd2948e72a536d0c97f6715d52c7c8ce74d2377bce6840b4",
+    "arxiv_id": null,
+    "title": "Contextualizing_biological_perturbation_experiments_through_language_24629e5e1480d03e",
+    "author": "",
+    "creation_date": "D:20250303020944Z",
+    "published": "2025-03-03T02:09:44",
+    "pages": 27,
+    "size": 948368,
+    "file_mtime": 1740981055.187479
+  },
+  "main_staff": {
+    "title": "Contextualizing_biological_perturbation_experiments_through_language_24629e5e1480d03e",
+    "authors": [
+      ""
+    ],
+    "abstract": "High-content perturbation experiments allow scientists to probe biomolecular sys-\ntems at unprecedented resolution, but experimental and analysis costs pose signif-\nicant barriers to widespread adoption. Machine learning has the potential to guide\nefficient exploration of the perturbation space and extract novel insights from these\ndata. However, current approaches neglect the semantic richness of the relevant\nbiology, and their objectives are misaligned with downstream biological analyses.\nIn this paper, we hypothesize that large language models (LLMs) present a nat-\nural medium for representing complex biological relationships and rationalizing\nexperimental outcomes. We propose PERTURBQA, a benchmark for structured\nreasoning over perturbation experiments. Unlike current benchmarks that primar-\nily interrogate existing knowledge, PERTURBQA is inspired by open problems\nin perturbation modeling: prediction of differential expression and change of di-\nrection for unseen perturbations, and gene set enrichment. We evaluate state-of-\nthe-art machine learning and statistical approaches for modeling perturbations, as\nwell as standard LLM reasoning strategies, and we find that current methods per-\nform poorly on PERTURBQA. As a proof of feasibility, we introduce SUMMER\n(SUMMarize, retrievE, and answeR), a simple, domain-informed LLM framework\nthat matches or exceeds the current state-of-the-art.1\n1",
+    "sections": [
+      "unknown",
+      "experiments through language",
+      "abstract",
+      "introduction",
+      "related work",
+      "background",
+      "results",
+      "conclusion",
+      "methods for these applications.",
+      "methods described do not involve the design of potentially harmful chemical agents or other",
+      "references",
+      "experiments. genome biology, 4:210, 02 2003. doi: 10.1186/gb-2003-4-4-210.",
+      "evaluation of machine translation. in pierre isabelle, eugene charniak, and dekang lin (eds.),"
+    ],
+    "topics": [
+      "gene",
+      "genes",
+      "al",
+      "et al",
+      "et",
+      "set",
+      "llm",
+      "expression",
+      "perturbation",
+      "gene set"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

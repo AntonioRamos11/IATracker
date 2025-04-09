@@ -1,0 +1,77 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Requires large-scale video datasets and may involve computational overhead.",
+    "**Assumptions:** Video models are assumed to effectively capture temporal coherence for diverse visual tasks.",
+    "",
+    "### **Domain Impact:**",
+    "Broad impact on self-supervised, multi-modal, and self-supervised image generation.",
+    "Significant applications in fields requiring efficient visual data processing, such as computer vision and multimedia systems.",
+    "",
+    "**Core Innovation:** Integration of video models for unified image generation, capitalizing on their temporal capabilities to reformulate image tasks as conditional frame predictions.",
+    "**Technical Approach:**",
+    "Unified Conditional Embedding for multi-modal alignment.",
+    "Unified Stream DiT Block with adaptive normalization and attention masks.",
+    "**Quantitative Findings:**",
+    "14.5% improvement in customized generation.",
+    "10% improvement in image quality for canny-to-image tasks.",
+    "Comparable performance to state-of-the-art models in depth-to-image tasks.",
+    "**Limitations & Assumptions:** Dependence on large video datasets and potential computational overhead.",
+    "**Impact:** Broad domain effect across visual data processing applications."
+  ],
+  "impact": "",
+  "topics": [
+    "image",
+    "generation",
+    "models",
+    "text",
+    "condition",
+    "arxiv",
+    "video",
+    "visual",
+    "task",
+    "unified"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/RealGeneral_Unifying_Visual_Generation_via_Temporal_In-Context_Learning__with_Video_Models_c6ee0bf12b82f81f.pdf",
+    "content_hash": "c6ee0bf12b82f81fcc4c2345194bc29828dc05f1e5b841c1c65ce77c049402d4",
+    "arxiv_id": null,
+    "title": "RealGeneral_Unifying_Visual_Generation_via_Temporal_In-Context_Learning__with_Video_Models_c6ee0bf12b82f81f",
+    "author": "",
+    "creation_date": "D:20250314010225Z",
+    "published": "2025-03-14T01:02:25",
+    "pages": 11,
+    "size": 30174867,
+    "file_mtime": 1742113502.4899378
+  },
+  "main_staff": {
+    "title": "RealGeneral_Unifying_Visual_Generation_via_Temporal_In-Context_Learning__with_Video_Models_c6ee0bf12b82f81f",
+    "authors": [
+      ""
+    ],
+    "abstract": "Unifying diverse image generation tasks within a sin-\ngle framework remains a fundamental challenge in visual\ngeneration. While large language models (LLMs) achieve\nunification through task-agnostic data and generation, ex-\nisting visual generation models fail to meet these princi-\nples. Current approaches either rely on per-task datasets\nand large-scale training or adapt pre-trained image mod-\nels with task-specific modifications, limiting their gener-\nalizability.\nIn this work, we explore video models as a\nfoundation for unified image generation, leveraging their\ninherent ability to model temporal correlations.\nWe in-\n*Corresponding author\ntroduce RealGeneral, a novel framework that reformulates\nimage generation as a conditional frame prediction task,\nanalogous to in-context learning in LLMs. To bridge the\ngap between video models and condition-image pairs, we\npropose (1) a Unified Conditional Embedding module for\nmulti-modal alignment and (2) a Unified Stream DiT Block\nwith decoupled adaptive LayerNorm and attention mask\nto mitigate cross-modal interference. RealGeneral demon-\nstrates effectiveness in multiple important visual generation\ntasks, e.g., it achieves a 14.5% improvement in subject sim-\nilarity for customized generation and a 10% enhancement\nin image quality for canny-to-image task.\nProject page:\nhttps://lyne1.github.io/RealGeneral/\n1\narXiv:2503.10406v1  [cs.CV]  13 Mar 2025\n\n1. Introduction\nWith the rapid development of generative modeling [5, 15,\n16, 20, 26, 51], image generation has gained consider-\nable attention in various application domains.\nAlthough\nfoundation models such as Stable Diffusion [10, 32] and\nFLUX [22] have achieved remarkable success in unimodal\ntext-to-image generation, processing diverse inputs (e.g.,\ntext, depth maps, conditional images) and generating cor-\nresponding images within a unified framework remains a\nsignificant challenge. While large language models (LLMs)\nhave unified text generation [1, 4, 48], an analogous unified\nmodel for the visual domain is still lacking.\nUpon closer examination of the core principles underly-\ning LLMs’ success as a unified text generation architecture,\nwe identify two fundamental pillars, i.e., (1) a task-agnostic\ndata principle during pre-training that facilitates the utiliza-\ntion of web-scale corpora for general linguistic knowledge\nacquisition, and (2) a task-agnostic generation principle that\ncoherently unifies all kinds of textual tasks through next-\ntoken prediction. Analogously, a promising and effective\narchitecture for unified visual generation should also exhibit\n(1) a task-agnostic visual data principle for general visual\nknowledge acquisition, and (2) a task-agnostic visual gen-\neration principle that could unify all kinds of multi-modal\nvisual tasks (e.g., customized generation, canny-to-image\ngeneration, etc.), as shown in Fig. 2.\nRecent research on unified visual generation models\nmainly evolves along two streams, i.e., (1) the training-\nfrom-scratch stream [2, 25, 33, 42, 45], which curates per-\ntask datasets and trains unified models through de novo op-\ntimization, and (2) the image-model-adaptation stream [6,\n54], which reformulates generation tasks as partial im-\nage synthesis by leveraging pre-trained generative pri-\nors (e.g., FLUX). The first stream usually requires vast\namounts of high-quality data and massive computational re-\nsources [8, 47]. For example, OmniGen[50] constructs a\ndataset of 0.1 billion images for all tasks and trains a unified\nmodel using 104 A800 GPUs. The second stream leverages\nthe rich, general representations of pre-trained image gener-\native models by fine-tuning them for specific tasks, thereby\nreducing computational costs. Some work [50, 53, 55] de-\nsigns additional condition encoders or task-specific adapters\nto handle new condition types, while other work [43] revises\nonly certain modules in the pre-trained models to adapt\nthem to new tasks. Though much progress has been made,\nboth of the streams fail to meet either the task-agnostic vi-\nsual data principle or the task-agnostic visual generation\nprinciple. To be specific, the first stream heavily relies on\nthe image dataset, inherently violating the task-agnostic vi-\nsual data principle. Analogous to LLMs that learn by mod-\neling relationships between sequential tokens, only video\ndata inherently captures inter-frame relationships essential\nfor general visual knowledge acquisition, while single im-\nFigure 2. LLMs unify text generation through task-agnostic data\nand task-agnostic generation. Therefore, unified visual generation\nmodels should adhere to similar principles through visual task-\nagnostic data and task-agnostic visual generation principles.\nages lack this attribution. Moreover, the second stream not\nonly depends on image data but also adopts specialized ar-\nchitecture for certain tasks, violating both principles.\nTo address the limitations of existing methods, we fur-\nther explore whether large-scale pre-trained video genera-\ntion models can overcome these challenges and provide a\nmore robust framework for unified visual generation. In\nthis study, we posit that such models, which are structurally\nendowed with both short-term micro-coherence and long-\nterm macro-consistency, serve as a more effective and gen-\neral foundation for this task. On the one hand, short-term\nmicro-coherence captures fine-grained temporal dynamics,\nensuring precise local details. On the other hand, long-term\nmacro-consistency inherently preserves global structure and\nsemantic consistency across entire sequences. Though great\npotential, how to effectively harness the pre-trained video\nmodels’ inherent consistent generation capabilities for uni-\nfied visual generation remains unexplored.\nBuilding on this insight, we argue that video models,\nwith their inherent capability to model temporal correla-\ntions across frames, provide a more natural foundation for\nunified visual generation. Inspired by in-context learning\nin LLMs, we reformulate image generation as a conditional\nframe prediction task. In this formulation, input images are\ntreated as preceding frames in a video sequence, analogous\nto previous tokens in LLMs, and generate the subsequent\nframe as the target output. This unified formulation recasts\ndiverse visual generation tasks as instances of conditional\nframe prediction, eliminating the need for task-specific ar-\nchitectural modifications and thereby satisfying the task-\nagnostic visual generation principle.\nFurthermore, video\nmodels are trained on task-agnostic data (i.e., videos), ad-\nhering to the task-agnostic visual data principle. Therefore,\nthe pre-trained video model only needs a small amount of\ncorresponding task data for efficient fine-tuning, which can\nelicit the ability to handle various visual generation tasks,\nanalogous to in-context learning in LLMs.\nIn this study, we propose a new framework termed Re-\n2\n\nalGeneral, adapting video diffusion models to image gen-\neration by proposing a minimalist framework centered on\none-condition-image to one-target-image synthesis. In vi-\nsual generative tasks, effectively fusing multi-modal inputs\nwithout conflating them with the generated image is chal-\nlenging.\nTo address these challenges, we introduce two\ncore innovations. First, the Unified Conditional Embedding\nmodule fuses multi-modal inputs, aligning multi-modal\nconditions through both inter-modal conditional semantic\nalignment and intra-modal generative semantic distinction.\nSecond, the Unified Stream DiT Block, a redesigned video\nmodel transformer block that incorporates (1) triple-branch\nadaLN to decouple feature modulation among text, condi-\ntion frames, and target frames, eliminating the interference\nbetween the condition frame and target frame, and (2) atten-\ntion mask that prevents text-to-condition interactions while\npreserving full condition-to-target visual attention to avoid\nthe blending of textual and visual information.\nOur main contributions are summarized as follows:\nConceptual contribution.\nWe point out two crucial\nprinciples underlying the unification of visual generation.\nFurthermore, we propose a novel formulation that recasts\nmulti-condition image generation as temporal in-context\nlearning within video models, thereby establishing a unified\nframework for image generation.\nTechnical contribution. (1) We propose Unified Condi-\ntional Embedding module for aligning multi-modal inputs.\n(2) We propose Unified Stream DiT Block with decoupled\nadaLN and attention mask to mitigate interference between\ndifferent modalities.\nExperimental contribution.\nWe validate our frame-\nwork across multiple tasks. For instance, RealGeneral out-\nperforms existing methods in the customized generation,\nachieving a 14.5% improvement in subject similarity com-\npared to state-of-the-art models. In the canny-to-image task,\nRealGeneral enhances image quality by 10%, while in the\ndepth-to-image task, it attains image quality comparable\nto existing models. Furthermore, training RealGeneral re-\nquires significantly fewer computational resources and less\ndata than both unified models and specialized models.\n2. Related work\n2.1. Image Generation\nImage generation is an area of rapid development that inte-\ngrates concepts from natural language processing with ad-\nvancements in transformer architectures.\nAutoregressive\nmodels utilize transformers to predict sequences of discrete\ncodebook codes [10, 35, 40]. Meanwhile, continuous dif-\nfusion models have emerged as a powerful framework for\nimage generation [9, 15, 37]. The integration of large-scale\ntransformer architectures has led to the development of ad-\nvanced models, such as DiT [22, 31]. Many efforts have\nbeen made to extend the capabilities of generation models,\nwith notable techniques, such as T2I-Adapter [28]. How-\never, these methods are designed for specific tasks, enhanc-\ning the capabilities of generative models through architec-\ntural modifications.\n2.2. Video Generation\nThe field of text-to-video models has witnessed remarkable\nprogress. Early efforts to pre-train and scale Transformers\nfor generating videos from text, such as CogVideo [18] and\nPhenaki [44], demonstrate significant potential. At the same\ntime, diffusion models have recently made groundbreaking\nstrides in video generation [3, 12, 17, 24, 39]. With the",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction of dit, text-to-video generation has reached a",
+      "method",
+      "references"
+    ],
+    "topics": [
+      "image",
+      "generation",
+      "models",
+      "text",
+      "condition",
+      "arxiv",
+      "video",
+      "visual",
+      "task",
+      "unified"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

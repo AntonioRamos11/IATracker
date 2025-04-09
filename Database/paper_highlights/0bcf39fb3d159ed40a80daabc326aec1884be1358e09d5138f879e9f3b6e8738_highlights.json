@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: SoRFT_Issue_Resolving_with_Subtask-oriented_Reinforced_Fine-Tuning_0bcf39fb3d159ed4\n        **Abstract**: Mainstream issue-resolving frameworks pre-\ndominantly rely on commercial models, lead-\ning to high costs and privacy concerns. Existing\ntraining approaches for issue resolving strug-\ngle with poor generalization and fail to fully\nleverage open-source development resources.\nWe propose Subtask-oriented Reinforced Fine-\nTuning (SoRFT), a novel training approach to\nenhance the issue resolving capability of LLMs.\nWe decomposes issue resolving into structured\nsubtasks: file localization, function localiza-\ntion, line localization, and code edit genera-\ntion. SoRFT consists of two training stages:\n(1) rejection-sampled supervised fine-tuning,\nChain of Thought (CoT) data is filtered using\nground-truth before fine-tuning the LLM, and\n(2) rule-based reinforcement learning, which\nleverages PPO with ground-truth based rewards.\nWe evaluate the SoRFT-trained model on SWE-\nBench Verified and SWE-Bench Lite, achieving\nstate-of-the-art (SOTA) performance among\nopen-source models (e.g., resolve 21.4% issues\non SWE-Bench Verified with SoRFT-Qwen-\n7B). The experimental results demonstrate that\nSoRFT significantly enhances issue-resolving\nperformance, improves model generalization,\nand provides a cost-efficient alternative to com-\nmercial models.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        The user is a researcher in the field of AI for software engineering. They want to understand the key aspects of this paper quickly.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n1. **Core Innovation**:  \n   The paper introduces a novel training approach, **Subtask-oriented Reinforced Fine-Tuning (SoRFT)**, which enhances large language models (LLMs) for issue resolving in software engineering by decomposing the task into structured subtasks and combining supervised fine-tuning with rule-based reinforcement learning.\n\n2. **Technical Approach**:  \n   - **Subtask Decomposition**: Issue resolving is broken down into four subtasks: **file localization**, **function localization**, **line localization**, and **code edit generation**.  \n   - **Two-Stage Training**:  \n     1. **Rejection-Sampled Supervised Fine-Tuning**: CoT data is filtered using ground-truth labels before fine-tuning the LLM.  \n     2. **Rule-Based Reinforcement Learning**: Uses Proximal Policy Optimization (PPO) with rewards based on ground-truth data to improve performance.\n\n3. **Quantitative Findings**:  \n   - Achieves **21.4% issue resolution on SWE-Bench Verified** with the SoRFT-Qwen-7B model.  \n   - Demonstrates **state-of-the-art (SOTA) performance** among open-source models.  \n   - Enhanced **model generalization** and **cost efficiency** compared to commercial alternatives.\n\n4. **Limitations & Assumptions**:  \n   - **Limitations**: The approach primarily focuses on issue resolution and may not generalize well to other NLP tasks.  \n   - **Assumptions**: The model relies on high-quality ground-truth data for training, which may limit its applicability in scenarios with insufficient labeled data.\n\n5. **Domain Impact**:  \n   - **Theoretical**: Provides a structured framework for decomposing complex tasks into manageable subtasks, potentially applicable to other domains.  \n   - **Practical**: Offers a cost-efficient alternative to expensive commercial tools, making advanced AI solutions more accessible in software engineering.  \n   - **Broader Impact**: Enhances the reliability and affordability of AI-driven software development tools, potentially improving productivity and reducing errors.\n\n**Key Equations/Figures**:  \nWhile the specific equations are not detailed in the provided text, the approach leverages PPO (a reinforcement learning algorithm) and supervised learning techniques, which are critical to the model's training process. The effectiveness is validated through experiments on SWE-Bench datasets, demonstrating significant performance improvements.",
+  "topics": [
+    "al",
+    "et",
+    "et al",
+    "issue",
+    "swe",
+    "2024",
+    "model",
+    "based",
+    "arxiv",
+    "resolving"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/SoRFT_Issue_Resolving_with_Subtask-oriented_Reinforced_Fine-Tuning_0bcf39fb3d159ed4.pdf",
+    "content_hash": "0bcf39fb3d159ed40a80daabc326aec1884be1358e09d5138f879e9f3b6e8738",
+    "arxiv_id": null,
+    "title": "SoRFT_Issue_Resolving_with_Subtask-oriented_Reinforced_Fine-Tuning_0bcf39fb3d159ed4",
+    "author": "",
+    "creation_date": "D:20250228015311Z",
+    "published": "2025-02-28T01:53:11",
+    "pages": 16,
+    "size": 960931,
+    "file_mtime": 1740970075.7974741
+  },
+  "main_staff": {
+    "title": "SoRFT_Issue_Resolving_with_Subtask-oriented_Reinforced_Fine-Tuning_0bcf39fb3d159ed4",
+    "authors": [
+      ""
+    ],
+    "abstract": "Mainstream issue-resolving frameworks pre-\ndominantly rely on commercial models, lead-\ning to high costs and privacy concerns. Existing\ntraining approaches for issue resolving strug-\ngle with poor generalization and fail to fully\nleverage open-source development resources.\nWe propose Subtask-oriented Reinforced Fine-\nTuning (SoRFT), a novel training approach to\nenhance the issue resolving capability of LLMs.\nWe decomposes issue resolving into structured\nsubtasks: file localization, function localiza-\ntion, line localization, and code edit genera-\ntion. SoRFT consists of two training stages:\n(1) rejection-sampled supervised fine-tuning,\nChain of Thought (CoT) data is filtered using\nground-truth before fine-tuning the LLM, and\n(2) rule-based reinforcement learning, which\nleverages PPO with ground-truth based rewards.\nWe evaluate the SoRFT-trained model on SWE-\nBench Verified and SWE-Bench Lite, achieving\nstate-of-the-art (SOTA) performance among\nopen-source models (e.g., resolve 21.4% issues\non SWE-Bench Verified with SoRFT-Qwen-\n7B). The experimental results demonstrate that\nSoRFT significantly enhances issue-resolving\nperformance, improves model generalization,\nand provides a cost-efficient alternative to com-\nmercial models.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "background",
+      "approach",
+      "experiments",
+      "results and analysis",
+      "related work",
+      "conclusion",
+      "experiments were conducted only in the python",
+      "references",
+      "evaluation details",
+      "methods in the class."
+    ],
+    "topics": [
+      "al",
+      "et",
+      "et al",
+      "issue",
+      "swe",
+      "2024",
+      "model",
+      "based",
+      "arxiv",
+      "resolving"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

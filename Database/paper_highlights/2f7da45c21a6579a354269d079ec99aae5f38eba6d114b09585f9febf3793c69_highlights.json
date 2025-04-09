@@ -1,0 +1,56 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: HEAPO – An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols\n        **Abstract**: Heat pumps are essential for decarbonizing residential heating but\nconsume substantial electrical energy, impacting operational costs\nand grid demand. Many systems run inefficiently due to planning\nflaws, operational faults, or misconfigurations. While optimizing\nperformance requires skilled professionals, labor shortages hinder\nlarge-scale interventions. However, digital tools and improved data\navailability create new service opportunities for energy efficiency,\npredictive maintenance, and demand-side management. To support\nresearch and practical solutions, we present an open-source dataset\nof electricity consumption from 1,408 households with heat pumps\nand smart electricity meters in the canton of Zurich, Switzerland,\nrecorded at 15-minute and daily resolutions between 2018-11-03\nand 2024-03-21. The dataset includes household metadata, weather\ndata from 8 stations, and ground truth data from 410 field visit pro-\ntocols collected by energy consultants during system optimizations.\nAdditionally, the dataset includes a Python-based data loader to\nfacilitate seamless data processing and exploration.\nKeywords\nheat pump, performance optimization, smart electricity meter, open\nenergy data, residential building, real-world, digital appliance mon-\nitoring, inspection protocol, smart grid\nGeneral Note\nPlease note that this manuscript on arXiv is a preprint. The dataset\nand dataloader are already available in their initial version, but\nupdates may occur in future releases as the manuscript is currently\nunder peer review. If you use the dataset in its initial form, please\ncite this arXiv paper.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        to the innovation.\n</think>\n\n**HEAPO: An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols**\n\n---\n\n### 1. Core Innovation\n\nHEAPO provides an open-source dataset combining electricity consumption and smart meter data with on-site inspection protocols for heat pumps, enabling comprehensive analysis for optimization and improving energy efficiency.\n\n---\n\n### 2. Technical Approach\n\n- **Data Collection**: Smart meters and on-site inspections from 1,408 households in Zurich, Switzerland, with data at 15-minute and daily resolutions from 2018-11-03 to 2024-03-21.\n- **Metadata and Weather Data**: Includes household metadata and weather data from 8 stations.\n- **Field Protocols**: Ground truth data from 410 field visits by energy consultants during system optimizations.\n- **Python-Based Data Loader**: Facilitates seamless data processing and exploration.\n\n---\n\n### 3. Quantitative Findings\n\n1. **Energy Consumption Analysis**: Heat pumps consume significant electrical energy, contributing to grid demand and operational costs.\n2. **System Efficiency**: Many systems operate inefficiently due to planning flaws, operational faults, or misconfigurations.\n3. **Field Data Insights**: Reveals patterns in system optimization and identifies areas for improvement in planning and maintenance.\n\n---\n\n### 4. Limitations & Assumptions\n\n- **Data Completeness**: Limited to households in Zurich and operational data from 2018–2024.\n- **Field Protocol Accuracy**: Relies on field visits by energy consultants, assuming their accuracy.\n- **Static Metadata**: Household metadata is static, not reflecting dynamic changes.\n\n---\n\n### 5. Domain Impact\n\n- **Theoretical Impact**: Validates the importance of smart meter data and on-site inspections for heat pump optimization, highlighting the role of digital tools in energy efficiency.\n- **Practical Impact**: Supports research and real-world applications, offering a benchmark for optimizing heat pump performance and reducing grid demand.",
+  "topics": [
+    "energy",
+    "data",
+    "hp",
+    "heat",
+    "10",
+    "households",
+    "daily",
+    "dataset",
+    "household",
+    "heating"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/HEAPO_--_An_Open_Dataset_for_Heat_Pump_Optimization_with_Smart__Electricity_Meter_Data_and_On-Site_Inspection_Protocols_2f7da45c21a6579a.pdf",
+    "content_hash": "2f7da45c21a6579a354269d079ec99aae5f38eba6d114b09585f9febf3793c69",
+    "arxiv_id": null,
+    "title": "HEAPO – An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols",
+    "author": "",
+    "creation_date": "D:20250324003831Z",
+    "published": "2025-03-24T00:38:31",
+    "pages": 12,
+    "size": 2550139,
+    "file_mtime": 1742789478.0381126
+  },
+  "main_staff": {
+    "title": "HEAPO – An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols",
+    "authors": [
+      ""
+    ],
+    "abstract": "Heat pumps are essential for decarbonizing residential heating but\nconsume substantial electrical energy, impacting operational costs\nand grid demand. Many systems run inefficiently due to planning\nflaws, operational faults, or misconfigurations. While optimizing\nperformance requires skilled professionals, labor shortages hinder\nlarge-scale interventions. However, digital tools and improved data\navailability create new service opportunities for energy efficiency,\npredictive maintenance, and demand-side management. To support\nresearch and practical solutions, we present an open-source dataset\nof electricity consumption from 1,408 households with heat pumps\nand smart electricity meters in the canton of Zurich, Switzerland,\nrecorded at 15-minute and daily resolutions between 2018-11-03\nand 2024-03-21. The dataset includes household metadata, weather\ndata from 8 stations, and ground truth data from 410 field visit pro-\ntocols collected by energy consultants during system optimizations.\nAdditionally, the dataset includes a Python-based data loader to\nfacilitate seamless data processing and exploration.\nKeywords\nheat pump, performance optimization, smart electricity meter, open\nenergy data, residential building, real-world, digital appliance mon-\nitoring, inspection protocol, smart grid\nGeneral Note\nPlease note that this manuscript on arXiv is a preprint. The dataset\nand dataloader are already available in their initial version, but\nupdates may occur in future releases as the manuscript is currently\nunder peer review. If you use the dataset in its initial form, please\ncite this arXiv paper.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results are available in the github repository of the data loader.",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "energy",
+      "data",
+      "hp",
+      "heat",
+      "10",
+      "households",
+      "daily",
+      "dataset",
+      "household",
+      "heating"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

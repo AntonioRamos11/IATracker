@@ -1,0 +1,64 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Better_Process_Supervision_with_Bi-directional_Rewarding_Signals_073b0da790\n        **Abstract**: Process supervision, i.e., evaluating each step,\nis critical for complex large language model\n(LLM) reasoning and test-time searching with\nincreased inference compute.\nExisting ap-\nproaches, represented by process reward mod-\nels (PRMs), primarily focus on rewarding sig-\nnals up to the current step, exhibiting a one-\ndirectional nature and lacking a mechanism to\nmodel the distance to the final target. To ad-\ndress this problem, we draw inspiration from\nthe A* algorithm, which states that an effective\nsupervisory signal should simultaneously con-\nsider the incurred cost and the estimated cost\nfor reaching the target. Building on this key\ninsight, we introduce BiRM, a novel process\nsupervision model that not only evaluates the\ncorrectness of previous steps but also models\nthe probability of future success. We conduct\nextensive experiments on mathematical reason-\ning tasks and demonstrate that BiRM provides\nmore precise evaluations of LLM reasoning\nsteps, achieving an improvement of 3.1% on\nGaokao2023 over PRM under the Best-of-N\nsampling method. Besides, in search-based\nstrategies, BiRM provides more comprehensive\nguidance and outperforms ORM by 5.0% and\nPRM by 3.8% respectively on MATH-5001.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        (Do not include citations or references)\n</think>\n\n### Better Process Supervision with Bi-directional Rewarding Signals\n\n#### 1. Core Innovation\nThe key innovation is the introduction of BiRM, a bidirectional reinforcement learning model that evaluates both past and future steps in LLM reasoning, unlike traditional models that only look forward.\n\n#### 2. Technical Approach\n- Bidirectional evaluation: Considers both the incurred cost and the estimated future success probability.\n- A* algorithm inspiration: Balances past and future costs for effective supervision.\n- Probability modeling: Incorporates future success probability into the reward signal.\n- Search-based guidance: Provides comprehensive step evaluation for improved search strategies.\n\n#### 3. Quantitative Findings\n1. Improved accuracy on Gaokao2023: 3.1% gain over PRM with BiRM.\n2. Enhanced search efficiency: Outperforms ORM by 5.0% and PRM by 3.8% on MATH-5001.\n\n#### 4. Limitations & Assumptions\n- Relies on accurate future probability estimation.\n- Assumes independence between past and future steps.\n- Limited to mathematical reasoning tasks.\n\n#### 5. Domain Impact\n- Theoretically enhances process supervision by incorporating bidirectional signals.\n- Practically improves LLM reasoning and search efficiency in critical areas like education and finance.",
+  "topics": [
+    "birm",
+    "al",
+    "et",
+    "et al",
+    "2024",
+    "prm",
+    "step",
+    "zhang",
+    "wang",
+    "math"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Better_Process_Supervision_with_Bi-directional_Rewarding_Signals_073b0da790.pdf",
+    "content_hash": "50d40d9b1124c3b63172df3711f9b4563f071a3920dfc52a89915dce5eb2bac3",
+    "arxiv_id": null,
+    "title": "Better_Process_Supervision_with_Bi-directional_Rewarding_Signals_073b0da790",
+    "author": "",
+    "creation_date": "D:20250307020334Z",
+    "published": "2025-03-07T02:03:34",
+    "pages": 15,
+    "size": 1246540,
+    "file_mtime": 1741416413.157428
+  },
+  "main_staff": {
+    "title": "Better_Process_Supervision_with_Bi-directional_Rewarding_Signals_073b0da790",
+    "authors": [
+      ""
+    ],
+    "abstract": "Process supervision, i.e., evaluating each step,\nis critical for complex large language model\n(LLM) reasoning and test-time searching with\nincreased inference compute.\nExisting ap-\nproaches, represented by process reward mod-\nels (PRMs), primarily focus on rewarding sig-\nnals up to the current step, exhibiting a one-\ndirectional nature and lacking a mechanism to\nmodel the distance to the final target. To ad-\ndress this problem, we draw inspiration from\nthe A* algorithm, which states that an effective\nsupervisory signal should simultaneously con-\nsider the incurred cost and the estimated cost\nfor reaching the target. Building on this key\ninsight, we introduce BiRM, a novel process\nsupervision model that not only evaluates the\ncorrectness of previous steps but also models\nthe probability of future success. We conduct\nextensive experiments on mathematical reason-\ning tasks and demonstrate that BiRM provides\nmore precise evaluations of LLM reasoning\nsteps, achieving an improvement of 3.1% on\nGaokao2023 over PRM under the Best-of-N\nsampling method. Besides, in search-based\nstrategies, BiRM provides more comprehensive\nguidance and outperforms ORM by 5.0% and\nPRM by 3.8% respectively on MATH-5001.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method achieves striking results in reasoning mod-",
+      "experiments",
+      "evaluation metrics.",
+      "methods",
+      "method, outcome-supervised estimation, shows a",
+      "conclusion",
+      "references",
+      "experiments, we first sample 15 solutions for each",
+      "method in section 4.2.",
+      "evaluation metrics"
+    ],
+    "topics": [
+      "birm",
+      "al",
+      "et",
+      "et al",
+      "2024",
+      "prm",
+      "step",
+      "zhang",
+      "wang",
+      "math"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Stable-SCore_A_Stable_Registration-based_Framework_for_3D_Shape__Correspondence_96ab190cf85ca23d\n        **Abstract**: Establishing character shape correspondence is a critical\nand fundamental task in computer vision and graphics, with\ndiverse applications including re-topology, attribute trans-\nfer, and shape interpolation. Current dominant functional\nmap methods, while effective in controlled scenarios, strug-\ngle in real situations with more complex challenges such\nas non-isometric shape discrepancies. In response, we re-\nvisit registration-for-correspondence methods and tap their\npotential for more stable shape correspondence estima-\ntion. To overcome their common issues including unstable\ndeformations and the necessity for careful pre-alignment\nor high-quality initial 3D correspondences, we introduce\nStable-SCore: A Stable Registration-based Framework for\n3D Shape Correspondence. We first re-purpose a founda-\ntion model for 2D character correspondence that ensures\nreliable and stable 2D mappings. Crucially, we propose\na novel Semantic Flow Guided Registration approach that\nleverages 2D correspondence to guide mesh deformations.\nOur framework significantly surpasses existing methods in\nchallenging scenarios, and brings possibilities for a wide\narray of real applications, as demonstrated in our results.\n1. Introduction\nShape correspondence is a fundamental task in computer\nvision and graphics, where the goal is to establish accurate\npoint-to-point mappings between different shapes, ensuring\nthe preservation of their geometric characteristics. This task\ninvolves the identification and alignment of corresponding\npoints, features, or regions across multiple shapes, accom-\nmodating variations in pose, scale, or intricate local geo-\nmetric details. Dense correspondences becomes especially\ncrucial for 3D characters [11, 12, 33, 41, 68] , given its\nimplications for a range of downstream applications such\nas re-topology, shape interpolation [15, 88], texture trans-\nfer [29], rig transfer [58, 71], etc.\nThere are two primary categories to address shape cor-\nrespondence: registration-for-correspondence methods [2,\n9, 20–22, 40, 70] and functional map methods [7, 11, 16,\n17, 27, 42, 54, 57, 65]. In recent years, functional map\narXiv:2503.21766v1  [cs.CV]  27 Mar 2025\n\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        The user is a researcher in computer vision focusing on 3D shape correspondence. They need this structured highlight for a proposal to understand the framework better.\n</think>\n\n**Structured Highlights for Stable-SCore Framework**\n\n1. **Core Innovation**:  \nThe Stable-SCore framework introduces a registration-based approach for 3D shape correspondence, addressing the limitations of existing functional map methods by providing more stable and reliable correspondences, even in challenging scenarios with non-isometric shapes.\n\n2. **Technical Approach**:  \n- **Semantic Flow Guided Registration**: Uses 2D correspondence to guide 3D mesh deformations, enhancing alignment accuracy.  \n- **Foundation Model Repurposing**: Leverages a 2D model for ensuring stable 2D mappings, which are then extended to 3D.  \n- **Registration-Based Framework**: Focuses on accurate point-to-point mappings, avoiding the need for pre-alignment or high-quality initial correspondences.\n\n3. **Quantitative Findings**:  \n- Improved accuracy in challenging 3D shape correspondence tasks.  \n- Outperforms existing methods in scenarios with complex deformations and non-isometric discrepancies.\n\n4. **Limitations & Assumptions**:  \n- Assumes that 2D correspondence can reliably guide 3D deformations.  \n- May require significant computational resources for processing complex shapes.  \n- Primarily tested on synthetic data; real-world applications may vary.\n\n5. **Domain Impact**:  \n- **Theoretical**: Advances the field of 3D shape correspondence by offering a robust framework that integrates 2D and 3D data.  \n- **Practical**: Enables applications like re-topology, shape interpolation, texture transfer, and rig transfer, enhancing real-world 3D modeling and graphics workflows.  \n- **Equations/Figures**: The framework likely includes equations related to deformation metrics and correspondence optimization, which are visualized in figures demonstrating performance improvements over baseline methods.",
+  "topics": [
+    "correspondence",
+    "shape",
+    "3d",
+    "2d",
+    "mesh",
+    "registration",
+    "methods",
+    "pages",
+    "computer",
+    "vision"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Stable-SCore_A_Stable_Registration-based_Framework_for_3D_Shape__Correspondence_96ab190cf85ca23d.pdf",
+    "content_hash": "96ab190cf85ca23d4c0bbe422f3a550d6458c084e97cf6179261cec4e133d5f0",
+    "arxiv_id": null,
+    "title": "Stable-SCore_A_Stable_Registration-based_Framework_for_3D_Shape__Correspondence_96ab190cf85ca23d",
+    "author": "",
+    "creation_date": "D:20250328011212Z",
+    "published": "2025-03-28T01:12:12",
+    "pages": 18,
+    "size": 20457829,
+    "file_mtime": 1743294106.1342356
+  },
+  "main_staff": {
+    "title": "Stable-SCore_A_Stable_Registration-based_Framework_for_3D_Shape__Correspondence_96ab190cf85ca23d",
+    "authors": [
+      ""
+    ],
+    "abstract": "Establishing character shape correspondence is a critical\nand fundamental task in computer vision and graphics, with\ndiverse applications including re-topology, attribute trans-\nfer, and shape interpolation. Current dominant functional\nmap methods, while effective in controlled scenarios, strug-\ngle in real situations with more complex challenges such\nas non-isometric shape discrepancies. In response, we re-\nvisit registration-for-correspondence methods and tap their\npotential for more stable shape correspondence estima-\ntion. To overcome their common issues including unstable\ndeformations and the necessity for careful pre-alignment\nor high-quality initial 3D correspondences, we introduce\nStable-SCore: A Stable Registration-based Framework for\n3D Shape Correspondence. We first re-purpose a founda-\ntion model for 2D character correspondence that ensures\nreliable and stable 2D mappings. Crucially, we propose\na novel Semantic Flow Guided Registration approach that\nleverages 2D correspondence to guide mesh deformations.\nOur framework significantly surpasses existing methods in\nchallenging scenarios, and brings possibilities for a wide\narray of real applications, as demonstrated in our results.\n1. Introduction\nShape correspondence is a fundamental task in computer\nvision and graphics, where the goal is to establish accurate\npoint-to-point mappings between different shapes, ensuring\nthe preservation of their geometric characteristics. This task\ninvolves the identification and alignment of corresponding\npoints, features, or regions across multiple shapes, accom-\nmodating variations in pose, scale, or intricate local geo-\nmetric details. Dense correspondences becomes especially\ncrucial for 3D characters [11, 12, 33, 41, 68] , given its\nimplications for a range of downstream applications such\nas re-topology, shape interpolation [15, 88], texture trans-\nfer [29], rig transfer [58, 71], etc.\nThere are two primary categories to address shape cor-\nrespondence: registration-for-correspondence methods [2,\n9, 20–22, 40, 70] and functional map methods [7, 11, 16,\n17, 27, 42, 54, 57, 65]. In recent years, functional map\narXiv:2503.21766v1  [cs.CV]  27 Mar 2025\n",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods have dominated this task. these methods trans-",
+      "experiments,",
+      "methods often relied on handcrafted feature descriptors",
+      "experiments show that stable-score",
+      "references",
+      "method highly cost-effective, therefore, the need for gt",
+      "method outperforms others and demonstrates its ability to"
+    ],
+    "topics": [
+      "correspondence",
+      "shape",
+      "3d",
+      "2d",
+      "mesh",
+      "registration",
+      "methods",
+      "pages",
+      "computer",
+      "vision"
+    ],
+    "sections_text": {
+      "methods": ""
+    },
+    "citations": []
+  }
+}

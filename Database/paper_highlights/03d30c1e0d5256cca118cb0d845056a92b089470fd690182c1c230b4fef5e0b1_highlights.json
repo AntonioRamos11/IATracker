@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: The_Role_of_Visual_Modality_in_Multimodal_Mathematical_Reasoning__Challenges_and_Insights_7d4b1f3084\n        **Abstract**: Recent research has increasingly focused on\nmultimodal mathematical reasoning, partic-\nularly emphasizing the creation of relevant\ndatasets and benchmarks. Despite this, the role\nof visual information in reasoning has been un-\nderexplored. Our findings show that existing\nmultimodal mathematical models minimally\nleverage visual information, and model perfor-\nmance remains largely unaffected by changes\nto or removal of images in the dataset. We\nattribute this to the dominance of textual infor-\nmation and answer options that inadvertently\nguide the model to correct answers. To im-\nprove evaluation methods, we introduce the\nHC-M3D dataset, specifically designed to re-\nquire image reliance for problem-solving and\nto challenge models with similar, yet distinct,\nimages that change the correct answer. In test-\ning leading models, their failure to detect these\nsubtle visual differences suggests limitations\nin current visual perception capabilities. Ad-\nditionally, we observe that the common ap-\nproach of improving general VQA capabili-\nties by combining various types of image en-\ncoders does not contribute to math reasoning\nperformance. This finding also presents a chal-\nlenge to enhancing visual reliance during math\nreasoning. Our benchmark and code would\nbe available at https://github.com/Yufang-\nLiu/visual_modality_role.\n1\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        I'll provide the paper step by step, but first, let me make sure I understand what you want.\n</think>\n\n**Core Innovation:** The research introduces HC-M3D, a dataset designed to enhance the reliance on visual information in multimodal mathematical reasoning by requiring image-based problem-solving and challenging models with similar yet distinct images that affect the correct answer.\n\n**Technical Approach:**  \n- **Dataset Design:** HC-M3D is tailored to demand visual reasoning, with problems solved through images, not text.  \n- **Visual Challenges:** The dataset includes pairs of similar images that alter correct answers, testing models' visual perception.  \n- **Evaluation Method:** Models are assessed on their ability to detect subtle visual differences, indicating limitations in current visual processing.  \n- **Image Encoders:** The study explores using various image encoders but finds they don't improve math reasoning performance.  \n\n**Quantitative Findings:**  \n1. Model performance is minimally affected by image inclusion.  \n2. Models fail to detect critical visual differences in similar images.  \n3. Combining image encoders doesn't enhance math reasoning.  \n\n**Limitations & Assumptions:**  \n- The study focuses on visual reasoning in math, neglecting other modalities.  \n- It assumes that current VQA improvements don't aid math reasoning.  \n- Results are based on the HC-M3D dataset and may not generalize.  \n\n**Domain Impact:**  \n- **Theoretical:** Challenges existing assumptions about visual dominance in math reasoning.  \n- **Practical:** Highlights the need for new approaches to integrate visual data in mathematical models, potentially improving accuracy and robustness.",
+  "topics": [
+    "image",
+    "visual",
+    "2024",
+    "images",
+    "model",
+    "al",
+    "mathematical",
+    "math",
+    "et al",
+    "models"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/The_Role_of_Visual_Modality_in_Multimodal_Mathematical_Reasoning__Challenges_and_Insights_7d4b1f3084.pdf",
+    "content_hash": "03d30c1e0d5256cca118cb0d845056a92b089470fd690182c1c230b4fef5e0b1",
+    "arxiv_id": null,
+    "title": "The_Role_of_Visual_Modality_in_Multimodal_Mathematical_Reasoning__Challenges_and_Insights_7d4b1f3084",
+    "author": "",
+    "creation_date": "D:20250307013219Z",
+    "published": "2025-03-07T01:32:19",
+    "pages": 16,
+    "size": 1111037,
+    "file_mtime": 1741419767.96992
+  },
+  "main_staff": {
+    "title": "The_Role_of_Visual_Modality_in_Multimodal_Mathematical_Reasoning__Challenges_and_Insights_7d4b1f3084",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent research has increasingly focused on\nmultimodal mathematical reasoning, partic-\nularly emphasizing the creation of relevant\ndatasets and benchmarks. Despite this, the role\nof visual information in reasoning has been un-\nderexplored. Our findings show that existing\nmultimodal mathematical models minimally\nleverage visual information, and model perfor-\nmance remains largely unaffected by changes\nto or removal of images in the dataset. We\nattribute this to the dominance of textual infor-\nmation and answer options that inadvertently\nguide the model to correct answers. To im-\nprove evaluation methods, we introduce the\nHC-M3D dataset, specifically designed to re-\nquire image reliance for problem-solving and\nto challenge models with similar, yet distinct,\nimages that change the correct answer. In test-\ning leading models, their failure to detect these\nsubtle visual differences suggests limitations\nin current visual perception capabilities. Ad-\nditionally, we observe that the common ap-\nproach of improving general VQA capabili-\nties by combining various types of image en-\ncoders does not contribute to math reasoning\nperformance. This finding also presents a chal-\nlenge to enhancing visual reliance during math\nreasoning. Our benchmark and code would\nbe available at https://github.com/Yufang-\nLiu/visual_modality_role.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation datasets, perturbing the visual modality",
+      "related work",
+      "evaluation.",
+      "evaluation",
+      "results",
+      "conclusion",
+      "experiments demonstrate that the model does not",
+      "references",
+      "evaluation. (as shown in table 1, mathllava"
+    ],
+    "topics": [
+      "image",
+      "visual",
+      "2024",
+      "images",
+      "model",
+      "al",
+      "mathematical",
+      "math",
+      "et al",
+      "models"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

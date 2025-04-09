@@ -1,0 +1,64 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Revisiting_Self-Consistency_from_Dynamic_Distributional_Alignment__Perspective_on_Answer_Aggregation_d483cfbe59efa975\n        **Abstract**: Self-consistency improves reasoning by ag-\ngregating diverse stochastic samples, yet the\ndynamics behind its efficacy remain underex-\nplored. We reframe self-consistency as a dy-\nnamic distributional alignment problem, reveal-\ning that decoding temperature not only gov-\nerns sampling randomness but also actively\nshapes the latent answer distribution. Given\nthat high temperatures require prohibitively\nlarge sample sizes to stabilize, while low tem-\nperatures risk amplifying biases, we propose\na confidence-driven mechanism that dynami-\ncally calibrates temperature: sharpening the\nsampling distribution under uncertainty to align\nwith high-probability modes, and promoting\nexploration when confidence is high. Experi-\nments on mathematical reasoning tasks show\nthis approach outperforms fixed-diversity base-\nlines under limited samples, improving both av-\nerage and best-case performance across varying\ninitial temperatures without additional data or\nmodules. This establishes self-consistency as\na synchronization challenge between sampling\ndynamics and evolving answer distributions.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n\n        Also, ensure that all information from the paper is covered.\n\n        The output should be structured as follows:\n        - Core Innovation\n        - Technical Approach\n        - Quantitative Findings\n        - Limitations & Assumptions\n        - Domain Impact\n</think>\n\n**Core Innovation**  \nThe paper introduces a novel perspective on self-consistency by reframing it as a dynamic distributional alignment problem. It reveals that temperature decoding not only governs sampling randomness but also shapes the latent answer distribution, providing a deeper understanding of self-consistency's mechanisms.\n\n**Technical Approach**  \n1. The approach dynamically calibrates temperature based on confidence levels.  \n2. It sharpens the sampling distribution under uncertainty to align with high-probability modes.  \n3. It promotes exploration when confidence is high.  \n4. The method operates without requiring additional data or modules.  \n5. It employs a confidence-driven mechanism to dynamically adjust temperature during sampling.\n\n**Quantitative Findings**  \n1. The proposed approach outperforms fixed-diversity baselines under limited samples.  \n2. It improves both average and best-case performance across varying initial temperatures.  \n3. The method achieves these results without additional data or modules.  \n\n**Limitations & Assumptions**  \n1. The method assumes that high temperatures require prohibitively large sample sizes to stabilize.  \n2. Low temperatures may amplify biases.  \n3. The approach focuses on mathematical reasoning tasks.  \n\n**Domain Impact**  \nTheoretically, the paper contributes to understanding the dynamics of self-consistency in AI systems. Practically, the method offers a promising direction for enhancing reasoning systems by dynamically calibrating temperature, potentially applicable beyond mathematical reasoning tasks. The core innovation and technical approach provide a solid foundation for future research in self-consistency mechanisms.",
+  "topics": [
+    "temperature",
+    "88",
+    "sampling",
+    "consistency",
+    "self",
+    "87",
+    "samples",
+    "self consistency",
+    "86",
+    "83"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Revisiting_Self-Consistency_from_Dynamic_Distributional_Alignment__Perspective_on_Answer_Aggregation_d483cfbe59efa975.pdf",
+    "content_hash": "d483cfbe59efa975cd233eef7557a3265fa4d15b9653280dc77a2ac059f657e2",
+    "arxiv_id": null,
+    "title": "Revisiting_Self-Consistency_from_Dynamic_Distributional_Alignment__Perspective_on_Answer_Aggregation_d483cfbe59efa975",
+    "author": "",
+    "creation_date": "D:20250228013011Z",
+    "published": "2025-02-28T01:30:11",
+    "pages": 14,
+    "size": 869404,
+    "file_mtime": 1740970239.1005037
+  },
+  "main_staff": {
+    "title": "Revisiting_Self-Consistency_from_Dynamic_Distributional_Alignment__Perspective_on_Answer_Aggregation_d483cfbe59efa975",
+    "authors": [
+      ""
+    ],
+    "abstract": "Self-consistency improves reasoning by ag-\ngregating diverse stochastic samples, yet the\ndynamics behind its efficacy remain underex-\nplored. We reframe self-consistency as a dy-\nnamic distributional alignment problem, reveal-\ning that decoding temperature not only gov-\nerns sampling randomness but also actively\nshapes the latent answer distribution. Given\nthat high temperatures require prohibitively\nlarge sample sizes to stabilize, while low tem-\nperatures risk amplifying biases, we propose\na confidence-driven mechanism that dynami-\ncally calibrates temperature: sharpening the\nsampling distribution under uncertainty to align\nwith high-probability modes, and promoting\nexploration when confidence is high. Experi-\nments on mathematical reasoning tasks show\nthis approach outperforms fixed-diversity base-\nlines under limited samples, improving both av-\nerage and best-case performance across varying\ninitial temperatures without additional data or\nmodules. This establishes self-consistency as\na synchronization challenge between sampling\ndynamics and evolving answer distributions.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results across various model types and size indi-",
+      "method for improving reasoning performance by",
+      "experiments",
+      "evaluation is conducted from the perspectives of",
+      "results",
+      "approach mitigates the performance loss caused by",
+      "results in a higher proportion of fsd instances en-",
+      "related work",
+      "conclusion",
+      "approaches infinity, and how it varies with",
+      "references"
+    ],
+    "topics": [
+      "temperature",
+      "88",
+      "sampling",
+      "consistency",
+      "self",
+      "87",
+      "samples",
+      "self consistency",
+      "86",
+      "83"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Decoupled_Graph_Energy-based_Model_for_Node_Out-of-Distribution__Detection_on_Heterophilic_Graphs_dbdf20ba6b12ad99\n        **Abstract**: Despite extensive research efforts focused on Out-of-Distribution (OOD) detection\non images, OOD detection on nodes in graph learning remains underexplored.\nThe dependence among graph nodes hinders the trivial adaptation of existing ap-\nproaches on images that assume inputs to be i.i.d. sampled, since many unique\nfeatures and challenges specific to graphs are not considered, such as the het-\nerophily issue. Recently, GNNSafe, which considers node dependence, adapted\nenergy-based detection to the graph domain with state-of-the-art performance, how-\never, it has two serious issues: 1) it derives node energy from classification logits\nwithout specifically tailored training for modeling data distribution, making it less\neffective at recognizing OOD data; 2) it highly relies on energy propagation, which\nis based on homophily assumption and will cause significant performance degrada-\ntion on heterophilic graphs, where the node tends to have dissimilar distribution\nwith its neighbors. To address the above issues, we suggest training Energy-based\nModels (EBMs) by Maximum Likelihood Estimation (MLE) to enhance data dis-\ntribution modeling and removing energy propagation to overcome the heterophily\nissues. However, training EBMs via MLE requires performing Markov Chain\nMonte Carlo (MCMC) sampling on both node feature and node neighbors, which\nis challenging due to the node interdependence and discrete graph topology. To\ntackle the sampling challenge, we introduce Decoupled Graph Energy-based Model\n(DeGEM), which decomposes the learning process into two parts—a graph encoder\nthat leverages topology information for node representations and an energy head\nthat operates in latent space. Additionally, we propose a Multi-Hop Graph encoder\n(MH) and Energy Readout (ERo) to enhance node representation learning, Condi-\ntional Energy (CE) for improved EBM training, and Recurrent Update for the graph\nencoder and energy head to promote each other. This approach avoids sampling\nadjacency matrices and removes the need for energy propagation to extract graph\ntopology information. Extensive experiments validate that DeGEM, without OOD\nexposure during training, surpasses previous state-of-the-art methods, achieving\nan average AUROC improvement of 6.71% on homophilic graphs and 20.29% on\nheterophilic graphs, and even outperform methods trained with OOD exposure.\nOur code is available at: https://github.com/draym28/DeGEM.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n### Core Innovation\n\nThe research introduces **Decoupled Graph Energy-based Model (DeGEM)**, a novel approach to Node Out-of-Distribution (OOD) detection on heterophilic graphs. Unlike existing methods that rely on energy propagation based on homophily assumptions, DeGEM decouples the modeling of node features and their neighbors, enabling effective detection on both homophilic and heterophilic graphs.\n\n### Technical Approach\n\n1. **Decoupled Learning**: The model separates the graph encoder, which captures topology information, from the energy head, which operates in latent space, avoiding energy propagation.\n2. **Energy-based Modeling via MLE**: Using Maximum Likelihood Estimation, DeGEM enhances data distribution modeling without requiring MCMC sampling.\n3. **Multi-Hop Graph Encoder (MH)**: Captures multi-level neighborhood features for better node representation learning.\n4. **Energy Readout (ERo)**: Improves energy estimation by considering node features and their neighbors.\n5. **Conditional Energy (CE)**: Enhances EBM training by conditioning on node features and topology.\n\n### Quantitative Findings\n\n- On homophilic graphs, DeGEM improves AUROC by **6.71%** compared to previous methods.\n- On heterophilic graphs, AUROC improves by **20.29%** without OOD exposure during training.\n- Outperforms state-of-the-art methods trained with OOD exposure.\n\n### Limitations & Assumptions\n\n- **Assumption of Node Features**: The model relies on accurate node feature representation.\n- **Computational Complexity**: The approach may be computationally intensive due to graph encoder and energy head interactions.\n- **Topology Dependency**: Performance may vary based on graph structure and heterophily levels.\n\n### Domain Impact\n\nThe innovation is theoretically significant for advancing OOD detection in graph learning and practically impactful for applications requiring robust graph analysis, such as social networks, recommendation systems, and biological networks.",
+  "topics": [
+    "99",
+    "energy",
+    "graph",
+    "97",
+    "93",
+    "94",
+    "90",
+    "92",
+    "82",
+    "87"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Decoupled_Graph_Energy-based_Model_for_Node_Out-of-Distribution__Detection_on_Heterophilic_Graphs_dbdf20ba6b12ad99.pdf",
+    "content_hash": "dbdf20ba6b12ad99fffb3e4e6a8c1c8d41ac4136e20879b2dc8d7094168db0e4",
+    "arxiv_id": null,
+    "title": "Decoupled_Graph_Energy-based_Model_for_Node_Out-of-Distribution__Detection_on_Heterophilic_Graphs_dbdf20ba6b12ad99",
+    "author": "",
+    "creation_date": "D:20250226013017Z",
+    "published": "2025-02-26T01:30:17",
+    "pages": 23,
+    "size": 1468402,
+    "file_mtime": 1740971386.4946115
+  },
+  "main_staff": {
+    "title": "Decoupled_Graph_Energy-based_Model_for_Node_Out-of-Distribution__Detection_on_Heterophilic_Graphs_dbdf20ba6b12ad99",
+    "authors": [
+      ""
+    ],
+    "abstract": "Despite extensive research efforts focused on Out-of-Distribution (OOD) detection\non images, OOD detection on nodes in graph learning remains underexplored.\nThe dependence among graph nodes hinders the trivial adaptation of existing ap-\nproaches on images that assume inputs to be i.i.d. sampled, since many unique\nfeatures and challenges specific to graphs are not considered, such as the het-\nerophily issue. Recently, GNNSafe, which considers node dependence, adapted\nenergy-based detection to the graph domain with state-of-the-art performance, how-\never, it has two serious issues: 1) it derives node energy from classification logits\nwithout specifically tailored training for modeling data distribution, making it less\neffective at recognizing OOD data; 2) it highly relies on energy propagation, which\nis based on homophily assumption and will cause significant performance degrada-\ntion on heterophilic graphs, where the node tends to have dissimilar distribution\nwith its neighbors. To address the above issues, we suggest training Energy-based\nModels (EBMs) by Maximum Likelihood Estimation (MLE) to enhance data dis-\ntribution modeling and removing energy propagation to overcome the heterophily\nissues. However, training EBMs via MLE requires performing Markov Chain\nMonte Carlo (MCMC) sampling on both node feature and node neighbors, which\nis challenging due to the node interdependence and discrete graph topology. To\ntackle the sampling challenge, we introduce Decoupled Graph Energy-based Model\n(DeGEM), which decomposes the learning process into two parts—a graph encoder\nthat leverages topology information for node representations and an energy head\nthat operates in latent space. Additionally, we propose a Multi-Hop Graph encoder\n(MH) and Energy Readout (ERo) to enhance node representation learning, Condi-\ntional Energy (CE) for improved EBM training, and Recurrent Update for the graph\nencoder and energy head to promote each other. This approach avoids sampling\nadjacency matrices and removes the need for energy propagation to extract graph\ntopology information. Extensive experiments validate that DeGEM, without OOD\nexposure during training, surpasses previous state-of-the-art methods, achieving\nan average AUROC improvement of 6.71% on homophilic graphs and 20.29% on\nheterophilic graphs, and even outperform methods trained with OOD exposure.\nOur code is available at: https://github.com/draym28/DeGEM.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology",
+      "method",
+      "experiments",
+      "evaluation results",
+      "evaluation on limited labels",
+      "method, we select three baselines oe, energy-ft",
+      "results of each dataset in tab. 3, and the average performance of each method in fig. 4 for more",
+      "related work",
+      "conclusion",
+      "references",
+      "experiments show that this to be greatly beneficial for ood detection (see sec. 4.4).",
+      "evaluation on synthetic graphs",
+      "methods"
+    ],
+    "topics": [
+      "99",
+      "energy",
+      "graph",
+      "97",
+      "93",
+      "94",
+      "90",
+      "92",
+      "82",
+      "87"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

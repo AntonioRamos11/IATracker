@@ -1,0 +1,68 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Language Models can Self-Improve at State-Value Estimation for Better Search\n        **Abstract**: Collecting ground truth task completion rewards\nor human demonstrations for multi-step rea-\nsoning tasks is often cost-prohibitive and time-\nconsuming, especially in interactive domains like\nweb tasks. To address this bottleneck, we present\nself-taught lookahead, a self-supervised method\nthat leverages state-transition dynamics to train\na value model capable of effectively guiding lan-\nguage model-controlled search. We find that mod-\nerately sized (8 billion parameters) open-weight\nvalue models improved with self-taught looka-\nhead can match the performance of using a fron-\ntier LLM such as gpt-4o as the value model.\nFurthermore, we find that self-taught lookahead\nimproves performance by 20% while reducing\ncosts 37× compared to previous LLM-based tree\nsearch, without relying on ground truth rewards.\n1. Introduction\nWhile current large language models (LLMs) have exhibited\nimpressive intrinsic reasoning capabilities (Wei et al., 2022;\nWang et al., 2022), recent work (Yao et al., 2024; Xie et al.,\n2024) has demonstrated that eliciting more deliberate rea-\nsoning through explicit tree search improves performance\non complex multi-step reasoning tasks. During this search\nprocess, a policy LLM proposes possible actions from the\ncurrent state, and a value LLM evaluates and selects the\nmost promising states to explore. Recent work has found\nthe strength of the value model to be strongly correlated with\noverall performance (Chen et al., 2024; Liu et al., 2024a).\nMuch prior work on LLM-based tree search simply prompts\nan off-the-shelf LLM to serve as both the policy and value\nmodels during the search process, where performance is con-\nstrained by the capabilities of this model. Recent approaches\nhave addressed this constraint by utilizing ground truth task\ncompletion rewards during Monte Carlo tree search (MCTS)\nto guide node selection. Zhou et al. (2024) show that MCTS\nusing these rewards can outperform gradient-based methods\n1Georgia Institute of Technology. Correspondence to: Ethan\nMendes <emendes3@gatech.edu>.\nthat train on human demonstrations or rejection sampled\ntrajectories. However, collecting ground-truth rewards can\nbe costly. For example, in interactive domains like web\ntasks, data collection can cost thousands of dollars (Yao\net al., 2022a). This constraint motivates the need for new\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n1. **Core Innovation**:  \n   The paper introduces **self-taught lookahead**, a self-supervised method that enables language models to self-improve for state-value estimation, enhancing their performance in search tasks without relying on ground truth rewards.\n\n2. **Technical Approach**:  \n   - Utilizes **state-transition dynamics** to train a value model, guiding language model-controlled search effectively.  \n   - Employs a **moderately sized open-weight value model** (8 billion parameters) that improves with self-taught lookahead.  \n   - Avoids the need for **ground truth rewards** or human demonstrations, reducing costs and time.  \n\n3. **Quantitative Findings**:  \n   - The method achieves **match performance** with a Frontier LLM like GPT-4o.  \n   - Improves performance by **20%** compared to previous LLM-based tree search methods.  \n   - Reduces costs by a factor of **37×** relative to relying on ground truth rewards.  \n\n4. **Limitations & Assumptions**:  \n   - The study assumes sufficient state representation for accurate value estimation.  \n   - The method's effectiveness may depend on the complexity and diversity of the training data.  \n   - Performance gains are observed in **multi-step reasoning tasks**, but generalization to other domains is not yet established.  \n\n5. **Domain Impact**:  \n   - **Theoretical**: Advances understanding of self-supervised learning in LLMs and its application to complex reasoning tasks.  \n   - **Practical**: Significantly reduces costs and time for data collection in interactive domains like web tasks, making advanced search capabilities more accessible.  \n\n**Key Equations/Figures**:  \nThe paper's analysis likely includes equations modeling state transitions and value estimation, though specific metrics are not detailed here. Figure 1 might illustrate the performance improvement of self-taught lookahead compared to traditional methods, while Figure 2 could depict the cost reduction achieved.",
+  "topics": [
+    "value",
+    "al",
+    "et al",
+    "et",
+    "self",
+    "search",
+    "state",
+    "model",
+    "models",
+    "arxiv"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Language_Models_can_Self-Improve_at_State-Value_Estimation_for_Better__Search_851762bffeeb8fbf.pdf",
+    "content_hash": "851762bffeeb8fbfe3c645f747f5fedade03f38134a232d09c7a80dbceb41965",
+    "arxiv_id": null,
+    "title": "Language Models can Self-Improve at State-Value Estimation for Better Search",
+    "author": "Ethan Mendes, Alan Ritter",
+    "creation_date": "D:20250305021724Z",
+    "published": "2025-03-05T02:17:24",
+    "pages": 17,
+    "size": 708179,
+    "file_mtime": 1741159935.5581257
+  },
+  "main_staff": {
+    "title": "Language Models can Self-Improve at State-Value Estimation for Better Search",
+    "authors": [
+      "Ethan Mendes",
+      " Alan Ritter"
+    ],
+    "abstract": "Collecting ground truth task completion rewards\nor human demonstrations for multi-step rea-\nsoning tasks is often cost-prohibitive and time-\nconsuming, especially in interactive domains like\nweb tasks. To address this bottleneck, we present\nself-taught lookahead, a self-supervised method\nthat leverages state-transition dynamics to train\na value model capable of effectively guiding lan-\nguage model-controlled search. We find that mod-\nerately sized (8 billion parameters) open-weight\nvalue models improved with self-taught looka-\nhead can match the performance of using a fron-\ntier LLM such as gpt-4o as the value model.\nFurthermore, we find that self-taught lookahead\nimproves performance by 20% while reducing\ncosts 37× compared to previous LLM-based tree\nsearch, without relying on ground truth rewards.\n1. Introduction\nWhile current large language models (LLMs) have exhibited\nimpressive intrinsic reasoning capabilities (Wei et al., 2022;\nWang et al., 2022), recent work (Yao et al., 2024; Xie et al.,\n2024) has demonstrated that eliciting more deliberate rea-\nsoning through explicit tree search improves performance\non complex multi-step reasoning tasks. During this search\nprocess, a policy LLM proposes possible actions from the\ncurrent state, and a value LLM evaluates and selects the\nmost promising states to explore. Recent work has found\nthe strength of the value model to be strongly correlated with\noverall performance (Chen et al., 2024; Liu et al., 2024a).\nMuch prior work on LLM-based tree search simply prompts\nan off-the-shelf LLM to serve as both the policy and value\nmodels during the search process, where performance is con-\nstrained by the capabilities of this model. Recent approaches\nhave addressed this constraint by utilizing ground truth task\ncompletion rewards during Monte Carlo tree search (MCTS)\nto guide node selection. Zhou et al. (2024) show that MCTS\nusing these rewards can outperform gradient-based methods\n1Georgia Institute of Technology. Correspondence to: Ethan\nMendes <emendes3@gatech.edu>.\nthat train on human demonstrations or rejection sampled\ntrajectories. However, collecting ground-truth rewards can\nbe costly. For example, in interactive domains like web\ntasks, data collection can cost thousands of dollars (Yao\net al., 2022a). This constraint motivates the need for new",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods that can perform self-supervised training of the",
+      "methods (zhou et al., 2024), while reducing inference costs",
+      "method e.g. breadth-first search (bfs) or monte carlo tree",
+      "method, the models and inference configuration are listed along",
+      "method",
+      "approach on applied web agent tasks and traditional math",
+      "methods that use these rewards and self-taught lookahead",
+      "methods compared to the underlined results (∗p < 0.05, ∗∗p < 0.01, ∗∗∗p < 0.001) using the paired bootstrap test (berg-kirkpatrick",
+      "results and discussion.",
+      "evaluation",
+      "methods",
+      "method to improve the value model employed during search.",
+      "references",
+      "methods in natural language processing and computa-",
+      "results are shown in figure 6."
+    ],
+    "topics": [
+      "value",
+      "al",
+      "et al",
+      "et",
+      "self",
+      "search",
+      "state",
+      "model",
+      "models",
+      "arxiv"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

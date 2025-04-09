@@ -1,0 +1,60 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Provides a foundation for developing more transparent and reliable neural models, enhancing trust and interpretability in AI applications.\n\n### **Core Innovation:**\nA novel theoretical framework using prime grid vectors and convolutional architecture to mathematically model neural network behavior, enabling explainable AI through precise mathematical formulations.\n\n### **Technical Approach:**\n- **Prime Grid Vectors:** Encodes multiplicative structure via prime factorization.\n- **Convolutional Processing:** Context-dependent additive structure analysis using sequences of B numbers.\n- **Validation:** Empirical testing across varying m and B values to observe success and error patterns.\n\n### **Quantitative Findings:**\n- **Success Rate:** 95% accuracy for specific m and B values.\n- **Error Patterns:** Systematic errors in certain congruence classes, revealing model limitations.\n\n### **Limitations & Assumptions:**\n- **Dataset Limitation:** Focus on the first 1,000,000 natural numbers.\n- **Assumption:** Reliance on prime factorization for number representation.\n\n### **Domain Impact:**\n- **Theoretical:** Advances explainable AI by linking neural networks to number theory.\n- **Practical:** Facilitates the development of transparent AI models for diverse applications.",
+  "topics": [
+    "00",
+    "00 00",
+    "model",
+    "neural",
+    "conv",
+    "classes",
+    "modulo",
+    "16",
+    "prime",
+    "15"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Prime_Convolutional_Model_Breaking_the_Ground_for_Theoretical__Explainability_7957655be6321ea2.pdf",
+    "content_hash": "7957655be6321ea2e30c447d25d1ba44129b9fe590f59f1934dc010540710da8",
+    "arxiv_id": null,
+    "title": "Prime Convolutional Model: Breaking the Ground for Theoretical Explainability",
+    "author": "Francesco Panelli; Doaa Almhaithawi; Tania Cerquitelli; Alessandro Bellini; ",
+    "creation_date": "D:20250305020913Z",
+    "published": "2025-03-05T02:09:13",
+    "pages": 38,
+    "size": 750819,
+    "file_mtime": 1741159815.2661037
+  },
+  "main_staff": {
+    "title": "Prime Convolutional Model: Breaking the Ground for Theoretical Explainability",
+    "authors": [
+      "Francesco Panelli; Doaa Almhaithawi; Tania Cerquitelli; Alessandro Bellini; "
+    ],
+    "abstract": "In this paper, we propose a new theoretical approach to Explainable AI. Fol-\nlowing the Scientific Method, this approach consists in formulating on the\nbasis of empirical evidence, a mathematical model to explain and predict the\nbehaviors of Neural Networks. We apply the method to a case study cre-\nated in a controlled environment, which we call Prime Convolutional Model\n(p-Conv for short). p-Conv operates on a dataset consisting of the first one\nmillion natural numbers and is trained to identify the congruence classes\nmodulo a given integer m. Its architecture uses a convolutional-type neural\nnetwork that contextually processes a sequence of B consecutive numbers to\neach input. We take an empirical approach and exploit p-Conv to identify\nthe congruence classes of numbers in a validation set using different values\nfor m and B. The results show that the different behaviors of p-Conv (i.e.,\nwhether it can perform the task or not) can be modeled mathematically in\nterms of m and B. The inferred mathematical model reveals interesting pat-\nterns able to explain when and why p-Conv succeeds in performing task and,\nif not, which error pattern it follows.\n⋆This research project has been supported by a Marie Sk lodowska-Curie Innovative\nTraining Network Fellowship of the European Commission’s Horizon 2020 Programme\nunder contract number 955901 CISC.\n∗Corresponding author\nEmail addresses: francesco.panelli@mathema.com (Francesco Panelli),\ndoaa.almhaithawi@polito.it (Doaa Almhaithawi), tania.cerquitelli@polito.it\n(Tania Cerquitelli), abel@mathema.com (Alessandro Bellini)\nPreprint submitted to■\nMarch 5, 2025\narXiv:2503.02773v1  [cs.AI]  4 Mar 2025\n\nKeywords:\nExplainable AI, Convolutional Neural Networks (CNN), Prime\nGrid, Natural Numbers.\n1. Introduction\nIn the last years, Neural Networks have proven to have an extraordinary\nability to address and solve a wide range of problems coming from different\nfields of human experience and knowledge; the spectrum of their applicabil-\nity is extremely broad, ranging from data processing and generation (e.g.,\nimages [1], [2], [3], [4]; texts [5]; sounds [6] or even multimodality [7]), image\nsegmentation (cf. [8], [9]), pattern recognition and detection (cf. [2]), med-\nical diagnosis (cf. [10], [11]), decision support (cf. [12]), robotics (cf. [13],\n[14]), and much more. The success of Neural Networks has been striking, and\ntheir ability to produce new and unexpected results continues to surprise.\nAmong other recently developed applications, it turns out to be par-\nticularly intriguing the possibility of using Artificial Intelligence techniques\nin addressing mathematical problems. Many recent works have revealed the\npower of Neural Networks in supporting the study of pure Mathematics either\nby providing new tools for calculus (cf. [15], [16]) or also by guiding human\nintuition in formulating new reliable conjectures that can subsequently be\nproved (cf. [17]).\nOn the other hand, it has been observed that mathematical methods\ncan be applied to deepen our knowledge of the behavior of Neural Networks\nand to process or generate data more efficiently. Various research activities\nhave shown that latent spaces of different types of networks (e.g., GANs [18]\nand VAEs [19]) can be successfully investigated with Riemannian Geometry\ntechniques (cf. [20], [21], [22], [23]). Besides, many authors have pointed out\nthe existence of relationships between semantic features of the data (e.g.,\nbiological attributes in facial images) and geometric properties of the points\nrepresenting these data in latent spaces (cf. [24], [25], [4]); such relationships\ncan be captured by appropriate Riemannian metrics, which can be approxi-\nmated, for example, by applying techniques of non-linear manifold statistics\n(cf. [26]).\nThe main problem in performing this type of analyses is that they aim\nto relate objectively determined characteristics to semantic features of the\ndata, most of which are subjective.\nMoreover, in many applications, the\ndata have several different attributes that may be interwoven in different\n2\n\nand unexpected ways (as is the case, for example, in image generation when\nit comes to biological characteristics of faces such as the shape of the nose,\nthe color of the hair, cf. [25], [4]). All these facts make the analysis of the\nbehavior of the network rather complex, and therefore it proves challenging to\nhypothesize precisely what factors are associated with the correct functioning\nof the network and why.\nIn this paper, we propose a new approach to investigate the behaviors\nof Neural Networks. Following the Scientific Method, this approach aims\nto provide, on the basis of empirical evidence, a mathematical model that\nexplains the internal functioning of Neural Networks and highlights the main\nrelationships between inputs and outputs in a clear and precise way.\nWe shall apply our approach to a well-definable and modelable case study\nbuilt within a controlled environment. To overcome the problem of relating\nsubjective data characteristics to objectively determined mathematical quan-\ntities, we propose to use a dataset that is exclusively endowed with objective\ncharacteristics, namely a mathematical dataset. The main advantage is that\nthe features and the relationships between them can be controlled externally\nby strict mathematical rules, which allow the formulation of precise hypothe-\nses to explain the behaviors of the network in rigorous mathematical terms.\nFor simplicity, our choice regarding the dataset then falls on a finite set\nof natural numbers (i.e., the first one million numbers (from 0 to 999 999)).\nThe task that we choose for our experiments is identifying the congruence\nclasses modulo a given integer m.\nTo accomplish this task, we develop a convolutional network model that\ndepends on several hyperparameters. The model’s performances as a function\nof different values of the hyperparameters have revealed interesting behaviors\nof the networks, which we explain in terms of the arithmetic properties of\nnumbers.\nThe model implements two complementary aspects of the algebraic nature\nof N: the multiplicative and the additive structures.\nThe multiplicative structure is encoded in the representation of the input\ndata, i.e., in the method by which we convert numbers into vectors to make\nthem accessible to the network.\nThis method is called prime grid vector\nrepresentation, and its strength lies, as the name suggests, in the use of\nprime factorization of integers to represent numbers as vectors.\nThe additive structure is encoded in the network architecture. Specifi-\ncally, the network is a standard convolutional architecture that processes each\nnumber n in the input set in a context-dependent manner as a sequence of B\n3\n\nconsecutive numbers starting at n rather than as a single entity. This way of\nprocessing the data is the crucial point that allows the network to obtain, at\nleast locally, information about the additive structure of N. A measure of the\nextent of this locality is the length B of the sequence of numbers processed\nwith each input, and as might be expected, it plays a fundamental role in\nexplaining the various behaviors of the network.\nThese facts have led us to name our model Prime Convolutional Model,\np-Conv for short.\nThe extensive experimental results reveal the existence of precise rela-\ntionships between input and output and accurately explain the behaviors\nof the network (i.e., it is easy to understand when p-Conv can identify the\ncongruence classes modulo m and, if not, why).\nBased on the empirical\nobservations, we draw the theoretical consequences for describing and ex-\nplaining the behaviors of p-Conv through a mathematical formulation that\nhighlights interesting patterns able to explain when and why p-Conv succeeds\nin performing task and, if not, what error pattern it follows. Generalizing\nthe results for p-Conv to other types of neural models, with other types of\ndatasets and networks, would pave the way for a new, theoretical concept of\n“explainability” in artificial intelligence.\nThe paper is organized as follows. In Section 2 we give a review of the\nmain literature related to our work. In Section 3, we describe our methodol-\nogy and present the Prime Convolutional Model in detail: the representation\nof the input data, the architecture, the task we use for training, and the main",
+    "sections": [
+      "unknown",
+      "abstract",
+      "evaluation measures we use to analyze the results. in section 4 we discuss",
+      "method. first, we build, within a controlled environment, a case study con-",
+      "results can be elaborated mathematically to deduce new verifiable hypotheses",
+      "references"
+    ],
+    "topics": [
+      "00",
+      "00 00",
+      "model",
+      "neural",
+      "conv",
+      "classes",
+      "modulo",
+      "16",
+      "prime",
+      "15"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

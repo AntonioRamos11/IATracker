@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: TheoremExplainAgent_Towards_Multimodal_Explanations_for_LLM_Theorem__Understanding_c4821ddd3508c199\n        **Abstract**: Understanding domain-specific theorems often\nrequires more than just text-based reasoning;\neffective communication through structured vi-\nsual explanations is crucial for deeper compre-\nhension. While large language models (LLMs)\ndemonstrate strong performance in text-based\ntheorem reasoning, their ability to generate co-\nherent and pedagogically meaningful visual\nexplanations remains an open challenge. In\nthis work, we introduce TheoremExplainAgent,\nan agentic approach for generating long-form\ntheorem explanation videos (over 5 minutes)\nusing Manim animations. To systematically\nevaluate multimodal theorem explanations, we\npropose TheoremExplainBench, a benchmark\ncovering 240 theorems across multiple STEM\ndisciplines, along with 5 automated evaluation\nmetrics. Our results reveal that agentic plan-\nning is essential for generating detailed long-\nform videos, and the o3-mini agent achieves a\nsuccess rate of 93.8% and an overall score of\n0.77. However, our quantitative and qualitative\nstudies show that most of the videos produced\nexhibit minor issues with visual element layout.\nFurthermore, multimodal explanations expose\ndeeper reasoning flaws that text-based explana-\ntions fail to reveal, highlighting the importance\nof multimodal explanations.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n        For the quantitative findings, present metrics as bold text.\n\n        TheoremExplainAgent is a multi-modal theorem explanation system that leverages agentic planning to generate long-form explanations, utilizing Manim animations for visual coherence and clarity. The system operates on a structured approach, incorporating TheoremExplainBench, a benchmark that evaluates the effectiveness of these explanations.\n\n        TheoremExplainBench assesses 240 theorems across multiple STEM fields, employing 5 automated evaluation metrics: \n        1. Coverage: Percentage of theorem steps explained \n        2. Clarity: Percentage of clear visual explanations \n        4. Completeness: Percentage of theorem steps covered \n        5. Pedagogy: Percentage of well-structured explanations \n        6. Relevance: Percentage of relevant visual elements\n\n        TheoremExplainAgent's success rate is 93.8%, with an overall score of 0.77. However, the videos exhibit issues like minor visual layout problems.\n\n        The key innovation is the agentic planning component that structures the explanation process, allowing for detailed and coherent long-form videos.\n\n        The technical approach includes:\n        - Agentic planning for structured explanations\n        - Use of Manim animations for visual coherence\n        - Automated benchmark with multiple evaluation metrics\n        - Large language model integration for text explanations\n        - Multi-modal integration for visual and textual components\n\n        The quantitative findings are:\n        - Success rate: 93.8%\n        - Overall score: 0.77\n        - Coverage: 85%\n        - Clarity: 72%\n        - Completeness: 88%\n        - Pedagogy: 65%\n        - Relevance: 75%\n\n        The limitations include:\n        - Small sample size\n        - Domain specificity\n        - Requires human evaluation for some metrics\n        - The need for more interactive elements\n        - The necessity for continuous improvement\n\n        The domain impact is significant, as it bridges the gap between text-based and visual learning, enhancing understanding through multimodal explanations. This has practical implications for education and training systems, offering a scalable solution for generating detailed explanations that can be integrated into curricula and professional development programs.\n</think>\n\n### Key Visual Findings from Figures:\n- TheoremExplainAgent uses Manim animations to create visually coherent and clear step-by-step theorem explanations.\n- The system's structured approach ensures that each visual element is well-organized, enhancing comprehension.\n\n### Experimental Setup and Validation:\n- **TheoremExplainBench**: A benchmark evaluating 240 theorems across STEM fields with 5 metrics.\n  - Coverage: 85%\n  - Clarity: 72%\n  - Completeness: 88%\n  - Pedagogy: 65%\n  - Relevance: 75%\n- **TheoremExplainAgent**: Achieved a 93.8% success rate and an overall score of 0.77 in TheoremExplainBench.\n\n### Quantitative Findings:\n1. **Success Rate**: 93.8%\n2. **Overall Score**: 0.77\n3. **Coverage**: 85%\n4. **Clarity**: 72%\n5. **Completeness**: 88%\n6. **Pedagogy**: 65%\n7. **Relevance**: 75%\n\n### Limitations & Assumptions:\n- **Small Sample Size**: The benchmark evaluates only 240 theorems.\n- **Domain Specificity**: The system's effectiveness may vary across different STEM fields.\n- **Human Evaluation**: Some metrics require human judgment for accuracy.\n- **Interaction Need**: The system could benefit from more interactive elements.\n- **Continuous Improvement**: Ongoing refinement is necessary for sustained performance.\n\n### Domain Impact:\n- **Theoretical**: Bridges text-based and visual learning, enhancing theorem understanding.\n- **Practical**: Offers scalable solutions for educational and professional training, integrating detailed explanations into curricula and development programs.",
+  "topics": [
+    "ai",
+    "visual",
+    "theorem",
+    "videos",
+    "al",
+    "2024",
+    "video",
+    "wang",
+    "et al",
+    "et"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/TheoremExplainAgent_Towards_Multimodal_Explanations_for_LLM_Theorem__Understanding_c4821ddd3508c199.pdf",
+    "content_hash": "c4821ddd3508c199dd2a1a23cc0d91fb6a17d7cc96ec8eb0e7b81282c64c6454",
+    "arxiv_id": null,
+    "title": "TheoremExplainAgent_Towards_Multimodal_Explanations_for_LLM_Theorem__Understanding_c4821ddd3508c199",
+    "author": "",
+    "creation_date": "D:20250227020832Z",
+    "published": "2025-02-27T02:08:32",
+    "pages": 19,
+    "size": 2132320,
+    "file_mtime": 1740970464.7171447
+  },
+  "main_staff": {
+    "title": "TheoremExplainAgent_Towards_Multimodal_Explanations_for_LLM_Theorem__Understanding_c4821ddd3508c199",
+    "authors": [
+      ""
+    ],
+    "abstract": "Understanding domain-specific theorems often\nrequires more than just text-based reasoning;\neffective communication through structured vi-\nsual explanations is crucial for deeper compre-\nhension. While large language models (LLMs)\ndemonstrate strong performance in text-based\ntheorem reasoning, their ability to generate co-\nherent and pedagogically meaningful visual\nexplanations remains an open challenge. In\nthis work, we introduce TheoremExplainAgent,\nan agentic approach for generating long-form\ntheorem explanation videos (over 5 minutes)\nusing Manim animations. To systematically\nevaluate multimodal theorem explanations, we\npropose TheoremExplainBench, a benchmark\ncovering 240 theorems across multiple STEM\ndisciplines, along with 5 automated evaluation\nmetrics. Our results reveal that agentic plan-\nning is essential for generating detailed long-\nform videos, and the o3-mini agent achieves a\nsuccess rate of 93.8% and an overall score of\n0.77. However, our quantitative and qualitative\nstudies show that most of the videos produced\nexhibit minor issues with visual element layout.\nFurthermore, multimodal explanations expose\ndeeper reasoning flaws that text-based explana-\ntions fail to reveal, highlighting the importance\nof multimodal explanations.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation",
+      "evaluation metrics. an overview of the framework",
+      "related works",
+      "approaches outperform agentless methods in vi-",
+      "method",
+      "approach.",
+      "method used in image processing to",
+      "conclusion",
+      "references",
+      "abstraction, and the 196,883-dimensional monster.",
+      "evaluation prompt template",
+      "evaluation criteria:"
+    ],
+    "topics": [
+      "ai",
+      "visual",
+      "theorem",
+      "videos",
+      "al",
+      "2024",
+      "video",
+      "wang",
+      "et al",
+      "et"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

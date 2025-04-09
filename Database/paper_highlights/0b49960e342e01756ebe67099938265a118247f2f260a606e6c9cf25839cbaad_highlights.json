@@ -1,0 +1,56 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: WildFrame_Comparing_Framing_in_Humans_and_LLMs_on_Naturally_Occurring__Texts_0b49960e342e0175\n        **Abstract**: Humans are influenced by how information is\npresented, a phenomenon known as the fram-\ning effect. Previous work has shown that LLMs\nmay also be susceptible to framing but has done\nso on synthetic data and did not compare to\nhuman behavior. We introduce WILDFRAME,\na dataset for evaluating LLM responses to\npositive and negative framing, in naturally-\noccurring sentences, and compare humans on\nthe same data. WILDFRAME consists of 1,000\ntexts, first selecting real-world statements with\nclear sentiment, then reframing them in either\npositive or negative light, and lastly, collecting\nhuman sentiment annotations. By evaluating\neight state-of-the-art LLMs on WILDFRAME,\nwe find that all models exhibit framing effects\nsimilar to humans (r ≥0.57), with both hu-\nmans and models being more influenced by\npositive rather than negative reframing. Our\nfindings benefit model developers, who can ei-\nther harness framing or mitigate its effects, de-\npending on the downstream application.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe study introduces **WILDFRAME**, a novel dataset designed to evaluate how LLMs and humans respond to positive and negative framing in naturally occurring text. This dataset bridges the gap between human behavior and LLM responses, offering a more realistic assessment of framing effects.\n\n#### 2. Technical Approach\n- **Dataset Construction**: \n  - 1,000 real-world sentences with clear sentiment were selected.\n  - Sentences were reframed in both positive and negative directions.\n  - Human annotators provided sentiment annotations for each reframed sentence.\n  \n- **Model Evaluation**:\n  - Eight state-of-the-art LLMs were evaluated on the WILDFRAME dataset.\n  - Sentiment analysis metrics were used to assess model responses.\n\n#### 3. Quantitative Findings\n- **Framing Effect Similarity**: All models exhibited framing effects comparable to humans, with an effect size (r) ≥ 0.57.\n- **Sentiment Bias**: Both humans and models were more influenced by positive framing.\n- **Performance Metrics**: Models showed higher accuracy on positive framing tasks compared to negative ones.\n\n#### 4. Limitations & Assumptions\n- **Limitations**: The dataset's size and diversity may limit generalizability. Human annotations could introduce variability.\n- **Assumptions**: The dataset assumes that sentiment annotations accurately reflect human framing effects.\n\n#### 5. Domain Impact\n- **Theoretical**: Validates that framing effects exist in LLMs, aligning with human behavior, enriching cognitive science research.\n- **Practical**: Aids model developers in understanding and managing framing effects for specific applications.\n\n### Key Visual Findings\n- **Figure 1**: Distribution of model responses to positive and negative framing across different models.\n- **Figure 2**: Scatter plot showing the correlation between model framing effects and human annotations.\n\n### Key Equations/Figures\n- **Equation**: Framing effect size (r) ≥ 0.57, indicating significant framing influence.\n- **Figure References**: Figures 1 and 2 illustrate framing effects and sentiment bias.",
+  "topics": [
+    "sentiment",
+    "framing",
+    "positive",
+    "statements",
+    "negative",
+    "human",
+    "llms",
+    "statement",
+    "models",
+    "opposite"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/WildFrame_Comparing_Framing_in_Humans_and_LLMs_on_Naturally_Occurring__Texts_0b49960e342e0175.pdf",
+    "content_hash": "0b49960e342e01756ebe67099938265a118247f2f260a606e6c9cf25839cbaad",
+    "arxiv_id": null,
+    "title": "WildFrame_Comparing_Framing_in_Humans_and_LLMs_on_Naturally_Occurring__Texts_0b49960e342e0175",
+    "author": "",
+    "creation_date": "D:20250225024328Z",
+    "published": "2025-02-25T02:43:28",
+    "pages": 9,
+    "size": 633219,
+    "file_mtime": 1740971928.968102
+  },
+  "main_staff": {
+    "title": "WildFrame_Comparing_Framing_in_Humans_and_LLMs_on_Naturally_Occurring__Texts_0b49960e342e0175",
+    "authors": [
+      ""
+    ],
+    "abstract": "Humans are influenced by how information is\npresented, a phenomenon known as the fram-\ning effect. Previous work has shown that LLMs\nmay also be susceptible to framing but has done\nso on synthetic data and did not compare to\nhuman behavior. We introduce WILDFRAME,\na dataset for evaluating LLM responses to\npositive and negative framing, in naturally-\noccurring sentences, and compare humans on\nthe same data. WILDFRAME consists of 1,000\ntexts, first selecting real-world statements with\nclear sentiment, then reframing them in either\npositive or negative light, and lastly, collecting\nhuman sentiment annotations. By evaluating\neight state-of-the-art LLMs on WILDFRAME,\nwe find that all models exhibit framing effects\nsimilar to humans (r ≥0.57), with both hu-\nmans and models being more influenced by\npositive rather than negative reframing. Our\nfindings benefit model developers, who can ei-\nther harness framing or mitigate its effects, de-\npending on the downstream application.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results",
+      "discussion and future work: when",
+      "references"
+    ],
+    "topics": [
+      "sentiment",
+      "framing",
+      "positive",
+      "statements",
+      "negative",
+      "human",
+      "llms",
+      "statement",
+      "models",
+      "opposite"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

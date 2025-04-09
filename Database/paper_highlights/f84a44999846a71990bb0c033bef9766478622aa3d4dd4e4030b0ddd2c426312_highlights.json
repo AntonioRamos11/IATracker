@@ -1,0 +1,63 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** The findings provide actionable insights for organizations, enabling the development of more effective and stable cyber defense systems through RL-based approaches.\n\n---\n\nThis structured format highlights the key aspects of the research, emphasizing its contributions to both theoretical understanding and practical applications in cyber defense.",
+  "topics": [
+    "reward",
+    "network",
+    "sparse",
+    "agents",
+    "cyber",
+    "agent",
+    "training",
+    "red",
+    "score",
+    "action"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Less_is_more_Rewards_in_RL_for_Cyber_Defence_f8200bfdf8.pdf",
+    "content_hash": "f84a44999846a71990bb0c033bef9766478622aa3d4dd4e4030b0ddd2c426312",
+    "arxiv_id": null,
+    "title": "Less_is_more_Rewards_in_RL_for_Cyber_Defence_f8200bfdf8",
+    "author": "",
+    "creation_date": "D:20250306013003Z",
+    "published": "2025-03-06T01:30:03",
+    "pages": 5,
+    "size": 332144,
+    "file_mtime": 1741417667.6515589
+  },
+  "main_staff": {
+    "title": "Less_is_more_Rewards_in_RL_for_Cyber_Defence_f8200bfdf8",
+    "authors": [
+      ""
+    ],
+    "abstract": "The last few years has seen an explosion of interest in autonomous cyber defence agents based on deep reinforcement\nlearning. Such agents are typically trained in a cyber gym environment, also known as a cyber simulator, at least 32 of\nwhich have already been built. Most, if not all cyber gyms provide dense “scaffolded” reward functions which combine\nmany penalties or incentives for a range of (un)desirable states and costly actions. Whilst dense rewards help alleviate the\nchallenge of exploring complex environments, yielding seemingly effective strategies from relatively few environment\nsteps; they are also known to bias the solutions an agent can find, potentially towards suboptimal solutions. This is\nespecially a problem in complex cyber environments where policy weaknesses may not be noticed until exploited by an\nadversary. Sparse rewards could offer preferable or more effective solutions and have been overlooked by cyber gyms\nto date. In this work we set out to evaluate whether sparse reward functions might enable training more effective cyber\ndefence agents. Towards this goal we first break down several evaluation limitations in existing work by proposing a\nground truth evaluation score that goes beyond the standard RL paradigm used to train and evaluate agents. By adapting\na well-established cyber gym to accommodate our methodology and ground truth score, we propose and evaluate two\nsparse reward mechanisms and compare them with a typical dense reward. Our evaluation considers a range of network\nsizes, from 2 to 50 nodes, and both reactive and proactive defensive actions. Our results show that sparse rewards,\nparticularly positive reinforcement for an uncompromised network state, enable the training of more effective cyber\ndefence agents. Furthermore, we show that sparse rewards provide more stable training than dense rewards, and that\nboth effectiveness and training stability are robust to a variety of cyber environment considerations.\nAcknowledgements\nResearch funded by the Defence Science and Technology Laboratory (Dstl) which is an executive agency of the UK\nMinistry of Defence providing world class expertise and delivering cutting-edge science and technology for the benefit\nof the nation and allies. The research supports the Autonomous Resilient Cyber Defence (ARCD) project within the Dstl\nCyber Defence Enhancement programme.\nKeywords:\nReinforcement Learning, Autonomous Cyber Defence, Network\nSecurity\narXiv:2503.03245v1  [cs.LG]  5 Mar 2025\n\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology",
+      "results from multiple runs in our training curves. we calculate the dv across time metric with de-trending to our average",
+      "experiments",
+      "results and discussion",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "reward",
+      "network",
+      "sparse",
+      "agents",
+      "cyber",
+      "agent",
+      "training",
+      "red",
+      "score",
+      "action"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

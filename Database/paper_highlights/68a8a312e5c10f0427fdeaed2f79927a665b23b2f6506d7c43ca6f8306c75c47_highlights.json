@@ -1,0 +1,60 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Super-Linear_Speedup_by_Generalizing_Runtime_Repeated_Recursion__Unfolding_in_Prolog_68a8a312e5c10f04\n        **Abstract**: Runtime repeated recursion unfolding was recently introduced in [Fr¨u24] as a\njust-in-time program transformation strategy that can achieve super-linear speedup.\nSo far, the method was restricted to single linear direct recursive rules in the pro-\ngramming language Constraint Handling Rules (CHR). In this companion paper,\nwe generalize the technique to multiple recursion and to multiple recursive rules\nand provide an implementation of the generalized method in the logic program-\nming language Prolog.\nThe basic idea of the approach is as follows: When a recursive call is encountered\nat runtime, the recursive rule is unfolded with itself and this process is repeated\nwith each resulting unfolded rule as long as it is applicable to the current call. In\nthis way, more and more recursive steps are combined into one recursive step. Then\nan interpreter applies these rules to the call starting from the most unfolded rule.\nFor recursions which have suﬃciently simplifyable unfoldings, a super-linear can be\nachieved, i.e. the time complexity is reduced.\nWe implement an unfolder, a generalized meta-interpreter and a novel round-\nrobin rule processor for our generalization of runtime repeated recursion unfolding\nwith just ten clauses in Prolog. We illustrate the feasibility of our technique with\nworst-case time complexity estimates and benchmarks for some basic classical al-\ngorithms that achieve a super-linear speedup.\nKeywords: Logic Programming, Prolog, Rule-Based Programming, Just-In-Time\nProgram Transformation, Runtime Program Optimization, Online Program Specializa-\ntion, Repeated Recursion Unfolding, Super-Linear Speedup, Recursion, Meta-Interpreter,\nTime Complexity.\nContents\n1\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis. If no equations or figures, skip this part.\n\n        Also, structure the summary in the following format:\n\n        - Core Innovation:\n          - [1-2 sentences]\n        - Technical Approach:\n          - [3-5 bullet points]\n        - Quantitative Findings:\n          - [Numbered list with metrics]\n        - Limitations & Assumptions:\n          - [ bullet points]\n        - Domain Impact:\n          - [ bullet points]\n</think>\n\n**Core Innovation:**  \nThe research introduces a generalized runtime repeated recursion unfolding technique that extends beyond single linear direct recursive rules in Constraint Handling Rules (CHR) to support multiple recursion and recursive rules, enabling super-linear speedup in logic programming languages like Prolog.  \n\n**Technical Approach:**  \n- The method unfolds recursive calls by repeatedly applying the recursive rule, combining multiple recursive steps into one.  \n- An interpreter applies the most unfolded rule to the current call, enhancing efficiency.  \n- Implemented as a meta-interpreter in Prolog with just ten clauses, demonstrating simplicity and effectiveness.  \n\n**Quantitative Findings:**  \n- Achieves super-linear speedup for recursions with simplifyable unfoldings.  \n- Worst-case time complexity estimates and benchmarks for classical algorithms, such as sorting and tree traversals, showcasing significant performance improvements.  \n\n**Limitations & Assumptions:**  \n- The technique is currently limited to recursion in Prolog, not other logic programming languages.  \n- Requires the unfolding process to be applicable to the current call, which may not always be feasible.  \n- May not achieve super-linear speedup for recursions with complex unfoldings or those requiring extensive unfolding.  \n\n**Domain Impact:**  \n- The method has significant implications for logic programming, particularly in Prolog, by enabling more efficient recursive algorithms.  \n- Provides a simple yet powerful tool for runtime program optimization, enhancing performance in applications requiring recursion.  \n- The approach can be extended to other logic programming languages, potentially broadening its application scope.",
+  "topics": [
+    "rule",
+    "recursive",
+    "unfolding",
+    "rules",
+    "recursion",
+    "runtime",
+    "time",
+    "goal",
+    "true",
+    "list"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Super-Linear_Speedup_by_Generalizing_Runtime_Repeated_Recursion__Unfolding_in_Prolog_68a8a312e5c10f04.pdf",
+    "content_hash": "68a8a312e5c10f0427fdeaed2f79927a665b23b2f6506d7c43ca6f8306c75c47",
+    "arxiv_id": null,
+    "title": "Super-Linear_Speedup_by_Generalizing_Runtime_Repeated_Recursion__Unfolding_in_Prolog_68a8a312e5c10f04",
+    "author": "",
+    "creation_date": "D:20250313210328-04'00'",
+    "published": "20250313210328-04'00'",
+    "pages": 29,
+    "size": 252620,
+    "file_mtime": 1742113500.1017756
+  },
+  "main_staff": {
+    "title": "Super-Linear_Speedup_by_Generalizing_Runtime_Repeated_Recursion__Unfolding_in_Prolog_68a8a312e5c10f04",
+    "authors": [
+      ""
+    ],
+    "abstract": "Runtime repeated recursion unfolding was recently introduced in [Fr¨u24] as a\njust-in-time program transformation strategy that can achieve super-linear speedup.\nSo far, the method was restricted to single linear direct recursive rules in the pro-\ngramming language Constraint Handling Rules (CHR). In this companion paper,\nwe generalize the technique to multiple recursion and to multiple recursive rules\nand provide an implementation of the generalized method in the logic program-\nming language Prolog.\nThe basic idea of the approach is as follows: When a recursive call is encountered\nat runtime, the recursive rule is unfolded with itself and this process is repeated\nwith each resulting unfolded rule as long as it is applicable to the current call. In\nthis way, more and more recursive steps are combined into one recursive step. Then\nan interpreter applies these rules to the call starting from the most unfolded rule.\nFor recursions which have suﬃciently simplifyable unfoldings, a super-linear can be\nachieved, i.e. the time complexity is reduced.\nWe implement an unfolder, a generalized meta-interpreter and a novel round-\nrobin rule processor for our generalization of runtime repeated recursion unfolding\nwith just ten clauses in Prolog. We illustrate the feasibility of our technique with\nworst-case time complexity estimates and benchmarks for some basic classical al-\ngorithms that achieve a super-linear speedup.\nKeywords: Logic Programming, Prolog, Rule-Based Programming, Just-In-Time\nProgram Transformation, Runtime Program Optimization, Online Program Specializa-\ntion, Repeated Recursion Unfolding, Super-Linear Speedup, Recursion, Meta-Interpreter,\nTime Complexity.\nContents\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "conclusions",
+      "method in the logic programming language prolog.",
+      "results of recursive calls are cached and reused if the same recursive call reappears later",
+      "experiments show that our implementation also works without such cuts, but the effects",
+      "references",
+      "experiments confirm the super-linear speedup."
+    ],
+    "topics": [
+      "rule",
+      "recursive",
+      "unfolding",
+      "rules",
+      "recursion",
+      "runtime",
+      "time",
+      "goal",
+      "true",
+      "list"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

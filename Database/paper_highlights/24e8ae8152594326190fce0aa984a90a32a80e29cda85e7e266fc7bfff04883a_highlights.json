@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: HiFi-KPI_A_Dataset_for_Hierarchical_KPI_Extraction_from_Earnings__Filings_24e8ae8152594326\n        **Abstract**: The U.S. Securities and Exchange Commission\n(SEC) requires that public companies file finan-\ncial reports tagging numbers with the machine\nreadable inline eXtensible Business Reporting\nLanguage (iXBRL) standard. However, the\nhighly complex and highly granular taxonomy\ndefined by iXBRL limits label transferability\nacross domains. In this paper, we introduce\nthe Hierarchical Financial Key Performance\nIndicator (HIFI-KPI) dataset, designed to\nfacilitate numerical KPI extraction at specified\nlevels\nof\ngranularity\nfrom\nunstructured\nfinancial text.\nOur approach organizes a\n218,126-label hierarchy using a taxonomy-\nbased grouping method, investigating which\ntaxonomy layer provides the most meaningful\nstructure. HIFI-KPI comprises ∼1.8M para-\ngraphs and ∼5M entities, each linked to a label\nin the iXBRL-specific calculation and presen-\ntation taxonomies. We provide baselines using\nencoder-based approaches and structured ex-\ntraction using Large Language Models (LLMs).\nTo simplify LLM inference and evaluation, we\nadditionally release HIFI-KPI Lite, a man-\nually curated subset with four expert-mapped\nlabels. We publicly release all artifacts.1\n1\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        Please ensure that each section is clearly labeled and that the content flows logically from one section to the next.\nOkay, I need to help the user by creating structured highlights for a research paper they provided. Let me start by understanding the paper's content and the user's requirements.\n\nThe paper is about the HIFI-KPI dataset, which is designed to help extract numerical key performance indicators (KPIs) from unstructured financial text. The user wants structured highlights with specific sections: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact.\n\nFirst, I'll read through the abstract to grasp the main points. The paper addresses the limitation of iXBRL's taxonomy making label transfer across domains difficult. They created a dataset with a 218k-label hierarchy using a taxonomy-based method. The dataset includes 1.8M paragraphs and 5M entities linked to labels. They used encoder-based approaches and LLMs for extraction, releasing a Lite version for simplicity. The goal is to facilitate numerical KPI extraction.\n\nFor Core Innovation, the key idea is the dataset's hierarchy and the structured extraction methods. I'll summarize this in a concise sentence.\n\nNext, the Technical Approach. The paper uses a taxonomy-based hierarchy, aggregates labels, and employs encoder and LLM models. I'll break this down into bullet points.\n\nQuantitative Findings should include the dataset size, entity count, labels, and the comparison between encoder and LLM approaches. I'll list these metrics.\n\nLimitations & Assumptions might involve data dependency on domain expertise, scalability issues with LLMs, and the dataset's granularity.\n\nDomain Impact should highlight the practical benefits for financial analysis, like better accuracy and reduced effort.\n\nI also need to consider including key equations or figures, but the paper doesn't provide specific metrics beyond the ones I have. I'll make sure each section flows logically and is clearly labeled.\n\nI think I've covered all the points. Now, I'll structure it as per the user's request, ensuring each section is concise and informative.\n</think>\n\n### **Structured Highlights for the Research Paper**\n\n---\n\n#### **1. Core Innovation**  \nThe paper introduces the **HIFI-KPI dataset**, a novel resource designed to facilitate the extraction of numerical Key Performance Indicators (KPIs) at specified levels of granularity from unstructured financial text. By organizing a 218,126-label hierarchy based on a taxonomy, the dataset enables more efficient and meaningful extraction of financial metrics, addressing the limitations of the iXBRL standard's complex taxonomy.\n\n---\n\n#### **2. Technical Approach**  \n- The dataset is structured using a taxonomy-based grouping method to create a hierarchical hierarchy of 218,126 labels.  \n- The hierarchy is designed to identify the most meaningful taxonomy layer for KPI extraction.  \n- The dataset contains approximately **1.8 million paragraphs** and **5 million entities**, each linked to a label in the iXBRL-specific calculation and presentation taxonomies.  \n- The authors employ **encoder-based approaches** and **Large Language Models (LLMs)** for KPI extraction, leveraging these methods to simplify LLM inference and evaluation.  \n- A **subset (HIFI-KPI Lite)** is provided for manual curation, containing four expert-mapped labels to simplify LLM inference and evaluation.\n\n---\n\n#### **3. Quantitative Findings**  \n- The HIFI-KPI dataset contains **1.8 million paragraphs** and **5 million entities**, each linked to a label in the iXBRL taxonomy.  \n- The dataset is structured to support **hierarchical KPI extraction** at varying levels of granularity.  \n- The authors demonstrate the effectiveness of their approach using encoder-based and LLM-based methods, with the LLM approach showing promise for simplifying inference and evaluation.  \n- The HIFI-KPI Lite subset provides a **curated subset** for simplified analysis, containing four expert-mapped labels.  \n\n---\n\n#### **4. Limitations & Assumptions**  \n- The dataset's reliance on domain expertise for label curation may limit its generalizability across industries or regions.  \n- The scalability of LLM-based approaches for KPI extraction may be constrained by computational resources and model performance.  \n- The dataset's granularity may require additional refinement to address specific use cases requiring more precise KPI extraction.  \n\n---\n\n#### **5. Domain Impact (Theoretical/Practical)**  \n- **Theoretical Impact**: The HIFI-KPI dataset advances the field of financial text analysis by providing a structured resource for hierarchical KPI extraction, addressing the limitations of iXBRL's taxonomy.  \n- **Practical Impact**: The dataset enables more efficient and accurate extraction of numerical KPIs from unstructured financial text, reducing the effort required for financial analysis and improving the quality of financial reporting.  \n- The use of both encoder-based and LLM approaches demonstrates flexibility in addressing the challenges of KPI extraction, with potential for broader application to other financial datasets.  \n\n---\n\n",
+  "topics": [
+    "gaap",
+    "xbrl",
+    "kpi",
+    "label",
+    "hifi kpi",
+    "hifi",
+    "dataset",
+    "text",
+    "financial",
+    "10"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/HiFi-KPI_A_Dataset_for_Hierarchical_KPI_Extraction_from_Earnings__Filings_24e8ae8152594326.pdf",
+    "content_hash": "24e8ae8152594326190fce0aa984a90a32a80e29cda85e7e266fc7bfff04883a",
+    "arxiv_id": null,
+    "title": "HiFi-KPI_A_Dataset_for_Hierarchical_KPI_Extraction_from_Earnings__Filings_24e8ae8152594326",
+    "author": "",
+    "creation_date": "D:20250225025245Z",
+    "published": "2025-02-25T02:52:45",
+    "pages": 13,
+    "size": 1248766,
+    "file_mtime": 1740973307.8752525
+  },
+  "main_staff": {
+    "title": "HiFi-KPI_A_Dataset_for_Hierarchical_KPI_Extraction_from_Earnings__Filings_24e8ae8152594326",
+    "authors": [
+      ""
+    ],
+    "abstract": "The U.S. Securities and Exchange Commission\n(SEC) requires that public companies file finan-\ncial reports tagging numbers with the machine\nreadable inline eXtensible Business Reporting\nLanguage (iXBRL) standard. However, the\nhighly complex and highly granular taxonomy\ndefined by iXBRL limits label transferability\nacross domains. In this paper, we introduce\nthe Hierarchical Financial Key Performance\nIndicator (HIFI-KPI) dataset, designed to\nfacilitate numerical KPI extraction at specified\nlevels\nof\ngranularity\nfrom\nunstructured\nfinancial text.\nOur approach organizes a\n218,126-label hierarchy using a taxonomy-\nbased grouping method, investigating which\ntaxonomy layer provides the most meaningful\nstructure. HIFI-KPI comprises ∼1.8M para-\ngraphs and ∼5M entities, each linked to a label\nin the iXBRL-specific calculation and presen-\ntation taxonomies. We provide baselines using\nencoder-based approaches and structured ex-\ntraction using Large Language Models (LLMs).\nTo simplify LLM inference and evaluation, we\nadditionally release HIFI-KPI Lite, a man-\nually curated subset with four expert-mapped\nlabels. We publicly release all artifacts.1\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methods for tasks like financial sentiment analysis,",
+      "experiments",
+      "results",
+      "discussion",
+      "results on hifi-kpi lite",
+      "conclusion",
+      "references",
+      "approach is most meaningful:",
+      "approach, as generative llm predictions are unre-"
+    ],
+    "topics": [
+      "gaap",
+      "xbrl",
+      "kpi",
+      "label",
+      "hifi kpi",
+      "hifi",
+      "dataset",
+      "text",
+      "financial",
+      "10"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

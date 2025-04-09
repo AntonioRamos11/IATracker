@@ -1,0 +1,73 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "Sample size of LLMs is limited, potentially missing diverse perspectives.",
+    "Experiments focused on specific tasks, not broader reasoning capabilities.",
+    "**Assumptions:**",
+    "LLMs' preferences are influenced by task context and language prominence.",
+    "Established libraries' popularity may limit innovation in new projects."
+  ],
+  "impact": "",
+  "topics": [
+    "python",
+    "llms",
+    "used",
+    "2024",
+    "language",
+    "code",
+    "libraries",
+    "100",
+    "arxiv",
+    "languages"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/LLMs_Love_Python_A_Study_of_LLMs_Bias_for_Programming_Languages_and__Libraries_9bd492945d2d8fd8.pdf",
+    "content_hash": "9bd492945d2d8fd839831d61394cd66e20f4f55b9209ac19f9d3bd3d14ae6c67",
+    "arxiv_id": null,
+    "title": "LLMs Love Python: A Study of LLMs' Bias for Programming Languages and Libraries",
+    "author": "",
+    "creation_date": "D:20250324005248Z",
+    "published": "2025-03-24T00:52:48",
+    "pages": 12,
+    "size": 824630,
+    "file_mtime": 1742791215.2129483
+  },
+  "main_staff": {
+    "title": "LLMs Love Python: A Study of LLMs' Bias for Programming Languages and Libraries",
+    "authors": [
+      ""
+    ],
+    "abstract": "Programming language and library choices are crucial to software\nreliability and security. Poor or inconsistent choices can lead to\nincreased technical debt, security vulnerabilities, and even cata-\nstrophic failures in safety-critical systems. As Large Language Mod-\nels (LLMs) play an increasing role in code generation, it is essential\nto understand how they make these decisions. However, little is\nknown about their preferences when selecting programming lan-\nguages and libraries for different coding tasks. To fill this gap, this\nstudy provides the first in-depth investigation into LLM preferences\nfor programming languages and libraries used when generating\ncode. We assess the preferences of eight diverse LLMs by prompting\nthem to complete various coding tasks, including widely-studied\nbenchmarks and the more practical task of generating the initial\nstructural code for new projects (a crucial step that often determines\na project’s language or library choices).\nOur findings reveal that LLMs heavily favour Python when solv-\ning language-agnostic problems, using it in 90%-97% of cases for\nbenchmark tasks. Even when generating initial project code where\nPython is not a suitable language, it remains the most-used lan-\nguage in 58% of instances. Moreover, LLMs contradict their own\nlanguage recommendations in 83% of project initialisation tasks,\nraising concerns about their reliability in guiding language selec-\ntion. Similar biases toward well-established libraries further create\nserious discoverability challenges for newer open-source projects.\nThese results highlight the need to improve LLMs’ adaptability\nto diverse programming contexts and to develop mechanisms for\nmitigating programming language and library bias.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methodology used and experiments designed to answer them.",
+      "experiments. we compare the languages or libraries used by each",
+      "results",
+      "discussion",
+      "conclusion",
+      "references",
+      "evaluations across diverse llms. (june 18, 2024). arxiv: 2406.12513. retrieved",
+      "methods in natural language processing. emnlp 2024. yaser al-onaizan et al.,"
+    ],
+    "topics": [
+      "python",
+      "llms",
+      "used",
+      "2024",
+      "language",
+      "code",
+      "libraries",
+      "100",
+      "arxiv",
+      "languages"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

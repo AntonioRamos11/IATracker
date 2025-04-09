@@ -1,0 +1,71 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Self-Training_Elicits_Concise_Reasoning_in_Large_Language_Models_63d0a3662df2db68\n        **Abstract**: Chain-of-thought (CoT) reasoning has enabled\nlarge language models (LLMs) to utilize ad-\nditional computation through intermediate to-\nkens to solve complex tasks. However, we posit\nthat typical reasoning traces contain many re-\ndundant tokens, incurring extraneous inference\ncosts. Upon examination of the output distribu-\ntion of current LLMs, we find evidence on their\nlatent ability to reason more concisely, relative\nto their default behavior. To elicit this capa-\nbility, we propose simple fine-tuning methods\nwhich leverage self-generated concise reason-\ning paths obtained by best-of-N sampling and\nfew-shot conditioning, in task-specific settings.\nOur combined method achieves a 30% reduc-\ntion in output tokens on average, across five\nmodel families on GSM8K and MATH, while\nmaintaining average accuracy. By exploiting\nthe fundamental stochasticity and in-context\nlearning capabilities of LLMs, our self-training\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\nAlright, so I need to create structured highlights for this research paper. The user provided the title, abstract, and specific areas to focus on: mathematical models/theorems, key visual findings, experimental setup, and validation. The format should include Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact.\n\nFirst, I'll read through the abstract again to understand the main points. The paper is about improving large language models' reasoning by encouraging them to use more concise reasoning paths. They propose a self-training method using self-generated concise reasoning paths through best-of-N sampling and few-shot conditioning. This method reduces output tokens by 30% on GSM8K and MATH tasks without affecting accuracy.\n\nNow, for the Core Innovation: It seems they've found that LLMs can reason more concisely, so they're using self-training to leverage this. That's the main idea.\n\nTechnical Approach: They mention best-of-N sampling and few-shot conditioning. Also, they're using self-generated paths, so the methods are likely involving some form of iterative training where the model generates its own reasoning steps and uses them to improve itself.\n\nQuantitative Findings: They mention a 30% reduction in tokens, and that accuracy remains the same. These are the key metrics.\n\nLimitations & Assumptions: Probably, the models might not always find concise paths, or this method might not work for all tasks. They might have tested it on specific datasets like GSM8K and MATH, so maybe it's domain-specific.\n\nDomain Impact: This innovation is practically useful for tasks that require concise reasoning, like math problems or certain types of logic tasks. Theoretically, it shows that LLMs can be guided to use more efficient reasoning.\n\nI need to structure all of this into the required sections with concise points. I should make sure to highlight the equations or figures where they are critical, but since the abstract doesn't mention specific equations or figures, I might not need to include those here.\n\nWait, in the initial response, I didn't mention the equations. Since the abstract doesn't provide specific numbers or equations, maybe it's not necessary for this structured highlight. The main focus is on the process and findings.\n\nSo, putting it all together, I'll structure each section with the points I have, making sure to be clear and concise.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n### 1. Core Innovation\nThe research introduces a self-training method that leverages concise reasoning paths in large language models (LLMs) to reduce unnecessary computation, enhancing efficiency without compromising accuracy.\n\n### 2. Technical Approach\n- **Self-Training Method:** Utilizes self-generated reasoning paths obtained through best-of-N sampling and few-shot conditioning.\n- **Iterative Training:** Encourages the model to generate concise reasoning steps, thereby optimizing the reasoning process.\n- **Domain-Specific Adaptation:** Tailored for tasks like mathematical reasoning and logical problem-solving.\n\n### 3. Quantitative Findings\n- **Token Reduction:** Achieves a 30% reduction in output tokens on GSM8K and MATH tasks.\n- **Accuracy Preservation:** Maintains average accuracy across the evaluated tasks.\n\n### 4. Limitations & Assumptions\n- **Domain-Specific Effectiveness:** Likely effective for tasks requiring concise reasoning but may vary in other contexts.\n- **Model Dependence:** Potentially influenced by the model's architecture and training data, such as GSM8K and MATH datasets.\n\n### 5. Domain Impact\n- **Practical Implications:** Enhances efficiency in tasks requiring reasoning, such as mathematics and logic, making LLMs more resource-efficient.\n- **Theoretical Insight:** Demonstrates the potential for LLMs to utilize stochasticity and in-context learning for more efficient reasoning, opening new avenues in model optimization.\n\nThis structured approach highlights the research's focus on improving reasoning efficiency in LLMs through innovative self-training techniques, supported by quantitative results and practical implications.",
+  "topics": [
+    "reasoning",
+    "length",
+    "2024",
+    "shot",
+    "models",
+    "al",
+    "et",
+    "et al",
+    "fs",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Self-Training_Elicits_Concise_Reasoning_in_Large_Language_Models_63d0a3662df2db68.pdf",
+    "content_hash": "63d0a3662df2db68ae70c6c229ef39929bd12c77d109e5312e1773892e8489d4",
+    "arxiv_id": null,
+    "title": "Self-Training_Elicits_Concise_Reasoning_in_Large_Language_Models_63d0a3662df2db68",
+    "author": "",
+    "creation_date": "D:20250303013312Z",
+    "published": "2025-03-03T01:33:12",
+    "pages": 23,
+    "size": 838168,
+    "file_mtime": 1740970090.1625438
+  },
+  "main_staff": {
+    "title": "Self-Training_Elicits_Concise_Reasoning_in_Large_Language_Models_63d0a3662df2db68",
+    "authors": [
+      ""
+    ],
+    "abstract": "Chain-of-thought (CoT) reasoning has enabled\nlarge language models (LLMs) to utilize ad-\nditional computation through intermediate to-\nkens to solve complex tasks. However, we posit\nthat typical reasoning traces contain many re-\ndundant tokens, incurring extraneous inference\ncosts. Upon examination of the output distribu-\ntion of current LLMs, we find evidence on their\nlatent ability to reason more concisely, relative\nto their default behavior. To elicit this capa-\nbility, we propose simple fine-tuning methods\nwhich leverage self-generated concise reason-\ning paths obtained by best-of-N sampling and\nfew-shot conditioning, in task-specific settings.\nOur combined method achieves a 30% reduc-\ntion in output tokens on average, across five\nmodel families on GSM8K and MATH, while\nmaintaining average accuracy. By exploiting\nthe fundamental stochasticity and in-context\nlearning capabilities of LLMs, our self-training",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approach robustly elicits concise reasoning on",
+      "introduction",
+      "method",
+      "approach to reliably elicit concise reasoning in",
+      "methods, with its effectiveness ablated in figure 4.",
+      "evaluation metrics",
+      "methods on concise reasoning, we reproduce ratio-",
+      "method but with two key differences: (1) a reward",
+      "results",
+      "methods against baseline approaches.",
+      "discussion",
+      "conclusion",
+      "references",
+      "related work",
+      "method elicits concise reasoning more simply yet",
+      "methodological details",
+      "evaluation. results for math are reported on the",
+      "evaluation, we use greedy decoding, while for",
+      "approach"
+    ],
+    "topics": [
+      "reasoning",
+      "length",
+      "2024",
+      "shot",
+      "models",
+      "al",
+      "et",
+      "et al",
+      "fs",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Automating Adjudication of Cardiovascular Events Using Large Language Models\n        **Abstract**: Cardiovascular events, such as heart attacks and strokes, remain a leading cause of mortality globally,\nnecessitating meticulous monitoring and adjudication in clinical trials. This process, traditionally performed\nmanually by clinical experts, is time-consuming, resource-intensive, and prone to inter-reviewer variability,\npotentially introducing bias and hindering trial progress. This study addresses these critical limitations\nby presenting a novel framework for automating the adjudication of cardiovascular events in clinical trials\nusing Large Language Models (LLMs). We developed a two-stage approach: first, employing an LLM-based\npipeline for event information extraction from unstructured clinical data and second, using an LLM-based\nadjudication process guided by a Tree of Thoughts approach and clinical endpoint committee (CEC) guidelines.\nUsing cardiovascular event-specific clinical trial data, the framework achieved an F1-score of 0.82 for event\nextraction and an accuracy of 0.68 for adjudication. Furthermore, we introduce the CLEART score, a\nnovel, automated metric specifically designed for evaluating the quality of AI-generated clinical reasoning in\nadjudicating cardiovascular events. This approach demonstrates significant potential for substantially reducing\nadjudication time and costs while maintaining high-quality, consistent, and auditable outcomes in clinical\ntrials. The reduced variability and enhanced standardization also allows for faster identification and mitigation\nof risks associated with cardiovascular therapies.\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, provide a structured summary in bullet points, focusing on key concepts and elements.\n\nAlright, I need to help the user by creating structured highlights for their research paper titled \"Automating Adjudication of Cardiovascular Events Using Large Language Models.\" They provided the abstract and specific instructions on how to format the highlights, focusing on key visual findings, experimental setup, validation, and other required sections.\n\nFirst, I'll read through the abstract carefully to understand the main points. The study aims to automate the adjudication of cardiovascular events in clinical trials using LLMs, addressing time, resource, and bias issues. The approach is a two-stage pipeline: event extraction and adjudication. They mention an F1-score of 0.82 and accuracy of 0.68, and introduce the CLEART score.\n\nNow, I need to structure the response according to the user's requirements. The core innovation is the use of LLMs in a two-stage pipeline. For the technical approach, I'll list the key components like event extraction, adjudication with Tree of Thoughts, and the CLEART score. Quantitative findings will include the metrics mentioned. Limitations might include dataset size and reliance on existing guidelines. Domain impact touches on clinical trial efficiency and safety.\n\nI should ensure each section is concise, using bullet points and key terms. Also, I need to think if there are any equations or figures critical to the innovation, but since the user didn't provide specific ones, I'll note that the framework's design is a key innovation without specific metrics.\n\nFinally, I'll prepare a structured summary in bullet points, focusing on key concepts and elements without getting too detailed. I need to make sure everything is clear and follows the user's format precisely.\n</think>\n\n### **Structured Highlights for the Research Paper: \"Automating Adjudication of Cardiovascular Events Using Large Language Models\"**\n\n#### **1. Core Innovation**\n- The study introduces a novel framework for automating the adjudication of cardiovascular events in clinical trials using Large Language Models (LLMs), addressing time, resource, and bias limitations in manual processes.\n\n#### **2. Technical Approach**\n- **Event Information Extraction**: An LLM-based pipeline extracts event information from unstructured clinical data.\n- **Adjudication Process**: Uses an LLM-based adjudication process guided by a Tree of Thoughts approach and clinical endpoint committee (CEC) guidelines.\n- **CLEART Score**: A novel metric specifically designed to evaluate the quality of AI-generated clinical reasoning in adjudicating cardiovascular events.\n\n#### **3. Quantitative Findings**\n1. **Event Extraction**: Achieved an F1-score of **0.82**.\n2. **Adjudication**: Achieved an accuracy of **0.68**.\n3. **CLEART Score**: Introduced as a metric for evaluating AI-generated clinical reasoning quality.\n\n#### **4. Limitations & Assumptions**\n- **Limitations**: The study may be limited by the reliance on existing CEC guidelines and the dataset size.\n- **Assumptions**: The approach assumes that LLMs can reliably extract and adjudicate cardiovascular events without human oversight.\n\n#### **5. Domain Impact**\n- **Theoretical**: The framework demonstrates the potential of LLMs in automating complex clinical trial processes.\n- **Practical**: The approach could significantly reduce adjudication time and costs while maintaining high-quality, consistent, and auditable outcomes.\n- **Clinical Impact**: Reduced variability and enhanced standardization could facilitate faster identification and mitigation of risks associated with cardiovascular therapies.\n\n#### **Structured Summary in Bullet Points**\n- **Core Innovation**: Uses LLMs in a two-stage pipeline for automating cardiovascular event adjudication.\n- **Technical Approach**:\n  - Event extraction using LLM-based pipeline.\n  - Adjudication using Tree of Thoughts approach and CEC guidelines.\n  - CLEART score for evaluating AI-generated clinical reasoning.\n- **Quantitative Findings**:\n  - Event extraction: F1-score of 0.82.\n  - Adjudication: Accuracy of 0.68.\n  - CLEART score: Introduced as a novel metric.\n- **Limitations & Assumptions**: Reliance on CEC guidelines and dataset size.\n- **Domain Impact**: Reduces time, costs, and variability in clinical trials, enhances safety and efficiency.\n\n---\n\nThis structured format highlights the key aspects of the research paper, focusing on the core innovation, technical approach, quantitative findings, limitations, and domain impact.",
+  "topics": [
+    "clinical",
+    "adjudication",
+    "llm",
+    "cardiovascular",
+    "reasoning",
+    "event",
+    "approach",
+    "information",
+    "process",
+    "accuracy"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Automating_Adjudication_of_Cardiovascular_Events_Using_Large_Language__Models_583fb3554f61aff3.pdf",
+    "content_hash": "583fb3554f61aff322fabcfe6c0b4b24442288d5f2a254b59d2b94f6b3b4f4a8",
+    "arxiv_id": null,
+    "title": "Automating Adjudication of Cardiovascular Events Using Large Language Models",
+    "author": "Sonish Sivarajkumar, Min Jiang",
+    "creation_date": "D:20250324005709Z",
+    "published": "2025-03-24T00:57:09",
+    "pages": 11,
+    "size": 995036,
+    "file_mtime": 1742791198.3440578
+  },
+  "main_staff": {
+    "title": "Automating Adjudication of Cardiovascular Events Using Large Language Models",
+    "authors": [
+      "Sonish Sivarajkumar",
+      " Min Jiang"
+    ],
+    "abstract": "Cardiovascular events, such as heart attacks and strokes, remain a leading cause of mortality globally,\nnecessitating meticulous monitoring and adjudication in clinical trials. This process, traditionally performed\nmanually by clinical experts, is time-consuming, resource-intensive, and prone to inter-reviewer variability,\npotentially introducing bias and hindering trial progress. This study addresses these critical limitations\nby presenting a novel framework for automating the adjudication of cardiovascular events in clinical trials\nusing Large Language Models (LLMs). We developed a two-stage approach: first, employing an LLM-based\npipeline for event information extraction from unstructured clinical data and second, using an LLM-based\nadjudication process guided by a Tree of Thoughts approach and clinical endpoint committee (CEC) guidelines.\nUsing cardiovascular event-specific clinical trial data, the framework achieved an F1-score of 0.82 for event\nextraction and an accuracy of 0.68 for adjudication. Furthermore, we introduce the CLEART score, a\nnovel, automated metric specifically designed for evaluating the quality of AI-generated clinical reasoning in\nadjudicating cardiovascular events. This approach demonstrates significant potential for substantially reducing\nadjudication time and costs while maintaining high-quality, consistent, and auditable outcomes in clinical\ntrials. The reduced variability and enhanced standardization also allows for faster identification and mitigation\nof risks associated with cardiovascular therapies.",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods",
+      "evaluation",
+      "approach addresses the complex nature of the task and evaluates different aspects of the system’s performance.",
+      "evaluation details",
+      "results",
+      "discussion",
+      "approaches that combine llms with traditional machine learning models or rule-based systems may offer",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "clinical",
+      "adjudication",
+      "llm",
+      "cardiovascular",
+      "reasoning",
+      "event",
+      "approach",
+      "information",
+      "process",
+      "accuracy"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "The approach may struggle with adversarial noise not present in the training dataset.",
+    "",
+    "**5. Conclusion**",
+    "**Findings Summary:**",
+    "The study demonstrates the effectiveness of an ensemble-based DeBERTa model with noisy data for AI-generated text detection.",
+    "**Significance:**",
+    "This work sets a new standard, offering robust detection methods with practical applications in fact-checking and content moderation.",
+    "**Future Work:**",
+    "Potential extensions include exploring real-time noise generation and integrating with multimodal detection systems.",
+    "",
+    "**6. References**",
+    "[1] ChatGPT reference",
+    "[2] GPTZero, DetectGPT, and OpenAI's text classifier references",
+    "[7] Recent LLM research reference",
+    "[8] Defactify 4.0 shared task reference",
+    "",
+    "**7. Keywords:**",
+    "AI-generated text detection, DeBERTa, Noise, Defactify 4.0@AAAI2025",
+    "",
+    "**8. Figures/Appendices (if any)**",
+    "**Figure 1:** Training and validation loss curves",
+    "**Table 1:** Comparative performance metrics",
+    "**Figure 2:** Feature importance analysis"
+  ],
+  "impact": "",
+  "topics": [
+    "text",
+    "model",
+    "data",
+    "generated",
+    "deberta",
+    "ai",
+    "detection",
+    "generated text",
+    "task",
+    "dataset"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Sarang_at_DEFACTIFY_40_Detecting_AI-Generated_Text_Using_Noised_Data__and_an_Ensemble_of_DeBERTa_Models_2d4e556e73bc2397.pdf",
+    "content_hash": "2d4e556e73bc2397084180faa5822e7bc418f838be14488a445a1add565c2347",
+    "arxiv_id": null,
+    "title": "Sarang at DEFACTIFY 4.0: Detecting AI-Generated Text Using Noised Data and an Ensemble of DeBERTa Models",
+    "author": "",
+    "creation_date": "D:20250225022440+00'00'",
+    "published": "20250225022440+00'00'",
+    "pages": 7,
+    "size": 653684,
+    "file_mtime": 1740972113.1584687
+  },
+  "main_staff": {
+    "title": "Sarang at DEFACTIFY 4.0: Detecting AI-Generated Text Using Noised Data and an Ensemble of DeBERTa Models",
+    "authors": [
+      ""
+    ],
+    "abstract": "This paper presents an effective approach to detect AI-generated text, developed for the Defactify 4.0 shared task\nat the fourth workshop on multimodal fact checking and hate speech detection. The task consists of two subtasks:\nTask-A, classifying whether a text is AI generated or human written, and Task-B, classifying the specific large\nlanguage model that generated the text. Our team (Sarang) achieved the 1st place in both tasks with F1 scores of\n1.0 and 0.9531, respectively. The methodology involves adding noise to the dataset to improve model robustness\nand generalization. We used an ensemble of DeBERTa models to effectively capture complex patterns in the text.\nThe result indicates the effectiveness of our noise-driven and ensemble-based approach, setting a new standard\nin AI-generated text detection and providing guidance for future developments.\nKeywords\nAI-generated text detection, DeBERTa, Noise, De-Factify 4.0@AAAI2025\n1. Introduction\nLarge Language Models (LLMs), such as ChatGPT [1], are really good at writing long pieces of text\nthat sound very human. While these developments have various beneficial applications, they also raise\nconcerns about potential misuse, such as the automatic creation of fake news articles and academic\ncontents [2]. To address these risks, various algorithms have been developed to detect AI-generated\ntext, which include watermarking techniques [3], tools like GPTZero [4], DetectGPT [5], and OpenAI’s\ntext classifier [6].\nThe task of detecting AI-generated text is inherently challenging, as recent research [7] highlights\nthe increasing sophistication of newer, more capable LLMs. Early studies demonstrated that humans\nstruggle to tell if something was written by a computer or a human. Given the ethical implications and\nthe complexity of the problem, creating robust detection systems remains an active area of research.\nThe Defactify 4.0 shared task 1 [8], part of the fourth workshop on multimodal fact-checking and hate\nspeech detection, featured two subtasks: Task-A focused on distinguishing between AI-generated and\nhuman-authored text, while Task-B aimed to identify the specific LLM responsible for generating the\ntext. This paper proposes an ensemble based DeBERTa model, trained and validated on noisy dataset to\nmake the model more robust. This work highlights how adding noise to the dataset makes the model\nremain resilient to disturbances. It captures features invariant under perturbations and demonstrates\nsignificantly improved robustness against such disturbances.\nThe rest of the paper is as follows. Section 2 contains related work, section 3 describes the dataset,\nsection 4 describes our methodology, section 5 contains experimental results and section 6 includes",
+    "sections": [
+      "unknown",
+      "abstract",
+      "conclusions and future work.",
+      "method achieves significantly higher auroc scores compared to other zero-shot detection approaches,",
+      "method categorizes tokens into green and red lists, guiding token selection to create patterns that are",
+      "approaches, might be required.",
+      "results, achieving significant improvements across both task-a and task-b. furthermore, utilizing",
+      "references"
+    ],
+    "topics": [
+      "text",
+      "model",
+      "data",
+      "generated",
+      "deberta",
+      "ai",
+      "detection",
+      "generated text",
+      "task",
+      "dataset"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

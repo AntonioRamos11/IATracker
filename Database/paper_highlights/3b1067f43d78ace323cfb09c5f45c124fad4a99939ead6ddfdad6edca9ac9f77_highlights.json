@@ -1,0 +1,89 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "The model uses simplified traffic patterns and assumes certain network topologies, which might not capture all real-world scenarios.",
+    "Domain impact: This research is crucial for HPC and datacenter designers as it provides insights into optimizing network architectures to avoid bottlenecks.",
+    "I need to make sure each section is clear and concise, using bullet points where appropriate. I should also include key equations or figures mentioned, but since there are none in the provided text, I'll focus on the narrative parts.",
+    "</think>",
+    "**Structured Highlights: Research Paper on Intra- and Inter-Node Communication in HPC Systems and Datacenters**",
+    "",
+    "### **1. Core Innovation**",
+    "The research highlights that increasing intra-node bandwidth in HPC systems and datacenters can lead to congestion and degrade inter-node communication performance, especially in high traffic scenarios like generative AI workloads.",
+    "",
+    "### **2. Technical Approach**",
+    "**Simulation Model**: Utilized OMNeT++ to model intra- and inter-node communication, capturing realistic traffic patterns (e.g., LLM training).",
+    "**Network Configurations**: Tested various setups, including 32, 128 end-nodes, and 256, 1024 accelerators.",
+    "**Traffic Patterns**: Evaluated using micro-benchmarks (InfiniBand Perftest, OSU benchmarks) and compared with simulation results.",
+    "",
+    "### **3. Quantitative Findings**",
+    "**Congestion Impact**: At high intra- or inter-node traffic loads, intra-node networks became bottlenecks, increasing tail latency significantly.",
+    "**Performance Metrics**: Simulation experiments revealed substantial latency increases, particularly when multiple devices tried to communicate simultaneously.",
+    "",
+    "### **4. Limitations & Assumptions**",
+    "**Simplified Traffic Patterns**: The model assumed specific communication patterns but may not fully capture all real-world scenarios.",
+    "**Network Topology**: The study focused on simplified topologies, potentially limiting the generalizability of findings.",
+    "",
+    "### **5. Domain Impact**",
+    "**Theoretical Insight**: Provides valuable insights for optimizing network architectures to avoid bottlenecks.",
+    "**Practical Implications**: Crucial for HPC and datacenter designers aiming to improve communication efficiency across intra- and inter-node networks.",
+    "",
+    "This structured approach encapsulates the key aspects of the research, emphasizing innovation, methodology, findings, limitations, and broader impact."
+  ],
+  "impact": "",
+  "topics": [
+    "node",
+    "intra",
+    "network",
+    "intra node",
+    "node network",
+    "communication",
+    "inter",
+    "inter node",
+    "end",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Understanding_intra-node_communication_in_HPC_systems_and_Datacenters_3b1067f43d78ace3.pdf",
+    "content_hash": "3b1067f43d78ace323cfb09c5f45c124fad4a99939ead6ddfdad6edca9ac9f77",
+    "arxiv_id": null,
+    "title": "Understanding_intra-node_communication_in_HPC_systems_and_Datacenters_3b1067f43d78ace3",
+    "author": "",
+    "creation_date": "D:20250303014430Z",
+    "published": "2025-03-03T01:44:30",
+    "pages": 15,
+    "size": 1006045,
+    "file_mtime": 1740981889.2200313
+  },
+  "main_staff": {
+    "title": "Understanding_intra-node_communication_in_HPC_systems_and_Datacenters_3b1067f43d78ace3",
+    "authors": [
+      ""
+    ],
+    "abstract": "Over the past decade, specialized computing and storage devices, such as GPUs, TPUs, and high-\nspeed storage, have been increasingly integrated into server nodes within Supercomputers and Data\nCenters. The advent of high-bandwidth memory (HBM) has facilitated a more compact design for\nthese components, enabling multiple units to be interconnected within a single server node through\nintra-node networks like PCIe, NVLink, or Ethernet. These networks allow for scaling up the\nnumber of dedicated computing and storage devices per node. Additionally, inter-node networks\nlink these devices across thousands of server nodes in large-scale computing systems. However,\nas communication demands among accelerators grow—especially in workloads like generative\nAI—both intra- and inter-node networks risk becoming critical bottlenecks. Although modern intra-\nnode network architectures attempt to mitigate this issue by boosting bandwidth, we demonstrate in\nthis paper that such an approach can inadvertently degrade inter-node communication. This occurs\nwhen high-bandwidth intra-node traffic interferes with incoming traffic from external nodes, leading\nto congestion. To evaluate this phenomenon, we analyze the communication behavior of realistic\ntraffic patterns commonly found in generative AI applications. Using OMNeT++, we developed a\ngeneral simulation model that captures both intra- and inter-node network interactions. Through\nextensive simulations, our findings reveal that increasing intra-node bandwidth and the number of\naccelerators per node can actually hinder overall inter-node communication performance rather than\nimprove it.\nKeywords High-performance interconnection networks · Intra-node communication · accelerators · GPUs\n1\nMotivation\nSupercomputers and Data centers are increasing their computing power and storage capacity to cope with the growing\nrequirements of applications and services, such as those used in scientific computing or generative AI. While computing\npower requirements are currently being met using more powerful processors and specific-purpose accelerators (GPUs,\nTPUs, etc.), innovative technologies, such as 3D-stacked high-bandwidth memory (HBM), Non-Volatile Memory\n(NVMe) or Storage Class Memory (SCM), are increasing storage and memory capacity and bandwidth access, to bring\nunprecedented amounts of data close to where it is processed and reduce inter-node communication latency.\nThe devices mentioned above (i.e., accelerators, CPUs, memory, or storage) are interconnected within end nodes\nthrough an intra-node interconnection network (also known as I/O or system interconnect), which must be designed\nso that it does not become the bottleneck in the communication among these devices. Generally, this is achieved by\nover-dimensioning the aggregated bandwidth of the intra-node network links. For instance, the Peripheral Component\nInterconnect Express (PCIe) is the de-facto intra-node network in contemporary servers, offering 1GB/s per lane for\nPCIe 3.0, 2GB/s for PCIe 4.0, and 4GB/s for PCIe 5.0. Other intra-node technologies exist such as NVLink (NVIDIA),\nwhich is specially designed to interconnect multiple GPUs at either the same end-node or different end-nodes, reaching\nspeeds of 4GB/s, 7.5GB/s, and 15.1 GB/s per lane for Gen5, Gen6, and Gen7 (planned for next year), respectively.\narXiv:2502.20965v1  [cs.AR]  28 Feb 2025\n\nA PREPRINT - MARCH 3, 2025\nInfinity Fabric (AMD) is also used to interconnect specific AMD devices for both CPU (i.e., Zen) and graphics (e.g.,\nVega). Therefore, the increasing link speed in the intra-node network and the variety of devices within a server node (i.e.,\nCPUs, GPUs, TPUs, other accelerators, SSDs, NVMe, etc.) challenges the design of intra-node network technologies,\nwhich needs to thoroughly identify potential bottlenecks when different communication patterns are generated involving\nmultiple end-node devices that request to communicate through the intra-node network at full speed.\nIn this context, communication operations among end-node devices (e.g., GPUs and other accelerators) may involve\ndevices beyond a single node. For instance, an AllReduce communication operation performed when training a deep\nneural network (DNN) usually involves multiple GPUs that can be placed at different end nodes when the model to\ntrain does not fit a single end node [1]. Following this example, when the model is too big to be stored in the memory\nof a single end-node device, it is usually stored in the local memory of multiple end-node devices (e.g., the HBM local\nmemory of GPUs). So, when the weights of that model need to be updated in a distributed manner, communication\noperations are generated involving multiple end-node devices, which will encapsulate the communication operations\ninformation in intra-node network transactions that will be exchanged among the devices involved in the communication,\nwhich may be placed at different end-nodes. More precisely, a communication operation involving two end-node\ndevices (e.g., GPUs) can be divided into three phases. First, an end-node device generates an intra-node network\ntransaction with the specific information to be transmitted. This transaction is divided into intra-node network packets\nand sent throughout the intra-node network to another device within the same end node or the network interface (NIC).\nIn any of these cases, the receiving end-node device finally composes the transaction based on the received packets.\nSecondly, when the transaction is sent to a remote end-node device from the mentioned NIC, the intra-node transaction\nis encapsulated into inter-node network packets and sent through the inter-node network to the NIC at the destination\nend node. Third, at the NIC at the receiving end-node, packets are combined into an intra-node network transaction,\ndivided into intra-node packets, and sent through the intra-node network reaching the destination end-node device,\nwhich finally processes that transaction. Note that the interconnection network performance has been widely studied in\nthe last decades only assuming the second communication phase. However, the impact of communication phases first\nand second in the intra- and inter-node network performance is still a wide-open field of study [2]. Therefore, it is critical\nto accurately analyze the communication operations generated at end-node devices under specific communication\npatterns and their impact on the intra- and inter-node network performance. This analysis will help identify potential\ncommunication bottlenecks in the system.\nNote that the aggregated communication bandwidth that multiple end-node devices may require at a given instant can\nalso be requested to the inter-node interconnection network when devices at different end nodes want to communicate.\nConsequently, the inter-node network bandwidth is augmenting proportionally to accommodate the communication\nrequirements of the increasing number of devices per end node and their computing power and storage requirements.\nFurthermore, current inter-node interconnection network technologies are focused on proposing more cost-effective\nnetwork topologies, routing algorithms, and specific mechanisms to improve network performance in several ways,\nsuch as congestion control, power management, QoS, network virtualization, fault tolerance, etc.\nThis paper addresses the following research question: to what extent does the intra-node network communication impact\nthe inter-node communication and vice-versa? To answer this question, we have characterized the intra-node network\narchitecture and the communication operations (intra- and inter-node) generated at end-node devices and modeled\nthem into an OMNeT++-based simulation tool. Note that there are several proposals for system-level simulators (e.g.,\ngem5 [3]), which model accurately the processor, memory, GPUs, and I/O. Other solutions model the specific GPU-to-\nGPU communication (e.g., TraceR-CODES [4, 5]). However, these models lack scalability or an accurate performance\nmodel at the packet level for the combined intra-node and inter-node communication. We have validated our simulation\nmodel using a real cluster infrastructure. We have run specific micro-benchmarks (e.g., InfiniBand Perftest and OSU\nbenchmarks) and obtained latency and throughput metrics, which we have compared to those obtained using our\nsimulation model. Moreover, we have performed simulation experiments configuring intra- and inter-node networks\nthat communicate 32 and 128 end-nodes (and 256 and 1024 accelerators, respectively) using realistic communication\npatterns, such as those used in the training of Large Language Models (LLMs) for generative AI. The obtained results\nshow that the intra-node network can be a bottleneck, due to the interference between intra-node and inter-node\ncommunication operations, increasing dramatically the tail latency at high intra- or inter-node traffic loads.\nThe rest of the paper is organized as follows. Section 2 overviews the background of end-node devices, inter- and\nintra-node interconnects, and communication patterns. Section3 describes our proposed simulation model to analyze\nthe impact of intra- and inter-node communication interference. Section 4 describes the simulation experiments and\ndiscusses the obtained results. Finally, Section 5 draws some conclusions.\n2\n\nA PREPRINT - MARCH 3, 2025\n2",
+    "sections": [
+      "unknown",
+      "abstract",
+      "background",
+      "evaluation",
+      "results that follow the same trend. these results show that, in this simple scenario, the pcie intra-node model essentially",
+      "conclusions",
+      "references"
+    ],
+    "topics": [
+      "node",
+      "intra",
+      "network",
+      "intra node",
+      "node network",
+      "communication",
+      "inter",
+      "inter node",
+      "end",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Prompt_Generate_Train_PGT_Few-shot_Domain_Adaption_of_Retrieval__Augmented_Generation_Models_for_Open_Book_Question-Answering_d2625616fda87b2c\n        **Abstract**: We propose a framework – Prompt, Generate,\nTrain (PGT) – to efficiently develop a genera-\ntive question-answering model for open-book\nquestion-answering over a proprietary collec-\ntion of text documents. The framework adapts\na retriever augmented generation (RAG) model\nto the target domain using supervised fine-\ntuning and reinforcement learning with syn-\nthetic feedback in a few-shot setting. This, we\nhypothesize, will yield an aligned, uncertainty\ncalibrated model that is competitive with GPT-\n4 based in-context retrieval augmented gener-\nation in generating relevant answers at lower\nserving costs.\nThe framework’s synthetic generation pipeline\nwill generate synthetic training data compris-\ning <passage, question, answer> tuples us-\ning an open-source LLM and a novel consis-\ntency filtering scheme. The pipeline will be\ndesigned to generate both abstractive and ex-\ntractive questions that span the entire corpus.\nThe framework proposes to fine-tune a smaller\nRAG model comprising a dense retriever (Col-\nBERTv2) and a smaller sized LLM on the\nsynthetic data-set. In parallel, the framework\nwill train a Reward model to score domain\ngrounded answers higher than hallucinated an-\nswers using an a priori relevance ordering of\nsynthetically assembled samples. In the next\nphase, the framework will align the RAG model\nwith the target domain using reinforcement\nlearning (Proximal Policy Optimization). This\nstep may improve the RAG model’s ability to\ngenerate grounded answers and ignore out of\ndomain questions. In the final phase, the frame-\nwork will calibrate the model’s uncertainty for\nextractive question-answers.\n1\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, for each point, ensure that it is concise and focused on the key aspects of the framework.\n\nOkay, I need to help the user by generating structured highlights for their research paper. The paper is about a framework called PGT (Prompt, Generate, Train) for developing generative question-answering models in open-book scenarios. The user wants the highlights to focus on experimental setup and validation, with specific sections: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact. They also want concise, focused points with key equations or figures if relevant.\n\nFirst, I'll start by understanding the paper's abstract. The framework PGT uses a few-shot domain adaptation approach with a retriever augmented generation (RAG) model. They adapt a smaller RAG model using synthetic data generated from an open-source LLM and a consistency filter. They employ reinforcement learning (Proximal Policy Optimization) for alignment and uncertainty calibration.\n\nNow, focusing on experimental setup and validation:\n\n1. Core Innovation: The PGT framework uses a few-shot domain adaptation with a synthetic training pipeline. It involves generating passage, question, and answer tuples using an LLM and a consistency filter, then fine-tuning a smaller RAG model on this data.\n\n2. Technical Approach: The key steps are:\n   - Generate synthetic data with questions spanning extractive and abstractive.\n   - Fine-tune a dense retriever (ColBERTv2) and smaller LLM on this data.\n   - Use a reward model to score domain grounded answers.\n   - Apply Proximal Policy Optimization for alignment.\n   - Calibrate uncertainty for extractive answers.\n\n3. Quantitative Findings: The paper likely shows improvements in retrieval and generation efficiency compared to GPT-4. Metrics like F1-score, precision, recall, or reduction in serving costs would be relevant here.\n\n4. Limitations & Assumptions: The framework might not handle certain types of questions well, or require access to proprietary documents. Assumptions could include the effectiveness of the consistency filter and the sufficiency of the synthetic data.\n\n5. Domain Impact: Theoretically, it could expand RAG models to open-domain with lower costs. Practically, it could improve accessibility for less resourceful users.\n\nI need to ensure each section is concise and focused, using bullet points where necessary. Since the paper mentions equations and figures, I should note them where applicable, but since I don't have specifics, I'll mention the use of equations in the technical approach.\n\nPutting it all together, I'll structure each section with the required elements, making sure to highlight the key aspects without going into too much detail.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe paper introduces the **Prompt, Generate, Train (PGT)** framework, a novel approach for developing generative question-answering (QA) models tailored for **open-book retrieval augmented generation (RAG)**. The framework integrates **few-shot domain adaptation** to efficiently leverage synthetic data for training, enabling the model to operate effectively without extensive in-context examples.\n\n#### 2. Technical Approach\n- **Synthetic Data Generation**: The framework employs a **synthetic pipeline** that generates training tuples of **passage, question, and answer**, utilizing an open-source LLM and a **novel consistency filtering scheme** to ensure high-quality data.\n- **Model Architecture**: The framework uses a **smaller RAG model** comprising a **dense retriever (ColBERTv2)** and a **smaller language model**, optimized for efficiency.\n- **Reward Model**: A **reward model** is trained to score domain-grounded answers higher than hallucinated ones, enhancing the model's ability to generate relevant responses.\n- **Reinforcement Learning (RL)**: **Proximal Policy Optimization (Proximal Policy Optimization)** is applied to align the RAG model with the target domain, improving its grounding ability.\n- **Uncertainty Calibration**: The framework incorporates **uncertainty calibration** specifically for **extractive questions**, ensuring reliable and accurate responses.\n\n#### 3. Quantitative Findings\n- The paper likely demonstrates **improved retrieval and generation efficiency** compared to GPT-4-based models.\n- Metrics such as **F1-score**, **precision**, **recall**, and **reduction in serving costs** are probable quantitative findings, highlighting the framework's efficiency and effectiveness.\n\n#### 4. Limitations & Assumptions\n- The framework's **assumptions** include the effectiveness of the **consistency filter** and the sufficiency of synthetic data for generalization.\n- **Limitations** may involve challenges in handling **complex or ambiguous questions**, reliance on proprietary document collections, and potential performance degradation in **out-of-domain** scenarios.\n\n#### 5. Domain Impact\n- **Theoretical Impact**: The framework expands the applicability of RAG models to **open-domain question answering**, potentially lowering the entry barrier for such systems",
+  "topics": [
+    "model",
+    "answer",
+    "question",
+    "al",
+    "arxiv",
+    "rag",
+    "generate",
+    "et",
+    "et al",
+    "domain"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Prompt_Generate_Train_PGT_Few-shot_Domain_Adaption_of_Retrieval__Augmented_Generation_Models_for_Open_Book_Question-Answering_d2625616fda87b2c.pdf",
+    "content_hash": "d2625616fda87b2ccefa3f86301cfe128a576f3404a570249e696ac9e46dd4fd",
+    "arxiv_id": null,
+    "title": "Prompt_Generate_Train_PGT_Few-shot_Domain_Adaption_of_Retrieval__Augmented_Generation_Models_for_Open_Book_Question-Answering_d2625616fda87b2c",
+    "author": "",
+    "creation_date": "D:20230727011515Z",
+    "published": "2023-07-27T01:15:15",
+    "pages": 7,
+    "size": 244824,
+    "file_mtime": 1741158387.7890024
+  },
+  "main_staff": {
+    "title": "Prompt_Generate_Train_PGT_Few-shot_Domain_Adaption_of_Retrieval__Augmented_Generation_Models_for_Open_Book_Question-Answering_d2625616fda87b2c",
+    "authors": [
+      ""
+    ],
+    "abstract": "We propose a framework – Prompt, Generate,\nTrain (PGT) – to efficiently develop a genera-\ntive question-answering model for open-book\nquestion-answering over a proprietary collec-\ntion of text documents. The framework adapts\na retriever augmented generation (RAG) model\nto the target domain using supervised fine-\ntuning and reinforcement learning with syn-\nthetic feedback in a few-shot setting. This, we\nhypothesize, will yield an aligned, uncertainty\ncalibrated model that is competitive with GPT-\n4 based in-context retrieval augmented gener-\nation in generating relevant answers at lower\nserving costs.\nThe framework’s synthetic generation pipeline\nwill generate synthetic training data compris-\ning <passage, question, answer> tuples us-\ning an open-source LLM and a novel consis-\ntency filtering scheme. The pipeline will be\ndesigned to generate both abstractive and ex-\ntractive questions that span the entire corpus.\nThe framework proposes to fine-tune a smaller\nRAG model comprising a dense retriever (Col-\nBERTv2) and a smaller sized LLM on the\nsynthetic data-set. In parallel, the framework\nwill train a Reward model to score domain\ngrounded answers higher than hallucinated an-\nswers using an a priori relevance ordering of\nsynthetically assembled samples. In the next\nphase, the framework will align the RAG model\nwith the target domain using reinforcement\nlearning (Proximal Policy Optimization). This\nstep may improve the RAG model’s ability to\ngenerate grounded answers and ignore out of\ndomain questions. In the final phase, the frame-\nwork will calibrate the model’s uncertainty for\nextractive question-answers.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methodology",
+      "abstractive (ab) (khashabi et al., 2020).",
+      "references"
+    ],
+    "topics": [
+      "model",
+      "answer",
+      "question",
+      "al",
+      "arxiv",
+      "rag",
+      "generate",
+      "et",
+      "et al",
+      "domain"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

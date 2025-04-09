@@ -1,0 +1,60 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Video-R1_Reinforcing_Video_Reasoning_in_MLLMs_ec9449d79e38f8fd\n        **Abstract**: Inspired by DeepSeek-R1’s success in eliciting reasoning abilities through rule-\nbased reinforcement learning (RL), we introduce Video-R1 as the first attempt to\nsystematically explore the R1 paradigm for eliciting video reasoning within multi-\nmodal large language models (MLLMs). However, directly applying RL training\nwith the GRPO algorithm to video reasoning presents two primary challenges: (i) a\nlack of temporal modeling for video reasoning, and (ii) the scarcity of high-quality\nvideo-reasoning data. To address these issues, we first propose the T-GRPO al-\ngorithm, which encourages models to utilize temporal information in videos for\nreasoning. Additionally, instead of relying solely on video data, we incorporate\nhigh-quality image-reasoning data into the training process. We have constructed\ntwo datasets: Video-R1-COT-165k for SFT cold start and Video-R1-260k for RL\ntraining, both comprising image and video data. Experimental results demonstrate\nthat Video-R1 achieves significant improvements on video reasoning benchmarks\nsuch as VideoMMMU and VSI-Bench, as well as on general video benchmarks\nincluding MVBench and TempCompass, etc. Notably, Video-R1-7B attains a\n35.8% accuracy on video spatial reasoning benchmark VSI-bench, surpassing the\ncommercial proprietary model GPT-4o. All codes, models, data are released.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n### Core Innovation\nThe research introduces **Video-R1**, a novel approach that integrates reinforcement learning with multi-modal large language models (MLLMs) to enhance their video reasoning capabilities. This innovation builds upon DeepSeek-R1's success by specifically addressing the challenges of temporal modeling and data scarcity in video reasoning.\n\n### Technical Approach\n- **T-GRPO Algorithm**: A modified Grouped Relative Policy Optimization algorithm that incorporates temporal information from videos, enhancing the model's reasoning abilities.\n- **Dataset Expansion**: Utilizes both **Video-R1-COT-165k** and **Video-R1-260k**, combining image and video data to improve training effectiveness.\n- **Multi-Modal Integration**: Employs high-quality image-reasoning data alongside video data to enrich the model's understanding and reasoning.\n\n### Quantitative Findings\n1. **Accuracy Improvement**: The model achieves **35.8% accuracy** on the VSI-bench, surpassing GPT-4o's performance.\n2. **Benchmark Success**: Outperforms on **VideoMMMU**, **VSI-Bench**, **MVBench**, and **TempCompass**.\n3. **Scalability**: The **7B model** demonstrates consistent performance across various benchmarks.\n\n### Limitations & Assumptions\n- **Data Dependency**: Performance may vary with dataset quality and diversity.\n- **Computational Cost**: The approach requires significant computational resources, which could limit broader adoption.\n- **Temporal Focus**: Primarily addresses temporal reasoning, with potential for future extensions.\n\n### Domain Impact\n- **Theoretical**: Advances MLLM capabilities in video reasoning, offering new insights into multi-modal processing.\n- **Practical**: Provides a scalable solution for applications like video analysis and synthesis, outperforming existing proprietary models.",
+  "topics": [
+    "video",
+    "reasoning",
+    "r1",
+    "model",
+    "video r1",
+    "training",
+    "temporal",
+    "arxiv",
+    "reward",
+    "data"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Video-R1_Reinforcing_Video_Reasoning_in_MLLMs_ec9449d79e38f8fd.pdf",
+    "content_hash": "ec9449d79e38f8fd9618473771b8259f3ec9968396d32dbbe3fc95e5711e598f",
+    "arxiv_id": null,
+    "title": "Video-R1_Reinforcing_Video_Reasoning_in_MLLMs_ec9449d79e38f8fd",
+    "author": "",
+    "creation_date": "D:20250328011233Z",
+    "published": "2025-03-28T01:12:33",
+    "pages": 12,
+    "size": 1115012,
+    "file_mtime": 1743294083.7090707
+  },
+  "main_staff": {
+    "title": "Video-R1_Reinforcing_Video_Reasoning_in_MLLMs_ec9449d79e38f8fd",
+    "authors": [
+      ""
+    ],
+    "abstract": "Inspired by DeepSeek-R1’s success in eliciting reasoning abilities through rule-\nbased reinforcement learning (RL), we introduce Video-R1 as the first attempt to\nsystematically explore the R1 paradigm for eliciting video reasoning within multi-\nmodal large language models (MLLMs). However, directly applying RL training\nwith the GRPO algorithm to video reasoning presents two primary challenges: (i) a\nlack of temporal modeling for video reasoning, and (ii) the scarcity of high-quality\nvideo-reasoning data. To address these issues, we first propose the T-GRPO al-\ngorithm, which encourages models to utilize temporal information in videos for\nreasoning. Additionally, instead of relying solely on video data, we incorporate\nhigh-quality image-reasoning data into the training process. We have constructed\ntwo datasets: Video-R1-COT-165k for SFT cold start and Video-R1-260k for RL\ntraining, both comprising image and video data. Experimental results demonstrate\nthat Video-R1 achieves significant improvements on video reasoning benchmarks\nsuch as VideoMMMU and VSI-Bench, as well as on general video benchmarks\nincluding MVBench and TempCompass, etc. Notably, Video-R1-7B attains a\n35.8% accuracy on video spatial reasoning benchmark VSI-bench, surpassing the\ncommercial proprietary model GPT-4o. All codes, models, data are released.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related works",
+      "methods",
+      "experiments",
+      "methods.",
+      "conclusions, limitations and future works",
+      "references",
+      "evaluation benchmark of multi-modal llms in video analysis. arxiv preprint arxiv:2405.21075,"
+    ],
+    "topics": [
+      "video",
+      "reasoning",
+      "r1",
+      "model",
+      "video r1",
+      "training",
+      "temporal",
+      "arxiv",
+      "reward",
+      "data"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Local_Information_for_Global_Network_Estimation_in_Latent_Space_Models_ad449db35daa778e\n        **Abstract**: In social networks, neighborhood is crucial for understanding individual behavior in re-\nsponse to environments, and thus it is essential to analyze an individual’s local perspective\nwithin the global network. This paper studies how to utilize a partial information network\ncentered around a given individual for global network estimation by fitting a general latent\nspace model. Compared to the entire network, the partial information network contains a\nsignificant proportion of missing edges with its structure depending on a random, poten-\ntially sparse neighborhood, posing significant challenges for estimation. We address the\nchallenges by proposing a projected gradient descent algorithm for maximizing the like-\nlihood of the observed data and develop theoretical guarantees for its convergence under\ndifferent neighborhood structures.\nOur convergence rates and estimation error bounds\nhighlight the impact of bias in an individual’s local view of the global network, and we\nfurther show that the bias can be quantified with an imbalance measure. Using simulated\nand real networks, we demonstrate the performance of our estimation method and how\nour approach enables researchers to gain additional insights into the structure of social\nnetworks, such as the tradeoff between degrees and imbalance.\n∗Correspondence should be addressed to Y.X. Rachel Wang (rachel.wang@sydney.edu.au)\n1\narXiv:2502.16504v1  [stat.ME]  23 Feb 2025\n\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, ensure that each point is concise, with no more than one paragraph per point.\n</think>\n\n**Core Innovation**: The paper introduces a method to estimate global network properties using a partial, locally centered network by leveraging a latent space model and incorporating local information effectively.\n\n**Technical Approach**:  \n- Uses a projected gradient descent algorithm to maximize likelihood for parameter estimation.  \n- Employs a latent space model to capture hidden network structures.  \n- Accounts for missing edges and sparse neighborhoods to improve estimation accuracy.  \n- Proposes an imbalance measure to quantify bias in local network views.\n\n**Quantitative Findings**:  \n1. The method achieves faster convergence rates compared to existing techniques.  \n2. Estimation errors are minimized, especially under varying neighborhood densities.  \n3. The imbalance measure correlates with estimation bias, enhancing interpretability.\n\n**Limitations & Assumptions**:  \n- Assumes sufficient local network data for reliable estimation.  \n- Relies on the latent space model's accuracy for capturing hidden network features.  \n- May not perform well with extremely sparse or noisy local networks.\n\n**Domain Impact**:  \n- Provides a valuable tool for social network analysis, aiding researchers in understanding network dynamics.  \n- Enhances insights into network structure, such as tradeoffs between degrees and imbalance, benefiting both theoretical and practical applications.  \n- The method's flexibility and improved accuracy make it a significant advancement in network estimation techniques.",
+  "topics": [
+    "network",
+    "neighborhood",
+    "et",
+    "estimation",
+    "matrix",
+    "partial",
+    "information",
+    "et al",
+    "al",
+    "node"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Local_Information_for_Global_Network_Estimation_in_Latent_Space_Models_ad449db35daa778e.pdf",
+    "content_hash": "ad449db35daa778e13aa7193df0e6f63d5a31293c4f64d9c7ede51e7de8608d4",
+    "arxiv_id": null,
+    "title": "Local_Information_for_Global_Network_Estimation_in_Latent_Space_Models_ad449db35daa778e",
+    "author": "",
+    "creation_date": "D:20250225015735Z",
+    "published": "2025-02-25T01:57:35",
+    "pages": 22,
+    "size": 1173281,
+    "file_mtime": 1741158578.3384147
+  },
+  "main_staff": {
+    "title": "Local_Information_for_Global_Network_Estimation_in_Latent_Space_Models_ad449db35daa778e",
+    "authors": [
+      ""
+    ],
+    "abstract": "In social networks, neighborhood is crucial for understanding individual behavior in re-\nsponse to environments, and thus it is essential to analyze an individual’s local perspective\nwithin the global network. This paper studies how to utilize a partial information network\ncentered around a given individual for global network estimation by fitting a general latent\nspace model. Compared to the entire network, the partial information network contains a\nsignificant proportion of missing edges with its structure depending on a random, poten-\ntially sparse neighborhood, posing significant challenges for estimation. We address the\nchallenges by proposing a projected gradient descent algorithm for maximizing the like-\nlihood of the observed data and develop theoretical guarantees for its convergence under\ndifferent neighborhood structures.\nOur convergence rates and estimation error bounds\nhighlight the impact of bias in an individual’s local view of the global network, and we\nfurther show that the bias can be quantified with an imbalance measure. Using simulated\nand real networks, we demonstrate the performance of our estimation method and how\nour approach enables researchers to gain additional insights into the structure of social\nnetworks, such as the tradeoff between degrees and imbalance.\n∗Correspondence should be addressed to Y.X. Rachel Wang (rachel.wang@sydney.edu.au)\n1\narXiv:2502.16504v1  [stat.ME]  23 Feb 2025\n\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work and preview of contributions",
+      "results for the algorithm in different settings, emphasizing the importance of neighborhood",
+      "results can be found in the supplementary material.",
+      "results inapplicable to our problem.",
+      "methods typically require singular value decomposition at each iteration.",
+      "discussion",
+      "methods, particularly in the selection of informative and efficient seeds, and heterogeneous",
+      "references",
+      "methodology, 84(2):630–653, 2022."
+    ],
+    "topics": [
+      "network",
+      "neighborhood",
+      "et",
+      "estimation",
+      "matrix",
+      "partial",
+      "information",
+      "et al",
+      "al",
+      "node"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

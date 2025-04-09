@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: From Euler to AI: Unifying Formulas for Mathematical Constants\n        **Abstract**: The constant π has fascinated scholars for cen-\nturies, inspiring the derivation of countless for-\nmulas rooted in profound mathematical insight.\nThis abundance of formulas raises a question:\nAre they interconnected, and can a unifying\nstructure explain their relationships?\nWe propose a systematic methodology for dis-\ncovering and proving formula equivalences,\nleveraging modern large language models, large-\nscale data processing, and novel mathematical\nalgorithms.\nAnalyzing 457,145 arXiv papers,\nover a third of the validated formulas for π were\nproven to be derivable from a single mathemati-\ncal object — including formulas by Euler, Gauss,\nLord Brouncker, and newer ones from algorith-\nmic discoveries by the Ramanujan Machine.\nOur approach extends to other constants, such as\ne, ζ(3), and Catalan’s constant, proving its broad\napplicability. This work represents a step toward\nthe automatic unification of mathematical knowl-\nedge, laying a foundation for AI-driven discover-\nies of connections across scientific domains.\n1. Introduction\nThe earliest rigorous approximation for π dates back to\nArchimedes, around 250 BCE (B. & Dhar, 2020) estab-\nlishing the bounds\n223\n71\n<\nπ\n<\n22\n7 .\nModern algo-\nrithms for calculating π employ more sophisticated formu-\nlas. For example, the Chudnovsky algorithm (Chudnovsky\n& Chudnovsky, 1989), derived from a formula by Ramanu-\njan (Ramanujan, 1914), remains instrumental for preci-\nsion records. Similarly, the BBP formula (Bailey et al.,\n1996) is notable for enabling computation of specific π dig-\nits without requiring prior digits. Such breakthroughs in-\nspired fundamental advances in computer science, such as\nhigh-precision arithmetic (Bailey et al., 2012), evolution-\nary optimization (Koza, 1994), and elliptic curve cryptog-\nraphy (Miller, 1986). Recent efforts led to the development\n1Technion\n-\nIsrael\nInstitute\nof\nTechnology,\nHaifa\n3200003,\nIsrael.\nCorrespondence\nto:\nIdo\nKaminer\n<kaminer@technion.ac.il>.\nCopyright 2025 by the author(s).\nof computer algorithms capable of generating numerous\nformula hypotheses for mathematical constants (Raayoni\net al., 2021; Razon et al., 2023; Elimelech et al., 2024).\nFigure 1. Selected π formulas discovered over the centuries.\nThe plethora of results related to π discovered over the cen-\nturies led to a persistent question: How are they all con-\nnected? This question is important not only for preventing\naccidental rediscoveries (e.g., Lange’s formula from 1999\n(Lange, 1999) had already been derived by Lord Brouncker\nin 1656 (Osler, 2010)). Many equivalent formulas appear\nvastly different at first glance. A simple example is Euler’s\ncontinued fraction that provides equivalent representations\nof infinite sums (Euler, 1748). There exists a wide range of\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        (I need this for a presentation, so concise and clear)\nOkay, I need to create structured highlights for the given research paper. The user has already provided the title, abstract, and introduction sections. They want the highlights to focus on specific areas: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact. Each section needs to be concise and clear, suitable for a presentation.\n\nFirst, I'll start by understanding the paper's content. The paper discusses a method to unify formulas for mathematical constants like π, e, ζ(3), and Catalan's constant. They used AI models to find connections between these formulas. The key innovation is using large language models and large-scale data processing to automate formula discovery and prove equivalences.\n\nFor the Core Innovation, the main point is that AI can automatically unify mathematical formulas, which is a significant step towards AI-driven mathematical discoveries.\n\nNext, the Technical Approach should outline the methods they used: large language models, processing arXiv papers, mathematical algorithms, and the Ramanujan Machine. These tools help in discovering and proving formula equivalences.\n\nIn Quantitative Findings, they mention the number of formulas analyzed (457,145 arXiv papers) and how many formulas were proven derivable from a single object. This shows the scale and effectiveness of their approach.\n\nLimitations & Assumptions likely include the dependency on existing data, the complexity of mathematical proofs, and the potential for new constants not covered yet.\n\nDomain Impact should highlight the theoretical advancements in mathematical knowledge and the practical applications in fields like computer science and cryptography.\n\nI need to make sure each section is concise, using bullet points and key equations where necessary. I'll avoid jargon where possible and ensure clarity for the presentation.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n---\n\n### **1. Core Innovation**  \nThe research introduces an AI-driven methodology that automatically unifies mathematical formulas for constants like π, e, ζ(3), and Catalan’s constant. By leveraging large language models, large-scale data processing, and novel mathematical algorithms, the approach identifies equivalent formulas and their interconnections, advancing mathematical knowledge.\n\n---\n\n### **2. Technical Approach**  \n- **Large Language Models**: Used to analyze and generate mathematical hypotheses.  \n- **Data Processing**: Analyzed 457,145 arXiv papers, discovering validated formulas derivable from a single mathematical object.  \n- **Mathematical Algorithms**: Provided proofs for formula equivalences.  \n- **Ramanujan Machine**: A tool for discovering new mathematical conjectures, validated through rigorous proofs.\n\n---\n\n### **3. Quantitative Findings**  \n- Analyzed 457,145 arXiv papers.  \n- Over a third of validated π formulas were proven derivable from a single mathematical object.  \n- Includes formulas by Euler, Gauss, Lord Brouncker, and newer discoveries.  \n- Demonstrates the broad applicability of the methodology across mathematical constants.\n\n---\n\n### **4. Limitations & Assumptions**  \n- **Data Dependency**: Relying on existing arXiv papers limits coverage of newly discovered or less studied constants.  \n- **Proof Complexity**: Mathematical proofs can be intricate and time-consuming.  \n- **AI Limitations**: The approach may miss formulas not amenable to current AI models or algorithms.\n\n---\n\n### **5. Domain Impact**  \n- **Theoretical**: Advances mathematical knowledge by unifying diverse formulas.  \n- **Practical**: Facilitates high-precision calculations, evolutionary optimization, and cryptographic advancements.  \n- **Broader Impact**: Paves the way for AI-driven discoveries in mathematics and related fields.\n\n---\n\n### **Key Equations/Visual Findings**  \n- **Chudnovsky Algorithm**:  \n  \\[\n  \\frac{1}{\\pi} = \\frac{1}{12}\\sum_{k=0}^{\\infty} \\frac{(-1)^k (6k)!}{(k!)^3 (3k)! 13591409 + 54514015n}}\n  \\]  \n- **BBP Formula**:  \n  \\[\n  \\pi = \\sum_{k=0}^{\\infty} \\left[ \\frac{1}{16^k} \\left( \\frac{4}{8k + 1} - \\frac{2}{8k + 4} - \\frac{1}{8k + 5} - \\frac{1}{8k + 6} \\right) \\right]\n  \\]  \n- **Ramanujan Machine**: Automatically generates conjectures for constants like e and ζ(3).\n\n---\n\nThis structured format is concise, clear, and tailored for an engaging presentation.",
+  "topics": [
+    "formulas",
+    "2n",
+    "pcf",
+    "matrix",
+    "coboundary",
+    "formula",
+    "arxiv",
+    "url",
+    "https",
+    "url https"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/From_Euler_to_AI_Unifying_Formulas_for_Mathematical_Constants_f7bd8809efbcbb00.pdf",
+    "content_hash": "f7bd8809efbcbb008dc3b2b9973e972c5c04c570cd0fe9dca6b73f020f6e8357",
+    "arxiv_id": null,
+    "title": "From Euler to AI: Unifying Formulas for Mathematical Constants",
+    "author": "Tomer Raz, Michael Shalyt, Elyasheev Leibtag, Rotem Kalisch, Yaron Hadad, Ido Kaminer",
+    "creation_date": "D:20250226010255Z",
+    "published": "2025-02-26T01:02:55",
+    "pages": 50,
+    "size": 12264469,
+    "file_mtime": 1740971823.6180072
+  },
+  "main_staff": {
+    "title": "From Euler to AI: Unifying Formulas for Mathematical Constants",
+    "authors": [
+      "Tomer Raz",
+      " Michael Shalyt",
+      " Elyasheev Leibtag",
+      " Rotem Kalisch",
+      " Yaron Hadad",
+      " Ido Kaminer"
+    ],
+    "abstract": "The constant π has fascinated scholars for cen-\nturies, inspiring the derivation of countless for-\nmulas rooted in profound mathematical insight.\nThis abundance of formulas raises a question:\nAre they interconnected, and can a unifying\nstructure explain their relationships?\nWe propose a systematic methodology for dis-\ncovering and proving formula equivalences,\nleveraging modern large language models, large-\nscale data processing, and novel mathematical\nalgorithms.\nAnalyzing 457,145 arXiv papers,\nover a third of the validated formulas for π were\nproven to be derivable from a single mathemati-\ncal object — including formulas by Euler, Gauss,\nLord Brouncker, and newer ones from algorith-\nmic discoveries by the Ramanujan Machine.\nOur approach extends to other constants, such as\ne, ζ(3), and Catalan’s constant, proving its broad\napplicability. This work represents a step toward\nthe automatic unification of mathematical knowl-\nedge, laying a foundation for AI-driven discover-\nies of connections across scientific domains.\n1. Introduction\nThe earliest rigorous approximation for π dates back to\nArchimedes, around 250 BCE (B. & Dhar, 2020) estab-\nlishing the bounds\n223\n71\n<\nπ\n<\n22\n7 .\nModern algo-\nrithms for calculating π employ more sophisticated formu-\nlas. For example, the Chudnovsky algorithm (Chudnovsky\n& Chudnovsky, 1989), derived from a formula by Ramanu-\njan (Ramanujan, 1914), remains instrumental for preci-\nsion records. Similarly, the BBP formula (Bailey et al.,\n1996) is notable for enabling computation of specific π dig-\nits without requiring prior digits. Such breakthroughs in-\nspired fundamental advances in computer science, such as\nhigh-precision arithmetic (Bailey et al., 2012), evolution-\nary optimization (Koza, 1994), and elliptic curve cryptog-\nraphy (Miller, 1986). Recent efforts led to the development\n1Technion\n-\nIsrael\nInstitute\nof\nTechnology,\nHaifa\n3200003,\nIsrael.\nCorrespondence\nto:\nIdo\nKaminer\n<kaminer@technion.ac.il>.\nCopyright 2025 by the author(s).\nof computer algorithms capable of generating numerous\nformula hypotheses for mathematical constants (Raayoni\net al., 2021; Razon et al., 2023; Elimelech et al., 2024).\nFigure 1. Selected π formulas discovered over the centuries.\nThe plethora of results related to π discovered over the cen-\nturies led to a persistent question: How are they all con-\nnected? This question is important not only for preventing\naccidental rediscoveries (e.g., Lange’s formula from 1999\n(Lange, 1999) had already been derived by Lord Brouncker\nin 1656 (Osler, 2010)). Many equivalent formulas appear\nvastly different at first glance. A simple example is Euler’s\ncontinued fraction that provides equivalent representations\nof infinite sums (Euler, 1748). There exists a wide range of",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods for proving equivalences, but these methods are",
+      "references",
+      "method. 2005. url https://arxiv.org/abs/",
+      "evaluations).",
+      "evaluations of some series of the type"
+    ],
+    "topics": [
+      "formulas",
+      "2n",
+      "pcf",
+      "matrix",
+      "coboundary",
+      "formula",
+      "arxiv",
+      "url",
+      "https",
+      "url https"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

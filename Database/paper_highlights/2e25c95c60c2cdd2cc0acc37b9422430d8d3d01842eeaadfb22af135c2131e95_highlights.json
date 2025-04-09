@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: 3D_Neural_Operator-Based_Flow_Surrogates_around_3D_geometries_Signed__Distance_Functions_and_Derivative_Constraints_2e25c95c60c2cdd2\n        **Abstract**: Accurate modeling of fluid dynamics around complex geometries is critical for applications such as aerodynamic\noptimization and biomedical device design. While advancements in numerical methods and high-performance com-\nputing have improved simulation capabilities, the computational cost of high-fidelity 3D flow simulations remains\na significant challenge. Scientific machine learning (SciML) offers an efficient alternative, enabling rapid and reli-\nable flow predictions. In this study, we evaluate Deep Operator Networks (DeepONet) and Geometric-DeepONet, a\nvariant that incorporates geometry information via signed distance functions (SDFs), on steady-state 3D flow over\ncomplex objects. Our dataset consists of 1,000 high-fidelity simulations spanning Reynolds numbers from 10 to\n1,000, enabling comprehensive training and evaluation across a range of flow regimes. To assess model generaliza-\ntion, we apply two train–test splitting strategies: (1) a random split, evaluating (interpolation) performance within\nthe data distribution, and (2) an extrapolatory split, testing performance on unseen flow conditions. Additionally, we\nexplore a derivative-informed training strategy that augments standard loss functions with velocity gradient penal-\nties and incompressibility constraints, improving physics consistency in 3D flow prediction. Our results show that\nGeometric-DeepONet improves boundary-layer accuracy by up to 32% compared to standard DeepONet. Moreover,\nincorporating derivative constraints enhances gradient accuracy by 25% in interpolation tasks and up to 45% in ex-\ntrapolatory test scenarios, suggesting significant improvement in generalization capabilities to unseen 3D Reynolds\nnumbers. By refining loss function design and integrating rigorous evaluation metrics, this study advances SciML\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical for the innovation.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n### Core Innovation:\nThe study introduces the use of Geometric-DeepONet, a variant of Deep Operator Networks enhanced with signed distance functions (SDFs) and derivative constraints, to improve the accuracy of 3D fluid flow predictions around complex geometries.\n\n### Technical Approach:\n1. **Model Architecture**: Employs Geometric-DeepONet, integrating SDFs for geometry information and derivative-informed training for enhanced physics consistency.\n2. **Training Data**: Utilizes 1,000 high-fidelity simulations across a range of Reynolds numbers (10 to 1,000).\n3. **Validation Strategy**: Implements two splitting strategies—random for interpolation and extrapolatory for unseen conditions.\n4. **Loss Function**: Augments standard loss with velocity gradient penalties and incompressibility constraints.\n\n### Quantitative Findings:\n1. **Boundary-Layer Accuracy**: Geometric-DeepONet improves accuracy by up to 32% compared to DeepONet.\n2. **Gradient Accuracy**: Enhances interpolation accuracy by 25% and extrapolatory accuracy by up to 45%.\n\n### Limitations & Assumptions:\n- **Limitations**: Focus on steady-state 3D flow, with potential extensions to unsteady and complex geometries.\n- **Assumptions**: Assumes sufficient training data and computational resources for high-fidelity simulations.\n\n### Domain Impact:\n- **Theoretical**: Advances SciML by demonstrating improved generalization and physics consistency.\n- **Practical**: Offers efficient alternatives for aerodynamic and biomedical device design, reducing computational costs.\n\n### Key Equations/Figures:\n- **Key Equation**: Incorporates SDFs and derivative constraints into the loss function for enhanced flow prediction.\n- **Figures**: References figures showing training loss, validation loss, boundary-layer accuracy, and generalization metrics, highlighting improved performance with derivative-informed training.",
+  "topics": [
+    "loss",
+    "velocity",
+    "deeponet",
+    "flow",
+    "geometric",
+    "l1",
+    "functions",
+    "training",
+    "geometric deeponet",
+    "3d"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/3D_Neural_Operator-Based_Flow_Surrogates_around_3D_geometries_Signed__Distance_Functions_and_Derivative_Constraints_2e25c95c60c2cdd2.pdf",
+    "content_hash": "2e25c95c60c2cdd2cc0acc37b9422430d8d3d01842eeaadfb22af135c2131e95",
+    "arxiv_id": null,
+    "title": "3D_Neural_Operator-Based_Flow_Surrogates_around_3D_geometries_Signed__Distance_Functions_and_Derivative_Constraints_2e25c95c60c2cdd2",
+    "author": "",
+    "creation_date": "D:20250324010226Z",
+    "published": "2025-03-24T01:02:26",
+    "pages": 27,
+    "size": 5108578,
+    "file_mtime": 1742790888.4875505
+  },
+  "main_staff": {
+    "title": "3D_Neural_Operator-Based_Flow_Surrogates_around_3D_geometries_Signed__Distance_Functions_and_Derivative_Constraints_2e25c95c60c2cdd2",
+    "authors": [
+      ""
+    ],
+    "abstract": "Accurate modeling of fluid dynamics around complex geometries is critical for applications such as aerodynamic\noptimization and biomedical device design. While advancements in numerical methods and high-performance com-\nputing have improved simulation capabilities, the computational cost of high-fidelity 3D flow simulations remains\na significant challenge. Scientific machine learning (SciML) offers an efficient alternative, enabling rapid and reli-\nable flow predictions. In this study, we evaluate Deep Operator Networks (DeepONet) and Geometric-DeepONet, a\nvariant that incorporates geometry information via signed distance functions (SDFs), on steady-state 3D flow over\ncomplex objects. Our dataset consists of 1,000 high-fidelity simulations spanning Reynolds numbers from 10 to\n1,000, enabling comprehensive training and evaluation across a range of flow regimes. To assess model generaliza-\ntion, we apply two train–test splitting strategies: (1) a random split, evaluating (interpolation) performance within\nthe data distribution, and (2) an extrapolatory split, testing performance on unseen flow conditions. Additionally, we\nexplore a derivative-informed training strategy that augments standard loss functions with velocity gradient penal-\nties and incompressibility constraints, improving physics consistency in 3D flow prediction. Our results show that\nGeometric-DeepONet improves boundary-layer accuracy by up to 32% compared to standard DeepONet. Moreover,\nincorporating derivative constraints enhances gradient accuracy by 25% in interpolation tasks and up to 45% in ex-\ntrapolatory test scenarios, suggesting significant improvement in generalization capabilities to unseen 3D Reynolds\nnumbers. By refining loss function design and integrating rigorous evaluation metrics, this study advances SciML",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methodologies for scalable and generalizable high-fidelity 3d fluid flow modeling around complex geometries.",
+      "introduction",
+      "evaluation metrics. section 4 describes the different loss functions designed to train the sciml models. in section 5,",
+      "evaluation metrics",
+      "results",
+      "conclusion",
+      "references",
+      "methods in materials science. npj computational materials, 8(1):59, 2022.",
+      "method on octree meshes. computer methods in applied mechanics and engineering, 419:116686, 2024.",
+      "evaluation of velocity and gradients at element center"
+    ],
+    "topics": [
+      "loss",
+      "velocity",
+      "deeponet",
+      "flow",
+      "geometric",
+      "l1",
+      "functions",
+      "training",
+      "geometric deeponet",
+      "3d"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

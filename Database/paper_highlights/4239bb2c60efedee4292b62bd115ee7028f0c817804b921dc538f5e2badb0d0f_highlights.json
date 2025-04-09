@@ -1,0 +1,61 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** The findings are valuable for network design and distributed systems, particularly in dense networks where these problems are more tractable.\n- **Equation/Figure References:** The key equation is related to the graph's parameters and their bounds, e.g., d(G) ≤ 2^O(√log n).\n\nThese structured highlights encapsulate the paper's contributions, methodology, and implications, providing a clear overview of its significance in the field of distributed computing.",
+  "topics": [
+    "log",
+    "vertices",
+    "edges",
+    "graph",
+    "degree",
+    "algorithm",
+    "vertex",
+    "set",
+    "level",
+    "probability"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/When_MIS_and_Maximal_Matching_are_Easy_in_the_Congested_Clique_4239bb2c60efedee.pdf",
+    "content_hash": "4239bb2c60efedee4292b62bd115ee7028f0c817804b921dc538f5e2badb0d0f",
+    "arxiv_id": null,
+    "title": "When_MIS_and_Maximal_Matching_are_Easy_in_the_Congested_Clique_4239bb2c60efedee",
+    "author": "",
+    "creation_date": "D:20250302205128-05'00'",
+    "published": "20250302205128-05'00'",
+    "pages": 28,
+    "size": 376889,
+    "file_mtime": 1740976188.1992166
+  },
+  "main_staff": {
+    "title": "When_MIS_and_Maximal_Matching_are_Easy_in_the_Congested_Clique_4239bb2c60efedee",
+    "authors": [
+      ""
+    ],
+    "abstract": "Two of the most fundamental distributed symmetry-breaking problems are that of ﬁnding\na maximal independent set (MIS) and a maximal matching (MM) in a graph. It is a major\nopen question whether these problems can be solved in constant rounds of the all-to-all\ncommunication model of Congested Clique, with O(log log ∆) being the best upper bound\nknown (where ∆is the maximum degree).\nWe explore in this paper the boundary of the feasible, asking for which graphs we can\nsolve the problems in constant rounds. We ﬁnd that for several graph parameters, ranging\nfrom sparse to highly dense graphs, the problems do have a constant-round solution. In\nparticular, we give algorithms that run in constant rounds when:\n• the average degree is at most d(G) ≤2O(√log n),\n• the neighborhood independence number is at most β(G) ≤2O(√log n), or\n• the independence number is at most α(G) ≤|V (G)|/d(G)µ, for any constant µ > 0.\nFurther, we establish that these are tight bounds for the known methods, for all three\nparameters, suggesting that new ideas are needed for further progress.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "results show o(1) round congested clique algorithms for mis and mm in low arboricity graphs",
+      "methods that reduce the maximum degree. we first state the previous result, and then present",
+      "references"
+    ],
+    "topics": [
+      "log",
+      "vertices",
+      "edges",
+      "graph",
+      "degree",
+      "algorithm",
+      "vertex",
+      "set",
+      "level",
+      "probability"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

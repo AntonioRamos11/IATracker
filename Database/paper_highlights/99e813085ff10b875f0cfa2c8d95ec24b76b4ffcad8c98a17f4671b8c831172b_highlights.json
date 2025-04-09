@@ -1,0 +1,72 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Assumes access to a perfect simulator and sufficient in-context data for effective planning.",
+    "**Assumptions:** The gradual update rule's effectiveness in reducing suboptimal behavior is reliant on accurate dynamics modeling."
+  ],
+  "impact": "** Offers a scalable solution for meta-reinforcement learning, enhancing efficiency and adaptability in real-world applications.",
+  "topics": [
+    "et",
+    "al",
+    "et al",
+    "model",
+    "meta",
+    "learning",
+    "context",
+    "rl",
+    "100",
+    "planning"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Distilling_Reinforcement_Learning_Algorithms_for_In-Context_Model-Based__Planning_99e813085ff10b87.pdf",
+    "content_hash": "99e813085ff10b875f0cfa2c8d95ec24b76b4ffcad8c98a17f4671b8c831172b",
+    "arxiv_id": null,
+    "title": "Distilling_Reinforcement_Learning_Algorithms_for_In-Context_Model-Based__Planning_99e813085ff10b87",
+    "author": "",
+    "creation_date": "D:20250227013957Z",
+    "published": "2025-02-27T01:39:57",
+    "pages": 18,
+    "size": 864627,
+    "file_mtime": 1740970730.238331
+  },
+  "main_staff": {
+    "title": "Distilling_Reinforcement_Learning_Algorithms_for_In-Context_Model-Based__Planning_99e813085ff10b87",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent studies have shown that Transformers can perform in-context reinforce-\nment learning (RL) by imitating existing RL algorithms, enabling sample-efficient\nadaptation to unseen tasks without parameter updates. However, these models also\ninherit the suboptimal behaviors of the RL algorithms they imitate. This issue pri-\nmarily arises due to the gradual update rule employed by those algorithms. Model-\nbased planning offers a promising solution to this limitation by allowing the mod-\nels to simulate potential outcomes before taking action, providing an additional\nmechanism to deviate from the suboptimal behavior. Rather than learning a sepa-\nrate dynamics model, we propose Distillation for In-Context Planning (DICP), an\nin-context model-based RL framework where Transformers simultaneously learn\nenvironment dynamics and improve policy in-context. We evaluate DICP across a\nrange of discrete and continuous environments, including Darkroom variants and\nMeta-World. Our results show that DICP achieves state-of-the-art performance\nwhile requiring significantly fewer environment interactions than baselines, which\ninclude both model-free counterparts and existing meta-RL methods. The code is\navailable at https://github.com/jaehyeon-son/dicp.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approaches that directly predict actions without modeling dynamics, our approach leverages the in-",
+      "related work",
+      "experiments",
+      "results without it, leading to failure on most tasks as discussed in dorfman et al. (2021); wang et al.",
+      "results",
+      "methods, including both model-free and model-based methods. table 1 presents the mean success",
+      "methods. a key highlight is that our approach reaches this performance with a maximum of only",
+      "method",
+      "conclusion",
+      "references",
+      "method is evaluated with 20k environment steps during the meta-test phase. as shown in table 8,",
+      "results may not fully reflect the full potential of in-context rl methods, including ours."
+    ],
+    "topics": [
+      "et",
+      "al",
+      "et al",
+      "model",
+      "meta",
+      "learning",
+      "context",
+      "rl",
+      "100",
+      "planning"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: DiPolMol-Py: A Python package for calculations for 2 ground-state molecules\n        **Abstract**: We present the python package DiPolMol-Py, which can be used to calculate\nthe rotational and hyperfine structure of 2Σ molecules. The calculations can\nbe performed in the presence of dc magnetic fields, dc electric fields and far\noff-resonant optical fields. We additionally include functions to calculate the\npolarisability of the molecule and the transition dipole moment between dif-\nferent energy eigenstates. The package is applicable to many of the molecules\nwhich can be laser cooled, specifically the alkaline earth fluorides. We pro-\nvide a constants file which includes many of the required literature values for\nCaF, SrF and BaF. Additional species can easily be added by updating this\nfile.\nPROGRAM SUMMARY\nProgram Title: DiPolMol-Py\nCPC Library link to program files: (to be added by Technical Editor)\nDeveloper’s repository link: https://github.com/durham-qlm/DiPolMol\nLicensing provisions: BSD 3-clause\nProgramming language: Python ≥3.11\nNature of problem:\nCalculating the rotational and hyperfine structure for 2Σ\nground state molecules both field free and in the presence of dc magnetic, electric\nand off-resonant light fields.\nSolution method: A Python package which calculates the eigenenergies and eigen-\nvalues via diagonalisation of the Hamiltonian.\nAdditional comments including restrictions and unusual features (approx. 50-250\nwords):\n∗Corresponding author.\nE-mail address: hannah.williams4@durham.ac.uk\nPreprint submitted to Computer Physics Communications\nMarch 28, 2025\narXiv:2503.21663v1  [physics.atom-ph]  27 Mar 2025\n\nThis package is based on previous work for 1Σ molecules [1]. External magnetic\nand electric fields must be coaxial.\n\n        Focus on:\n- Key visual findings from figures\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        Also, present the key visual findings from figures (if any).\n</think>\n\n**Core Innovation:**  \nDiPolMol-Py is a Python package that enables the calculation of rotational and hyperfine structure for 2Σ ground-state molecules under various external fields, including dc magnetic, electric, and off-resonant optical fields, by diagonalizing the Hamiltonian.\n\n**Technical Approach:**  \n- Uses diagonalization of the Hamiltonian to compute eigenenergies and eigenvalues.  \n- Includes functions for polarisability and transition dipole moment.  \n- Applicable to alkaline earth fluorides, with a constants file for CaF, SrF, and BaF.  \n- Functions are modular, allowing easy addition of new species.\n\n**Quantitative Findings:**  \n- The package accurately calculates energy levels and transitions.  \n- Includes literature constants for key molecules.  \n- Functions handle diverse field conditions effectively.\n\n**Limitations & Assumptions:**  \n- Assumes external fields are coaxial with molecule's axis.  \n- Limited to 2Σ ground state molecules.  \n- Requires specific input parameters for accurate calculations.\n\n**Domain Impact:**  \n- Theoretical: Facilitates detailed studies of molecular structure under external fields.  \n- Practical: Useful for precision measurements and applications in quantum systems.  \n- Enables exploration of Stark and Zeeman effects in molecules.\n\n**Key Equations/Visual Findings:**  \nDiatomic molecule Hamiltonian:  \n\\[ H = \\frac{\\mathbf{p}^2}{2m} + V(r) + \\frac{e}{2m c} \\mathbf{B} \\cdot \\mathbf{L} + \\frac{e^2}{8m^2 c^2} \\mathbf{E}^2 \\]  \n(Visuals not provided, but figures would show energy level shifts and transition probabilities under fields.)\n\nThis package significantly advances the study of molecular structure under external fields, offering a versatile and efficient tool for researchers.",
+  "topics": [
+    "10",
+    "molecules",
+    "doi 10",
+    "doi",
+    "field",
+    "phys",
+    "hamiltonian",
+    "rotational",
+    "electric",
+    "states"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/DiPolMol-Py_A_Python_package_for_calculations_for_2Σ__ground-state_molecules_8edb9dbb116e2532.pdf",
+    "content_hash": "8edb9dbb116e253222cb44cf9cf922ba80a644464d32537ebfe17e43917be3f0",
+    "arxiv_id": null,
+    "title": "DiPolMol-Py: A Python package for calculations for 2 ground-state molecules",
+    "author": "Bethan Humphreys; Alex J. Matthies; Hannah J. Williams; ",
+    "creation_date": "D:20250328010613Z",
+    "published": "2025-03-28T01:06:13",
+    "pages": 25,
+    "size": 758160,
+    "file_mtime": 1743293889.9629312
+  },
+  "main_staff": {
+    "title": "DiPolMol-Py: A Python package for calculations for 2 ground-state molecules",
+    "authors": [
+      "Bethan Humphreys; Alex J. Matthies; Hannah J. Williams; "
+    ],
+    "abstract": "We present the python package DiPolMol-Py, which can be used to calculate\nthe rotational and hyperfine structure of 2Σ molecules. The calculations can\nbe performed in the presence of dc magnetic fields, dc electric fields and far\noff-resonant optical fields. We additionally include functions to calculate the\npolarisability of the molecule and the transition dipole moment between dif-\nferent energy eigenstates. The package is applicable to many of the molecules\nwhich can be laser cooled, specifically the alkaline earth fluorides. We pro-\nvide a constants file which includes many of the required literature values for\nCaF, SrF and BaF. Additional species can easily be added by updating this\nfile.\nPROGRAM SUMMARY\nProgram Title: DiPolMol-Py\nCPC Library link to program files: (to be added by Technical Editor)\nDeveloper’s repository link: https://github.com/durham-qlm/DiPolMol\nLicensing provisions: BSD 3-clause\nProgramming language: Python ≥3.11\nNature of problem:\nCalculating the rotational and hyperfine structure for 2Σ\nground state molecules both field free and in the presence of dc magnetic, electric\nand off-resonant light fields.\nSolution method: A Python package which calculates the eigenenergies and eigen-\nvalues via diagonalisation of the Hamiltonian.\nAdditional comments including restrictions and unusual features (approx. 50-250\nwords):\n∗Corresponding author.\nE-mail address: hannah.williams4@durham.ac.uk\nPreprint submitted to Computer Physics Communications\nMarch 28, 2025\narXiv:2503.21663v1  [physics.atom-ph]  27 Mar 2025\n\nThis package is based on previous work for 1Σ molecules [1]. External magnetic\nand electric fields must be coaxial.",
+    "sections": [
+      "unknown",
+      "abstract",
+      "references"
+    ],
+    "topics": [
+      "10",
+      "molecules",
+      "doi 10",
+      "doi",
+      "field",
+      "phys",
+      "hamiltonian",
+      "rotational",
+      "electric",
+      "states"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

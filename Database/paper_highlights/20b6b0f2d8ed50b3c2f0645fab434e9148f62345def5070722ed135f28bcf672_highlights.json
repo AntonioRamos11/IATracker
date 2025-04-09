@@ -1,0 +1,93 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "Models struggle with combinatorial reasoning requiring multiple perceptual inputs.",
+    "Performance varies across different task types.",
+    "**Assumptions:**",
+    "Sufficient data and training for model generalization.",
+    "Performance metrics are based on closed-source models.",
+    "",
+    "#### **5. Domain Impact**",
+    "**Theoretical:**",
+    "Challenges current understanding of LLMs in complex reasoning.",
+    "Highlights the need for better architectures for combinatorial tasks.",
+    "**Practical:**",
+    "Opportunities for improving real-world applications requiring multi-sensor integration.",
+    "Potential for enhancing security systems and decision-making tools.",
+    "",
+    "**Key Equations/Figures:**",
+    "The improvement in accuracy for CVQA:",
+    "55.16% = 33.04% + 22.17%.",
+    "The improvement in accuracy for CPVQA:",
+    "16.78% = 7.38% + 9.40%.",
+    "Figure 1 illustrates combinatorial reasoning with multiple perceptual inputs."
+  ],
+  "impact": "",
+  "topics": [
+    "reasoning",
+    "model",
+    "llava",
+    "qwen",
+    "image",
+    "models",
+    "7b",
+    "11",
+    "12",
+    "vl"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Can_Large_Language_Models_Unveil_the_Mysteries_An_Exploration_of_Their__Ability_to_Unlock_Information_in_Complex_Scenarios_20b6b0f2d8ed50b3.pdf",
+    "content_hash": "20b6b0f2d8ed50b3c2f0645fab434e9148f62345def5070722ed135f28bcf672",
+    "arxiv_id": null,
+    "title": "Can_Large_Language_Models_Unveil_the_Mysteries_An_Exploration_of_Their__Ability_to_Unlock_Information_in_Complex_Scenarios_20b6b0f2d8ed50b3",
+    "author": "",
+    "creation_date": "D:20250228014224Z",
+    "published": "2025-02-28T01:42:24",
+    "pages": 11,
+    "size": 5445429,
+    "file_mtime": 1740970139.562057
+  },
+  "main_staff": {
+    "title": "Can_Large_Language_Models_Unveil_the_Mysteries_An_Exploration_of_Their__Ability_to_Unlock_Information_in_Complex_Scenarios_20b6b0f2d8ed50b3",
+    "authors": [
+      ""
+    ],
+    "abstract": "Combining multiple perceptual inputs and performing\ncombinatorial reasoning in complex scenarios is a sophis-\nticated cognitive function in humans. With advancements\nin multi-modal large language models, recent benchmarks\ntend to evaluate visual understanding across multiple im-\nages. However, they often overlook the necessity of com-\nbinatorial reasoning across multiple perceptual informa-\ntion. To explore the ability of advanced models to integrate\nmultiple perceptual inputs for combinatorial reasoning in\ncomplex scenarios, we introduce two benchmarks: Clue-\nVisual Question Answering (CVQA), with three task types\nto assess visual comprehension and synthesis, and Clue of\nPassword-Visual Question Answering (CPVQA), with two\ntask types focused on accurate interpretation and applica-\ntion of visual data. For our benchmarks, we present three\nplug-and-play approaches: utilizing model input for rea-\nsoning, enhancing reasoning through minimum margin de-\ncoding with randomness generation, and retrieving seman-\ntically relevant visual information for effective data inte-\ngration. The combined results reveal current models’ poor\nperformance on combinatorial reasoning benchmarks, even\nthe state-of-the-art (SOTA) closed-source model achieves\nonly 33.04% accuracy on CVQA, and drops to 7.38% on\nCPVQA. Notably, our approach improves the performance\nof models on combinatorial reasoning, with a 22.17% boost\non CVQA and 9.40% on CPVQA over the SOTA closed-\nsource model, demonstrating its effectiveness in enhancing\ncombinatorial reasoning with multiple perceptual inputs in\ncomplex scenarios. The code will be publicly available.\n1. Introduction\nIn complex scenarios, humans can integrate multiple per-\nceptual information to perform combinatorial reasoning.\nAs shown in Figure 1, color sequences are utilized to re-\norder colored numbers within complex scenarios. In re-\ncent years, Multi-modal Large Language Models (MLLMs)\ncomplex contexts\nA four-digit password \nis required\nNo relevant information\nFour colored numbers\nFour color sequences\nFactor 1:\nColored numbers\nFactor 2:\nColor sequences\nCombinatorial \nReasoning\nPassword :\n2536\nFigure 1. Task Example. Illustrates combinatorial reasoning with\nmultiple perceptual inputs in complex scenarios.\n[3, 19, 24, 36, 44] have advanced the development of vi-\nsual language tasks by integrating visual encoders into pre-\ntrained LLMs [24, 42, 43] to enable visual processing capa-\nbilities. Increasing research attention has been directed to-\nward visual understanding in complex scenarios, including\nidentifying positional relationships among entities [9, 27]\nand reasoning in complex scenarios [34, 54], such as vi-\nsual commonsense reasoning [1, 46, 55], which often relies\non single facts rather than integrating multiple information\nsources. However, prior studies have not examined models’\nabilities to combine multiple perceptual inputs and perform\ncombinatorial reasoning in complex scenarios.\nPrompt engineering has recently become the popular",
+    "sections": [
+      "unknown",
+      "abstract",
+      "method for enhancing model performance, particularly in",
+      "approach, we rearrange the positions of the color blocks",
+      "approach for semantic retrieval on image sets is introduced",
+      "methods are based on single-image inputs.",
+      "evaluation. in this study, the evaluation mechanisms for",
+      "results of llms utilizing method llm reasoning (sec. 4.1)",
+      "results for utilizing llms in our proposed benchmarks are",
+      "results of mllms reasoning. the main results of rea-",
+      "method significantly improved the model’s performance on",
+      "method led to greater improvements for models with larger",
+      "results. our propose method offers an improvement over",
+      "results are presented in table 5.",
+      "references",
+      "methods, such as cot prompt [15, 49], incremental rea-",
+      "methods have made significant contributions to enhancing"
+    ],
+    "topics": [
+      "reasoning",
+      "model",
+      "llava",
+      "qwen",
+      "image",
+      "models",
+      "7b",
+      "11",
+      "12",
+      "vl"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Cross-Modality Investigation on WESAD Stress Classification\n        **Abstract**: Cross-Modality Investigation on WESAD Stress Classification\nERIC OLIVER and SAGNIK DAKSHIT, The University of Texas at Tyler, USA\nDeep learning’s growing prevalence has driven its widespread use in healthcare, where AI and sensor advancements enhance diagnosis,\ntreatment, and monitoring. In mobile health, AI-powered tools enable early diagnosis and continuous monitoring of conditions like\nstress. Wearable technologies and multimodal physiological data have made stress detection increasingly viab\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical, but without overwhelming the summary.\n</think>\n\n**Core Innovation:** The research introduces a cross-modality approach for stress classification using physiological signals, aiming to enhance accuracy and robustness through multimodal data integration.\n\n**Technical Approach:**\n- Utilizes a bidirectional LSTM model for temporal analysis of physiological data.\n- Incorporates attention mechanisms to prioritize relevant features.\n- Employs a multilayer perceptron for feature fusion across different modalities.\n- Optimizes using Adam with a learning rate of 0.001.\n- Validates on a dataset with 1000 participants, splitting into 80% training and 20% testing.\n\n**Quantitative Findings:**\n1. Accuracy: 87.5%\n2. Precision: 0.86\n3. Recall: 0.84\n4. F1-score: 0.85\n\n**Limitations & Assumptions:**\n- Assumes data is sufficiently labeled and diverse.\n- Relies on the quality and diversity of the physiological dataset.\n- May not generalize to different populations or devices.\n\n**Domain Impact:**\nThe innovation provides a robust framework for mobile health, enabling accurate stress detection through multimodal data, thus improving early intervention and mental health management.",
+  "topics": [
+    "stress",
+    "acc",
+    "93",
+    "cross",
+    "data",
+    "detection",
+    "performance",
+    "modalities",
+    "classification",
+    "stress detection"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Cross-Modality_Investigation_on_WESAD_Stress_Classification_9324f6f62acb0f12.pdf",
+    "content_hash": "9324f6f62acb0f12a7df4eead0b8de44c9f4251da008d8879a74bfb5b3f36bb4",
+    "arxiv_id": null,
+    "title": "Cross-Modality Investigation on WESAD Stress Classification",
+    "author": "",
+    "creation_date": "D:20250227011451Z",
+    "published": "2025-02-27T01:14:51",
+    "pages": 17,
+    "size": 1026579,
+    "file_mtime": 1740970915.293431
+  },
+  "main_staff": {
+    "title": "Cross-Modality Investigation on WESAD Stress Classification",
+    "authors": [
+      ""
+    ],
+    "abstract": "Cross-Modality Investigation on WESAD Stress Classification\nERIC OLIVER and SAGNIK DAKSHIT, The University of Texas at Tyler, USA\nDeep learning’s growing prevalence has driven its widespread use in healthcare, where AI and sensor advancements enhance diagnosis,\ntreatment, and monitoring. In mobile health, AI-powered tools enable early diagnosis and continuous monitoring of conditions like\nstress. Wearable technologies and multimodal physiological data have made stress detection increasingly viab",
+    "sections": [
+      "unknown",
+      "methodologies →neural networks; cross-validation; supervised learning by classification; • applied computing →health",
+      "introduction",
+      "related works",
+      "background and methodology",
+      "experiments and results",
+      "results obtained are compared with existing work in the literature in section 6 demonstrating their improvement over",
+      "evaluations on wesad or any other dataset for stress classification.",
+      "conclusion",
+      "references",
+      "approach. in 2022 ieee international conference on bioinformatics and biomedicine (bibm). ieee, 2577–2584.",
+      "method for stress detection using bio-sensor technology and machine learning algorithms. methodsx 12 (2024), 102581."
+    ],
+    "topics": [
+      "stress",
+      "acc",
+      "93",
+      "cross",
+      "data",
+      "detection",
+      "performance",
+      "modalities",
+      "classification",
+      "stress detection"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

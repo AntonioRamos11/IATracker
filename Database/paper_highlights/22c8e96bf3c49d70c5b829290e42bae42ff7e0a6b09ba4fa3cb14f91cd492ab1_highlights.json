@@ -1,0 +1,67 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: DPZV_Resource_Efficient_ZO_Optimization_For_Differentially_Private_VFL_d3686d0567\n        **Abstract**: Vertical Federated Learning (VFL) enables collaborative model training across feature-partitioned\ndata, yet faces significant privacy risks and inefficiencies when scaling to large models. We propose\nDPZV, a memory-efficient Zeroth-Order(ZO) optimization framework that integrates differential\nprivacy (DP) with vertical federated learning, addressing three critical challenges: (1) privacy vulner-\nabilities from gradient leakage, (2) high computation/communication costs of first-order methods,\nand (3) excessive memory footprint in conventional zeroth-order approaches. Our framework elimi-\nnates backpropagation through two-point gradient estimation, reducing client memory usage by 90%\ncompared to first-order counterparts while enabling asynchronous communication. By strategically\ninjecting Gaussian noise on the server, DPZV achieves rigorous (ϵ, δ)-DP guarantees without third-\nparty trust assumptions. Theoretical analysis establishes a convergence rate matching centralized case\nunder non-convex objectives. Extensive experiments on image and NLP benchmarks demonstrate that\nDPZV outperforms all baselines in accuracy while providing strong privacy assurances (ϵ ≤10) and\nrequiring far fewer computation resources, establishing new state-of-the-art privacy-utility tradeoffs\nfor resource-constrained VFL deployments.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the explanation. Avoid markdown, use LaTeX equations where necessary.\n</think>\n\n**Structured Highlights for the Research Paper**\n\n### 1. Core Innovation\nThe research introduces **DPZV**, a memory-efficient Zeroth-Order (ZO) optimization framework that integrates differential privacy (DP) with Vertical Federated Learning (VFL). It addresses privacy risks, computational inefficiencies, and memory constraints in large-scale VFL models by eliminating backpropagation through two-point gradient estimation and strategically injecting Gaussian noise on the server.\n\n### 2. Technical Approach\n- **Memory Efficiency**: Reduces client memory usage by 90% compared to first-order methods by avoiding backpropagation.\n- **Asynchronous Communication**: Facilitates asynchronous updates without compromising convergence.\n- **Differential Privacy**: Injects Gaussian noise on the server to achieve rigorous (ϵ, δ)-DP guarantees without third-party trust assumptions.\n- **Convergence Rate**: Theoretical analysis shows that DPZV achieves a convergence rate matching the centralized case under non-convex objectives.\n\n### 3. Quantitative Findings\n1. **Privacy Guarantees**: Achieves (ϵ, δ)-DP with ϵ ≤ 10, ensuring strong privacy assurances.\n2. **Resource Efficiency**: Requires far fewer computational resources compared to existing approaches.\n3. **Accuracy**: Demonstrates superior accuracy compared to all baseline methods.\n4. **Scalability**: Establishes new state-of-the-art privacy-utility tradeoffs for resource-constrained VFL deployments.\n\n### 4. Limitations & Assumptions\n- **Assumptions**: The framework relies on the assumption that the server can inject noise without compromising model accuracy.\n- **Resource Constraints**: The benefits are particularly pronounced in resource-constrained environments, where the trade-off between privacy and computational efficiency is most critical.\n- **Noise Injection**: The effectiveness of the Gaussian noise injection on the server is contingent upon proper tuning of the noise parameters (ϵ, δ).\n\n### 5. Domain Impact\n- **Theoretical Impact**: The framework provides a novel approach to combining differential privacy with zeroth-order optimization, offering a new direction for privacy-preserving distributed learning.\n- **Practical Impact**: DPZV is particularly valuable for resource-constrained VFL deployments, such as mobile devices and edge servers, where privacy and computational efficiency are critical. It enables more efficient and privacy-preserving model training, which is essential for applications requiring sensitive data handling, such as healthcare, finance, and natural language processing.\n\n### Key Equations/Figures\n- **Key Equation**: The two-point gradient estimation formula used in DPZV for memory efficiency.\n- **Key Figure**: Illustration of the DPZV framework's components, including memory efficiency, differential privacy integration, and convergence rate under non-convex objectives.",
+  "topics": [
+    "wt",
+    "2i",
+    "χt",
+    "privacy",
+    "vfl",
+    "client",
+    "dp",
+    "communication",
+    "order",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/DPZV_Resource_Efficient_ZO_Optimization_For_Differentially_Private_VFL_d3686d0567.pdf",
+    "content_hash": "22c8e96bf3c49d70c5b829290e42bae42ff7e0a6b09ba4fa3cb14f91cd492ab1",
+    "arxiv_id": null,
+    "title": "DPZV_Resource_Efficient_ZO_Optimization_For_Differentially_Private_VFL_d3686d0567",
+    "author": "",
+    "creation_date": "D:20250303010906Z",
+    "published": "2025-03-03T01:09:06",
+    "pages": 25,
+    "size": 985626,
+    "file_mtime": 1741419670.7114182
+  },
+  "main_staff": {
+    "title": "DPZV_Resource_Efficient_ZO_Optimization_For_Differentially_Private_VFL_d3686d0567",
+    "authors": [
+      ""
+    ],
+    "abstract": "Vertical Federated Learning (VFL) enables collaborative model training across feature-partitioned\ndata, yet faces significant privacy risks and inefficiencies when scaling to large models. We propose\nDPZV, a memory-efficient Zeroth-Order(ZO) optimization framework that integrates differential\nprivacy (DP) with vertical federated learning, addressing three critical challenges: (1) privacy vulner-\nabilities from gradient leakage, (2) high computation/communication costs of first-order methods,\nand (3) excessive memory footprint in conventional zeroth-order approaches. Our framework elimi-\nnates backpropagation through two-point gradient estimation, reducing client memory usage by 90%\ncompared to first-order counterparts while enabling asynchronous communication. By strategically\ninjecting Gaussian noise on the server, DPZV achieves rigorous (ϵ, δ)-DP guarantees without third-\nparty trust assumptions. Theoretical analysis establishes a convergence rate matching centralized case\nunder non-convex objectives. Extensive experiments on image and NLP benchmarks demonstrate that\nDPZV outperforms all baselines in accuracy while providing strong privacy assurances (ϵ ≤10) and\nrequiring far fewer computation resources, establishing new state-of-the-art privacy-utility tradeoffs\nfor resource-constrained VFL deployments.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "method. our convergence results establish that the proposed zero-order approach achieves the same order",
+      "related work",
+      "methods (e.g., fdml [13], vafl [2]) decouple coordination, allowing clients to update models independently. while",
+      "method, combining zeroth-order and first-order updates, which leveraged intrinsic noise from zo for limited privacy.",
+      "methodology",
+      "results exchanged during training.",
+      "experiments",
+      "method",
+      "method vafl demands more than twice the model size. compared to zoo-vfl, dpzv achieves further memory savings",
+      "method on vfl-czofo and zoo-vfl by clipping gradient and adding noise.",
+      "results show the advantage of dpzv, where memory-efficient zeroth-order updates significantly enhance the training",
+      "conclusion",
+      "references",
+      "discussion of differential privacy under various settings"
+    ],
+    "topics": [
+      "wt",
+      "2i",
+      "χt",
+      "privacy",
+      "vfl",
+      "client",
+      "dp",
+      "communication",
+      "order",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

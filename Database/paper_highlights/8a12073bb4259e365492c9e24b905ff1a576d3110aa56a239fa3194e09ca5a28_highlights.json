@@ -1,0 +1,69 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Enables significant speedups in diffusion sampling across various domains, including text-to-image and text-to-video generation, without compromising performance.",
+  "topics": [
+    "steps",
+    "teacher",
+    "step",
+    "sampling",
+    "optimal",
+    "stepsize",
+    "results",
+    "10",
+    "diffusion",
+    "vθ"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Optimal_Stepsize_for_Diffusion_Sampling_8a12073bb4259e36.pdf",
+    "content_hash": "8a12073bb4259e365492c9e24b905ff1a576d3110aa56a239fa3194e09ca5a28",
+    "arxiv_id": null,
+    "title": "Optimal_Stepsize_for_Diffusion_Sampling_8a12073bb4259e36",
+    "author": "",
+    "creation_date": "D:20250328011234Z",
+    "published": "2025-03-28T01:12:34",
+    "pages": 16,
+    "size": 44046883,
+    "file_mtime": 1743294088.0292952
+  },
+  "main_staff": {
+    "title": "Optimal_Stepsize_for_Diffusion_Sampling_8a12073bb4259e36",
+    "authors": [
+      ""
+    ],
+    "abstract": "Diffusion models achieve remarkable generation quality but\nsuffer from computational intensive sampling due to sub-\noptimal step discretization. While existing works focus on\noptimizing denoising directions, we address the principled\ndesign of stepsize schedules.\nThis paper proposes Opti-\nmal Stepsize Distillation, a dynamic programming frame-\nwork that extracts theoretically optimal schedules by dis-\ntilling knowledge from reference trajectories. By reformu-\nlating stepsize optimization as recursive error minimiza-\ntion, our method guarantees global discretization bounds\nthrough optimal substructure exploitation. Crucially, the\ndistilled schedules demonstrate strong robustness across ar-\nchitectures, ODE solvers, and noise schedules. Experiments\nshow 10× accelerated text-to-image generation while pre-\nserving 99.4% performance on GenEval.\nOur code is\navailable at https://github.com/bebebe666/\nOptimalSteps.\n1. Introduction\nScore-based generative models [28, 29] have emerged as a\ngroundbreaking paradigm in generative modeling, achiev-\ning state-of-the-art results across diverse domains. Unlike\n†Corresponding Author.\ntraditional approaches that directly model complex data dis-\ntributions, these methods decompose the target distribution\ninto a sequence of conditional distributions structured as a\nMarkov chain. While this decomposition enables tractable\ntraining through iterative noise prediction, it inherently ne-\ncessitates computational expensive sampling procedures.\nFrom a theoretical perspective, diffusion models approx-\nimate the data generation process as a continuous transfor-\nmation from noise to structured data, parameterized by an\ninfinite series of conditional distributions mapping. But in\npractice, computational constraints require discretizing this\ncontinuous trajectory into a finite sequence of steps, intro-\nducing a critical trade-off between sampling efficiency and\napproximation fidelity.\nThe discretization includes two key factors: the update\ndirection (determined by the score function) and the step-\nsize (controlling the progression towards the target distri-\nbution), as shown in Figure 2. While significant attention\nhas been devoted to optimizing update directions, including\nhigher-order solvers [18, 19] and corrected network predic-\ntions [38], the principled design of stepsize remains under-\nexplored. Existing methods predominantly rely on heuris-\ntic schedules, such as the uniform timesteps in DDIM [27]\nor the empirically designed schedule in EDM [10], lacking\ntheoretical guarantees of optimality under constrained step\nbudgets.\n1\narXiv:2503.21774v1  [cs.CV]  27 Mar 2025\n\n∆𝒕𝒕𝟏𝟏\n∆𝒕𝒕𝟐𝟐\n∆𝒕𝒕\n∆𝒕𝒕\n∆𝒕𝒕\n∆𝒕𝒕\nSingle-step\nMulti-step\nFigure 2. Two key factors in diffusion sampling: direction strat-\negy(left) and stepsize strategy(right).\nIn this work, we propose a principled framework for\nsearching the Optimal Stepsize in diffusion Sampling\n(OSS), compatible with arbitrary direction strategies.\nSpecifically, we regard the stepsize searching problem as a\nknowledge distillation problem, where a ”student” sampling\nprocess with limited steps aims to approximate the results\nof a ”teacher” sampling process with abundant steps. Cru-\ncially, we identify that this distillation objective exhibits re-\ncursive substructure—the optimal step schedule for N steps\ninherently contain optimal sub-schedules for fewer steps.\nExploiting this insight, we develop a dynamic program-\nming algorithm that systematically derives theoretically op-\ntimal step sequences, ensuring maximal proximity to the\nteacher model’s output under any pre-defined student sam-\npling steps. It guarantees that the distilled schedule achieves\nthe closest approximation to the teacher’s continuous trajec-\ntory under computational constraints.\nImportantly, our experimental analysis demonstrates the\nuniversal applicability and robustness of the proposed step-\nsize distillation framework. It exhibits consistent perfor-\nmance across various model architectures (e.g., U-Net [10]\nvs.\nTransformer-based [21]), ODE solver orders (1st to\n3th-order [19]), noise schedules (linear [27]/Flow Match-\ning [15, 17]/EDM [10]), and diverse denoising direction\nstrategies [18, 19, 38].\nFurthermore, when applying the\noptimal stepsize to text2image and text2video diffusion\npipelines, our method achieves 10× speedups while pre-\nserving 99.4% of the teacher model’s performance metrics\non GenEval [5] benchmark.\nSuch universal acceleration\ncapability suggests broad practical potential for deploying\nlatency-efficient diffusion models without sacrificing output\nquality.\nAbove all, our key contributions are as follows:\n1. Theoretically Optimal Stepsize Distillation: We for-\nmulate stepsize optimization as a dynamic programming\nproblem, proving that our solution can achieve global error\nminimization.\n2. Architecture-Agnostic Robustness: We demonstrate\nthat the distilled schedules generalize across datasets, noise\nschedules, and ODE solvers, outperforming heuristic base-\nlines in diverse settings.\n3. Efficient Adaptation: Our method enables lightweight\nschedule calibration across tasks, achieving 5-10× speedup\nwith negligible performance degradation.\n2. Related Work\n2.1. Diffusion sampling direction strategy\nRecent advances focused on correcting high-order direction\nfor diffusion sampling acceleration. The earliest work [27]\nadopted first-order Euler for discretization diffusion ODEs.\nEDM [10] pioneers adopting Heun’s[1] method for second-\norder gradient estimation between steps, reducing the Eu-\nler approximation error. PNDM [16] figured out the way\nof solving the denoising differential equation on manifold.\nAMED [40] utilized an additional network to predict the\nmiddle point of each step in the second order Heun solver.\nDPM-Solver [18] leveraged the semi-linear structure of dif-\nfusion ODEs, decomposing backward processes into lin-\near/nonlinear components through Taylor expansion. Build-\ning on this, DPM-Solver++ [19] introduced a multistep gra-\ndient reuse and shifts schedule, further saving the computa-\ntional efforts. UniPC [38] generalized these via a predictor-\ncorrector framework using Lagrange polynomial interpola-\ntion, enabling arbitrary-order accuracy with minimal com-\nputational overhead. These innovations collectively estab-\nlished theoretical foundations for balancing discretization\nprecision and computational overhead in diffusion sam-\npling.\n2.2. Diffusion sampling stepsize strategy\nTraditional diffusion models typically employ predefined\nfixed-step strategies. For instance, DiT [21] and SDXL [22]\nadopt uniform timestep allocations, while EDM [10] and\nCM [30] rely on manually crafted schedules. These strate-\ngies often yield suboptimal results in few-step sampling\nscenarios, prompting recent studies to explore stepsize op-\ntimization.\nExisting methods fall into two categories: training-free\noptimization and learning-based strategies. The former ap-\nproaches, including DM [36], which minimizes inference\nerror bounds via constrained trust-region methods, have\na poor generalization ability since it shares the stepsize\nstrategy across different diffusion networks and different\nsolvers.\nSimilarly, AYS [25] optimizes stepsize through\nKL divergence upper bounds (KLUB) but remains confined\nto SDE frameworks. [8] gets a better stepsize according\nto the similarity with the results of the high-order solver,\nwhich mixes the direction and stepsize of denoising. [35]\nselects the sampling steps based on dynamic programming\nand minimizes the sum of ELBO but incurs significant per-\nformance degradation. GITS [3] also employs dynamic pro-\ngramming to optimize stepsize but exhibits deviations from\nminimizing global error due to fixed cost matrices. The lat-\nter category, exemplified by LD3 [32], leverages a mono-\ntonic network for stepsize prediction, which is supervised\nby global errors. However, it requires additional high com-\nputational training. GGDM [34] adds trainable parameters\n2\n\nCriterion\nAYS [25] GITS [3] DM [36] LD3 [32] OSS\nTraining-free\n✓\n✓\n✓\n✕\n✓\nStability\n✕\n✓\n✓\n✓\n✓\nSolver-aware\n✓\n✕\n✕\n✓\n✓\nGlobal error\n✕\n✕\n✕\n✓\n✓\nTable 1.",
+    "sections": [
+      "unknown",
+      "abstract",
+      "related work comparison.",
+      "evaluation protocol we prioritize minimizing the di-",
+      "method’s robustness across four critical dimensions: noise",
+      "results with different teacher steps. all the teacher solver leverages",
+      "results using different order solvers.",
+      "results with mar-base.",
+      "method",
+      "results in table 7, where the oss-ave setting adopts 32 im-",
+      "method demonstrates the closest proximity to the teacher",
+      "references",
+      "results using 10 steps. moreover, we also provide the video"
+    ],
+    "topics": [
+      "steps",
+      "teacher",
+      "step",
+      "sampling",
+      "optimal",
+      "stepsize",
+      "results",
+      "10",
+      "diffusion",
+      "vθ"
+    ],
+    "sections_text": {
+      "results": ""
+    },
+    "citations": []
+  }
+}

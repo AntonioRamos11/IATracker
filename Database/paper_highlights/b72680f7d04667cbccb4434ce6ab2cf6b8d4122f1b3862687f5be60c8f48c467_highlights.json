@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: SafeMERGE_Preserving_Safety_Alignment_in_Fine-Tuned_Large_Language__Models_via_Selective_Layer-Wise_Model_Merging_b72680f7d04667cb\n        **Abstract**: Fine-tuning large language models (LLMs) on downstream tasks can inadvertently\nerode their safety alignment, even for benign fine-tuning datasets. We address\nthis challenge by proposing SafeMERGE1, a post-fine-tuning framework that pre-\nserves safety while maintaining task utility. It achieves this by selectively merg-\ning fine-tuned and safety-aligned model layers only when those deviate from safe\nbehavior, measured by a cosine similarity criterion. We evaluate SafeMERGE\nagainst other fine-tuning- and post–fine-tuning-stage approaches for Llama-2-7B-\nChat and Qwen-2-7B-Instruct models on GSM8K and PubMedQA tasks while\nexploring different merging strategies. We find that SafeMERGE consistently\nreduces harmful outputs compared to other baselines without significantly sac-\nrificing performance, sometimes even enhancing it. The results suggest that our\nselective, subspace-guided, and per-layer merging method provides an effective\nsafeguard against the inadvertent loss of safety in fine-tuned LLMs while outper-\nforming simpler post–fine-tuning-stage defenses.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the method.\n\n        Also, ensure that the structured highlights include the following elements:\n        - No markdown\n        - Bold text for key terms\n        - Proper alignment\n        - Use of consistent formatting\n\nOkay, so I need to create structured highlights for this research paper. The user has given me specific points to focus on: core innovation, technical approach, quantitative findings, limitations & assumptions, and domain impact. They also mentioned including key equations and figures where critical, and to avoid markdown. \n\nFirst, I'll start by understanding the paper's title and abstract. The title mentions SafeMERGE, which is a framework to preserve safety alignment in fine-tuned large language models. The abstract talks about how fine-tuning can sometimes ruin safety alignment, so SafeMERGE is proposed as a post-fine-tuning framework that selectively merges layers only when necessary, using cosine similarity.\n\nThe core innovation is the selective, subspace-guided, per-layer merging. That's a mouthful, but I need to condense it into one or two sentences. Maybe something like \"A novel framework that selectively merges model layers using cosine similarity to preserve safety alignment.\"\n\nFor the technical approach, I need to break down the method into bullet points. The key components are: post-fine-tuning framework, selective merging, cosine similarity as a criterion, per-layer, and subspace guidance. So, each of these as a bullet point.\n\nQuantitative findings should be a numbered list with metrics. The abstract mentions consistently reducing harmful outputs without sacrificing performance, sometimes even enhancing it. They tested on GSM8K and PubMedQA tasks, so those are the datasets. The cosine similarity criterion was critical, so I should note that.\n\nLimitations & assumptions: The paper likely assumes certain conditions, like the effectiveness of cosine similarity, and may not work in all scenarios. Also, maybe the models used are specific (Llama-2-7B-Chat and Qwen-2-7B-Instruct), so that's a limitation.\n\nDomain impact: Theoretically, it's a method to ensure safety in LLMs, practically useful for applications where safety is critical, like medical or legal domains.\n\nI should also think about any key equations or figures mentioned. The abstract doesn't provide specific metrics beyond the ones mentioned, but in the structured highlights, I need to include any equations. Since the user didn't specify any, I might need to mention a placeholder like Equation (1) if it's implied.\n\nWait, looking back, the user mentioned including key equations/figures where critical to the method. The abstract doesn't have equations, but the method likely involves cosine similarity. So I'll mention that.\n\nPutting it all together, I'll structure each section with the required elements, using bold for key terms and ensuring clarity and conciseness. I need to make sure each part is properly aligned and formatted without markdown, so maybe using line breaks and bullet points as specified.\n\nI think that's a solid plan. Now, I'll draft each section based on these thoughts.\n</think>\n\n**Structured Highlights for the Research Paper**\n\n---\n\n### **1. Core Innovation**\nA novel framework, **SafeMERGE**, is introduced to preserve safety alignment in fine-tuned large language models (LLMs) by selectively merging layers using cosine similarity as a criterion.\n\n---\n\n### **2. Technical Approach**\n- **Post-fine-tuning framework**: Safely merges model layers after fine-tuning to maintain safety alignment.\n- **Selective merging**: Merges layers only when they deviate from safe behavior.\n- **Cosine similarity criterion**: Uses cosine similarity to measure deviation from safe behavior.\n- **Per-layer merging**: Applies merging at the layer level for granularity.\n- **Subspace guidance**: Directs merging based on the model's subspace to maintain task utility.\n\n---\n\n### **3. Quantitative Findings**\n- **Reduction in harmful outputs**: Safely reduces harmful outputs in tasks like GSM8K and PubMedQA.\n- **Performance consistency**: Maintains or enhances performance without sacrificing safety.\n- **Critical metric**: Cosine similarity is pivotal in identifying deviations from safe behavior.\n\n---\n\n### **4. Limitations & Assumptions**\n- **Assumption**: Effectiveness of cosine similarity as a metric for safety.\n- **Limitation**: Specific applicability to certain model architectures (e.g., Llama-2-7B-Chat and Qwen-2-7B-Instruct).\n- **Scope**: Primarily tested on specific datasets and tasks.\n\n---\n\n### **5. Domain Impact**\n- **Theoretical significance**: Provides a safeguard against safety erosion in LLMs.\n- **Practical utility**: Useful for domains requiring safety, such as healthcare and legal applications.\n\n---\n\nThis structured highlights encapsulate the research paper's core contributions, methodology, and impact, ensuring clarity and alignment with the user's requirements.",
+  "topics": [
+    "safety",
+    "fine",
+    "et al",
+    "al",
+    "et",
+    "tuning",
+    "fine tuning",
+    "model",
+    "2024",
+    "safemerge"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/SafeMERGE_Preserving_Safety_Alignment_in_Fine-Tuned_Large_Language__Models_via_Selective_Layer-Wise_Model_Merging_b72680f7d04667cb.pdf",
+    "content_hash": "b72680f7d04667cbccb4434ce6ab2cf6b8d4122f1b3862687f5be60c8f48c467",
+    "arxiv_id": null,
+    "title": "SafeMERGE_Preserving_Safety_Alignment_in_Fine-Tuned_Large_Language__Models_via_Selective_Layer-Wise_Model_Merging_b72680f7d04667cb",
+    "author": "",
+    "creation_date": "D:20250324005811Z",
+    "published": "2025-03-24T00:58:11",
+    "pages": 17,
+    "size": 1183761,
+    "file_mtime": 1742791175.1948342
+  },
+  "main_staff": {
+    "title": "SafeMERGE_Preserving_Safety_Alignment_in_Fine-Tuned_Large_Language__Models_via_Selective_Layer-Wise_Model_Merging_b72680f7d04667cb",
+    "authors": [
+      ""
+    ],
+    "abstract": "Fine-tuning large language models (LLMs) on downstream tasks can inadvertently\nerode their safety alignment, even for benign fine-tuning datasets. We address\nthis challenge by proposing SafeMERGE1, a post-fine-tuning framework that pre-\nserves safety while maintaining task utility. It achieves this by selectively merg-\ning fine-tuned and safety-aligned model layers only when those deviate from safe\nbehavior, measured by a cosine similarity criterion. We evaluate SafeMERGE\nagainst other fine-tuning- and post–fine-tuning-stage approaches for Llama-2-7B-\nChat and Qwen-2-7B-Instruct models on GSM8K and PubMedQA tasks while\nexploring different merging strategies. We find that SafeMERGE consistently\nreduces harmful outputs compared to other baselines without significantly sac-\nrificing performance, sometimes even enhancing it. The results suggest that our\nselective, subspace-guided, and per-layer merging method provides an effective\nsafeguard against the inadvertent loss of safety in fine-tuned LLMs while outper-\nforming simpler post–fine-tuning-stage defenses.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation setup.",
+      "evaluation, as our primary concerns are safety and utility in multi-step reasoning or domain qa tasks",
+      "results and discussions",
+      "conclusion",
+      "references",
+      "methods in natural language processing and the 9th international joint conference on natural",
+      "related work",
+      "evaluation setup",
+      "results for harmfulqa. each row contains directharm on the left and hexphi on the right."
+    ],
+    "topics": [
+      "safety",
+      "fine",
+      "et al",
+      "al",
+      "et",
+      "tuning",
+      "fine tuning",
+      "model",
+      "2024",
+      "safemerge"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

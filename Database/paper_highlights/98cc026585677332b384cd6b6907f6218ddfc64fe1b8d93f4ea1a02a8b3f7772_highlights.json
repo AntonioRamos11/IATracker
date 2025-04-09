@@ -1,0 +1,71 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Reward_Shaping_to_Mitigate_Reward_Hacking_in_RLHF_98cc026585677332\n        **Abstract**: Reinforcement Learning from Human Feed-\nback (RLHF) is essential for aligning large\nlanguage models (LLMs) with human values.\nHowever, RLHF is susceptible to reward hack-\ning, where the agent exploits flaws in the re-\nward function rather than learning the intended\nbehavior, thus degrading alignment. While re-\nward shaping helps stabilize RLHF and par-\ntially mitigate reward hacking, a systematic\ninvestigation into shaping techniques and their\nunderlying principles remains lacking.\nTo\nbridge this gap, we present a comprehensive\nstudy of the prevalent reward shaping methods.\nOur analysis suggests three key design prin-\nciples: (1) RL reward is ideally bounded, (2)\nRL benefits from rapid initial growth followed\nby gradual convergence, and (3) RL reward\nis best formulated as a function of centered\nreward. Guided by these insights, we propose\nPreference As Reward (PAR), a novel approach\nthat leverages the latent preferences embedded\nwithin the reward model itself as the signal for\nreinforcement learning. We evaluated PAR on\ntwo base models, Gemma2-2B and Llama3-8B,\nusing two datasets, Ultrafeedback-Binarized\nand HH-RLHF. Experimental results demon-\nstrate PAR’s superior performance over other\nreward shaping methods. On the AlpacaEval\n2.0 benchmark, PAR achieves a win rate at least\n5 percentage points higher than competing ap-\nproaches. Furthermore, PAR exhibits remark-\nable data efficiency, requiring only a single ref-\nerence reward for optimal performance, and\nmaintains robustness against reward hacking\neven after two full epochs of training. Code is\navailable at https://github.com/PorUna-byte/\nPAR.1\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n\n        Also, ensure that the structured highlights include a brief summary of the paper, a clear core innovation, technical details, and quantitative results.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n**Title**: Reward_Shaping_to_Mitigate_Reward_Hacking_in_RLHF_98cc026585677332\n\n**Core Innovation**:  \nThe paper introduces a novel reward shaping method, Preference As Reward (PAR), designed to mitigate reward hacking in RLHF by leveraging the latent preferences within the reward model itself, offering superior performance and data efficiency.\n\n**Technical Approach**:  \n1. PAR utilizes the latent preferences embedded in the reward model as the reinforcement learning signal.  \n2. The method incorporates a centered reward function to stabilize learning.  \n3. PAR employs a reference reward to guide the shaping process effectively.  \n4. It integrates with existing RL algorithms to maintain compatibility and scalability.  \n5. The approach ensures rapid initial growth followed by gradual convergence for stable learning.\n\n**Quantitative Findings**:  \n1. On the AlpacaEval 2.0 benchmark, PAR achieves a win rate at least 5 percentage points higher than other methods.  \n2. It requires only a single reference reward for optimal performance.  \n3. PAR demonstrates robustness against reward hacking even after two full training epochs.  \n4. The method shows remarkable data efficiency, outperforming competitors with minimal data.  \n\n**Limitations & Assumptions**:  \n1. The method assumes the availability of a reference reward for shaping.  \n2. It may not perform optimally in environments with highly complex reward landscapes.  \n3. The reliance on the reward model's latent preferences restricts its applicability to scenarios where such preferences are meaningful.  \n\n**Domain Impact**:  \nTheoretically, PAR addresses a critical vulnerability in RLHF by enhancing alignment with human values. Practically, it offers a robust and efficient solution that could be integrated into existing RL systems, improving safety and reliability in AI development. The method's data efficiency and resistance to reward hacking make it particularly suitable for real-world applications where robustness and efficiency are paramount.",
+  "topics": [
+    "reward",
+    "model",
+    "training",
+    "par",
+    "al",
+    "et al",
+    "et",
+    "policy",
+    "winrate",
+    "rewards"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Reward_Shaping_to_Mitigate_Reward_Hacking_in_RLHF_98cc026585677332.pdf",
+    "content_hash": "98cc026585677332b384cd6b6907f6218ddfc64fe1b8d93f4ea1a02a8b3f7772",
+    "arxiv_id": null,
+    "title": "Reward_Shaping_to_Mitigate_Reward_Hacking_in_RLHF_98cc026585677332",
+    "author": "",
+    "creation_date": "D:20250228012458Z",
+    "published": "2025-02-28T01:24:58",
+    "pages": 19,
+    "size": 836302,
+    "file_mtime": 1740970876.7857687
+  },
+  "main_staff": {
+    "title": "Reward_Shaping_to_Mitigate_Reward_Hacking_in_RLHF_98cc026585677332",
+    "authors": [
+      ""
+    ],
+    "abstract": "Reinforcement Learning from Human Feed-\nback (RLHF) is essential for aligning large\nlanguage models (LLMs) with human values.\nHowever, RLHF is susceptible to reward hack-\ning, where the agent exploits flaws in the re-\nward function rather than learning the intended\nbehavior, thus degrading alignment. While re-\nward shaping helps stabilize RLHF and par-\ntially mitigate reward hacking, a systematic\ninvestigation into shaping techniques and their\nunderlying principles remains lacking.\nTo\nbridge this gap, we present a comprehensive\nstudy of the prevalent reward shaping methods.\nOur analysis suggests three key design prin-\nciples: (1) RL reward is ideally bounded, (2)\nRL benefits from rapid initial growth followed\nby gradual convergence, and (3) RL reward\nis best formulated as a function of centered\nreward. Guided by these insights, we propose\nPreference As Reward (PAR), a novel approach\nthat leverages the latent preferences embedded\nwithin the reward model itself as the signal for\nreinforcement learning. We evaluated PAR on\ntwo base models, Gemma2-2B and Llama3-8B,\nusing two datasets, Ultrafeedback-Binarized\nand HH-RLHF. Experimental results demon-\nstrate PAR’s superior performance over other\nreward shaping methods. On the AlpacaEval\n2.0 benchmark, PAR achieves a win rate at least\n5 percentage points higher than competing ap-\nproaches. Furthermore, PAR exhibits remark-\nable data efficiency, requiring only a single ref-\nerence reward for optimal performance, and\nmaintains robustness against reward hacking\neven after two full epochs of training. Code is\navailable at https://github.com/PorUna-byte/\nPAR.1\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method",
+      "method preference as reward (par), which is",
+      "methods to mitigate reward hacking, which are",
+      "method, defined as: rrl = log σ(r −r.85",
+      "evaluation metrics",
+      "methods that modify the reward model itself ex-",
+      "experiments using several sigmoid-like functions,",
+      "methods exhibit comparable peak performance during",
+      "discussion",
+      "conclusion",
+      "methods.",
+      "methods by the end of one training epoch but also",
+      "references",
+      "evaluation",
+      "evaluation of the model’s performance across",
+      "methods on gemma2-2b with the hh-rlhf",
+      "evaluation format:"
+    ],
+    "topics": [
+      "reward",
+      "model",
+      "training",
+      "par",
+      "al",
+      "et al",
+      "et",
+      "policy",
+      "winrate",
+      "rewards"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

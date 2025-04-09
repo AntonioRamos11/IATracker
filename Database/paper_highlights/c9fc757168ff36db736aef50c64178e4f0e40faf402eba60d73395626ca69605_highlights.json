@@ -1,0 +1,77 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Voting_or_Consensus_Decision-Making_in_Multi-Agent_Debate_c9fc757168ff36db\n        **Abstract**: Much of the success of multi-agent debates\ndepends on carefully choosing the right param-\neters. Among them, the decision-making proto-\ncol stands out. Systematic comparison of deci-\nsion protocols is difficult because studies alter\nmultiple discussion parameters beyond the pro-\ntocol. So far, it has been largely unknown how\ndecision-making addresses the challenges of\ndifferent tasks. This work systematically eval-\nuates the impact of seven decision protocols\n(e.g., majority voting, unanimity consensus).\nWe change only one variable at a time (i.e., de-\ncision protocol) to analyze how different meth-\nods affect the collaboration between agents and\ntest different protocols on knowledge (MMLU,\nMMLU-Pro, GPQA) and reasoning datasets\n(StrategyQA, MuSR, SQuAD 2.0). Our re-\nsults show that voting protocols improve per-\nformance by 13.2% in reasoning tasks and con-\nsensus protocols by 2.8% in knowledge tasks\nover the other decision protocol. Increasing the\nnumber of agents improves performance, while\nmore discussion rounds before voting reduces\nit. To improve decision-making by increasing\nanswer diversity, we propose two new methods,\nAll-Agents Drafting (AAD) and Collective Im-\nprovement (CI). Our methods improve task\nperformance by up to 3.3% with AAD and up\nto 7.4% with CI. This work demonstrates the\nimportance of decision-making in multi-agent\ndebates beyond scaling.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n\n**Note:** The user provided the research paper abstract, and I need to help them by structuring the highlights as specified. The user is a researcher focusing on multi-agent systems, so the highlights should be concise and focused on the most critical aspects of the work.\nOkay, so I'm trying to help this user who is a researcher in multi-agent systems. They provided an abstract of a research paper and want me to structure the highlights based on specific requirements. Let me break this down step by step.\n\nFirst, I need to understand the core innovation of the paper. The abstract mentions that the study systematically evaluates seven decision protocols—majority voting, unanimity consensus, etc.—varying only one parameter at a time. So the main idea is comparing these protocols to see which works best for different tasks.\n\nNext, the technical approach. The paper changes only one variable each time, which is the decision protocol. They test these on various datasets for knowledge and reasoning tasks. So, the approach is controlled experiments with multiple factors.\n\nLooking at quantitative findings, the results show percentage improvements in performance. Voting protocols boosted reasoning tasks by 13.2% and knowledge tasks by 2.8%. Also, introducing two new methods, AAD and CI, increased performance by up to 3.3% and 7.4% respectively. So these are the key metrics.\n\nLimitations and assumptions would include that they only varied one parameter each time, which might not reflect real-world complexities where multiple factors change. Also, the impact is focused on datasets used, so maybe other areas aren't covered.\n\nFor domain impact, this is practically important for designing better multi-agent systems. Theoretically, it contributes to understanding decision-making scalability.\n\nI should make sure each section is concise, using bullet points where needed, and highlight the key points without getting too detailed. I also need to ensure that the format is followed strictly as per the user's request.\n\nI think I've covered all the points. Now, I'll structure it according to the required format, making sure each section is clear and focused on the most critical aspects for a researcher in multi-agent systems.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. **Core Innovation**  \nThe paper investigates the impact of different decision-making protocols on multi-agent debates, systematically evaluating seven protocols (e.g., majority voting, unanimity consensus) across various tasks and datasets. The key innovation is isolating the effect of each decision protocol by varying only one variable at a time, allowing for a controlled comparison of their performance.\n\n---\n\n#### 2. **Technical Approach**  \n- **Varying Only One Variable**: The study systematically changes only the decision protocol while keeping all other parameters constant to isolate their effects.  \n- **Datasets Evaluated**: The research tests the protocols on knowledge datasets (MMLU, MMLU-Pro, GPQA) and reasoning datasets (StrategyQA, MuSR, SQuAD 2.0).  \n- **Performance Metrics**: The performance improvements are measured in terms of task accuracy or effectiveness.  \n- **Proposed Methods**: Two new methods, **All-Agents Drafting (AAD)** and **Collective Improvement (CI)**, are introduced to enhance answer diversity and improve decision-making.\n\n---\n\n#### 3. **Quantitative Findings**  \n- **Decision Protocols**: Voting protocols (e.g., majority voting) improve performance by **13.2%** in reasoning tasks and **2.8%** in knowledge tasks compared to other protocols.  \n- **Answer Diversity**: The proposed methods (AAD and CI) improve task performance by up to **3.3%** with AAD and **7.4%** with CI.  \n- **Other Findings**: Increasing the number of agents positively impacts performance, while increasing the number of discussion rounds before voting negatively impacts performance.\n\n---\n\n#### 4. **Limitations & Assumptions**  \n- **Limitations**: The study assumes that decision-making can be optimized by varying only one parameter at a time, which may not fully capture real-world complexities where multiple factors interact.  \n- **Assumptions**: The research assumes that the tested datasets are representative of the broader multi-agent debate domain and that the protocols can be generalized to other scenarios.  \n\n---\n\n#### 5. **Domain Impact (Theoretical/Practical)**  \n- **Theoretical Impact**: The study provides valuable insights into the scalability and robustness of decision-making protocols in multi-agent systems, contributing to the theoretical understanding of how decision protocols affect collaboration and performance.  \n- **Practical Impact**: The findings are practically relevant for designing multi-agent systems, particularly in domains requiring knowledge exchange and reasoning, such as academic debates, policy discussions, and collaborative problem-solving. The proposed methods (AAD and CI) offer practical solutions to enhance task performance by improving answer diversity.  \n\nThis structured approach highlights the key contributions, methodology, and implications of the research paper, providing a concise and focused overview for a researcher in the field of",
+  "topics": [
+    "agent",
+    "agents",
+    "answer",
+    "voting",
+    "decision",
+    "solution",
+    "task",
+    "final",
+    "protocols",
+    "consensus"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Voting_or_Consensus_Decision-Making_in_Multi-Agent_Debate_c9fc757168ff36db.pdf",
+    "content_hash": "c9fc757168ff36db736aef50c64178e4f0e40faf402eba60d73395626ca69605",
+    "arxiv_id": null,
+    "title": "Voting_or_Consensus_Decision-Making_in_Multi-Agent_Debate_c9fc757168ff36db",
+    "author": "",
+    "creation_date": "D:20250227014836Z",
+    "published": "2025-02-27T01:48:36",
+    "pages": 31,
+    "size": 2008860,
+    "file_mtime": 1740970674.279634
+  },
+  "main_staff": {
+    "title": "Voting_or_Consensus_Decision-Making_in_Multi-Agent_Debate_c9fc757168ff36db",
+    "authors": [
+      ""
+    ],
+    "abstract": "Much of the success of multi-agent debates\ndepends on carefully choosing the right param-\neters. Among them, the decision-making proto-\ncol stands out. Systematic comparison of deci-\nsion protocols is difficult because studies alter\nmultiple discussion parameters beyond the pro-\ntocol. So far, it has been largely unknown how\ndecision-making addresses the challenges of\ndifferent tasks. This work systematically eval-\nuates the impact of seven decision protocols\n(e.g., majority voting, unanimity consensus).\nWe change only one variable at a time (i.e., de-\ncision protocol) to analyze how different meth-\nods affect the collaboration between agents and\ntest different protocols on knowledge (MMLU,\nMMLU-Pro, GPQA) and reasoning datasets\n(StrategyQA, MuSR, SQuAD 2.0). Our re-\nsults show that voting protocols improve per-\nformance by 13.2% in reasoning tasks and con-\nsensus protocols by 2.8% in knowledge tasks\nover the other decision protocol. Increasing the\nnumber of agents improves performance, while\nmore discussion rounds before voting reduces\nit. To improve decision-making by increasing\nanswer diversity, we propose two new methods,\nAll-Agents Drafting (AAD) and Collective Im-\nprovement (CI). Our methods improve task\nperformance by up to 3.3% with AAD and up\nto 7.4% with CI. This work demonstrates the\nimportance of decision-making in multi-agent\ndebates beyond scaling.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "results among tasks. thus, we argue that decision-",
+      "experiments, we observe that answer diversity and",
+      "experiments. we recommend consensus strategies",
+      "related work",
+      "methodology",
+      "discussion consists of three automatically gener-",
+      "discussion to end and how the final solution will be",
+      "discussion, and ultimately all agents must vote on",
+      "experiments",
+      "discussion",
+      "discussion history",
+      "discussion history with prior reasoning. the third",
+      "results in a drop in task performance.",
+      "results and may even reduce task performance. the",
+      "conclusion",
+      "methods to improve answer diversity during multi-",
+      "discussions (ames, 2009).",
+      "references",
+      "methods in natural language processing.",
+      "discussions are only in a few cases able to outper-",
+      "discussion to solve a task.",
+      "discussion paradigms.",
+      "discussion: <final_answer>.",
+      "discussion_paradigm: str = \"memory\""
+    ],
+    "topics": [
+      "agent",
+      "agents",
+      "answer",
+      "voting",
+      "decision",
+      "solution",
+      "task",
+      "final",
+      "protocols",
+      "consensus"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

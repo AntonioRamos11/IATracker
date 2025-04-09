@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Rare_Disease_Differential_Diagnosis_with_Large_Language_Models_at_Scale__From_Abdominal_Actinomycosis_to_Wilsons_Disease_15a16be8cfcba7ef\n        **Abstract**: Large language models (LLMs) have demon-\nstrated impressive capabilities in disease diag-\nnosis. However, their effectiveness in identify-\ning rarer diseases, which are inherently more\nchallenging to diagnose, remains an open ques-\ntion. Rare disease performance is critical with\nthe increasing use of LLMs in healthcare set-\ntings. This is especially true if a primary care\nphysician needs to make a rarer prognosis from\nonly a patient conversation so that they can take\nthe appropriate next step. To that end, several\nclinical decision support systems are designed\nto support providers in rare disease identifica-\ntion. Yet their utility is limited due to their\nlack of knowledge of common disorders and\ndifficulty of use.\nIn this paper, we propose RareScale to combine\nthe knowledge LLMs with expert systems. We\nuse jointly use an expert system and LLM to\nsimulate rare disease chats. This data is used to\ntrain a rare disease candidate predictor model.\nCandidates from this smaller model are then\nused as additional inputs to black-box LLM\nto make the final differential diagnosis. Thus,\nRareScale allows for a balance between rare\nand common diagnoses. We present results on\nover 575 rare diseases, beginning with Abdom-\ninal Actinomycosis and ending with Wilson’s\nDisease. Our approach significantly improves\nthe baseline performance of black-box LLMs\nby over 17% in Top-5 accuracy. We also find\nthat our candidate generation performance is\nhigh (e.g. 88.8% on gpt-4o generated chats).\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\nOkay, so I need to create structured highlights for this research paper. The user provided the title, abstract, and some specific instructions on what to focus on: key visual findings, experimental setup, validation, core innovation, technical approach, quantitative findings, limitations, assumptions, and domain impact.\n\nFirst, I should read the abstract thoroughly to understand the main points. The paper talks about using large language models (LLMs) for rare disease differential diagnosis. They mention that while LLMs are good for common diseases, they struggle with rare ones. The solution proposed is a system called RareScale, which combines expert systems with LLMs. They used this to simulate rare disease chats and train a model to improve diagnosis accuracy.\n\nLooking at the key visual findings, the abstract mentions a figure (15a16be8cfcba7ef) but doesn't describe it. Since I don't have access to the paper, I can't elaborate on that. So maybe I should note that the figure likely shows performance metrics or examples of the system in action.\n\nFor the experimental setup, they mention using over 575 rare diseases, starting from Abdominal Actinomycosis to Wilson’s Disease. The approach involves training a candidate predictor model and then using it as input for the LLM. The metrics like Top-5 accuracy improvement by 17% and 88.8% for candidate generation are key quantitative findings.\n\nThe core innovation is combining expert systems with LLMs for rare disease diagnosis. The technical approach includes using expert systems to generate rare disease cases, training a model on these, and integrating it with LLMs. The limitations might be that the dataset is limited to 575 diseases and perhaps the model's performance is only tested on a specific set of cases.\n\nIn terms of domain impact, this could be practically useful for primary care physicians needing to diagnose rare diseases, but it's limited to the diseases included in their dataset.\n\nI need to structure all this into the required sections without the figure details. I'll make sure each section is concise and includes the key points the user wants highlighted.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n### **1. Core Innovation**\nThe research introduces **RareScale**, a system that integrates large language models (LLMs) with expert systems to improve the diagnosis of rare diseases. This approach combines the strengths of both technologies to balance rare and common disease identification.\n\n### **2. Technical Approach**\n- **Expert System Integration**: Utilizes an expert system to simulate rare disease cases, providing a diverse dataset for training.\n- **Candidate Predictor Model**: Trained on the simulated rare disease cases to identify potential rare diseases.\n- **LLM Enhancement**: Uses the candidate model's outputs as additional inputs to enhance the performance of a black-box LLM.\n- **Balanced Training**: Focuses on improving the LLM's ability to handle both rare and common diseases by incorporating expert-generated data.\n\n### **3. Quantitative Findings**\n- **Top-5 Accuracy Improvement**: The integration of the candidate model improves the LLM's accuracy by **17%**.\n- **Candidate Generation Performance**: The model demonstrates **88.8%** accuracy in generating rare disease candidates.\n\n### **4. Limitations & Assumptions**\n- **Dataset Limitation**: The study focuses on **575 rare diseases**, which may limit generalizability.\n- **Expert System Reliance**: The system's effectiveness depends on the quality and comprehensiveness of the expert-generated data.\n- **Model Dependency**: The performance improvement is contingent on the integration of the candidate model with the LLM.\n\n### **5. Domain Impact**\n- **Practical Application**: The system could aid primary care physicians in identifying rare diseases, enhancing diagnostic accuracy.\n- **Theoretical Contribution**: Demonstrates the potential of combining expert systems with LLMs for specialized medical applications.\n\nThis structured approach highlights the research's key contributions, methodology, and implications, providing a clear overview of the study's advancements and areas for future exploration.",
+  "topics": [
+    "disease",
+    "rare",
+    "patient",
+    "diseases",
+    "al",
+    "et",
+    "et al",
+    "gpt",
+    "findings",
+    "4o"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Rare_Disease_Differential_Diagnosis_with_Large_Language_Models_at_Scale__From_Abdominal_Actinomycosis_to_Wilsons_Disease_15a16be8cfcba7ef.pdf",
+    "content_hash": "15a16be8cfcba7ef463ef578609aedc8f8b59774870118583feddea35ba5ff48",
+    "arxiv_id": null,
+    "title": "Rare_Disease_Differential_Diagnosis_with_Large_Language_Models_at_Scale__From_Abdominal_Actinomycosis_to_Wilsons_Disease_15a16be8cfcba7ef",
+    "author": "",
+    "creation_date": "D:20250224011107Z",
+    "published": "2025-02-24T01:11:07",
+    "pages": 21,
+    "size": 699459,
+    "file_mtime": 1740973548.3596146
+  },
+  "main_staff": {
+    "title": "Rare_Disease_Differential_Diagnosis_with_Large_Language_Models_at_Scale__From_Abdominal_Actinomycosis_to_Wilsons_Disease_15a16be8cfcba7ef",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large language models (LLMs) have demon-\nstrated impressive capabilities in disease diag-\nnosis. However, their effectiveness in identify-\ning rarer diseases, which are inherently more\nchallenging to diagnose, remains an open ques-\ntion. Rare disease performance is critical with\nthe increasing use of LLMs in healthcare set-\ntings. This is especially true if a primary care\nphysician needs to make a rarer prognosis from\nonly a patient conversation so that they can take\nthe appropriate next step. To that end, several\nclinical decision support systems are designed\nto support providers in rare disease identifica-\ntion. Yet their utility is limited due to their\nlack of knowledge of common disorders and\ndifficulty of use.\nIn this paper, we propose RareScale to combine\nthe knowledge LLMs with expert systems. We\nuse jointly use an expert system and LLM to\nsimulate rare disease chats. This data is used to\ntrain a rare disease candidate predictor model.\nCandidates from this smaller model are then\nused as additional inputs to black-box LLM\nto make the final differential diagnosis. Thus,\nRareScale allows for a balance between rare\nand common diagnoses. We present results on\nover 575 rare diseases, beginning with Abdom-\ninal Actinomycosis and ending with Wilson’s\nDisease. Our approach significantly improves\nthe baseline performance of black-box LLMs\nby over 17% in Top-5 accuracy. We also find\nthat our candidate generation performance is\nhigh (e.g. 88.8% on gpt-4o generated chats).\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approach to generate labeled history taking chats",
+      "approach unless noted. all components of the gen-",
+      "results in a corpus of rare disease chats – 28,589",
+      "evaluation and results",
+      "results",
+      "results in appendix table 7",
+      "related work",
+      "conclusion",
+      "approach is that expert systems rely on the labor of",
+      "references",
+      "evaluation details"
+    ],
+    "topics": [
+      "disease",
+      "rare",
+      "patient",
+      "diseases",
+      "al",
+      "et",
+      "et al",
+      "gpt",
+      "findings",
+      "4o"
+    ],
+    "sections_text": {
+      "results": ""
+    },
+    "citations": []
+  }
+}

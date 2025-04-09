@@ -1,0 +1,58 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Scaling_LLM_Pre-training_with_Vocabulary_Curriculum_2150d0719434f9e9\n        **Abstract**: Modern language models rely on static vocabularies, fixed before pretraining, in\ncontrast to the adaptive vocabulary acquisition observed in human language learn-\ning. To bridge this gap, we introduce vocabulary curriculum learning, an approach\nthat improves pretraining efficiency with log-linear scaling gains relative to vocabu-\nlary size. Our method alternates between entropy-guided vocabulary expansion and\nmodel optimization, enabling models to learn transferable representations across\ndiverse tokenization granularities. This approach naturally gives rise to an optimal\ncomputation allocation pattern: longer tokens capture predictable content, while\nshorter tokens focus on more complex, harder-to-predict contexts. Experiments\non small-scale GPT models demonstrate improved scaling efficiency, reinforcing\nthe effectiveness of dynamic tokenization. We release our code to support further\nresearch and plan to extend our experiments to larger models and diverse domains.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n</think>\n\n**Structured Highlights for \"Scaling_LLM_Pre-training_with_Vocabulary_Curriculum_2150d0719434f9e9\"**\n\n---\n\n### **1. Core Innovation**\nThe research introduces **vocabulary curriculum learning**, a method that dynamically adjusts tokenization granularity during pre-training to improve efficiency and model scaling. This approach bridges the gap between static vocabularies in LLMs and the adaptive learning of human language, enhancing pretraining efficiency with log-linear scaling benefits.\n\n---\n\n### **2. Technical Approach**\n- **Curriculum Learning**: Alternates between vocabulary expansion and model optimization, guided by entropy to balance token granularities.\n- **Dynamic Tokenization**: Longer tokens handle predictable content, while shorter tokens focus on complex, harder contexts.\n- **Entropy-Driven Expansion**: Uses entropy to guide vocabulary growth, ensuring balanced and efficient learning.\n- **Computation Allocation**: Longer tokens capture predictable content, shorter tokens tackle complex scenarios, optimizing resource usage.\n\n---\n\n### **3. Quantitative Findings**\n1. Improved scaling efficiency: GPT models trained with vocabulary curriculum learning show enhanced performance relative to static vocabularies.\n2. Dynamic tokenization: Allocation of computation between token lengths optimizes learning outcomes.\n3. Entropy-guided expansion: Efficient vocabulary growth ensures balanced learning across different granularities.\n\n---\n\n### **4. Limitations & Assumptions**\n- **Assumption on Token Granularity**: The method assumes that tokenization granularity can be dynamically adjusted without significant computational overhead.\n- **Static Performance Metrics**: Current experiments focus on small-scale models, with plans to validate scalability on larger models.\n- **Entropy Calculation**: The effectiveness may depend on accurate entropy estimation for vocabulary expansion.\n\n---\n\n### **5. Domain Impact (Theoretical/Practical)**\n- **Theoretical**: Advances LLM pretraining by introducing adaptive vocabulary learning, aligning with human language acquisition.\n- **Practical**: Facilitates efficient scaling of LLMs, supporting deployment in diverse domains with optimized tokenization strategies.\n\n---\n\nThis structured approach highlights the research's key contributions, methodology, findings, limitations, and broader impact, providing a clear overview of its significance and potential applications.",
+  "topics": [
+    "vocabulary",
+    "model",
+    "tokens",
+    "curriculum",
+    "learning",
+    "training",
+    "models",
+    "language",
+    "arxiv",
+    "tokenization"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Scaling_LLM_Pre-training_with_Vocabulary_Curriculum_2150d0719434f9e9.pdf",
+    "content_hash": "2150d0719434f9e927c9cded6b9228b8c49eb29dcb123e4d99dfae378aa98561",
+    "arxiv_id": null,
+    "title": "Scaling_LLM_Pre-training_with_Vocabulary_Curriculum_2150d0719434f9e9",
+    "author": "",
+    "creation_date": "D:20250226013004Z",
+    "published": "2025-02-26T01:30:04",
+    "pages": 8,
+    "size": 522793,
+    "file_mtime": 1740971386.9146402
+  },
+  "main_staff": {
+    "title": "Scaling_LLM_Pre-training_with_Vocabulary_Curriculum_2150d0719434f9e9",
+    "authors": [
+      ""
+    ],
+    "abstract": "Modern language models rely on static vocabularies, fixed before pretraining, in\ncontrast to the adaptive vocabulary acquisition observed in human language learn-\ning. To bridge this gap, we introduce vocabulary curriculum learning, an approach\nthat improves pretraining efficiency with log-linear scaling gains relative to vocabu-\nlary size. Our method alternates between entropy-guided vocabulary expansion and\nmodel optimization, enabling models to learn transferable representations across\ndiverse tokenization granularities. This approach naturally gives rise to an optimal\ncomputation allocation pattern: longer tokens capture predictable content, while\nshorter tokens focus on more complex, harder-to-predict contexts. Experiments\non small-scale GPT models demonstrate improved scaling efficiency, reinforcing\nthe effectiveness of dynamic tokenization. We release our code to support further\nresearch and plan to extend our experiments to larger models and diverse domains.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "approach creates vocabularies that are detached from the actual model’s entropy patterns and cannot",
+      "approach",
+      "experiments",
+      "method",
+      "references"
+    ],
+    "topics": [
+      "vocabulary",
+      "model",
+      "tokens",
+      "curriculum",
+      "learning",
+      "training",
+      "models",
+      "language",
+      "arxiv",
+      "tokenization"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

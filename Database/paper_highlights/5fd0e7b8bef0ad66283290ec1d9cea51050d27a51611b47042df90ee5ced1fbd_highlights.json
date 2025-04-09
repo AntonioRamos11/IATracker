@@ -1,0 +1,71 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: DynaCode_A_Dynamic_Complexity-Aware_Code_Benchmark_for_Evaluating_Large__Language_Models_in_Code_Generation_5fd0e7b8bef0ad66\n        **Abstract**: The rapid advancement of large language mod-\nels (LLMs) has significantly improved their per-\nformance in code generation tasks. However,\nexisting code benchmarks remain static, con-\nsisting of fixed datasets with predefined prob-\nlems. This makes them vulnerable to mem-\norization during training, where LLMs recall\nspecific test cases instead of generalizing to\nnew problems, leading to data contamination\nand unreliable evaluation results. To address\nthese issues, we introduce DynaCode, a dy-\nnamic, complexity-aware benchmark that over-\ncomes the limitations of static datasets. Dyna-\nCode evaluates LLMs systematically using a\ncomplexity-aware metric, incorporating both\ncode complexity and call-graph structures. Dy-\nnaCode achieves large-scale diversity, gener-\nating up to 189 million unique nested code\nproblems across four distinct levels of code\ncomplexity, referred to as units, and 16 types of\ncall graphs. Results on 12 latest LLMs show an\naverage performance drop of 16.8% to 45.7%\ncompared to MBPP+, a static code generation\nbenchmark, with performance progressively de-\ncreasing as complexity increases. This demon-\nstrates DynaCode’s ability to effectively dif-\nferentiate LLMs. Additionally, by leveraging\ncall graphs, we gain insights into LLM behav-\nior, particularly their preference for handling\nsubfunction interactions within nested code.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        (Do not include the abstract text, just the structured highlights)\nOkay, I need to create structured highlights for this research paper. The user has given me the title, abstract, and some specific instructions on what to focus on: key visual findings, experimental setup, and validation. The format should be in five sections: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact.\n\nFirst, I'll start with the Core Innovation. The paper introduces DynaCode, which is a dynamic, complexity-aware benchmark for evaluating LLMs in code generation. It's dynamic, so it's not static like previous benchmarks, and it's complexity-aware, meaning it considers both code complexity and call graph structures. That's the main innovation.\n\nNext, the Technical Approach. This should be bullet points. The approach uses a complexity-aware metric, which is mentioned in the abstract. It generates a large number of unique code problems—up to 189 million. These are across four complexity units and 16 types of call graphs. The benchmark evaluates LLMs systematically by varying code complexity and call graphs.\n\nNow, Quantitative Findings. The abstract mentions that performance drops from 16.8% to 45.7% compared to MBPP+. So I'll list these metrics. The performance degrades as complexity increases, and the call graph analysis shows preferences for subfunction interactions. I need to present these as numbered points.\n\nLimitations & Assumptions. The paper's limitations might include the dataset's size and diversity. It's generated up to 189 million, which is a lot, but maybe it's still limited in some way. The assumption is that the complexity and call graph structures are the main factors affecting LLM performance. But perhaps this doesn't cover other aspects of code generation, like syntax or semantics beyond structure.\n\nDomain Impact. Theoretically, it provides a new benchmark framework, which is important for evaluating LLMs. Practically, it helps in understanding LLM behavior, especially in handling nested code and subfunctions. This could guide future model development and usage in code generation tasks.\n\nI should also think about including key equations or figures if they're mentioned. The abstract doesn't specify any, so maybe it's not necessary here, but the structured highlights don't need to include the abstract text, just the key points.\n\nPutting it all together, I'll make sure each section is concise and focused on the key aspects the user asked for. I'll avoid any markdown and keep the language clear and straightforward.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation  \nDynaCode is a dynamic, complexity-aware benchmark designed to evaluate large language models (LLMs) in code generation tasks. Unlike static benchmarks, DynaCode generates a vast and diverse dataset of unique nested code problems, incorporating both code complexity and call graph structures to ensure comprehensive evaluation.\n\n#### 2. Technical Approach  \n- **Complexity-Aware Metric**: DynaCode evaluates LLMs using a metric that considers both code complexity and call graph structures.  \n- **Diverse Problem Generation**: The benchmark creates 189 million unique nested code problems across four units of code complexity and 16 types of call graphs.  \n- **Systematic Evaluation**: DynaCode evaluates LLMs systematically by varying the complexity of code problems and analyzing their call graph structures.  \n\n#### 3. Quantitative Findings  \n- Performance drop compared to MBPP+: 16.8% to 45.7%.  \n- Progressive performance degradation as code complexity increases.  \n- Insights into LLM behavior: A preference for handling subfunction interactions within nested code, as revealed by call graph analysis.  \n\n#### 4. Limitations & Assumptions  \n- **Limitations**: The dataset is large in size (up to 189 million problems), but its diversity may be constrained by the generation process.  \n- **Assumptions**: The benchmark assumes that code complexity and call graph structures are the primary factors influencing LLM performance in code generation.  \n\n#### 5. Domain Impact  \n- **Theoretical Impact**: DynaCode provides a novel framework for evaluating LLMs, addressing the limitations of static benchmarks.  \n- **Practical Impact**: The benchmark offers insights into LLM behavior, particularly in handling nested code and subfunction interactions, which can guide improvements in LLMs for code generation tasks.  \n\nThis structured approach highlights the key innovations, methodologies, and implications of the DynaCode benchmark, emphasizing its role in advancing the evaluation of LLMs in dynamic and complex code generation scenarios.",
+  "topics": [
+    "code",
+    "complexity",
+    "graph",
+    "dynacode",
+    "problems",
+    "llms",
+    "unit",
+    "al",
+    "et",
+    "et al"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/DynaCode_A_Dynamic_Complexity-Aware_Code_Benchmark_for_Evaluating_Large__Language_Models_in_Code_Generation_5fd0e7b8bef0ad66.pdf",
+    "content_hash": "5fd0e7b8bef0ad66283290ec1d9cea51050d27a51611b47042df90ee5ced1fbd",
+    "arxiv_id": null,
+    "title": "DynaCode_A_Dynamic_Complexity-Aware_Code_Benchmark_for_Evaluating_Large__Language_Models_in_Code_Generation_5fd0e7b8bef0ad66",
+    "author": "",
+    "creation_date": "D:20250314010559Z",
+    "published": "2025-03-14T01:05:59",
+    "pages": 16,
+    "size": 1082249,
+    "file_mtime": 1742113680.2899954
+  },
+  "main_staff": {
+    "title": "DynaCode_A_Dynamic_Complexity-Aware_Code_Benchmark_for_Evaluating_Large__Language_Models_in_Code_Generation_5fd0e7b8bef0ad66",
+    "authors": [
+      ""
+    ],
+    "abstract": "The rapid advancement of large language mod-\nels (LLMs) has significantly improved their per-\nformance in code generation tasks. However,\nexisting code benchmarks remain static, con-\nsisting of fixed datasets with predefined prob-\nlems. This makes them vulnerable to mem-\norization during training, where LLMs recall\nspecific test cases instead of generalizing to\nnew problems, leading to data contamination\nand unreliable evaluation results. To address\nthese issues, we introduce DynaCode, a dy-\nnamic, complexity-aware benchmark that over-\ncomes the limitations of static datasets. Dyna-\nCode evaluates LLMs systematically using a\ncomplexity-aware metric, incorporating both\ncode complexity and call-graph structures. Dy-\nnaCode achieves large-scale diversity, gener-\nating up to 189 million unique nested code\nproblems across four distinct levels of code\ncomplexity, referred to as units, and 16 types of\ncall graphs. Results on 12 latest LLMs show an\naverage performance drop of 16.8% to 45.7%\ncompared to MBPP+, a static code generation\nbenchmark, with performance progressively de-\ncreasing as complexity increases. This demon-\nstrates DynaCode’s ability to effectively dif-\nferentiate LLMs. Additionally, by leveraging\ncall graphs, we gain insights into LLM behav-\nior, particularly their preference for handling\nsubfunction interactions within nested code.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related works",
+      "methods has emerged to address data contami-",
+      "evaluation samples. additionally, benchmark self-",
+      "methodology",
+      "evaluation strategy based on call graphs in sec. 3.1,",
+      "evaluation is to analyze the execution behavior of",
+      "evaluation and analysis",
+      "evaluation",
+      "evaluation metric, which measures the percentage",
+      "results, we set the temperature to 0 to eliminate",
+      "results highlight the increasing complexity in our",
+      "results are reported for different function complexity levels. to ensure robustness, all experiments were conducted",
+      "results for each number are provided in figure 10.",
+      "conclusion",
+      "references",
+      "evaluation. arxiv preprint arxiv:2402.11443.",
+      "results, further validating the robustness of dyna-",
+      "evaluation strategy can assess the ability of llms"
+    ],
+    "topics": [
+      "code",
+      "complexity",
+      "graph",
+      "dynacode",
+      "problems",
+      "llms",
+      "unit",
+      "al",
+      "et",
+      "et al"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Towards_Thinking-Optimal_Scaling_of_Test-Time_Compute_for_LLM_Reasoning_01d88e92d0449a31\n        **Abstract**: Recent studies have shown that making a model spend more time thinking through\nlonger Chain of Thoughts (CoTs) enables it to gain significant improvements in\ncomplex reasoning tasks. While current researches continue to explore the benefits\nof increasing test-time compute by extending the CoT lengths of Large Language\nModels (LLMs), we are concerned about a potential issue hidden behind the current\npursuit of test-time scaling: Would excessively scaling the CoT length actually\nbring adverse effects to a model’s reasoning performance? Our explorations on\nmathematical reasoning tasks reveal an unexpected finding that scaling with longer\nCoTs can indeed impair the reasoning performance of LLMs in certain domains.\nMoreover, we discover that there exists an optimal scaled length distribution that\ndiffers across different domains. Based on these insights, we propose a Thinking-\nOptimal Scaling strategy. Our method first uses a small set of seed data with\nvarying response length distributions to teach the model to adopt different reasoning\nefforts for deep thinking. Then, the model selects its shortest correct response\nunder different reasoning efforts on additional problems for self-improvement.\nOur self-improved models built upon Qwen2.5-32B-Instruct outperform other\ndistillation-based 32B o1-like models across various math benchmarks, and achieve\nperformance on par with QwQ-32B-Preview.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Core Innovation\nThe research introduces a novel strategy called **Thinking-Optimal Scaling**, which optimizes the balance between computational resources and reasoning performance in LLMs by dynamically adjusting the Chain of Thoughts (CoT) length during test-time computation.\n\n### Technical Approach\n1. **Seed Data with Varying Response Lengths**: The method employs a small dataset of training examples with diverse response lengths to instruct the model on varying reasoning efforts.\n2. **Dynamic CoT Adjustment**: During inference, the model selects the shortest correct response based on different reasoning strategies tailored to specific domains.\n3. **Self-Improvement Mechanism**: The model iteratively refines its reasoning by optimizing for shorter, yet correct, responses, enhancing its efficiency without compromising accuracy.\n4. **Model Architecture Utilization**: The approach leverages architectures like Qwen2.5-32B-Instruct, fine-tuning them to adopt the optimal scaling strategy.\n\n### Quantitative Findings\n1. **Performance Improvement**: Models using Thinking-Optimal Scaling outperform 32B o1-like models across various math benchmarks.\n2. **Optimal CoT Length Distribution**: Identified optimal lengths vary by domain, with specific CoT length distributions yielding superior performance.\n3. **Efficiency Gain**: The strategy enables models to achieve comparable or better performance with reduced computational resources.\n\n### Limitations & Assumptions\n1. **Domain-Specific Optimal Lengths**: The strategy assumes that optimal CoT lengths are domain-dependent and may require further investigation across different contexts.\n2. **Fixed Seed Data**: The reliance on a small seed dataset for training introduces potential biases and limits generalizability.\n3. **Model Architecture Constraints**: The effectiveness is contingent on the model architecture supporting dynamic CoT adjustments.\n\n### Domain Impact\nThe innovation has significant implications for both theoretical and practical domains:\n- **Theoretical**: It challenges the assumption that longer CoTs always enhance performance, highlighting the importance of domain-specific optimization.\n- **Practical**: The strategy offers a scalable solution for deploying LLMs in resource-constrained environments, enhancing efficiency without performance trade-offs.",
+  "topics": [
+    "reasoning",
+    "model",
+    "32b",
+    "qwen2",
+    "models",
+    "thinking",
+    "qwen2 32b",
+    "number",
+    "scaling",
+    "tokens"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Towards_Thinking-Optimal_Scaling_of_Test-Time_Compute_for_LLM_Reasoning_01d88e92d0449a31.pdf",
+    "content_hash": "01d88e92d0449a311a0aeec244b421b34698d9fae3d40353eecc09bcadaf1def",
+    "arxiv_id": null,
+    "title": "Towards_Thinking-Optimal_Scaling_of_Test-Time_Compute_for_LLM_Reasoning_01d88e92d0449a31",
+    "author": "",
+    "creation_date": "D:20250226014128Z",
+    "published": "2025-02-26T01:41:28",
+    "pages": 13,
+    "size": 823395,
+    "file_mtime": 1740971243.7765172
+  },
+  "main_staff": {
+    "title": "Towards_Thinking-Optimal_Scaling_of_Test-Time_Compute_for_LLM_Reasoning_01d88e92d0449a31",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent studies have shown that making a model spend more time thinking through\nlonger Chain of Thoughts (CoTs) enables it to gain significant improvements in\ncomplex reasoning tasks. While current researches continue to explore the benefits\nof increasing test-time compute by extending the CoT lengths of Large Language\nModels (LLMs), we are concerned about a potential issue hidden behind the current\npursuit of test-time scaling: Would excessively scaling the CoT length actually\nbring adverse effects to a model’s reasoning performance? Our explorations on\nmathematical reasoning tasks reveal an unexpected finding that scaling with longer\nCoTs can indeed impair the reasoning performance of LLMs in certain domains.\nMoreover, we discover that there exists an optimal scaled length distribution that\ndiffers across different domains. Based on these insights, we propose a Thinking-\nOptimal Scaling strategy. Our method first uses a small set of seed data with\nvarying response length distributions to teach the model to adopt different reasoning\nefforts for deep thinking. Then, the model selects its shortest correct response\nunder different reasoning efforts on additional problems for self-improvement.\nOur self-improved models built upon Qwen2.5-32B-Instruct outperform other\ndistillation-based 32B o1-like models across various math benchmarks, and achieve\nperformance on par with QwQ-32B-Preview.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methods. (3) in-context search-based scaling enables llms to learn to search, backtrack and",
+      "experiments and analysis",
+      "evaluation of math500, we also use gpt-4o to assist in identifying missed cases caused by format",
+      "results of iterative self-improvement",
+      "conclusion",
+      "references",
+      "evaluation settings"
+    ],
+    "topics": [
+      "reasoning",
+      "model",
+      "32b",
+      "qwen2",
+      "models",
+      "thinking",
+      "qwen2 32b",
+      "number",
+      "scaling",
+      "tokens"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

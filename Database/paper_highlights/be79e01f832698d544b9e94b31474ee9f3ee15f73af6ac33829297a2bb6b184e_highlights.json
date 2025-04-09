@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: ToolFuzz - Automated Agent Tool Testing\n        **Abstract**: Large Language Model (LLM) Agents leverage\nthe advanced reasoning capabilities of LLMs in\nreal-world applications. To interface with an en-\nvironment, these agents often rely on tools, such\nas web search or database APIs. As the agent pro-\nvides the LLM with tool documentation along the\nuser query, the completeness and correctness of\nthis documentation is critical. However, tool doc-\numentation is often over-, under-, or ill-specified,\nimpeding the agent’s accuracy. Standard software\ntesting approaches struggle to identify these errors\nas they are expressed in natural language. Thus,\ndespite its importance, there currently exists no au-\ntomated method to test the tool documentation for\nagents. To address this issue, we present TOOL-\nFUZZ, the first method for automated testing of\ntool documentations. TOOLFUZZ is designed to\ndiscover two types of errors: (1) user queries lead-\ning to tool runtime errors and (2) user queries that\nlead to incorrect agent responses. TOOLFUZZ\ncan generate a large and diverse set of natural in-\nputs, effectively finding tool description errors at\na low false positive rate. Further, we present two\nstraightforward prompt-engineering approaches.\nWe evaluate all three tool testing approaches on 32\ncommon LangChain tools and 35 newly created\ncustom tools and 2 novel benchmarks to further\nstrengthen the assessment. We find that many\npublicly available tools suffer from underspeci-\nfication. Specifically, we show that TOOLFUZZ\nidentifies 20x more erroneous inputs compared to\nthe prompt-engineering approaches, making it a\nkey component for building reliable AI agents.\n1. Introduction\nLLM agents and compound systems (Yao et al., 2023a; Za-\nharia et al., 2024) aim to combine the powerful reasoning\n1Department of Computer Science, ETH Zurich. Correspon-\ndence to: Ivan Milev <imilev@ethz.ch>.\nPreprint\ncapabilities of LLMs with real-world interactions to solve\ncomplex tasks. An agent receives a natural language query\nfrom a user and performs a sequence of actions that inter-\nact with external tools, such as web search (Zhou et al.,\n2024), code execution (Yang et al., 2024a), or querying a\ndatabase (Wang et al., 2024a), with the goal of solving the\nspecified task. As such, effective interaction with these tools\nis critical for successful task completion.\nReliability Problems of Agent Tools\nTo facilitate tool us-\nage for agents, each tool is accompanied by documentation\ndetailing its functionality and intended use, which can be\nprovided to the agent LLM as part of the prompt. In practice,\nhowever, LLM agents often fail to use the available tools\ncorrectly (Sun et al., 2024; Yang et al., 2024b; Balunovic,\n2024) because their documentation assumes human-level\nunderstanding. Thus, it is often underspecified (leaving\ncrucial details implicit), overspecified (focusing narrowly\non a single use case despite broader applicability), or ill-\nspecified (where the tool’s functionality is not aligned with\nits documentation). Although tools play a crucial role in\nagent systems (Yuan et al., 2024; Qu et al., 2024), automated\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n**Structured Highlights for the Research Paper: ToolFuzz - Automated Agent Tool Testing**\n\n---\n\n**Core Innovation:**  \nThe research introduces TOOLFZZ, an automated method for testing tool documentations used by LLM agents, addressing the lack of automated testing methods for tool correctness and completeness.\n\n---\n\n**Technical Approach:**  \n1. **Automated Error Discovery:** TOOLFZZ identifies two types of errors in tool documentation: \n   - Errors leading to tool runtime errors.\n   - Errors leading to incorrect agent responses.  \n2. **Diverse Input Generation:** Uses a large and diverse set of natural language inputs to effectively find tool description errors with low false positives.  \n3. **Prompt-Engineering Approaches:** Two straightforward engineering strategies are employed to enhance testing.  \n\n---\n\n**Quantitative Findings:**  \n1. TOOLFZZ identifies 20x more erroneous inputs compared to prompt-engineering approaches.  \n2. Tested on 32 LangChain tools and 35 custom tools across 2 benchmarks, highlighting significant issues in underspecification.  \n\n---\n\n**Limitations & Assumptions:**  \n1. Current testing is limited to LLM agents and standard tools.  \n2. Testing effectiveness may vary with tool complexity and documentation quality.  \n\n---\n\n**Domain Impact:**  \nThe innovation is theoretically impactful by advancing automated testing frameworks and practically beneficial for building reliable AI agents, especially in sectors relying on tools like web search and databases.",
+  "topics": [
+    "tool",
+    "agent",
+    "toolfuzz",
+    "figure",
+    "llm",
+    "tools",
+    "query",
+    "prompt",
+    "prompts",
+    "description"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/ToolFuzz_--_Automated_Agent_Tool_Testing_f8a4c54d71.pdf",
+    "content_hash": "be79e01f832698d544b9e94b31474ee9f3ee15f73af6ac33829297a2bb6b184e",
+    "arxiv_id": null,
+    "title": "ToolFuzz - Automated Agent Tool Testing",
+    "author": "Ivan Milev, Mislav Balunović, Maximilian Baader, Martin Vechev",
+    "creation_date": "D:20250307015452Z",
+    "published": "2025-03-07T01:54:52",
+    "pages": 27,
+    "size": 641593,
+    "file_mtime": 1741418961.5319562
+  },
+  "main_staff": {
+    "title": "ToolFuzz - Automated Agent Tool Testing",
+    "authors": [
+      "Ivan Milev",
+      " Mislav Balunović",
+      " Maximilian Baader",
+      " Martin Vechev"
+    ],
+    "abstract": "Large Language Model (LLM) Agents leverage\nthe advanced reasoning capabilities of LLMs in\nreal-world applications. To interface with an en-\nvironment, these agents often rely on tools, such\nas web search or database APIs. As the agent pro-\nvides the LLM with tool documentation along the\nuser query, the completeness and correctness of\nthis documentation is critical. However, tool doc-\numentation is often over-, under-, or ill-specified,\nimpeding the agent’s accuracy. Standard software\ntesting approaches struggle to identify these errors\nas they are expressed in natural language. Thus,\ndespite its importance, there currently exists no au-\ntomated method to test the tool documentation for\nagents. To address this issue, we present TOOL-\nFUZZ, the first method for automated testing of\ntool documentations. TOOLFUZZ is designed to\ndiscover two types of errors: (1) user queries lead-\ning to tool runtime errors and (2) user queries that\nlead to incorrect agent responses. TOOLFUZZ\ncan generate a large and diverse set of natural in-\nputs, effectively finding tool description errors at\na low false positive rate. Further, we present two\nstraightforward prompt-engineering approaches.\nWe evaluate all three tool testing approaches on 32\ncommon LangChain tools and 35 newly created\ncustom tools and 2 novel benchmarks to further\nstrengthen the assessment. We find that many\npublicly available tools suffer from underspeci-\nfication. Specifically, we show that TOOLFUZZ\nidentifies 20x more erroneous inputs compared to\nthe prompt-engineering approaches, making it a\nkey component for building reliable AI agents.\n1. Introduction\nLLM agents and compound systems (Yao et al., 2023a; Za-\nharia et al., 2024) aim to combine the powerful reasoning\n1Department of Computer Science, ETH Zurich. Correspon-\ndence to: Ivan Milev <imilev@ethz.ch>.\nPreprint\ncapabilities of LLMs with real-world interactions to solve\ncomplex tasks. An agent receives a natural language query\nfrom a user and performs a sequence of actions that inter-\nact with external tools, such as web search (Zhou et al.,\n2024), code execution (Yang et al., 2024a), or querying a\ndatabase (Wang et al., 2024a), with the goal of solving the\nspecified task. As such, effective interaction with these tools\nis critical for successful task completion.\nReliability Problems of Agent Tools\nTo facilitate tool us-\nage for agents, each tool is accompanied by documentation\ndetailing its functionality and intended use, which can be\nprovided to the agent LLM as part of the prompt. In practice,\nhowever, LLM agents often fail to use the available tools\ncorrectly (Sun et al., 2024; Yang et al., 2024b; Balunovic,\n2024) because their documentation assumes human-level\nunderstanding. Thus, it is often underspecified (leaving\ncrucial details implicit), overspecified (focusing narrowly\non a single use case despite broader applicability), or ill-\nspecified (where the tool’s functionality is not aligned with\nits documentation). Although tools play a crucial role in\nagent systems (Yuan et al., 2024; Qu et al., 2024), automated",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods for detecting such errors are lacking. traditional",
+      "approaches. recently, llms have been employed to en-",
+      "evaluation",
+      "method",
+      "methods, especially in toolfuzz white-box testing",
+      "results for langchain’s",
+      "references"
+    ],
+    "topics": [
+      "tool",
+      "agent",
+      "toolfuzz",
+      "figure",
+      "llm",
+      "tools",
+      "query",
+      "prompt",
+      "prompts",
+      "description"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

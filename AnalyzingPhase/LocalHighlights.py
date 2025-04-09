@@ -420,26 +420,42 @@ def test_api_format(api_url):
     except Exception as e:
         logger.error(f"Format test failed: {str(e)}")
 
-def get_model_capacity(api_url):
-    """Get model's actual context window size and model name from the API health endpoint."""
+def get_model_capacity(api_url=None):
+    """Get model's context window size and name without using external API calls."""
     try:
-        base_url = api_url.rsplit('/', 1)[0]
-        response = requests.get(f"{base_url}/health", timeout=10)
-        data = response.json()
-        model_name = data.get('model', 'unknown')
-        
-        # Context window size database (example limits)
+        # Use the already loaded model information from the summarizer
+        model_name = summarizer.model.config.model_type
+        if hasattr(summarizer.model.config, "_name_or_path"):
+            model_name = summarizer.model.config._name_or_path
+            
+        # Map common model names to their context sizes
         model_limits = {
+            'deepseek-ai/deepseek-r1-distill-qwen-7b': 32768,
             'deepseek-r1-distill-qwen-7b': 32768,
+            'deepseek-llm': 32768,
             'llama2-13b': 4096,
+            'llama-2': 4096,
+            'mistral': 8192,
+            'mixtral': 32768,
             'gpt-4': 8192,
             'default': 4096
         }
-        capacity = model_limits.get(model_name.lower(), 4096)
+        
+        # Try to get the model's max position embeddings from config
+        if hasattr(summarizer.model.config, "max_position_embeddings"):
+            capacity = summarizer.model.config.max_position_embeddings
+        else:
+            # Use the mapped value or default
+            model_key = next((k for k in model_limits.keys() if k.lower() in model_name.lower()), "default")
+            capacity = model_limits[model_key]
+            
+        logger.info(f"Using local model: {model_name} with context capacity: {capacity}")
         return capacity, model_name
+        
     except Exception as e:
-        logger.error(f"Error getting model capacity: {e}")
-        return 4096, 'unknown'
+        logger.error(f"Error determining local model capacity: {e}")
+        logger.info("Using default capacity of 4096 tokens")
+        return 4096, "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
 
 def process_long_text(text, tokenizer, max_tokens, chunk_size=2048, overlap=512):
     """Process long text using sliding window chunking."""
@@ -473,25 +489,39 @@ def process_long_text(text, tokenizer, max_tokens, chunk_size=2048, overlap=512)
 def clean_text_chunk(text):
     """Clean and format text chunks while preserving structure."""
     # Remove excessive newlines (preserve at most two consecutive ones)
-    text = re.sub(r'\n{3,}', '\n\n', text)
     # Remove incomplete word fragments at the end of the chunk
+    text = re.sub(r'\n{3,}', '\n\n', text)
     text = re.sub(r'\s[^\s.]{1,20}$', '', text)
-    # Fix hyphenated word breaks
+    # Fix hyphenated word breaksf
     text = re.sub(r'(\w+)-\s+(\w+)', r'\1\2', text)
     return text.strip()
 
 def extract_highlights(json_path, api_url, api_max_tokens=None):
     try:
+        # First check if highlights already exist for this paper
+        highlights_dir = Path("./Database/paper_highlights/")
+        highlights_dir.mkdir(parents=True, exist_ok=True)
+        highlight_path = highlights_dir / f"{json_path.stem}_highlights.json"
+        
+        # If highlights file already exists, skip processing
+        if highlight_path.exists():
+            logger.info(f"✓ Highlights already exist for {json_path.name}, skipping processing")
+            # Return the existing highlights
+            with open(highlight_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        
         # Get model capacity (and model name) if not provided
         if api_max_tokens is None:
-            api_max_tokens, model_name = get_model_capacity(api_url)  # Modified to get model name
+            api_max_tokens, model_name = get_model_capacity()  # Modified to use local model
         else:
             # If overridden, use default model name for safety
             model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
         
         # Format paper data for API
         api_data = format_paper_for_api(json_path)
-        
+        with open(json_path, 'r', encoding='utf-8') as f:
+            original_data = json.load(f)
+            original_metadata = original_data.get('metadata', {})
         # Log request details
         logger.info(f"Processing: {api_data.get('title', 'Unknown')} ({json_path.name})")
         
@@ -514,7 +544,7 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
             text=original_content,
             tokenizer=tokenizer,
             max_tokens=content_budget,
-            chunk_size=2048,  # Adjust based on model's optimal chunk size
+            chunk_size=2048,
             overlap=512
         )
 
@@ -533,21 +563,7 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
         # Process highlights using your local model summarizer
         highlights = summarizer.generate_highlights(api_data)
 
-        # Enrich the highlights with additional metadata:
-        def extract_topics(text):
-            """
-            A simple heuristic to extract topics: counts the frequency of words
-            (excluding common stop words) and returns the top 5 keywords.
-            """
-            import re
-            from collections import Counter
-            # Find all words and filter out common words
-            words = re.findall(r'\b\w+\b', text.lower())
-            common_words = set(['the', 'and', 'with', 'for', 'this', 'that', 'from', 'are', 'have', 'been'])
-            filtered = [word for word in words if len(word) > 4 and word not in common_words]
-            freq = Counter(filtered)
-            topics = [word for word, count in freq.most_common(5)]
-            return topics
+        # Enrich the highlights with additional metadata
         from sklearn.feature_extraction.text import TfidfVectorizer
         import numpy as np
         def extract_topics(text, n=10):
@@ -555,7 +571,7 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
             tfidf = vectorizer.fit_transform([text])
             feature_array = np.array(vectorizer.get_feature_names_out())
             return feature_array[tfidf.toarray().argsort()[0][-n:][::-1]].tolist()
-        # Add topics and main_staff to your highlights output
+        
         section_markers = {
             "introduction": r"\b(Introduction|Background)\b",
             "methods": r"\b(Methods|Experimental Setup|Procedure)\b",
@@ -563,6 +579,7 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
             "discussion": r"\b(Discussion|Implications|Conclusion)\b",
             "references": r"\b(References|Bibliography)\b"
         }
+        
         def identify_sections(text):
             sections = {}
             current_section = "header"
@@ -580,14 +597,17 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
             
             return {k: '\n'.join(v) for k, v in sections.items()}
         
-        highlights["topics"] = extract_topics(api_data.get("content", ""))
         def extract_citations(text):
-                citation_pattern = r"\(([A-Za-z]+?[\s&-]+(?:\d{4}[a-z]?)(?:,\s?[^\)]+)*)\)"
-                return list(set(re.findall(citation_pattern, text)))
-                
+            citation_pattern = r"\(([A-Za-z]+?[\s&-]+(?:\d{4}[a-z]?)(?:,\s?[^\)]+)*)\)"
+            return list(set(re.findall(citation_pattern, text)))
+        
+        # Add topics and metadata
+        highlights["topics"] = extract_topics(api_data.get("content", ""))
+        highlights["metadata"] = original_metadata
+
         highlights["main_staff"] = {
-            "title": re.sub(r"_+", " ", api_data.get("title", "Untitled")).split("  ")[0].title(),
-            "authors": api_data.get("authors", []),
+            "title": original_metadata.get("title", "Untitled"),  # Add title from metadata
+            "authors": original_metadata.get("author", "").split(","),  # Add authors
             "abstract": api_data.get("abstract", ""),
             "sections": list(api_data.get("sections", {}).keys()),
             "topics": highlights["topics"],
@@ -595,12 +615,7 @@ def extract_highlights(json_path, api_url, api_max_tokens=None):
             "citations": extract_citations(" ".join(highlights["topics"])),
         }
 
-
-        # Save results to the paper_highlights folder inside your Database directory
-        highlights_dir = Path("./Database/paper_highlights/")
-        highlights_dir.mkdir(parents=True, exist_ok=True)
-        highlight_path = highlights_dir / f"{json_path.stem}_highlights.json"
-
+        # Save results to the paper_highlights folder
         with open(highlight_path, 'w', encoding='utf-8') as f:
             json.dump(highlights, f, ensure_ascii=False, indent=2)
 
@@ -651,7 +666,7 @@ def process_batch_sequential(processed_dir, api_url, max_papers=None, delay_seco
     # Get model capacity once at the beginning
     api_max_tokens = None
     if max_tokens is None:
-        api_max_tokens, _ = get_model_capacity(api_url)
+        api_max_tokens, _ = get_model_capacity()
     else:
         api_max_tokens = max_tokens
     

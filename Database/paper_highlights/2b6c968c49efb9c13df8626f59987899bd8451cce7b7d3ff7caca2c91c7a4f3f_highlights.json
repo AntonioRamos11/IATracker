@@ -1,0 +1,87 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "They probably can't handle all objects, maybe limited to specific categories, and real-world conditions might affect accuracy.",
+    "Domain Impact: This improves robotic manipulation in uncontrolled environments, useful for automation and augmented reality.",
+    "I should structure each section clearly, using markdown headers and bullet points. Make sure to highlight key terms and any equations if present. Since the abstract doesn't have equations, maybe I don't need to include them here.",
+    "</think>",
+    "# Structured Highlights for the Research Paper",
+    "## Core Innovation",
+    "The research introduces a novel method for extracting 6D object pose trajectories from Internet videos, enabling robotic manipulation in uncontrolled environments. The key innovation lies in leveraging CAD models to estimate object poses without prior object knowledge, combining retrieval, alignment, and scale grounding to achieve accurate 6D pose estimation.",
+    "## Technical Approach",
+    "The method comprises three key steps:"
+  ],
+  "impact": "",
+  "topics": [
+    "object",
+    "al",
+    "et",
+    "et al",
+    "pose",
+    "objects",
+    "estimation",
+    "video",
+    "method",
+    "6d"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/6D_Object_Pose_Tracking_in_Internet_Videos_for_Robotic_Manipulation_2b6c968c49efb9c1.pdf",
+    "content_hash": "2b6c968c49efb9c13df8626f59987899bd8451cce7b7d3ff7caca2c91c7a4f3f",
+    "arxiv_id": null,
+    "title": "6D_Object_Pose_Tracking_in_Internet_Videos_for_Robotic_Manipulation_2b6c968c49efb9c1",
+    "author": "",
+    "creation_date": "D:20250314005401Z",
+    "published": "2025-03-14T00:54:01",
+    "pages": 28,
+    "size": 25224758,
+    "file_mtime": 1742112266.7335951
+  },
+  "main_staff": {
+    "title": "6D_Object_Pose_Tracking_in_Internet_Videos_for_Robotic_Manipulation_2b6c968c49efb9c1",
+    "authors": [
+      ""
+    ],
+    "abstract": "We seek to extract a temporally consistent 6D pose trajectory of a manipulated ob-\nject from an Internet instructional video. This is a challenging set-up for current\n6D pose estimation methods due to uncontrolled capturing conditions, subtle but\ndynamic object motions, and the fact that the exact mesh of the manipulated object\nis not known. To address these challenges, we present the following contributions.\nFirst, we develop a new method that estimates the 6D pose of any object in the\ninput image without prior knowledge of the object itself. The method proceeds\nby (i) retrieving a CAD model similar to the depicted object from a large-scale\nmodel database, (ii) 6D aligning the retrieved CAD model with the input image,\nand (iii) grounding the absolute scale of the object with respect to the scene. Sec-\nond, we extract smooth 6D object trajectories from Internet videos by carefully\ntracking the detected objects across video frames. The extracted object trajecto-\nries are then retargeted via trajectory optimization into the configuration space of\na robotic manipulator. Third, we thoroughly evaluate and ablate our 6D pose esti-\nmation method on YCB-V and HOPE-Video datasets as well as a new dataset of\ninstructional videos manually annotated with approximate 6D object trajectories.\nWe demonstrate significant improvements over existing state-of-the-art RGB 6D\npose estimation methods. Finally, we show that the 6D object motion estimated\nfrom Internet videos can be transferred to a 7-axis robotic manipulator both in a\nvirtual simulator as well as in a real world set-up. We also successfully apply our",
+    "sections": [
+      "unknown",
+      "abstract",
+      "method to egocentric videos taken from the epic-kitchens dataset, demon-",
+      "introduction",
+      "related work",
+      "approach",
+      "methods, our main challenge is the lack of a known cad model of the object. further, as the cad",
+      "experiments",
+      "method with state-of-the-art 6d pose estimation methods on the ycb-v and hope-video datasets",
+      "methods in all the metrics.",
+      "method",
+      "methods on 6d pose estimation.",
+      "method on the 6d pose estimation.",
+      "evaluation of 6d pose estimation on standard datasets",
+      "method in the scenario when the exact meshes of the objects depicted in the image and their scales",
+      "method is able to detect objects that are not part of the dataset (such as keyboard in image f and",
+      "results in the appendix d and the supplementary video.",
+      "conclusion",
+      "references",
+      "approach (bhat et al., 2023) to obtain a depth map and compute a pointcloud for each object i in the",
+      "method on each frame to retrieve similar cad model from the database and align them in each",
+      "results on dttd2 dataset",
+      "results of our approach are compared to megapose (labb´e et al., 2022), gigapose (nguyen et al.,"
+    ],
+    "topics": [
+      "object",
+      "al",
+      "et",
+      "et al",
+      "pose",
+      "objects",
+      "estimation",
+      "video",
+      "method",
+      "6d"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

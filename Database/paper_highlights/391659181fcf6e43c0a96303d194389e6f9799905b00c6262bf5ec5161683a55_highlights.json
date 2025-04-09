@@ -1,0 +1,67 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Provides clinicians with actionable insights, potentially improving treatment outcomes by guiding personalized management strategies.\n- **Clinical Relevance:** Enables more accurate and reliable prediction of pR, aiding in the selection of appropriate treatments and monitoring.\n\n---\n\n**Key Equations/Figures:**\n- **Multi-View Learning Model:** Combines imaging data (e.g., CT scans) and pathological features (e.g., tumor mutational burden).\n- **XAI Visualization:** Uses SHAP values to highlight critical imaging regions contributing to pR prediction.\n\n---\n\nThis framework represents a significant step toward making AI a trusted tool in oncology, enhancing both diagnostic accuracy and clinical decision-making.",
+  "topics": [
+    "model",
+    "loop",
+    "doctor",
+    "doctor loop",
+    "view",
+    "pr",
+    "lung",
+    "image",
+    "training",
+    "focus"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Doctor-in-the-Loop_An_Explainable_Multi-View_Deep_Learning_Framework__for_Predicting_Pathological_Response_in_Non-Small_Cell_Lung_Cancer_391659181fcf6e43.pdf",
+    "content_hash": "391659181fcf6e43c0a96303d194389e6f9799905b00c6262bf5ec5161683a55",
+    "arxiv_id": null,
+    "title": "Doctor-in-the-Loop: An Explainable, Multi-View Deep Learning Framework for Predicting Pathological Response in Non-Small Cell Lung Cancer",
+    "author": "Alice Natalina Caragliano; Filippo Ruffini; Carlo Greco; Edy Ippolito; Michele Fiore; Claudia Tacconi; Lorenzo Nibid; Giuseppe Perrone; Sara Ramella; Paolo Soda; Valerio Guarrasi; ",
+    "creation_date": "D:20250226011802Z",
+    "published": "2025-02-26T01:18:02",
+    "pages": 34,
+    "size": 3766299,
+    "file_mtime": 1740973201.6252177
+  },
+  "main_staff": {
+    "title": "Doctor-in-the-Loop: An Explainable, Multi-View Deep Learning Framework for Predicting Pathological Response in Non-Small Cell Lung Cancer",
+    "authors": [
+      "Alice Natalina Caragliano; Filippo Ruffini; Carlo Greco; Edy Ippolito; Michele Fiore; Claudia Tacconi; Lorenzo Nibid; Giuseppe Perrone; Sara Ramella; Paolo Soda; Valerio Guarrasi; "
+    ],
+    "abstract": "Non-small cell lung cancer (NSCLC) remains a major global health challenge,\nwith high post-surgical recurrence rates underscoring the need for accurate\npathological response predictions to guide personalized treatments. Although\nartificial intelligence models show promise in this domain, their clinical adop-\ntion is limited by the lack of medically grounded guidance during training,\noften resulting in non-explainable intrinsic predictions. To address this, we\npropose Doctor-in-the-Loop, a novel framework that integrates expert-driven\ndomain knowledge with explainable artificial intelligence techniques, direct-\ning the model toward clinically relevant anatomical regions and improving\nboth interpretability and trustworthiness.\nOur approach employs a grad-\nual multi-view strategy, progressively refining the model’s focus from broad\n∗Correspondence: Valerio Guarrasi\nEmail address: valerio.guarrasi@unicampus.it (Valerio Guarrasi)\nPreprint submitted to Image and Vision Computing\nFebruary 26, 2025\narXiv:2502.17503v1  [cs.LG]  21 Feb 2025\n\ncontextual features to finer, lesion-specific details. By incorporating domain\ninsights at every stage, we enhance predictive accuracy while ensuring that\nthe model’s decision-making process aligns more closely with clinical reason-\ning. Evaluated on a dataset of NSCLC patients, Doctor-in-the-Loop delivers\npromising predictive performance and provides transparent, justifiable out-\nputs, representing a significant step toward clinically explainable artificial\nintelligence in oncology.\nKeywords:\nXAI, NSCLC, Pathological Response, Deep Learning, Medical\nImaging, Oncology, Human-in-the-Loop\n1. Introduction\nNon-small cell lung cancer (NSCLC) is the most common subtype of\nlung cancer, constituting approximately 85% of lung cancer cases [20]. Cur-\nrently, the main treatment for early-stage and resecatable locally advanced\nNSCLC is surgery, despite a notable number of patients experiencing post-\nsurgery recurrence. Neoadjuvant therapy (NAT) has shown potential in im-\nproving overall survival rates and reducing the risk of distant disease recur-\nrence [14, 2]. For patients undergoing pre-operative treatments, achieving\na complete pathological response, indicating the absence of tumor cells in\nall specimens, may have a potential prognostic role and serve as a surrogate\nendpoint of survival [17].\nEvaluating the complete pathological response\nbefore surgical resection could tailor the type of treatment to the needs of\npatients, ensuring that aggressive, surgery-based interventions are reserved\nonly for patients who are most likely to benefit from them. However, while\ncomplete pathological response is prognostically significant, it is relatively\nrare to achieve in NSCLC patients [22]. In contrast, major pathological re-\nsponse, defined as the presence of no more than 10% viable tumor cells,\nis observed in a larger proportion of NSCLC patients and has been asso-\nciated with significant clinical benefits, including improved progression-free\nsurvival [15]. Additionally, major pathological response’s higher prevalence\nenables the identification of a broader cohort of patients who may benefit\nfrom NAT [22]. Notably, considering a slightly higher threshold for viable\ntumor cells also helps address potential inter and intra-observer variability\nin pathological evaluations [23], effectively acting as a margin of error. Con-\nsequently, major pathological response represents a more achievable, reliable\nand clinically relevant endpoint for assessing NAT efficacy in NSCLC [9].\n2\n\nFor this reason, in this study we selected major pathological response as\nthe main predicting endpoint, using the term pathological response (pR) to\ncollectively refer to both complete and major pathological response.\nState-of-the-art reports that specific biomarkers, such as tumor muta-\ntional burden or tumor infiltrating lymphocytes [5, 13], as well as radiomics\nfeatures extracted from Computed Tomography (CT) scans [1, 6, 11, 25],\ncorrelate with pR. However, both approaches have limitations. Biomarkers\nare typically assessed after the biopsy, which not only exposes patients to\npotential complications from the invasive procedure, but may also fail to\nfully capture tumor heterogeneity. Similarly, the radiomics approach, while\nnon-invasive, relies on hand-crafted feature definition and selection methods,\nwhich may not be sufficient to account for the complexity and variability\nwithin the tumor [21].\nA powerful solution to address these issues is to leverage Deep Learning\n(DL), which has demonstrated remarkable success in cancer-related tasks,\nsuch as tumor segmentation, diagnosis, and classification [4]. Despite its suc-\ncess, an aspect which is gaining increasing importance is the explainability\nof the results generated by deep models because trust and transparency are\nessential for their adoption, especially in a critical field like healthcare [10].\nAlthough recent studies have exploited the combination of DL and med-\nical images to predict pR [12, 19, 16, 24], only a few have incorporated\neXplainable Artificial Intelligence (XAI) techniques to analyze the obtained",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results [19, 24]. specifically, these studies relied only on post-hoc methods ap-",
+      "results in the context of pr prediction and to develop a solution capable of",
+      "methodologies. each experiment is detailed below, and a general summary",
+      "experiments, consistent training configurations were applied, as described",
+      "method (figure 2). to evaluate how the model’s focus evolves across the",
+      "approach for six representative patients. patients are grouped into two rows based",
+      "method outperforms xai-guide across all steps and metrics, as shown in",
+      "approaches.",
+      "method to include other imaging modalities and integrating it into a multi-",
+      "approach that integrates expert clinical knowledge and xai techniques into",
+      "references"
+    ],
+    "topics": [
+      "model",
+      "loop",
+      "doctor",
+      "doctor loop",
+      "view",
+      "pr",
+      "lung",
+      "image",
+      "training",
+      "focus"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

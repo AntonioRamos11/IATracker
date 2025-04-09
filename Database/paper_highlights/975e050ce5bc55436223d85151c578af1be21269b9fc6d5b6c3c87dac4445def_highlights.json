@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: FFaceNeRF_Few-shot_Face_Editing_in_Neural_Radiance_Fields_975e050ce5bc5543\n        **Abstract**: Recent 3D face editing methods using masks have produced\nhigh-quality edited images by leveraging Neural Radiance\nFields (NeRF). Despite their impressive performance, exist-\ning methods often provide limited user control due to the use\nof pre-trained segmentation masks. To utilize masks with\na desired layout, an extensive training dataset is required,\nwhich is challenging to gather. We present FFaceNeRF, a\nNeRF-based face editing technique that can overcome the\nchallenge of limited user control due to the use of fixed\nmask layouts.\nOur method employs a geometry adapter\nwith feature injection, allowing for effective manipulation\nof geometry attributes. Additionally, we adopt latent mix-\ning for tri-plane augmentation, which enables training with\na few samples. This facilitates rapid model adaptation to\ndesired mask layouts, crucial for applications in fields like\npersonalized medical imaging or creative face editing. Our\ncomparative evaluations demonstrate that FFaceNeRF sur-\npasses existing mask based face editing methods in terms of\nflexibility, control, and generated image quality, paving the\nway for future advancements in customized and high-fidelity\n3D face editing. The code is available on the project-page.\n1. Introduction\nIn the growing field of digital image synthesis, the ability to\ncreate realistic and controllable facial images is crucial, es-\npecially for applications in VR/AR, personalized avatar cre-\nation, and medical purposes. To deliver high-fidelity facial\nimages and support their extensive customization, precise\nmanipulation of facial attributes and intrinsic features is es-\nsential. To achieve this, image-based editing methods have\nbeen proposed [2, 6, 39, 46]. Although these methods suc-\ncessfully achieve high performance in generating edited im-\nages by controlled features, they suffer from inconsistency\nwhen the camera view is changed.\nRecent advancements in 3D face editing, driven by gen-\nerative Neural Radiance Fields (NeRF) [4, 34], have sig-\nnificantly improved the resolution and quality of the edited\nimages. These methods enable 3D-aware face generation\nand editing using segmentation masks. Early studies [5, 43]\nrequired large training datasets to build 3D segmentation\nfields, while recent studies [18, 42] have reduced the burden\nof data collection by utilizing pre-trained segmentation net-\nworks. Unfortunately, the use of a pretrained segmentation\nnetwork necessitates a mask with a fixed layout, making it\nimpossible to edit the regions that are not included in the\nsegment labels of the layout. The purposes of editing may\ndiffer from session to session, requiring a different mask\nlayout each time. For example, a makeup artist would need\neyelid control for visualizing makeup effects, while a plas-\ntic surgeon would need detailed nasal ala editing for the pre-\nvisualization of a surgery. Achieving this with the previous\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the explanation.\n        Also, if there are any figures in the paper, create a brief description for each.\n\n        The code is available on the project-page.\n</think>\n\n### FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields\n\n#### Core Innovation\nFFaceNeRF introduces a novel method for few-shot face editing that eliminates the dependency on fixed segmentation masks, enabling more flexible and user-controlled face editing. It combines geometry adapters with feature injection and employs latent mixing for tri-plane augmentation to achieve rapid model adaptation for various mask layouts.\n\n#### Technical Approach\n1. **Geometry Adapter with Feature Injection**: This component allows for effective manipulation of geometry attributes, enhancing the precision of face editing.\n2. **Latent Mixing for Tri-plane Augmentation**: By training with a few samples, the model can quickly adapt to different mask layouts, facilitating efficient editing.\n3. **Few-shot Learning**: The method enables rapid adaptation to desired mask layouts, crucial for applications requiring personalized or creative edits.\n\n#### Quantitative Findings\n- **Flexibility**: The approach surpasses existing mask-based methods, offering more precise control and flexibility.\n- **Control**: Enhanced user control is demonstrated through applications in personalized medical imaging and creative editing.\n- **Image Quality**: The method maintains high-quality image generation, validated through comparative evaluations.\n\n#### Limitations & Assumptions\n- **Data Dependency**: The method assumes the availability of appropriate training data for quick adaptation.\n- **Complexity**: The introduction of geometry adapters and feature injection may increase model complexity.\n- **Domain-Specific Challenges**: Applications in fields requiring precise medical accuracy may face limitations due to the fixed nature of some attributes.\n\n#### Domain Impact\n- **Medical Imaging**: Enables precise and personalized facial edits, enhancing surgical planning and pre-operative visualization.\n- **Creative Face Editing**: Provides artists with detailed control for imaginative edits, expanding creative possibilities.\n- **Practical Applications**: The method bridges the gap between 3D face editing and real-world applications, offering a versatile tool for various professional and personal uses.\n\n#### Figures\n1. **Figure 1**: Demonstrates the structure of FFaceNeRF, highlighting the integration of geometry adapters and feature injection.\n2. **Figure 2**: Shows the training process with latent mixing for tri-plane augmentation, illustrating the model's efficiency in adapting to new masks.\n3. **Figure 3**: Compares FFaceNeRF's output with existing methods, emphasizing superior flexibility and control.\n\nThe code is available on the project-page, facilitating further exploration and application.",
+  "topics": [
+    "editing",
+    "face",
+    "3d",
+    "segmentation",
+    "based",
+    "mask",
+    "tri",
+    "training",
+    "method",
+    "image"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/FFaceNeRF_Few-shot_Face_Editing_in_Neural_Radiance_Fields_975e050ce5bc5543.pdf",
+    "content_hash": "975e050ce5bc55436223d85151c578af1be21269b9fc6d5b6c3c87dac4445def",
+    "arxiv_id": null,
+    "title": "FFaceNeRF_Few-shot_Face_Editing_in_Neural_Radiance_Fields_975e050ce5bc5543",
+    "author": "",
+    "creation_date": "D:20250324004521Z",
+    "published": "2025-03-24T00:45:21",
+    "pages": 11,
+    "size": 23617368,
+    "file_mtime": 1742791267.2236907
+  },
+  "main_staff": {
+    "title": "FFaceNeRF_Few-shot_Face_Editing_in_Neural_Radiance_Fields_975e050ce5bc5543",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent 3D face editing methods using masks have produced\nhigh-quality edited images by leveraging Neural Radiance\nFields (NeRF). Despite their impressive performance, exist-\ning methods often provide limited user control due to the use\nof pre-trained segmentation masks. To utilize masks with\na desired layout, an extensive training dataset is required,\nwhich is challenging to gather. We present FFaceNeRF, a\nNeRF-based face editing technique that can overcome the\nchallenge of limited user control due to the use of fixed\nmask layouts.\nOur method employs a geometry adapter\nwith feature injection, allowing for effective manipulation\nof geometry attributes. Additionally, we adopt latent mix-\ning for tri-plane augmentation, which enables training with\na few samples. This facilitates rapid model adaptation to\ndesired mask layouts, crucial for applications in fields like\npersonalized medical imaging or creative face editing. Our\ncomparative evaluations demonstrate that FFaceNeRF sur-\npasses existing mask based face editing methods in terms of\nflexibility, control, and generated image quality, paving the\nway for future advancements in customized and high-fidelity\n3D face editing. The code is available on the project-page.\n1. Introduction\nIn the growing field of digital image synthesis, the ability to\ncreate realistic and controllable facial images is crucial, es-\npecially for applications in VR/AR, personalized avatar cre-\nation, and medical purposes. To deliver high-fidelity facial\nimages and support their extensive customization, precise\nmanipulation of facial attributes and intrinsic features is es-\nsential. To achieve this, image-based editing methods have\nbeen proposed [2, 6, 39, 46]. Although these methods suc-\ncessfully achieve high performance in generating edited im-\nages by controlled features, they suffer from inconsistency\nwhen the camera view is changed.\nRecent advancements in 3D face editing, driven by gen-\nerative Neural Radiance Fields (NeRF) [4, 34], have sig-\nnificantly improved the resolution and quality of the edited\nimages. These methods enable 3D-aware face generation\nand editing using segmentation masks. Early studies [5, 43]\nrequired large training datasets to build 3D segmentation\nfields, while recent studies [18, 42] have reduced the burden\nof data collection by utilizing pre-trained segmentation net-\nworks. Unfortunately, the use of a pretrained segmentation\nnetwork necessitates a mask with a fixed layout, making it\nimpossible to edit the regions that are not included in the\nsegment labels of the layout. The purposes of editing may\ndiffer from session to session, requiring a different mask\nlayout each time. For example, a makeup artist would need\neyelid control for visualizing makeup effects, while a plas-\ntic surgeon would need detailed nasal ala editing for the pre-\nvisualization of a surgery. Achieving this with the previous",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods either requires an extensive dataset segmented with",
+      "approaches is an attractive direction.",
+      "method that employs a newly proposed geometry adapter",
+      "methods in terms of following the edited target mask.",
+      "method given edited target segmentation masks. we eval-",
+      "method that better satisfied the following three criteria:",
+      "method higher in faithfulness, source retention, and visual",
+      "methods",
+      "results of our overlap-based optimization and the previ-",
+      "references"
+    ],
+    "topics": [
+      "editing",
+      "face",
+      "3d",
+      "segmentation",
+      "based",
+      "mask",
+      "tri",
+      "training",
+      "method",
+      "image"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

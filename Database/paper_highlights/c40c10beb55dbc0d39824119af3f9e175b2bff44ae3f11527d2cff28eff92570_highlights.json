@@ -1,0 +1,76 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Are Sparse Autoencoders Useful? A Case Study in Sparse Probing\n        **Abstract**: Sparse autoencoders (SAEs) are a popular method\nfor interpreting concepts represented in large lan-\nguage model (LLM) activations. However, there\nis a lack of evidence regarding the validity of their\ninterpretations due to the lack of a ground truth\nfor the concepts used by an LLM, and a grow-\ning number of works have presented problems\nwith current SAEs. One alternative source of evi-\ndence would be demonstrating that SAEs improve\nperformance on downstream tasks beyond exist-\ning baselines. We test this by applying SAEs to\nthe real-world task of LLM activation probing in\nfour regimes: data scarcity, class imbalance, label\nnoise, and covariate shift1. Due to the difficulty of\ndetecting concepts in these challenging settings,\nwe hypothesize that SAEs’ basis of interpretable,\nconcept-level latents should provide a useful in-\nductive bias. However, although SAEs occasion-\nally perform better than baselines on individual\ndatasets, we are unable to design ensemble meth-\nods combining SAEs with baselines that consis-\ntently outperform ensemble methods solely using\nbaselines. Additionally, although SAEs initially\nappear promising for identifying spurious correla-\ntions, detecting poor dataset quality, and training\nmulti-token probes, we are able to achieve simi-\nlar results with simple non-SAE baselines as well.\nThough we cannot discount SAEs’ utility on other\ntasks, our findings highlight the shortcomings of\ncurrent SAEs and the need to rigorously evalu-\nate interpretability methods on downstream tasks\nwith strong baselines.\n1. Introduction\nDictionary learning is a popular method for interpreting\nLLM activations (Arora et al., 2018; Yun et al., 2021); most\n*Equal contribution\n1Massachusetts Institute of Technology.\nCorrespondence to: Subhash Kantamneni <subhashk@mit.edu>,\nJoshua Engels <jengels@mit.edu>.\n1We make our code publicly available here.\nStandard \nConditions\nData \nScarcity\nClass \nImbalance\nLabel \nNoise\nOOD\nInterp.\nDo SAE \nProbes \nHelp?\nN/A\n~\nFigure 1. SAE probes underperform the baseline of logistic re-\ngression in each regime when taking the mean across datasets.\nAdditionally, we find that baseline methods can provide many of\nthe interpretability insights of SAE probes.\nnotably, Bricken et al. (2023); Cunningham et al. (2023)\ndemonstrated the promise of sparse autoencoders (SAEs)\nand sparked considerable follow-up work. This includes\npapers focused on improving the downstream cross entropy\nloss of SAE reconstructions (Gao et al., 2024; Braun et al.,\n2024; Rajamanoharan et al., 2024a;b), improving SAE train-\ning efficiency (Mudide et al., 2024; Gao et al., 2024), finding\nweaknesses in SAEs and proposing solutions (Chanin et al.,\n2024; Bussmann et al., 2024b), using SAEs to understand\nmodel representation structure (Engels et al., 2024a;b; Li\net al., 2024), training large suites of SAEs (Lieberum et al.,\n2024; He et al., 2024), and developing benchmarks for SAEs\n(Huang et al., 2024; Karvonen et al.; 2024b).\nUnfortunately, we lack a “ground truth” to know whether\nSAEs truly extract the interpretable concepts used by lan-\nguage models. Prior work has largely avoided this limitation\nby evaluating SAEs with proxy metrics like reconstruction\nloss (Rajamanoharan et al., 2024a;b; Gao et al., 2024; Olmo\net al., 2024; Braun et al., 2024). These metrics are tractable\nto optimize for, but do not necessarily align with mecha-\nnistic interpretability’s (MI) goal of better understanding\nneural networks (see Bereska & Gavves (2024) and Sharkey\net al. (2025) for surveys of MI). We argue that if SAEs truly\nadvance MI’s goal, they should improve performance on a\nreal, hard-to-fake model control or explainability task.\nHowever, despite the extensive body of work on SAEs, there\nare relatively few cases where SAEs have been shown to\n1\narXiv:2502.16681v1  [cs.LG]  23 Feb 2025\n\nAre Sparse Autoencoders Useful? A Case Study in Sparse Probing\nhelp on such a task: Marks et al. (2024) show that SAE\nfeature circuits can help identify and remove bias from\nclassifiers; Smith & Brinkmann (2024) show that SAEs\ncan identify misaligned features learned by a preference\nmodel; and Karvonen et al. (2024a) show that SAE feature\nablations are better at preventing regex output than baselines\nin a setting with scarce supervised data. While these results\nare promising, they all study a single example in detail, and\nconsider comparative baselines with varying levels of rigor.\nAt the same time, there are also surprisingly few negative\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the story.\n</think>\n\n**Structured Highlights for the Research Paper: \"Are Sparse Autoencoders Useful? A Case Study in Sparse Probing\"**\n\n1. **Core Innovation**:  \n   The study introduces sparse autoencoders (SAEs) as a tool for interpreting large language model (LLM) activations, aiming to validate their utility through rigorous testing across various challenging data conditions.\n\n2. **Technical Approach**:  \n   - SAEs are applied to four challenging regimes: data scarcity, class imbalance, label noise, and covariate shift.  \n   - The methodology tests whether SAEs improve downstream performance compared to non-SAE baselines, focusing on tasks like LLM activation probing.  \n   - The analysis involves ensemble methods combining SAEs with different baselines to assess their overall impact.\n\n3. **Quantitative Findings**:  \n   - In each of the four regimes, SAE probes underperform compared to logistic regression baselines when averaged across datasets.  \n   - Baseline methods, such as logistic regression, provide similar interpretability insights as SAE probes.  \n   - Simple non-SAE baselines achieve comparable results, suggesting that SAEs may not offer significant advantages in interpretability tasks.\n\n4. **Limitations & Assumptions**:  \n   - The study assumes that proxy metrics like reconstruction loss can align with mechanistic interpretability goals.  \n   - It acknowledges the lack of a ground truth for concepts used by LLMs, which limits direct validation of SAE interpretations.  \n   - The findings are confined to the tested regimes and specific tasks, with no broader implications for other potential applications of SAEs.\n\n5. **Domain Impact**:  \n   - **Theoretical**: Challenges the assumption that SAEs enhance mechanistic interpretability by showing minimal impact compared to simpler methods.  \n   - **Practical**: Highlights the need for more rigorous evaluation metrics and datasets to validate SAE utility in real-world applications.  \n   - The study underscores the importance of ground truth validation in interpretability research, suggesting that current proxy metrics may not fully capture the intended goals of SAEs.  \n\nThis structured approach provides a comprehensive overview of the research, emphasizing its contributions and areas for future investigation.",
+  "topics": [
+    "sae",
+    "probes",
+    "et al",
+    "al",
+    "et",
+    "sparse",
+    "probing",
+    "auc",
+    "test",
+    "datasets"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Are_Sparse_Autoencoders_Useful_A_Case_Study_in_Sparse_Probing_c40c10beb55dbc0d.pdf",
+    "content_hash": "c40c10beb55dbc0d39824119af3f9e175b2bff44ae3f11527d2cff28eff92570",
+    "arxiv_id": null,
+    "title": "Are Sparse Autoencoders Useful? A Case Study in Sparse Probing",
+    "author": "Subhash Kantamneni, Joshua Engels, Senthooran Rajamanoharan, Max Tegmark, Neel Nanda",
+    "creation_date": "D:20250225021014Z",
+    "published": "2025-02-25T02:10:14",
+    "pages": 30,
+    "size": 3677292,
+    "file_mtime": 1740972297.2365584
+  },
+  "main_staff": {
+    "title": "Are Sparse Autoencoders Useful? A Case Study in Sparse Probing",
+    "authors": [
+      "Subhash Kantamneni",
+      " Joshua Engels",
+      " Senthooran Rajamanoharan",
+      " Max Tegmark",
+      " Neel Nanda"
+    ],
+    "abstract": "Sparse autoencoders (SAEs) are a popular method\nfor interpreting concepts represented in large lan-\nguage model (LLM) activations. However, there\nis a lack of evidence regarding the validity of their\ninterpretations due to the lack of a ground truth\nfor the concepts used by an LLM, and a grow-\ning number of works have presented problems\nwith current SAEs. One alternative source of evi-\ndence would be demonstrating that SAEs improve\nperformance on downstream tasks beyond exist-\ning baselines. We test this by applying SAEs to\nthe real-world task of LLM activation probing in\nfour regimes: data scarcity, class imbalance, label\nnoise, and covariate shift1. Due to the difficulty of\ndetecting concepts in these challenging settings,\nwe hypothesize that SAEs’ basis of interpretable,\nconcept-level latents should provide a useful in-\nductive bias. However, although SAEs occasion-\nally perform better than baselines on individual\ndatasets, we are unable to design ensemble meth-\nods combining SAEs with baselines that consis-\ntently outperform ensemble methods solely using\nbaselines. Additionally, although SAEs initially\nappear promising for identifying spurious correla-\ntions, detecting poor dataset quality, and training\nmulti-token probes, we are able to achieve simi-\nlar results with simple non-SAE baselines as well.\nThough we cannot discount SAEs’ utility on other\ntasks, our findings highlight the shortcomings of\ncurrent SAEs and the need to rigorously evalu-\nate interpretability methods on downstream tasks\nwith strong baselines.\n1. Introduction\nDictionary learning is a popular method for interpreting\nLLM activations (Arora et al., 2018; Yun et al., 2021); most\n*Equal contribution\n1Massachusetts Institute of Technology.\nCorrespondence to: Subhash Kantamneni <subhashk@mit.edu>,\nJoshua Engels <jengels@mit.edu>.\n1We make our code publicly available here.\nStandard \nConditions\nData \nScarcity\nClass \nImbalance\nLabel \nNoise\nOOD\nInterp.\nDo SAE \nProbes \nHelp?\nN/A\n~\nFigure 1. SAE probes underperform the baseline of logistic re-\ngression in each regime when taking the mean across datasets.\nAdditionally, we find that baseline methods can provide many of\nthe interpretability insights of SAE probes.\nnotably, Bricken et al. (2023); Cunningham et al. (2023)\ndemonstrated the promise of sparse autoencoders (SAEs)\nand sparked considerable follow-up work. This includes\npapers focused on improving the downstream cross entropy\nloss of SAE reconstructions (Gao et al., 2024; Braun et al.,\n2024; Rajamanoharan et al., 2024a;b), improving SAE train-\ning efficiency (Mudide et al., 2024; Gao et al., 2024), finding\nweaknesses in SAEs and proposing solutions (Chanin et al.,\n2024; Bussmann et al., 2024b), using SAEs to understand\nmodel representation structure (Engels et al., 2024a;b; Li\net al., 2024), training large suites of SAEs (Lieberum et al.,\n2024; He et al., 2024), and developing benchmarks for SAEs\n(Huang et al., 2024; Karvonen et al.; 2024b).\nUnfortunately, we lack a “ground truth” to know whether\nSAEs truly extract the interpretable concepts used by lan-\nguage models. Prior work has largely avoided this limitation\nby evaluating SAEs with proxy metrics like reconstruction\nloss (Rajamanoharan et al., 2024a;b; Gao et al., 2024; Olmo\net al., 2024; Braun et al., 2024). These metrics are tractable\nto optimize for, but do not necessarily align with mecha-\nnistic interpretability’s (MI) goal of better understanding\nneural networks (see Bereska & Gavves (2024) and Sharkey\net al. (2025) for surveys of MI). We argue that if SAEs truly\nadvance MI’s goal, they should improve performance on a\nreal, hard-to-fake model control or explainability task.\nHowever, despite the extensive body of work on SAEs, there\nare relatively few cases where SAEs have been shown to\n1\narXiv:2502.16681v1  [cs.LG]  23 Feb 2025\n\nAre Sparse Autoencoders Useful? A Case Study in Sparse Probing\nhelp on such a task: Marks et al. (2024) show that SAE\nfeature circuits can help identify and remove bias from\nclassifiers; Smith & Brinkmann (2024) show that SAEs\ncan identify misaligned features learned by a preference\nmodel; and Karvonen et al. (2024a) show that SAE feature\nablations are better at preventing regex output than baselines\nin a setting with scarce supervised data. While these results\nare promising, they all study a single example in detail, and\nconsider comparative baselines with varying levels of rigor.\nAt the same time, there are also surprisingly few negative",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results finding that saes do not help on downstream tasks;",
+      "method p. for the first three probing methods, we use grid",
+      "method by validation auc and then report the test auc of",
+      "experiments with this layer. we train baselines on 1024 data",
+      "approach in standard conditions. saes are chosen as the “ar-",
+      "method. however, the quiver of arrows method relies on the",
+      "methods are also able to identify these dataset errors.",
+      "approach to select between pooled and last-token strategies",
+      "methodology, use of stronger baselines, and evaluation on",
+      "evaluations like downstream cross-entropy loss or recon-",
+      "methods, discovered the initial glue cola and ai vs. hu-",
+      "references",
+      "results in our limitations section and in appendix j.",
+      "methods p ′ = p′",
+      "methods have perfect validation auc and",
+      "results for baseline probes applied to various layers of llama-3.1-8b in standard settings. we see that the layer roughly",
+      "references to female individuals, espe-",
+      "references to specific rooms in a house,",
+      "references to basketball teams, players,",
+      "references to conspiracy theories and"
+    ],
+    "topics": [
+      "sae",
+      "probes",
+      "et al",
+      "al",
+      "et",
+      "sparse",
+      "probing",
+      "auc",
+      "test",
+      "datasets"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

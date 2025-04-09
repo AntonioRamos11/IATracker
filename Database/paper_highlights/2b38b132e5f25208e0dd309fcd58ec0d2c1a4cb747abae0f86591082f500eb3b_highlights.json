@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: MindBridge_Scalable_and_Cross-Model_Knowledge_Editing_via__Memory-Augmented_Modality_2b38b132e5f25208\n        **Abstract**: Knowledge editing is a technique for efficiently\nand accurately updating the knowledge of large\nlanguage models (LLMs) to alleviate obsoles-\ncence and correct errors. However, most exist-\ning methods overfit to specific models, causing\nedited knowledge to be discarded during each\nLLM update and requiring frequent re-editing,\nwhich is particularly burdensome in today’s\nrapidly evolving open-source community. To\naddress this issue, we propose the problem of\ncross-model knowledge editing and introduce\nMindBridge, a scalable solution inspired by\nthe low coupling between modality process-\ning and LLMs in multi-modal models. Mind-\nBridge introduces the novel concept of mem-\nory modality, which encodes edited knowl-\nedge as an independent modality. It first per-\nforms LLM-agnostic pre-training of the mem-\nory modality and then integrates it with vari-\nous LLMs. Extensive experiments on multiple\nLLMs and popular knowledge editing datasets\ndemonstrate that MindBridge achieves superior\nperformance even in editing tens of thousands\nof knowledge entries and can flexibly adapt\nto different LLMs. Our code is available at\nhttps://github.com/CrashBugger/MindBridge.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        for understanding the innovation.\n</think>\n\n### MindBridge: Scalable and Cross-Model Knowledge Editing via Memory-Augmented Modality\n\n#### 1. Core Innovation\nMindBridge introduces a novel memory modality that decouples knowledge editing from large language models (LLMs), enabling efficient, scalable, and cross-model knowledge updates.\n\n#### 2. Technical Approach\n- **Memory Modality**: Encodes edited knowledge as an independent modality.\n- **LLM-Agnostic Pre-Training**: The memory modality is pre-trained independently of LLMs.\n- **Integration**: The memory modality is integrated with various LLMs, maintaining flexibility and avoiding overfitting.\n- **Efficient Updates**: Facilitates frequent and efficient knowledge updates without requiring re-editing.\n\n#### 3. Quantitative Findings\n- Superior performance achieved in editing tens of thousands of knowledge entries.\n- Flexible adaptation to different LLMs, demonstrating scalability.\n- Comprehensive experiments across multiple datasets validate the approach.\n\n#### 4. Limitations & Assumptions\n- **Assumption of Modality Coupling**: Assumes minimal coupling between modality processing and LLMs, which may not hold in all scenarios.\n- **Memory Requirements**: Potential memory overhead for storing edited knowledge entries.\n- **Limited Context Handling**: The approach may struggle with complex or context-dependent knowledge.\n\n#### 5. Domain Impact\n- **Theoretical**: Advances modularity in AI architectures, enhancing scalability and adaptability.\n- **Practical**: Reduces the burden on LLMs during updates, making knowledge editing more feasible in dynamic environments.\n- **Impact on Open-Source Communities**: Significantly benefits rapidly evolving communities by enabling frequent and efficient updates.",
+  "topics": [
+    "editing",
+    "knowledge",
+    "modality",
+    "memory",
+    "al",
+    "et",
+    "et al",
+    "model",
+    "arxiv",
+    "memory modality"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/MindBridge_Scalable_and_Cross-Model_Knowledge_Editing_via__Memory-Augmented_Modality_2b38b132e5f25208.pdf",
+    "content_hash": "2b38b132e5f25208e0dd309fcd58ec0d2c1a4cb747abae0f86591082f500eb3b",
+    "arxiv_id": null,
+    "title": "MindBridge_Scalable_and_Cross-Model_Knowledge_Editing_via__Memory-Augmented_Modality_2b38b132e5f25208",
+    "author": "",
+    "creation_date": "D:20250305020424Z",
+    "published": "2025-03-05T02:04:24",
+    "pages": 13,
+    "size": 6511288,
+    "file_mtime": 1741159846.7082012
+  },
+  "main_staff": {
+    "title": "MindBridge_Scalable_and_Cross-Model_Knowledge_Editing_via__Memory-Augmented_Modality_2b38b132e5f25208",
+    "authors": [
+      ""
+    ],
+    "abstract": "Knowledge editing is a technique for efficiently\nand accurately updating the knowledge of large\nlanguage models (LLMs) to alleviate obsoles-\ncence and correct errors. However, most exist-\ning methods overfit to specific models, causing\nedited knowledge to be discarded during each\nLLM update and requiring frequent re-editing,\nwhich is particularly burdensome in today’s\nrapidly evolving open-source community. To\naddress this issue, we propose the problem of\ncross-model knowledge editing and introduce\nMindBridge, a scalable solution inspired by\nthe low coupling between modality process-\ning and LLMs in multi-modal models. Mind-\nBridge introduces the novel concept of mem-\nory modality, which encodes edited knowl-\nedge as an independent modality. It first per-\nforms LLM-agnostic pre-training of the mem-\nory modality and then integrates it with vari-\nous LLMs. Extensive experiments on multiple\nLLMs and popular knowledge editing datasets\ndemonstrate that MindBridge achieves superior\nperformance even in editing tens of thousands\nof knowledge entries and can flexibly adapt\nto different LLMs. Our code is available at\nhttps://github.com/CrashBugger/MindBridge.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method",
+      "experiments",
+      "experiments. for more detailed information on the",
+      "approaches—fine-tuning (ft-l) (meng et al.,",
+      "results are shown in figure 6. it can be observed",
+      "experiments of multi-mindbridge, please refer to",
+      "conclusion",
+      "experiments to models with up to 8b parameters.",
+      "references",
+      "experiments comparing with baselines (see section",
+      "methods, the edit data used were identical to those",
+      "experiments of multi-mindbridge"
+    ],
+    "topics": [
+      "editing",
+      "knowledge",
+      "modality",
+      "memory",
+      "al",
+      "et",
+      "et al",
+      "model",
+      "arxiv",
+      "memory modality"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

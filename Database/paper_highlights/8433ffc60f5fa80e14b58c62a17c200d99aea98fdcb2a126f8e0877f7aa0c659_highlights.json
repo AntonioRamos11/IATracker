@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Directional_Gradient_Projection_for_Robust_Fine-Tuning_of_Foundation__Models_8433ffc60f5fa80e\n        **Abstract**: Robust fine-tuning aims to adapt large foundation models to downstream tasks\nwhile preserving their robustness to distribution shifts. Existing methods primarily\nfocus on constraining and projecting current model towards the pre-trained ini-\ntialization based on the magnitudes between fine-tuned and pre-trained weights,\nwhich often require extensive hyper-parameter tuning and can sometimes result in\nunderfitting. In this work, we propose Directional Gradient Projection (DiGraP),\na novel layer-wise trainable method that incorporates directional information from\ngradients to bridge regularization and multi-objective optimization. Besides demon-\nstrating our method on image classification, as another contribution we generalize\nthis area to the multi-modal evaluation settings for robust fine-tuning. Specifically,\nwe first bridge the uni-modal and multi-modal gap by performing analysis on\nImage Classification reformulated Visual Question Answering (VQA) benchmarks\nand further categorize ten out-of-distribution (OOD) VQA datasets by distribution\nshift types and degree (i.e. near versus far OOD). Experimental results show that\nDiGraP consistently outperforms existing baselines across Image Classfication\nand VQA tasks with discriminative and generative backbones, improving both\nin-distribution (ID) generalization and OOD robustness.1\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the approach.\n\nAlright, I need to help the user by generating structured highlights for a research paper they provided. The paper is about \"Directional Gradient Projection for Robust Fine-Tuning of Foundation Models.\" Let me start by reading through the abstract and the details they provided.\n\nThe title is pretty straightforward: it's about a new method called Directional Gradient Projection. The abstract mentions that robust fine-tuning aims to adapt large foundation models to downstream tasks while preserving their robustness to distribution shifts. Existing methods focus on constraining weights based on magnitudes between fine-tuned and pre-trained models, which requires hyper-parameter tuning and can lead to underfitting.\n\nThe key innovation here is the DiGraP method. It's layer-wise trainable and uses directional information from gradients to bridge regularization and multi-objective optimization. The authors applied this to image classification and multi-modal settings, specifically VQA benchmarks. They categorized OOD datasets into near and far shifts and found that DiGraP outperformed existing methods across these tasks, improving both in-distribution and OOD robustness.\n\nNow, the user wants structured highlights focusing on key visual findings, experimental setup, quantitative findings, limitations, and domain impact. They also mentioned including key equations or figures where critical to understanding the approach.\n\nStarting with the core innovation: the paper introduces DiGraP, a method that uses directional gradients for layer-wise regularization, addressing the limitations of previous methods by not requiring hyper-parameter tuning and effectively handling distribution shifts.\n\nTechnical approach: The method incorporates directional information from gradients, layer-wise trainable, and uses multi-objective optimization. It bridges regularization with gradient directions, applies to both unimodal and multimodal tasks, and uses a layer-wise approach with gradient direction analysis.\n\nQuantitative findings: They tested on image classification and VQA tasks, categorizing OOD datasets. DiGraP outperformed baselines across these tasks, improving both in-distribution and OOD generalization.\n\nLimitations & assumptions: The method requires careful tuning of hyper-parameters, assumes a specific architecture, and may not generalize to all types of distribution shifts or data domains.\n\nDomain impact: Theoretically, it advances robust fine-tuning by using gradient directions. Practically, it's useful for applications where model robustness is crucial, like NLP and vision tasks.\n\nI should structure this into sections with bullet points and numbered lists. Also, I need to include any key equations or figures that are essential. Since the abstract doesn't mention specific equations, I might have to note that as a point, but if there are any, they should be included.\n\nOverall, I need to make sure each section is concise and captures the main points without getting too detailed. The user wants this for a structured summary, likely for a presentation or paper review, so clarity and focus are important.\n</think>\n\n### Structured Highlights for the Research Paper:  \n**Title**: Directional_Gradient_Projection_for_Robust_Fine-Tuning_of_Foundation__Models_8433ffc60f5fa80e  \n**Abstract**:  \nRobust fine-tuning aims to adapt large foundation models to downstream tasks while preserving their robustness to distribution shifts. Existing methods focus on constraining weights based on magnitude differences between pre-trained and fine-tuned models, requiring extensive hyperparameter tuning and sometimes leading to underfitting. This work introduces Directional Gradient Projection (DiGraP), a layer-wise trainable method that incorporates directional gradient information to bridge regularization and multi-objective optimization. The method is applied to image classification and generalized to multi-modal settings like Visual Question Answering (VQA). DiGraP categorizes out-of-distribution (OOD) datasets by type and degree (near vs. far OOD) and demonstrates superior performance compared to existing baselines across tasks.\n\n---\n\n### 1. **Core Innovation**:  \n- **Directional Gradient Projection (DiGraP)**: A layer-wise trainable method that uses directional information from gradients to bridge regularization and multi-objective optimization, addressing the limitations of previous fine-tuning methods by eliminating the need for extensive hyperparameter tuning and reducing underfitting risks.\n\n---\n\n### 2. **Technical Approach**:  \n- **Layer-wise Trainability**: DiGraP applies regularization at each layer, allowing for fine-grained control over feature learning.  \n- **Directional Gradient Information**: The method incorporates the direction of gradients, enhancing regularization by aligning updates with gradient orientations.  \n- **Multi-Objective Optimization**: DiGraP integrates gradient direction analysis with optimization objectives, balancing in-distribution (ID) and out-of-distribution (OOD) performance.  \n- **Multi-Modal Extension**: The approach is generalized to multi-modal tasks, such as VQA, by reformulating image classification benchmarks and categorizing OOD datasets by type and degree.  \n- **Theoretical Foundation**: The method bridges regularization with gradient directions, providing a novel framework for robust fine-tuning.\n\n---\n\n### 3. **Quantitative Findings**:  \n1. DiG",
+  "topics": [
+    "ood",
+    "fine",
+    "vqa",
+    "al",
+    "et",
+    "et al",
+    "tuning",
+    "fine tuning",
+    "digrap",
+    "id"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Directional_Gradient_Projection_for_Robust_Fine-Tuning_of_Foundation__Models_8433ffc60f5fa80e.pdf",
+    "content_hash": "8433ffc60f5fa80e14b58c62a17c200d99aea98fdcb2a126f8e0877f7aa0c659",
+    "arxiv_id": null,
+    "title": "Directional_Gradient_Projection_for_Robust_Fine-Tuning_of_Foundation__Models_8433ffc60f5fa80e",
+    "author": "",
+    "creation_date": "D:20250225010739Z",
+    "published": "2025-02-25T01:07:39",
+    "pages": 21,
+    "size": 15920313,
+    "file_mtime": 1740973064.7150073
+  },
+  "main_staff": {
+    "title": "Directional_Gradient_Projection_for_Robust_Fine-Tuning_of_Foundation__Models_8433ffc60f5fa80e",
+    "authors": [
+      ""
+    ],
+    "abstract": "Robust fine-tuning aims to adapt large foundation models to downstream tasks\nwhile preserving their robustness to distribution shifts. Existing methods primarily\nfocus on constraining and projecting current model towards the pre-trained ini-\ntialization based on the magnitudes between fine-tuned and pre-trained weights,\nwhich often require extensive hyper-parameter tuning and can sometimes result in\nunderfitting. In this work, we propose Directional Gradient Projection (DiGraP),\na novel layer-wise trainable method that incorporates directional information from\ngradients to bridge regularization and multi-objective optimization. Besides demon-\nstrating our method on image classification, as another contribution we generalize\nthis area to the multi-modal evaluation settings for robust fine-tuning. Specifically,\nwe first bridge the uni-modal and multi-modal gap by performing analysis on\nImage Classification reformulated Visual Question Answering (VQA) benchmarks\nand further categorize ten out-of-distribution (OOD) VQA datasets by distribution\nshift types and degree (i.e. near versus far OOD). Experimental results show that\nDiGraP consistently outperforms existing baselines across Image Classfication\nand VQA tasks with discriminative and generative backbones, improving both\nin-distribution (ID) generalization and OOD robustness.1\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related works",
+      "experiments",
+      "results from tian et al. (2023b) where the quickdraw results are not presented.",
+      "experiments with distribution shifts in other modalities in sec. 4.3. we use the pre-trained generative",
+      "discussion to future work. nevertheless, one interesting question remains: when vanilla fine-tuning",
+      "evaluation and metrics. we follow the metric from vqav2 (goyal et al., 2017) and the evaluation",
+      "results, demonstrating robustness to distribution shifts across various modalities, including vision,",
+      "conclusion",
+      "experiments on image classification and vqa benchmarks show that digrap surpasses baselines,",
+      "references",
+      "experiments.",
+      "method"
+    ],
+    "topics": [
+      "ood",
+      "fine",
+      "vqa",
+      "al",
+      "et",
+      "et al",
+      "tuning",
+      "fine tuning",
+      "digrap",
+      "id"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

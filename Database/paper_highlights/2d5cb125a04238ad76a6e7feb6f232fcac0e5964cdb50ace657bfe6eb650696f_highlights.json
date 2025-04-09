@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Deepfake-Eval-2024_A_Multi-Modal_In-the-Wild_Benchmark_of_Deepfakes__Circulated_in_2024_23305b6e6c\n        **Abstract**: In the age of increasingly realistic generative AI, robust deepfake detection is\nessential for mitigating fraud and disinformation. While many deepfake detec-\ntors report high accuracy on academic datasets, we show that these academic\nbenchmarks are out of date and not representative of real-world deepfakes. We\nintroduce Deepfake-Eval-2024, a new deepfake detection benchmark consisting of\nin-the-wild deepfakes collected from social media and deepfake detection platform\nusers in 2024. Deepfake-Eval-2024 consists of 45 hours of videos, 56.5 hours\nof audio, and 1,975 images, encompassing the latest manipulation technologies.\nThe benchmark contains diverse media content from 88 different websites in 52\ndifferent languages. We find that the performance of open-source state-of-the-art\ndeepfake detection models drops precipitously when evaluated on Deepfake-Eval-\n2024, with AUC decreasing by 50% for video, 48% for audio, and 45% for image\nmodels compared to previous benchmarks. We also evaluate commercial deep-\nfake detection models and models finetuned on Deepfake-Eval-2024, and find that\nthey have superior performance to off-the-shelf open-source models, but do not\nyet reach the accuracy of deepfake forensic analysts. The dataset is available at\nhttps://github.com/nuriachandra/Deepfake-Eval-2024.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n### Core Innovation\n\nThe research introduces **Deepfake-Eval-2024**, a comprehensive, in-the-wild deepfake detection benchmark comprising 45 hours of video, 56.5 hours of audio, and 1,975 images, collected from diverse sources across 52 languages and 88 websites in 2024. This benchmark addresses the limitations of previous datasets by incorporating the latest manipulation techniques and real-world data.\n\n### Technical Approach\n\n- **Data Collection**: Videos, audio, and images from 88 websites in 52 languages, capturing diverse deepfake technologies.\n- **Multimodal Analysis**: Evaluation of deepfake detection models across video, audio, and image domains using advanced techniques.\n- **Commercial Models Evaluation**: Testing of commercial deepfake detection tools and models fine-tuned on the new benchmark.\n- **Comparative Analysis**: Use of previous benchmarks for baseline comparison to highlight dataset evolution.\n\n### Quantitative Findings\n\n1. **Performance Drop**: \n   - Video models: AUC decrease of 50% compared to previous benchmarks.\n   - Audio models: AUC decrease of 48%.\n   - Image models: AUC decrease of 45%.\n\n2. **Commercial Models**: Outperform off-the-shelf models but still lag behind human forensic analysts.\n\n3. **Diverse Content**: Includes manipulation techniques from 2024, reflecting current trends.\n\n### Limitations & Assumptions\n\n- **Open-source Models**: Current limitations remain for state-of-the-art open-source models.\n- **Language Diversity**: Limited coverage of regional languages and cultural nuances.\n- **Anonymity Concerns**: Risks of real-world misuse of deepfakes not fully addressed.\n- **Model Generalization**: Performance varies across different media types.\n- **Human Benchmark**: Human detection accuracy not measured, leaving room for improvement.\n\n### Domain Impact\n\n- **Theoretical**: Challenges existing models, pushing for more robust detection methods.\n- **Practical**: Provides a realistic dataset for model development, enhancing real-world applications.\n- **Ethical Considerations**: Highlights the need for measures to prevent misuse of deepfakes in misinformation campaigns.",
+  "topics": [
+    "deepfake",
+    "models",
+    "audio",
+    "2024",
+    "detection",
+    "media",
+    "datasets",
+    "ai",
+    "eval",
+    "real"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Deepfake-Eval-2024_A_Multi-Modal_In-the-Wild_Benchmark_of_Deepfakes__Circulated_in_2024_23305b6e6c.pdf",
+    "content_hash": "2d5cb125a04238ad76a6e7feb6f232fcac0e5964cdb50ace657bfe6eb650696f",
+    "arxiv_id": null,
+    "title": "Deepfake-Eval-2024_A_Multi-Modal_In-the-Wild_Benchmark_of_Deepfakes__Circulated_in_2024_23305b6e6c",
+    "author": "",
+    "creation_date": "D:20250307010634Z",
+    "published": "2025-03-07T01:06:34",
+    "pages": 22,
+    "size": 2347779,
+    "file_mtime": 1741417728.183738
+  },
+  "main_staff": {
+    "title": "Deepfake-Eval-2024_A_Multi-Modal_In-the-Wild_Benchmark_of_Deepfakes__Circulated_in_2024_23305b6e6c",
+    "authors": [
+      ""
+    ],
+    "abstract": "In the age of increasingly realistic generative AI, robust deepfake detection is\nessential for mitigating fraud and disinformation. While many deepfake detec-\ntors report high accuracy on academic datasets, we show that these academic\nbenchmarks are out of date and not representative of real-world deepfakes. We\nintroduce Deepfake-Eval-2024, a new deepfake detection benchmark consisting of\nin-the-wild deepfakes collected from social media and deepfake detection platform\nusers in 2024. Deepfake-Eval-2024 consists of 45 hours of videos, 56.5 hours\nof audio, and 1,975 images, encompassing the latest manipulation technologies.\nThe benchmark contains diverse media content from 88 different websites in 52\ndifferent languages. We find that the performance of open-source state-of-the-art\ndeepfake detection models drops precipitously when evaluated on Deepfake-Eval-\n2024, with AUC decreasing by 50% for video, 48% for audio, and 45% for image\nmodels compared to previous benchmarks. We also evaluate commercial deep-\nfake detection models and models finetuned on Deepfake-Eval-2024, and find that\nthey have superior performance to off-the-shelf open-source models, but do not\nyet reach the accuracy of deepfake forensic analysts. The dataset is available at\nhttps://github.com/nuriachandra/Deepfake-Eval-2024.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "experiments",
+      "evaluation metrics. the field of deepfake detection does not have a standard set of evaluation",
+      "evaluation on previous benchmarks. we compare the performance of open-source models on our",
+      "conclusion. we present deepfake-eval-2024, an in-the-wild deepfake dataset that captures the",
+      "references",
+      "related work supplementary figures",
+      "results supplementary figures"
+    ],
+    "topics": [
+      "deepfake",
+      "models",
+      "audio",
+      "2024",
+      "detection",
+      "media",
+      "datasets",
+      "ai",
+      "eval",
+      "real"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

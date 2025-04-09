@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Missing_Target-Relevant_Information_Prediction_with_World_Model_for__Accurate_Zero-Shot_Composed_Image_Retrieval_968c3eff18e369a3\n        **Abstract**: Zero-Shot Composed Image Retrieval (ZS-CIR) involves di-\nverse tasks with a broad range of visual content manipula-\ntion intent across domain, scene, object, and attribute. The\nkey challenge for ZS-CIR tasks is to modify a reference im-\nage according to manipulation text to accurately retrieve a\ntarget image, especially when the reference image is miss-\ning essential target content. In this paper, we propose a\nnovel prediction-based mapping network, named PrediCIR,\nto adaptively predict the missing target visual content in ref-\nerence images in the latent space before mapping for accu-\nrate ZS-CIR. Specifically, a world view generation module\nfirst constructs a source view by omitting certain visual con-\ntent of a target view, coupled with an action that includes\nthe manipulation intent derived from existing image-caption\npairs. Then, a target content prediction module trains a\nworld model as a predictor to adaptively predict the miss-\ning visual information guided by user intention in manip-\nulating text at the latent space. The two modules map an\nimage with the predicted relevant information to a pseudo-\nword token without extra supervision. Our model shows\nstrong generalization ability on six ZS-CIR tasks. It obtains\nconsistent and significant performance boosts ranging from\n1.73% to 4.45% over the best methods and achieves new\nstate-of-the-art results on ZS-CIR. Our code is available at\nhttps://github.com/Pter61/predicir.\n1. Introduction\nGiven a reference image and a human manipulation text,\nComposed Image Retrieval (CIR) [44] aims to retrieve a\ntarget image visually similar to the reference image while\n*Corresponding author\n(a) Pre-training of the prediction-free image to word mapping (baseline) \nMapping\nNetwork\nImage\nImage\n(b) Pre-training of the prediction-based image-to-word mapping (ours)\nImage\nPseudo Word\n𝑺∗\nContrastive\nLearning\nSource Content\nCaption\nA rugby player passes \nthe ball to his teammate \non a grassy field.\nWorld\nModel\nAction\nPredicted-\nMissing Content\n𝑺∗\nContrastive\nLearning\nMapping Network \nTarget Image\nJoint-Embedding Predictive\nPseudo Word\nCrop\nImage\nManipulation text\nPut a tree trunk to the \nleft of the dog standing \nwith flowers and grass\nImage\nMapping\nNetwork\n𝑆∗\nComposed \nquery\nCLIP\nOur\nBaseline\nManipulation text\nis a black sleeve shirt \nwith Earth picture and \npeople flying\nChange the image \nof the sea lion into \norigami style\n(c) Zero-Shot Composed Image Retrieval\nInput \nRetrieval Modal \nRetrieval Results \nImage  \nCandidates\nPseudo Word\nRepresentation\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        The output should be in markdown format.\n</think>\n\n# Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval\n\n## Core Innovation\nThe paper introduces **PrediCIR**, a prediction-based mapping network that predicts missing target visual content in reference images before mapping for ZS-CIR. This approach leverages a world view generation module and a target content prediction module to adaptively predict missing visual information guided by user intention in manipulation text at the latent space.\n\n## Technical Approach\n1. **World View Generation Module**: Constructs a source view by omitting certain visual content of a target view, coupled with an action derived from existing image-caption pairs.\n2. **Target Content Prediction Module**: Trains a world model to predict missing visual information in the latent space guided by manipulation intent.\n3. **Mapping Network**: Maps an image with predicted relevant information to a pseudo-word token without extra supervision.\n4. **Contrastive Learning**: Uses contrastive learning for both pre-training and fine-tuning stages, enhancing the model's ability to adapt to unseen tasks.\n\n## Quantitative Findings\n- Achieves consistent and significant performance boosts ranging from **1.73%** to **4.45%** over the best methods.\n- Sets new **state-of-the-art** results on six ZS-CIR tasks.\n\n## Limitations & Assumptions\n- Assumes that the world model can accurately predict missing visual information in the latent space.\n- Relies on sufficient training data to learn the mapping between manipulation text and visual content.\n- Performance may vary depending on the complexity of the manipulation actions and the diversity of visual content.\n\n## Domain Impact\n- Theoretically, the approach advances ZS-CIR by enabling accurate retrieval even when the reference image lacks essential target content.\n- Practically, it improves applications such as image editing, virtual tourism, and augmented reality by enhancing retrieval accuracy and flexibility in image composition.",
+  "topics": [
+    "image",
+    "target",
+    "boldsymbol",
+    "model",
+    "visual",
+    "source",
+    "cir",
+    "predicir",
+    "retrieval",
+    "text"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Missing_Target-Relevant_Information_Prediction_with_World_Model_for__Accurate_Zero-Shot_Composed_Image_Retrieval_968c3eff18e369a3.pdf",
+    "content_hash": "968c3eff18e369a33c1e65b4d2a0faa05cc44b0ad1114faa0d4c7f116398a771",
+    "arxiv_id": null,
+    "title": "Missing_Target-Relevant_Information_Prediction_with_World_Model_for__Accurate_Zero-Shot_Composed_Image_Retrieval_968c3eff18e369a3",
+    "author": "",
+    "creation_date": "D:20250324004625Z",
+    "published": "2025-03-24T00:46:25",
+    "pages": 15,
+    "size": 11148798,
+    "file_mtime": 1742791253.8709874
+  },
+  "main_staff": {
+    "title": "Missing_Target-Relevant_Information_Prediction_with_World_Model_for__Accurate_Zero-Shot_Composed_Image_Retrieval_968c3eff18e369a3",
+    "authors": [
+      ""
+    ],
+    "abstract": "Zero-Shot Composed Image Retrieval (ZS-CIR) involves di-\nverse tasks with a broad range of visual content manipula-\ntion intent across domain, scene, object, and attribute. The\nkey challenge for ZS-CIR tasks is to modify a reference im-\nage according to manipulation text to accurately retrieve a\ntarget image, especially when the reference image is miss-\ning essential target content. In this paper, we propose a\nnovel prediction-based mapping network, named PrediCIR,\nto adaptively predict the missing target visual content in ref-\nerence images in the latent space before mapping for accu-\nrate ZS-CIR. Specifically, a world view generation module\nfirst constructs a source view by omitting certain visual con-\ntent of a target view, coupled with an action that includes\nthe manipulation intent derived from existing image-caption\npairs. Then, a target content prediction module trains a\nworld model as a predictor to adaptively predict the miss-\ning visual information guided by user intention in manip-\nulating text at the latent space. The two modules map an\nimage with the predicted relevant information to a pseudo-\nword token without extra supervision. Our model shows\nstrong generalization ability on six ZS-CIR tasks. It obtains\nconsistent and significant performance boosts ranging from\n1.73% to 4.45% over the best methods and achieves new\nstate-of-the-art results on ZS-CIR. Our code is available at\nhttps://github.com/Pter61/predicir.\n1. Introduction\nGiven a reference image and a human manipulation text,\nComposed Image Retrieval (CIR) [44] aims to retrieve a\ntarget image visually similar to the reference image while\n*Corresponding author\n(a) Pre-training of the prediction-free image to word mapping (baseline) \nMapping\nNetwork\nImage\nImage\n(b) Pre-training of the prediction-based image-to-word mapping (ours)\nImage\nPseudo Word\n𝑺∗\nContrastive\nLearning\nSource Content\nCaption\nA rugby player passes \nthe ball to his teammate \non a grassy field.\nWorld\nModel\nAction\nPredicted-\nMissing Content\n𝑺∗\nContrastive\nLearning\nMapping Network \nTarget Image\nJoint-Embedding Predictive\nPseudo Word\nCrop\nImage\nManipulation text\nPut a tree trunk to the \nleft of the dog standing \nwith flowers and grass\nImage\nMapping\nNetwork\n𝑆∗\nComposed \nquery\nCLIP\nOur\nBaseline\nManipulation text\nis a black sleeve shirt \nwith Earth picture and \npeople flying\nChange the image \nof the sea lion into \norigami style\n(c) Zero-Shot Composed Image Retrieval\nInput \nRetrieval Modal \nRetrieval Results \nImage  \nCandidates\nPseudo Word\nRepresentation",
+    "sections": [
+      "unknown",
+      "abstract",
+      "abstraction",
+      "methods, is coarse-grained [15]. this leads to losing cru-",
+      "approaches [19, 47] learn representations by predicting",
+      "methods",
+      "approach of predicting target elements that are missing",
+      "approach. using the entire target image as the source view",
+      "background",
+      "discussion on common failure case. figure 8 depicts",
+      "references",
+      "methods, representations are learned by predicting the ef-",
+      "method"
+    ],
+    "topics": [
+      "image",
+      "target",
+      "boldsymbol",
+      "model",
+      "visual",
+      "source",
+      "cir",
+      "predicir",
+      "retrieval",
+      "text"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

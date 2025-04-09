@@ -1,0 +1,69 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: AutoEval_A_Practical_Framework_for_Autonomous_Evaluation_of_Mobile__Agents_662fecdc9c\n        **Abstract**: Accurate and systematic evaluation of mobile\nagents can significantly advance their develop-\nment and real-world applicability. However,\nexisting benchmarks for mobile agents lack\npracticality and scalability due to the extensive\nmanual effort required to define task reward sig-\nnals and implement corresponding evaluation\ncodes. To this end, we propose AutoEval, an\nautonomous agent evaluation framework that\ntests a mobile agent without any manual effort.\nFirst, we design a Structured Substate Repre-\nsentation to describe the UI state changes while\nagent execution, such that task reward signals\ncan be automatically generated. Second, we\nutilize a Judge System that can autonomously\nevaluate agents’ performance given the auto-\nmatically generated task reward signals. By\nproviding only a task description, our frame-\nwork evaluates agents with fine-grained perfor-\nmance feedback to that task without any extra\nmanual effort. We implement a prototype of\nour framework and validate the automatically\ngenerated task reward signals, finding over 93%\ncoverage to human-annotated reward signals.\nMoreover, to prove the effectiveness of our au-\ntonomous Judge System, we manually verify its\njudge results and demonstrate that it achieves\n94% accuracy. Finally, we evaluate the state-of-\nthe-art mobile agents using our framework, pro-\nviding detailed insights into their performance\ncharacteristics and limitations.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        to understand the innovation.\n</think>\n\n### Core Innovation\n\nThe key innovation of AutoEval lies in its ability to autonomously evaluate mobile agents without manual intervention. It combines a Structured Substate Representation and a Judge System to automatically generate task reward signals and evaluate agent performance.\n\n### Technical Approach\n\n- **Structured Substate Representation**: Captures UI state changes during agent execution, enabling automatic generation of task reward signals.\n- **Judge System**: Evaluates agent performance based on automatically generated task reward signals, requiring only a task description.\n- **Coverage Analysis**: Demonstrates over 93% coverage of human-annotated reward signals in validation.\n- **Validation**: Uses a prototype framework to validate performance metrics, ensuring accuracy in evaluation.\n\n### Quantitative Findings\n\n1. Coverage of automatically generated task reward signals: 93% compared to human-annotated signals.\n2. Accuracy of Judge System: 94% verified judge results.\n3. Detailed insights into agent performance characteristics and limitations.\n\n### Limitations & Assumptions\n\n- **Assumptions**: Relies on the availability of task descriptions and assumes agents' behavior can be captured by UI state changes.\n- **Limitations**: Prototype implementation may not cover all edge cases, and extensive testing is required for real-world applicability.\n\n### Domain Impact\n\n- **Theoretical**: Advances evaluation methodologies for mobile agents by reducing manual effort and enhancing scalability.\n- **Practical**: Offers a tool for developers to assess agent performance quickly, improving development efficiency and real-world applicability.\n\n### Key Equations/Figures\n\n- **Structured Substate Representation**: Describes state changes using a matrix or tree structure to track UI transitions.\n- **Judge System Accuracy**: 94% verified judge results, indicating high reliability in performance evaluation.\n- **Coverage Analysis**: 93% coverage of human-annotated reward signals, demonstrating robustness in automatic signal generation.",
+  "topics": [
+    "task",
+    "page",
+    "content",
+    "parent_id",
+    "state_id",
+    "agent",
+    "state_id content",
+    "substate",
+    "substates",
+    "visible"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/AutoEval_A_Practical_Framework_for_Autonomous_Evaluation_of_Mobile__Agents_662fecdc9c.pdf",
+    "content_hash": "d7f4be3fb293293cafc2a806a2d9977bc68e9546f3a3470fcd02216a297b7e67",
+    "arxiv_id": null,
+    "title": "AutoEval_A_Practical_Framework_for_Autonomous_Evaluation_of_Mobile__Agents_662fecdc9c",
+    "author": "",
+    "creation_date": "D:20250305014250Z",
+    "published": "2025-03-05T01:42:50",
+    "pages": 21,
+    "size": 815953,
+    "file_mtime": 1741419945.4898188
+  },
+  "main_staff": {
+    "title": "AutoEval_A_Practical_Framework_for_Autonomous_Evaluation_of_Mobile__Agents_662fecdc9c",
+    "authors": [
+      ""
+    ],
+    "abstract": "Accurate and systematic evaluation of mobile\nagents can significantly advance their develop-\nment and real-world applicability. However,\nexisting benchmarks for mobile agents lack\npracticality and scalability due to the extensive\nmanual effort required to define task reward sig-\nnals and implement corresponding evaluation\ncodes. To this end, we propose AutoEval, an\nautonomous agent evaluation framework that\ntests a mobile agent without any manual effort.\nFirst, we design a Structured Substate Repre-\nsentation to describe the UI state changes while\nagent execution, such that task reward signals\ncan be automatically generated. Second, we\nutilize a Judge System that can autonomously\nevaluate agents’ performance given the auto-\nmatically generated task reward signals. By\nproviding only a task description, our frame-\nwork evaluates agents with fine-grained perfor-\nmance feedback to that task without any extra\nmanual effort. We implement a prototype of\nour framework and validate the automatically\ngenerated task reward signals, finding over 93%\ncoverage to human-annotated reward signals.\nMoreover, to prove the effectiveness of our au-\ntonomous Judge System, we manually verify its\njudge results and demonstrate that it achieves\n94% accuracy. Finally, we evaluate the state-of-\nthe-art mobile agents using our framework, pro-\nviding detailed insights into their performance\ncharacteristics and limitations.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "evaluation code",
+      "evaluation result",
+      "related work",
+      "evaluation metrics: reference-based benchmarks",
+      "approach to define and check task reward signals.",
+      "evaluation accuracy to human evaluation.",
+      "evaluation suite comprising 93 tasks for agent eval-",
+      "evaluation",
+      "results. table 1 presents a comprehensive com-",
+      "results. table 2 shows the accuracy of judge",
+      "evaluation for each task execution. contribute to",
+      "results. table 4 shows the performance of dif-",
+      "conclusion",
+      "evaluation comparable to human evaluation. we",
+      "references",
+      "evaluation and refinement of digital agents. arxiv"
+    ],
+    "topics": [
+      "task",
+      "page",
+      "content",
+      "parent_id",
+      "state_id",
+      "agent",
+      "state_id content",
+      "substate",
+      "substates",
+      "visible"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

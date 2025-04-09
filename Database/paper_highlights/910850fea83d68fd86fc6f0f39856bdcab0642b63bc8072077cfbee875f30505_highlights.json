@@ -1,0 +1,81 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Assumes effective text-to-visual alignment and may struggle with ambiguous text features.",
+    "**Assumptions:** Relies on high-quality text annotations and sufficient training data for MLLMs.",
+    "",
+    "### 5. Domain Impact",
+    "**Theoretical:** Advances multi-modal ReID by integrating semantic text with visual features, offering a novel aggregation framework.",
+    "**Practical:** Provides robust tools for real-world applications, improving accuracy and efficiency in object retrieval across domains.",
+    "",
+    "### Key Equations/Figures",
+    "The framework's effectiveness is validated through metrics like mAP (mean average precision) and computational efficiency (e.g., reduction in feature extraction time).",
+    "The CDA mechanism's adaptability is illustrated through its ability to dynamically focus on relevant features, enhancing overall performance.",
+    "",
+    "This structured approach highlights the key aspects of the research, emphasizing its contributions, methods, validation, limitations, and broader impact."
+  ],
+  "impact": "",
+  "topics": [
+    "modal",
+    "text",
+    "multi",
+    "multi modal",
+    "reid",
+    "idea",
+    "model",
+    "information",
+    "map",
+    "feature"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/IDEA_Inverted_Text_with_Cooperative_Deformable_Aggregation_for__Multi-modal_Object_Re-Identification_910850fea83d68fd.pdf",
+    "content_hash": "910850fea83d68fd86fc6f0f39856bdcab0642b63bc8072077cfbee875f30505",
+    "arxiv_id": null,
+    "title": "IDEA_Inverted_Text_with_Cooperative_Deformable_Aggregation_for__Multi-modal_Object_Re-Identification_910850fea83d68fd",
+    "author": "",
+    "creation_date": "D:20250314005531Z",
+    "published": "2025-03-14T00:55:31",
+    "pages": 19,
+    "size": 25997055,
+    "file_mtime": 1742112264.6694565
+  },
+  "main_staff": {
+    "title": "IDEA_Inverted_Text_with_Cooperative_Deformable_Aggregation_for__Multi-modal_Object_Re-Identification_910850fea83d68fd",
+    "authors": [
+      ""
+    ],
+    "abstract": "Multi-modal object Re-IDentification (ReID) aims to re-\ntrieve specific objects by utilizing complementary infor-\nmation from various modalities. However, existing meth-\nods focus on fusing heterogeneous visual features, neglect-\ning the potential benefits of text-based semantic informa-\ntion. To address this issue, we first construct three text-\nenhanced multi-modal object ReID benchmarks. To be spe-\ncific, we propose a standardized multi-modal caption gen-\neration pipeline for structured and concise text annotations\nwith Multi-modal Large Language Models (MLLMs). Be-\nsides, current methods often directly aggregate multi-modal\ninformation without selecting representative local features,\nleading to redundancy and high complexity. To address the\nabove issues, we introduce IDEA, a novel feature learn-\ning framework comprising the Inverted Multi-modal Fea-\nture Extractor (IMFE) and Cooperative Deformable Aggre-\ngation (CDA). The IMFE utilizes Modal Prefixes and an In-\nverseNet to integrate multi-modal information with seman-\ntic guidance from inverted text. The CDA adaptively gen-\nerates sampling positions, enabling the model to focus on\nthe interplay between global features and discriminative lo-\ncal features. With the constructed benchmarks and the pro-\nposed modules, our framework can generate more robust\nmulti-modal features under complex scenarios. Extensive",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments on three multi-modal object reid benchmarks",
+      "methods provide text annotations for multi-modal im-",
+      "methods",
+      "methods, ∗indicates vit-based while others are cnn-based ones.",
+      "evaluation protocols. the performance is evaluated using",
+      "method idea† with existing multi-modal approaches on",
+      "results verify that incorporating text enhances feature dis-",
+      "experiments on three public reid",
+      "references",
+      "results, further validating the effectiveness of our method.",
+      "approaches, they often deliver superior performance due to",
+      "experiments on msvr310. a similar observation holds for"
+    ],
+    "topics": [
+      "modal",
+      "text",
+      "multi",
+      "multi modal",
+      "reid",
+      "idea",
+      "model",
+      "information",
+      "map",
+      "feature"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Feature maps for the Laplacian kernel and its generalizations\n        **Abstract**: Recent applications of kernel methods in machine\nlearning have seen a renewed interest in the Lapla-\ncian kernel, due to its stability to the bandwidth\nhyperparameter in comparison to the Gaussian\nkernel, as well as its expressivity being equivalent\nto that of the neural tangent kernel of deep fully\nconnected networks. However, unlike the Gaus-\nsian kernel, the Laplacian kernel is not separable.\nThis poses challenges for techniques to approxi-\nmate it, especially via the random Fourier features\n(RFF) methodology and its variants. In this work,\nwe provide random features for the Laplacian ker-\nnel and its two generalizations: Mat´ern kernel and\nthe Exponential power kernel. We provide effi-\nciently implementable schemes to sample weight\nmatrices so that random features approximate\nthese kernels.\nThese weight matrices have a\nweakly coupled heavy-tailed randomness. Via\nnumerical experiments on real datasets we demon-\nstrate the efficacy of these random feature maps.\nKeywords:\nKernel\nmachines,\nLaplacian\nkernel,\nMat´ern kernel, Exponential-power kernel, Random Fourier\nfeatures.\n1. Introduction\nKernel machines are a classical family of models in machine\nlearning. Certain architectures of neural networks (Lee et al.,\n2017; Matthews et al., 2018; Jacot et al., 2018) behave like\nkernel machines under a large width limit.\nRecent work on kernel machines enabled with feature learn-\ning (Radhakrishnan et al., 2024a), which builds on the Lapla-\ncian kernel, has inspired many interpretable substitutes for\ndeep neural networks on unstructured data. For example\n(Radhakrishnan et al., 2024b) and (Aristoff et al., 2024) have\ndemonstrated methodological advances in basic sciences.\nFrom a theoretical standpoint, kernel machines provide a\ntestbed for understanding many behaviours exhibited by\ndeep neural networks (Belkin et al., 2018). Recently, many\ncomplex neural phenomena been shown to be present in\n1Center for Machine Intelligence and Data Science, IIT Bom-\nbay, India. Correspondence to: <pandit@iitb.ac.in>.\nkernel models. Examples include emergence and grokking\n(Mallinar et al., 2024), deep neural collapse (Beaglehole\net al., 2024), overparameterization (Simon et al., 2024;\nGhosh & Belkin, 2023), benign overfitting (Mallinar et al.,\n2022), and interpolation (Beaglehole et al., 2023), monotone\nimprovement with model size (Abedsoltan et al., 2023), and\nsimplicity bias (Radhakrishnan et al., 2024a) among others.\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n**Answered:**\n\n**Structured Highlights:**\n\n**1. Core Innovation:** The paper introduces random features for the Laplacian kernel and its generalizations (Matérn and Exponential power kernels) using a novel method that captures their weakly coupled heavy-tailed randomness.\n\n**2. Technical Approach:**\n- The weight matrices are sampled with a weakly coupled heavy-tailed distribution.\n- Efficiently implementable schemes are provided for generating these weight matrices.\n- The approach is validated through numerical experiments on real datasets.\n\n**3. Quantitative Findings:**\n- The random feature maps achieve competitive performance compared to the original kernels.\n- The approximation quality is superior in certain metrics compared to existing RFF approximations.\n- Numerical results demonstrate the effectiveness of the proposed method in approximating the kernels.\n\n**4. Limitations & Assumptions:**\n- The method may not capture all the nuances of the kernels in high-dimensional spaces.\n- The assumption that the weakly coupled heavy-tailed randomness is sufficient for approximation may not hold for all cases.\n- The implementation complexity might be a barrier for certain applications.\n\n**5. Domain Impact:**\n- Theoretically, it provides a better understanding of kernel methods and their relation to deep learning.\n- Practically, it offers a more efficient and effective way to approximate the Laplacian and its generalizations, enhancing scalability in machine learning tasks.\n</think>\n\n**Structured Highlights:**\n\n**1. Core Innovation:**  \nThe paper introduces random features for the Laplacian kernel and its generalizations (Matérn and Exponential power kernels) by leveraging a novel method that captures their weakly coupled heavy-tailed randomness, enabling efficient approximation.\n\n**2. Technical Approach:**  \n- **Heavy-tailed Sampling:** Weight matrices are sampled using a weakly coupled heavy-tailed distribution, enhancing the approximation quality.\n- **Efficient Implementation:** The method provides practical schemes for generating these weight matrices, ensuring computational feasibility.\n- **Validation:** The approach is rigorously tested through numerical experiments on real datasets, demonstrating its effectiveness.\n\n**3. Quantitative Findings:**  \n- The random feature maps achieve competitive performance, matching or exceeding the original kernels in certain metrics.\n- Superior approximation quality is observed in specific metrics compared to existing RFF methods, highlighting the efficiency of the proposed approach.\n\n**4. Limitations & Assumptions:**  \n- The method may struggle with high-dimensional spaces, potentially limiting its applicability in such scenarios.\n- The assumption that the weakly coupled heavy-tailed distribution suffices for approximation may not hold universally across all cases.\n- Implementation complexity could act as a barrier, particularly for applications requiring simpler solutions.\n\n**5. Domain Impact:**  \n- **Theoretical:** Enhances understanding of kernel methods and their relation to deep learning, offering insights into complex neural phenomena.\n- **Practical:** Provides a scalable and efficient alternative to kernel methods, improving the applicability of machine learning models across various domains.",
+  "topics": [
+    "kernel",
+    "10",
+    "distribution",
+    "random",
+    "laplacian",
+    "rd",
+    "features",
+    "et",
+    "al",
+    "function"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Feature_maps_for_the_Laplacian_kernel_and_its_generalizations_bdd566849b8ca503.pdf",
+    "content_hash": "bdd566849b8ca503e404248cda575df1563e6c795095d182d2246fef88297947",
+    "arxiv_id": null,
+    "title": "Feature maps for the Laplacian kernel and its generalizations",
+    "author": "Sudhendu Ahir, Parthe Pandit",
+    "creation_date": "D:20250224015202Z",
+    "published": "2025-02-24T01:52:02",
+    "pages": 19,
+    "size": 915934,
+    "file_mtime": 1740973200.897146
+  },
+  "main_staff": {
+    "title": "Feature maps for the Laplacian kernel and its generalizations",
+    "authors": [
+      "Sudhendu Ahir",
+      " Parthe Pandit"
+    ],
+    "abstract": "Recent applications of kernel methods in machine\nlearning have seen a renewed interest in the Lapla-\ncian kernel, due to its stability to the bandwidth\nhyperparameter in comparison to the Gaussian\nkernel, as well as its expressivity being equivalent\nto that of the neural tangent kernel of deep fully\nconnected networks. However, unlike the Gaus-\nsian kernel, the Laplacian kernel is not separable.\nThis poses challenges for techniques to approxi-\nmate it, especially via the random Fourier features\n(RFF) methodology and its variants. In this work,\nwe provide random features for the Laplacian ker-\nnel and its two generalizations: Mat´ern kernel and\nthe Exponential power kernel. We provide effi-\nciently implementable schemes to sample weight\nmatrices so that random features approximate\nthese kernels.\nThese weight matrices have a\nweakly coupled heavy-tailed randomness. Via\nnumerical experiments on real datasets we demon-\nstrate the efficacy of these random feature maps.\nKeywords:\nKernel\nmachines,\nLaplacian\nkernel,\nMat´ern kernel, Exponential-power kernel, Random Fourier\nfeatures.\n1. Introduction\nKernel machines are a classical family of models in machine\nlearning. Certain architectures of neural networks (Lee et al.,\n2017; Matthews et al., 2018; Jacot et al., 2018) behave like\nkernel machines under a large width limit.\nRecent work on kernel machines enabled with feature learn-\ning (Radhakrishnan et al., 2024a), which builds on the Lapla-\ncian kernel, has inspired many interpretable substitutes for\ndeep neural networks on unstructured data. For example\n(Radhakrishnan et al., 2024b) and (Aristoff et al., 2024) have\ndemonstrated methodological advances in basic sciences.\nFrom a theoretical standpoint, kernel machines provide a\ntestbed for understanding many behaviours exhibited by\ndeep neural networks (Belkin et al., 2018). Recently, many\ncomplex neural phenomena been shown to be present in\n1Center for Machine Intelligence and Data Science, IIT Bom-\nbay, India. Correspondence to: <pandit@iitb.ac.in>.\nkernel models. Examples include emergence and grokking\n(Mallinar et al., 2024), deep neural collapse (Beaglehole\net al., 2024), overparameterization (Simon et al., 2024;\nGhosh & Belkin, 2023), benign overfitting (Mallinar et al.,\n2022), and interpolation (Beaglehole et al., 2023), monotone\nimprovement with model size (Abedsoltan et al., 2023), and\nsimplicity bias (Radhakrishnan et al., 2024a) among others.",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results on precise asymptotics (mei & montanari, 2022)",
+      "method for creating w, leveraging the distribution of ∥w∥.",
+      "references"
+    ],
+    "topics": [
+      "kernel",
+      "10",
+      "distribution",
+      "random",
+      "laplacian",
+      "rd",
+      "features",
+      "et",
+      "al",
+      "function"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Muon_is_Scalable_for_LLM_Training_6b8e3b47da4db09c\n        **Abstract**: Recently, the Muon optimizer (K. Jordan et al. 2024) based on matrix orthogonalization has demon-\nstrated strong results in training small-scale language models, but the scalability to larger models has\nnot been proven. We identify two crucial techniques for scaling up Muon: (1) adding weight decay and\n(2) carefully adjusting the per-parameter update scale. These techniques allow Muon to work out-of-\nthe-box on large-scale training without the need of hyper-parameter tuning. Scaling law experiments\nindicate that Muon achieves ∼2× computational efficiency compared to AdamW with compute\noptimal training. Based on these improvements, we introduce Moonlight, a 3B/16B-parameter\nMixture-of-Expert (MoE) model trained with 5.7T tokens using Muon. Our model improves the\ncurrent Pareto frontier, achieving better performance with much fewer training FLOPs compared\nto prior models. We open-source our distributed Muon implementation that is memory optimal\nand communication efficient. We also release the pretrained, instruction-tuned, and intermediate\ncheckpoints to support future research.\nCreated in Master PDF Editor\n10\n1\n100\n101\nPFLOP/s-days\n2.2\n2.3\n2.4\n2.5\n2.6\n2.7\n2.8\n2.9\n3.0\nLM loss \n0.519x FLOPs\nMuon\nAdamW\n(a)\n2e22\n5e22\n1e23\n2e23\n5e23\n1e24\nTraining FLOPs\n50\n55\n60\n65\n70\n75\n80\nMMLU Score\nLlama-2-13B\nLlama-3.1-8B\nQwen-2.5-7B\nQwen-2.5-14B\nGemma-2-9B\nStableLM-2-12B\nMAP-Neo-7B\nOLMo-0424-7B\nDCLM-7B\nOLMo-2-7B\nOLMo-2-13B\nQwen-2.5-3B\nDeepSeek-V2-Lite-2.4B\nDeepSeek-V3-Small-2.4B\nMoonlight-2.4B-1.2T\nMoonlight-2.4B-5.7T\nMMLU Performance Frontier\n(b)\nFigure 1: Scaling up with Muon. (a) Scaling law experiments comparing Muon and Adam. Muon is ∼2× more\ncomputational efficient than Adam with compute optimal training. (b) The MMLU performance of our Moonlight\nmodel optimized with Muon and other comparable models. Moonlight advances the Pareto frontier of performance vs\ntraining FLOPs.\n∗Corresponding author: zhouxinyu@moonshot.cn\narXiv:2502.16982v1  [cs.LG]  24 Feb 2025\n\nMuon is Scalable for LLM Training\nTECHNICAL REPORT\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n</think>\n\n**Core Innovation:**  \nThe Muon optimizer introduces a scalable approach for large-scale language model (LLM) training by enhancing computational efficiency through weight decay and per-parameter update scaling, achieving up to 2× efficiency compared to AdamW.\n\n**Technical Approach:**  \n1. **Weight Decay Integration:** Incorporates weight decay to stabilize training and prevent overfitting.  \n2. **Parameter-Specific Scaling:** Adjusts update scales per parameter to optimize training efficiency.  \n3. **Matrix Orthogonalization:** Uses orthogonalization techniques for efficient gradient updates.  \n4. **Memory Optimization:** Implements a distributed training setup for reduced memory usage.  \n5. **Communication Efficiency:** Utilizes optimized communication strategies for faster training.  \n\n**Quantitative Findings:**  \n1. Muon achieves 2× computational efficiency compared to AdamW with optimal training.  \n2. The MMLU performance frontier shows advancements, with Moonlight model outperforming others using fewer training FLOPs.  \n3. The training FLOPs for Moonlight are 5.7T, surpassing previous models.  \n\n**Limitations & Assumptions:**  \n- Limited testing on extremely large models beyond 3B parameters.  \n- Potential hardware constraints affecting scalability.  \n- Assumption of sufficient data and computational resources for optimal performance.  \n\n**Domain Impact:**  \n- **Theoretical:** Advances optimization techniques for efficient LLM training.  \n- **Practical:** Enables more efficient and scalable training, reducing computational costs and time.  \n- **Equations/Figures:**  \n  - **Figure 1(a):** Muon's 2× efficiency compared to AdamW.  \n  - **Figure 1(b):** Moonlight's superior MMLU score on the Pareto frontier.  \n- **Key Metrics:**  \n  - Training FLOPs: 5.7T for Moonlight.  \n  - Performance Frontier: Moonlight advances the frontier in terms of FLOPs and performance.",
+  "topics": [
+    "muon",
+    "al",
+    "et",
+    "et al",
+    "training",
+    "adamw",
+    "weight",
+    "model",
+    "2024",
+    "arxiv"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Muon_is_Scalable_for_LLM_Training_6b8e3b47da4db09c.pdf",
+    "content_hash": "6b8e3b47da4db09c952a35486c905f416c57081a32b445a36a3744c441b1c7f3",
+    "arxiv_id": null,
+    "title": "Muon_is_Scalable_for_LLM_Training_6b8e3b47da4db09c",
+    "author": "",
+    "creation_date": "D:20250225023458Z",
+    "published": "2025-02-25T02:34:58",
+    "pages": 19,
+    "size": 2077505,
+    "file_mtime": 1740972014.8129737
+  },
+  "main_staff": {
+    "title": "Muon_is_Scalable_for_LLM_Training_6b8e3b47da4db09c",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recently, the Muon optimizer (K. Jordan et al. 2024) based on matrix orthogonalization has demon-\nstrated strong results in training small-scale language models, but the scalability to larger models has\nnot been proven. We identify two crucial techniques for scaling up Muon: (1) adding weight decay and\n(2) carefully adjusting the per-parameter update scale. These techniques allow Muon to work out-of-\nthe-box on large-scale training without the need of hyper-parameter tuning. Scaling law experiments\nindicate that Muon achieves ∼2× computational efficiency compared to AdamW with compute\noptimal training. Based on these improvements, we introduce Moonlight, a 3B/16B-parameter\nMixture-of-Expert (MoE) model trained with 5.7T tokens using Muon. Our model improves the\ncurrent Pareto frontier, achieving better performance with much fewer training FLOPs compared\nto prior models. We open-source our distributed Muon implementation that is memory optimal\nand communication efficient. We also release the pretrained, instruction-tuned, and intermediate\ncheckpoints to support future research.\nCreated in Master PDF Editor\n10\n1\n100\n101\nPFLOP/s-days\n2.2\n2.3\n2.4\n2.5\n2.6\n2.7\n2.8\n2.9\n3.0\nLM loss \n0.519x FLOPs\nMuon\nAdamW\n(a)\n2e22\n5e22\n1e23\n2e23\n5e23\n1e24\nTraining FLOPs\n50\n55\n60\n65\n70\n75\n80\nMMLU Score\nLlama-2-13B\nLlama-3.1-8B\nQwen-2.5-7B\nQwen-2.5-14B\nGemma-2-9B\nStableLM-2-12B\nMAP-Neo-7B\nOLMo-0424-7B\nDCLM-7B\nOLMo-2-7B\nOLMo-2-13B\nQwen-2.5-3B\nDeepSeek-V2-Lite-2.4B\nDeepSeek-V3-Small-2.4B\nMoonlight-2.4B-1.2T\nMoonlight-2.4B-5.7T\nMMLU Performance Frontier\n(b)\nFigure 1: Scaling up with Muon. (a) Scaling law experiments comparing Muon and Adam. Muon is ∼2× more\ncomputational efficient than Adam with compute optimal training. (b) The MMLU performance of our Moonlight\nmodel optimized with Muon and other comparable models. Moonlight advances the Pareto frontier of performance vs\ntraining FLOPs.\n∗Corresponding author: zhouxinyu@moonshot.cn\narXiv:2502.16982v1  [cs.LG]  24 Feb 2025\n\nMuon is Scalable for LLM Training\nTECHNICAL REPORT\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods",
+      "background",
+      "method",
+      "experiments",
+      "results serve as a reference for comparison. our pretrained model has 2.24b activated and 15.29b total parameters (3b",
+      "evaluation benchmarks",
+      "discussions",
+      "approach, while functional, presents an opportunity for improvement. the integration of the optimization of all",
+      "conclusions",
+      "references"
+    ],
+    "topics": [
+      "muon",
+      "al",
+      "et",
+      "et al",
+      "training",
+      "adamw",
+      "weight",
+      "model",
+      "2024",
+      "arxiv"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

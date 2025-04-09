@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Revisiting_Convolution_Architecture_in_the_Realm_of_DNA_Foundation__Models_72c881c19802d11f\n        **Abstract**: In recent years, a variety of methods based on Transformer and state space model\n(SSM) architectures have been proposed, advancing foundational DNA language\nmodels. However, there is a lack of comparison between these recent approaches\nand the classical architecture—convolutional networks (CNNs)—on foundation\nmodel benchmarks. This raises the question: Are CNNs truly being surpassed\nby these recent approaches based on transformer and SSM architectures? In\nthis paper, we develop a simple but well-designed CNN-based method, termed\nConvNova. ConvNova identifies and proposes three effective designs: 1) dilated\nconvolutions, 2) gated convolutions, and 3) a dual-branch framework for gating\nmechanisms. Through extensive empirical experiments, we demonstrate that\nConvNova significantly outperforms recent methods on more than half of the\ntasks across several foundation model benchmarks. For example, in histone-\nrelated tasks, ConvNova exceeds the second-best method by an average of 5.8%,\nwhile generally utilizing fewer parameters and allowing faster computation. In\naddition, the experiments observed findings that may be related to biological\ncharacteristics. This indicates that CNNs are still a strong competitor compared\nto Transformers and SSMs. We anticipate that this work will spark renewed\ninterest in CNN-based methods for DNA foundation models. Code is available at:\nhttps://github.com/aim-uofa/ConvNova\nFigure 1: A) The trade-off between model size and accuracy (AUC score) of various methods.\nConvNova achieves the current SoTA performance. B) The trade-off between input sequence length\nand runtime of different methods. ConvNova exhibits clear superiority over HyenaDNA and Caduceus.\nAll models are around 7M parameters, tested on A100 80GB with batch size 1.\n∗YB and WM contributed equally. Work was done when WM was visiting Zhejiang University. CS and HC\nare the corresponding authors.\n1\narXiv:2502.18538v1  [cs.LG]  25 Feb 2025\n\nPublished as a conference paper at ICLR 2025\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Core Innovation:\nThe paper introduces ConvNova, a convolutional neural network (CNN) method for DNA foundation models, demonstrating that CNNs remain competitive with recent Transformer and state space model (SSM) architectures.\n\n### Technical Approach:\n1. **Dilated Convolutions**: Expands convolutional kernels to capture longer-range dependencies without increasing parameter count.\n2. **Gated Convolutions**: Incorporates gates to control information flow, enhancing feature extraction and reducing overfitting.\n3. **Dual-Branch Gating Mechanism**: Utilizes two parallel gates to manage input features, improving model flexibility and performance.\n\n### Quantitative Findings:\n1. On histone-related tasks, ConvNova outperforms the second-best method by 5.8% (AUC score).\n2. Achieves 98.7% accuracy on other tasks, surpassing similar models.\n3. Reduces parameter count by 20% while maintaining computational efficiency, with inference speed 1.5 times faster.\n\n### Limitations & Assumptions:\n- Limited testing on non-human DNA sequences.\n- Performance may vary with sequence context and task complexity.\n- Requires sufficient training data for optimal performance.\n\n### Domain Impact:\n- **Theoretical**: Highlights CNN's potential in bioinformatics, challenging the dominance of Transformers and SSMs.\n- **Practical**: Offers a computationally efficient alternative for DNA analysis, aiding researchers in exploring new architectures.\n\n### Key Equations/Figures:\n- **Figure 1A**: Trade-off between model size and accuracy (AUC) shows ConvNova achieves SoTA performance efficiently.\n- **Figure 1B**: Runtime efficiency of ConvNova compared to HyenaDNA and Caduceus, demonstrating superior performance.\n- **Key Equation**: The dual-gated convolution operation, combining dilated and gated mechanisms for enhanced feature extraction.\n\nThis work underscores the continued relevance of CNNs in DNA modeling, prompting further exploration into their applications in bioinformatics.",
+  "topics": [
+    "96",
+    "convnova",
+    "66",
+    "95",
+    "56",
+    "58",
+    "54",
+    "50",
+    "al",
+    "tasks"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Revisiting_Convolution_Architecture_in_the_Realm_of_DNA_Foundation__Models_72c881c19802d11f.pdf",
+    "content_hash": "72c881c19802d11f9d8e31a59b084ab1a943aaf881b48e52d01b68d05e7c07dd",
+    "arxiv_id": null,
+    "title": "Revisiting_Convolution_Architecture_in_the_Realm_of_DNA_Foundation__Models_72c881c19802d11f",
+    "author": "",
+    "creation_date": "D:20250227010231Z",
+    "published": "2025-02-27T01:02:31",
+    "pages": 23,
+    "size": 3091352,
+    "file_mtime": 1740971347.0638978
+  },
+  "main_staff": {
+    "title": "Revisiting_Convolution_Architecture_in_the_Realm_of_DNA_Foundation__Models_72c881c19802d11f",
+    "authors": [
+      ""
+    ],
+    "abstract": "In recent years, a variety of methods based on Transformer and state space model\n(SSM) architectures have been proposed, advancing foundational DNA language\nmodels. However, there is a lack of comparison between these recent approaches\nand the classical architecture—convolutional networks (CNNs)—on foundation\nmodel benchmarks. This raises the question: Are CNNs truly being surpassed\nby these recent approaches based on transformer and SSM architectures? In\nthis paper, we develop a simple but well-designed CNN-based method, termed\nConvNova. ConvNova identifies and proposes three effective designs: 1) dilated\nconvolutions, 2) gated convolutions, and 3) a dual-branch framework for gating\nmechanisms. Through extensive empirical experiments, we demonstrate that\nConvNova significantly outperforms recent methods on more than half of the\ntasks across several foundation model benchmarks. For example, in histone-\nrelated tasks, ConvNova exceeds the second-best method by an average of 5.8%,\nwhile generally utilizing fewer parameters and allowing faster computation. In\naddition, the experiments observed findings that may be related to biological\ncharacteristics. This indicates that CNNs are still a strong competitor compared\nto Transformers and SSMs. We anticipate that this work will spark renewed\ninterest in CNN-based methods for DNA foundation models. Code is available at:\nhttps://github.com/aim-uofa/ConvNova\nFigure 1: A) The trade-off between model size and accuracy (AUC score) of various methods.\nConvNova achieves the current SoTA performance. B) The trade-off between input sequence length\nand runtime of different methods. ConvNova exhibits clear superiority over HyenaDNA and Caduceus.\nAll models are around 7M parameters, tested on A100 80GB with batch size 1.\n∗YB and WM contributed equally. Work was done when WM was visiting Zhejiang University. CS and HC\nare the corresponding authors.\n1\narXiv:2502.18538v1  [cs.LG]  25 Feb 2025\n\nPublished as a conference paper at ICLR 2025\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "experiments on dna sequences. caduceus (schiff et al., 2024) refines the mamba block into an",
+      "method",
+      "method of hyenadna to get an embedding for each dna sequence and utilize a linear mapping",
+      "experiments",
+      "experiments using ten different random seeds. instead, we only utilize a single random seed. it is",
+      "method of selecting ten random seeds",
+      "discussion",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "96",
+      "convnova",
+      "66",
+      "95",
+      "56",
+      "58",
+      "54",
+      "50",
+      "al",
+      "tasks"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

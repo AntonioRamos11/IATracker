@@ -1,0 +1,62 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Same_accuracy_twice_as_fast_continuous_training_surpasses_retraining__from_scratch_fb812146a345ddc0\n        **Abstract**: Continual learning aims to enable models to adapt to new datasets without losing performance on\npreviously learned data, often assuming that prior data is no longer available. However, in many\npractical scenarios, both old and new data are accessible. In such cases, good performance on both\ndatasets is typically achieved by abandoning the model trained on the previous data and re-training\na new model from scratch on both datasets. This training from scratch is computationally expen-\nsive. In contrast, methods that leverage the previously trained model and old data are worthy of\ninvestigation, as they could significantly reduce computational costs. Our evaluation framework\nquantifies the computational savings of such methods while maintaining or exceeding the perfor-\nmance of training from scratch. We identify key optimization aspects – initialization, regularization,\ndata selection, and hyper-parameters – that can each contribute to reducing computational costs.\nFor each aspect, we propose effective first-step methods that already yield substantial computational\nsavings. By combining these methods, we achieve up to 2.7x reductions in computation time across\nvarious computer vision tasks, highlighting the potential for further advancements in this area.\n1\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n</think>\n\n**Structured Highlights for the Research Paper**\n\n1. **Core Innovation**: The paper introduces a framework that enables models to continuously train and adapt using both old and new datasets without retraining from scratch, achieving superior performance computationally faster than traditional methods.\n\n2. **Technical Approach**:\n   - Leverages the previously trained model and old data to minimize computational costs.\n   - Focuses on optimization aspects: initialization, regularization, data selection, and hyper-parameters.\n   - Proposes effective first-step methods for each aspect to reduce computation time.\n\n3. **Quantitative Findings**:\n   - Up to 2.7x reduction in computation time across various computer vision tasks.\n   - Maintains or exceeds performance of training from scratch.\n\n4. **Limitations & Assumptions**:\n   - Assumes prior data availability and model adaptability.\n   - Limited testing on non-computer vision tasks.\n   - Focus on computational efficiency without exploring other performance metrics.\n\n5. **Domain Impact**:\n   - Theoretically impactful by offering a computationally efficient approach for continual learning.\n   - Practically valuable for applications requiring efficient resource use, such as mobile devices or edge computing.",
+  "topics": [
+    "learning",
+    "scratch",
+    "model",
+    "data",
+    "training",
+    "old",
+    "new",
+    "trained",
+    "continuous",
+    "accuracy"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Same_accuracy_twice_as_fast_continuous_training_surpasses_retraining__from_scratch_fb812146a345ddc0.pdf",
+    "content_hash": "fb812146a345ddc0ebfe5e89cf972734805df863134c8696508ac5e266fdd283",
+    "arxiv_id": null,
+    "title": "Same_accuracy_twice_as_fast_continuous_training_surpasses_retraining__from_scratch_fb812146a345ddc0",
+    "author": "",
+    "creation_date": "D:20250303015929Z",
+    "published": "2025-03-03T01:59:29",
+    "pages": 15,
+    "size": 902381,
+    "file_mtime": 1740975950.0668516
+  },
+  "main_staff": {
+    "title": "Same_accuracy_twice_as_fast_continuous_training_surpasses_retraining__from_scratch_fb812146a345ddc0",
+    "authors": [
+      ""
+    ],
+    "abstract": "Continual learning aims to enable models to adapt to new datasets without losing performance on\npreviously learned data, often assuming that prior data is no longer available. However, in many\npractical scenarios, both old and new data are accessible. In such cases, good performance on both\ndatasets is typically achieved by abandoning the model trained on the previous data and re-training\na new model from scratch on both datasets. This training from scratch is computationally expen-\nsive. In contrast, methods that leverage the previously trained model and old data are worthy of\ninvestigation, as they could significantly reduce computational costs. Our evaluation framework\nquantifies the computational savings of such methods while maintaining or exceeding the perfor-\nmance of training from scratch. We identify key optimization aspects – initialization, regularization,\ndata selection, and hyper-parameters – that can each contribute to reducing computational costs.\nFor each aspect, we propose effective first-step methods that already yield substantial computational\nsavings. By combining these methods, we achieve up to 2.7x reductions in computation time across\nvarious computer vision tasks, highlighting the potential for further advancements in this area.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method",
+      "methods, it is a common practice to balance examples from old and new data in a batch (rolnick et al., 2019), which",
+      "results",
+      "results further, albeit not fully cumulative. on the right hand side of the table, ‘scratch’ shows the result of a model",
+      "conclusion",
+      "references",
+      "results, although it slows down learning results at the start of learning. shrinking enough is necessary and not doing",
+      "method. when r = 0, this becomes the method proposed by (hacohen & tuytelaars, 2024), on which this idea is"
+    ],
+    "topics": [
+      "learning",
+      "scratch",
+      "model",
+      "data",
+      "training",
+      "old",
+      "new",
+      "trained",
+      "continuous",
+      "accuracy"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

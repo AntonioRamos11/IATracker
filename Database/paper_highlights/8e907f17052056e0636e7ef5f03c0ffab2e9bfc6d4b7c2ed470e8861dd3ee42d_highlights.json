@@ -1,0 +1,69 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Tested on nuScenes, which may not fully represent real-world variability.",
+    "**Assumptions:** Assumes accurate and well-labeled input data, which may not hold in real-world scenarios with noisy data.",
+    "**Domain Impact:**",
+    "**Theoretical Impact:** Bridges the gap between end-to-end frameworks and vectorized systems by explicitly modeling geometric coherence.",
+    "**Practical Impact:** Enhances autonomous driving reliability, safety, and efficiency, crucial for real-world deployment.",
+    "**Summary:**",
+    "InVDriver addresses spatial correlations in autonomous driving using masked self-attention, improving accuracy and safety while maintaining efficiency. The approach is validated on nuScenes, showing superior performance, though real"
+  ],
+  "impact": "** Enhances autonomous driving reliability, safety, and efficiency, crucial for real-world deployment.\n\n**Summary:**\nInVDriver addresses spatial correlations in autonomous driving using masked self-attention, improving accuracy and safety while maintaining efficiency. The approach is validated on nuScenes, showing superior performance, though real",
+  "topics": [
+    "al",
+    "et",
+    "et al",
+    "instance",
+    "end",
+    "driving",
+    "intra",
+    "2024",
+    "autonomous",
+    "intra instance"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/InVDriver_Intra-Instance_Aware_Vectorized_Query-Based_Autonomous__Driving_Transformer_8e907f17052056e0.pdf",
+    "content_hash": "8e907f17052056e0636e7ef5f03c0ffab2e9bfc6d4b7c2ed470e8861dd3ee42d",
+    "arxiv_id": null,
+    "title": "Microsoft Word - IVDNet_JICV_Clean_250225_v3.docx",
+    "author": "",
+    "creation_date": "D:20250225081410Z00'00'",
+    "published": "20250225081410Z00'00'",
+    "pages": 18,
+    "size": 1644831,
+    "file_mtime": 1740971345.3477786
+  },
+  "main_staff": {
+    "title": "Microsoft Word - IVDNet_JICV_Clean_250225_v3.docx",
+    "authors": [
+      ""
+    ],
+    "abstract": "End-to-end autonomous driving with its holistic optimization capabilities, has gained increasing traction in academia \nand industry. Vectorized representations, which preserve instance-level topological information while reducing \ncomputational overhead, have emerged as a promising paradigm. While existing vectorized query-based frameworks \noften overlook the inherent spatial correlations among intra-instance points, resulting in geometrically inconsistent \noutputs (e.g., fragmented HD map elements or oscillatory trajectories). To address these limitations, we propose \nInVDriver, a novel vectorized query-based system that systematically models intra-instance spatial dependencies \nthrough masked self-attention layers, thereby enhancing planning accuracy and trajectory smoothness. Across all \ncore modules—perception, prediction, and planning—InVDriver incorporates masked self-attention mechanisms that \nrestrict attention to intra-instance point interactions, enabling coordinated refinement of structural elements while \nsuppressing irrelevant inter-instance noise. Experimental results on the nuScenes benchmark demonstrate that \nInVDriver achieves state-of-the-art performance, surpassing prior methods in both accuracy and safety, while \nmaintaining high computational efficiency. Our work validates that explicit modeling of intra-instance geometric \ncoherence is critical for advancing vectorized autonomous driving systems, bridging the gap between theoretical \nadvantages of end-to-end frameworks and practical deployment requirements. \n\nJournal of Intelligent and Connected Vehicles                                                                                                    http://mc03.manuscriptcentral.com/jicv-thu \n2 \n \n  \nKeywords  \nEnd-to-end autonomous driving; Decision making; Motion prediction; Transformer; Artificial Intelligence \n \n1. Introduction \nAutonomous driving systems represent a sophisticated technological framework comprising integrated subsystems \nof perception, prediction, motion planning, and vehicular control. This cyber-physical architecture requires the \nvehicle to continuously interpret multimodal sensory inputs, dynamically model agent behaviors, and execute \ncollision-free trajectories in complex traffic scenarios - demanding not only multi-spectral perception capabilities \nthrough sensor fusion but also cognitive-level decision-making algorithms powered by artificial intelligence \narchitectures.  \n \nTraditional architectural frameworks for autonomous driving systems employ a sequential modular paradigm \ncomprising discrete functional components (perception, prediction, planning, and control) (Liu et al., 2021; Zablocki \net al., 2022; Kendall et al., 2019; Chen et al., 2024; Li et al., 2024). These modules introduce cascading dependencies, \nwhere errors from upstream processes propagate, compounding inaccuracies in downstream modules. For instance, \nthe motion planning module necessitates object detection outputs (bounding boxes, semantic segmentation masks) \ngenerated by perception modules. While this compartmentalized approach provides initial design transparency and \nmodular development benefits, it introduces three fundamental limitations: (1) Suboptimal system integration. The \ndecoupled optimization strategy permits individual module tuning but fails to ensure global system optimality. The \ncombinatorial interaction of locally optimized components may create emergent error modes unobservable at module \nlevel evaluations. (2) Information degradation cascade. Subsequent decision-making layers operate on pre-processed ",
+    "sections": [
+      "unknown",
+      "abstract",
+      "abstractions rather than raw sensor data (e.g., cameras and lidars). critical environmental metadata, including",
+      "approaches directly generate planning outputs from raw sensor inputs without intermediate modules (xu et al., 2024;",
+      "method",
+      "methods, including lidar-camera fusion and camera-only approaches. as shown in table 1, invdriver achieves",
+      "method vad. with multiple camera images as input, both methods output hd map predictions, surrounding vehicle"
+    ],
+    "topics": [
+      "al",
+      "et",
+      "et al",
+      "instance",
+      "end",
+      "driving",
+      "intra",
+      "2024",
+      "autonomous",
+      "intra instance"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Judge_a_Book_by_its_Cover_Investigating_Multi-Modal_LLMs_for_Multi-Page__Handwritten_Document_Transcription_14eb722a3a6b5da9\n        **Abstract**: Handwritten text recognition (HTR) remains a challeng-\ning task, particularly for multi-page documents where pages\nshare common formatting and contextual features. While\nmodern optical character recognition (OCR) engines are pro-\nficient with printed text, their performance on handwriting is\nlimited, often requiring costly labeled data for fine-tuning.\nIn this paper, we explore the use of multi-modal large lan-\nguage models (MLLMs) for transcribing multi-page hand-\nwritten documents in a zero-shot setting. We investigate vari-\nous configurations of commercial OCR engines and MLLMs,\nutilizing the latter both as end-to-end transcribers and as post-\nprocessors, with and without image components. We propose\na novel method, +FIRST PAGE, which enhances MLLM tran-\nscription by providing the OCR output of the entire document\nalong with just the first page image. This approach leverages\nshared document features without incurring the high cost of\nprocessing all images. Experiments on a multi-page version\nof the IAM Handwriting Database demonstrate that +FIRST\nPAGE improves transcription accuracy, balances cost with\nperformance, and even enhances results on out-of-sample text\nby extrapolating formatting and OCR error patterns from a\nsingle page.\nCode — https://github.com/BenGutteridge/judge-a-book\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        Please reason step by step, I want to understand how to structure this.\n\nOkay, I need to create structured highlights for a research paper based on the user's query. The paper is about using multi-modal large language models (MLLMs) for transcribing multi-page handwritten documents. The title is \"Judge_a_Book_by_its_Cover\" and the abstract mentions challenges with HTR, limitations of OCR engines on handwriting, and the proposed method called +FIRST PAGE.\n\nFirst, I should break down the user's requirements. They want core innovation, technical approach with bullet points, quantitative findings with metrics, limitations, assumptions, and domain impact. They also mentioned including key equations and figures where critical. But since the abstract doesn't provide specific metrics or equations, I'll focus on what's mentioned.\n\nThe core innovation is the +FIRST PAGE method, which uses OCR outputs and the first page image to improve MLLM transcription. That's a solid starting point.\n\nFor the technical approach, I'll list the components: using MLLMs as end-to-end transcribers, integrating OCR outputs, and processing the first page image. Also, mention the system's cost-effectiveness by not processing all images.\n\nQuantitative findings should be extracted from the abstract. It mentions improved accuracy, balanced cost, and enhanced out-of-sample text results. I'll present these as numbered points.\n\nLimitations and assumptions likely include reliance on a single page's features, potential dependence on OCR quality, and maybe not handling highly varied document styles well.\n\nDomain impact is theoretical and practical, as this method can enhance HTR in real-world applications, especially for multi-page documents.\n\nI should structure each section clearly, using bold headings as per the example. Make sure each part is concise and captures the essence of the paper.\n\nI need to ensure that the flow is logical, starting from innovation to technical details, then results, limitations, and finally impact. Also, include any critical points from the abstract without adding new information.\n\nWait, the user mentioned including key equations or figures. Since the abstract doesn't have specific metrics beyond improvements, maybe I can focus on the workflow described and avoid adding made-up metrics.\n\nI should also ensure that each section is distinct and not overlapping. For example, quantitative findings should be separate from the technical approach.\n\nFinally, wrap up with the conclusion, highlighting the method's benefits and potential applications.\n\nI think that covers all the user's requirements. Now, I'll structure it accordingly, making sure each section is clear and concise.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. **Core Innovation**  \nThe paper introduces a novel method called **+FIRST PAGE**, which enhances multi-modal large language models (MLLMs) for transcribing multi-page handwritten documents in a zero-shot setting. By leveraging the OCR output of the entire document alongside just the first page image, the method leverages shared document features while maintaining cost efficiency.\n\n#### 2. **Technical Approach**  \n- **MLLM as End-to-End Transcribers**: The MLLMs are used to transcribe the entire document, acting as a black-box model for text generation.  \n- **Integration of OCR Outputs**: The OCR engine processes the entire document to provide text transcriptions, which are then used as input to the MLLM.  \n- **Processing the First Page Image**: The first page of the document is processed separately, incorporating its image features into the MLLM's training to improve transcription accuracy.  \n- **Cost-Effectiveness**: By focusing on the first page image and the OCR output of the entire document, the method avoids the need for processing all pages, reducing costs.  \n\n#### 3. **Quantitative Findings**  \n- Improved transcription accuracy on multi-page handwritten documents.  \n- Cost and performance balance achieved through the use of shared document features.  \n- Enhanced results on out-of-sample text by extrapolating formatting and OCR error patterns from a single page.  \n\n#### 4. **Limitations & Assumptions**  \n- The method relies on the assumption that the first page contains sufficient formatting and contextual features to enhance transcription accuracy.  \n- It assumes that the OCR output is of reasonable quality, as the method does not directly address OCR errors.  \n- The approach may not perform well on documents with highly varied styles or formats, as it primarily leverages the first page's features.  \n\n#### 5. **Domain Impact (Theoretical/Practical)**  \n- **Theoretical Impact**: The paper contributes to the field of multi-modal large language models by demonstrating their applicability to handwritten document transcription, even in zero-shot settings. It also highlights the importance of combining OCR outputs with image features for improved accuracy.  \n- **Practical Impact**: The proposed method offers a cost-effective solution for transcribing multi-page handwritten documents, making it applicable to real-world scenarios such as document scanning, form recognition, and academic/historical document processing.  \n\nThis structured approach highlights the paper's key contributions, technical details, and practical implications, providing a clear",
+  "topics": [
+    "ocr",
+    "page",
+    "4o",
+    "gpt",
+    "gpt 4o",
+    "text",
+    "pbp",
+    "pages",
+    "al",
+    "et al"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Judge_a_Book_by_its_Cover_Investigating_Multi-Modal_LLMs_for_Multi-Page__Handwritten_Document_Transcription_14eb722a3a6b5da9.pdf",
+    "content_hash": "14eb722a3a6b5da94b0fa1e15020f08cf684d935a489cce10626c02b3f1a6198",
+    "arxiv_id": null,
+    "title": "Judge_a_Book_by_its_Cover_Investigating_Multi-Modal_LLMs_for_Multi-Page__Handwritten_Document_Transcription_14eb722a3a6b5da9",
+    "author": "",
+    "creation_date": "D:20250228020928Z",
+    "published": "2025-02-28T02:09:28",
+    "pages": 11,
+    "size": 7244750,
+    "file_mtime": 1740969996.7231183
+  },
+  "main_staff": {
+    "title": "Judge_a_Book_by_its_Cover_Investigating_Multi-Modal_LLMs_for_Multi-Page__Handwritten_Document_Transcription_14eb722a3a6b5da9",
+    "authors": [
+      ""
+    ],
+    "abstract": "Handwritten text recognition (HTR) remains a challeng-\ning task, particularly for multi-page documents where pages\nshare common formatting and contextual features. While\nmodern optical character recognition (OCR) engines are pro-\nficient with printed text, their performance on handwriting is\nlimited, often requiring costly labeled data for fine-tuning.\nIn this paper, we explore the use of multi-modal large lan-\nguage models (MLLMs) for transcribing multi-page hand-\nwritten documents in a zero-shot setting. We investigate vari-\nous configurations of commercial OCR engines and MLLMs,\nutilizing the latter both as end-to-end transcribers and as post-\nprocessors, with and without image components. We propose\na novel method, +FIRST PAGE, which enhances MLLM tran-\nscription by providing the OCR output of the entire document\nalong with just the first page image. This approach leverages\nshared document features without incurring the high cost of\nprocessing all images. Experiments on a multi-page version\nof the IAM Handwriting Database demonstrate that +FIRST\nPAGE improves transcription accuracy, balances cost with\nperformance, and even enhances results on out-of-sample text\nby extrapolating formatting and OCR error patterns from a\nsingle page.\nCode — https://github.com/BenGutteridge/judge-a-book",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "results demonstrating improvement besides hand-picked ex-",
+      "methods.",
+      "methods, we perform simple common-sense checks for",
+      "evaluation is at the document level using",
+      "experiments",
+      "method",
+      "discussion",
+      "approach (see figure 7), where the benefit of having ac-",
+      "conclusion and further work",
+      "references",
+      "approach. arxiv preprint arxiv:1907.11692, 364."
+    ],
+    "topics": [
+      "ocr",
+      "page",
+      "4o",
+      "gpt",
+      "gpt 4o",
+      "text",
+      "pbp",
+      "pages",
+      "al",
+      "et al"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

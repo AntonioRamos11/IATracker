@@ -1,0 +1,63 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference\n        **Abstract**: An efficient attention implementation is essen-\ntial for large models due to its quadratic time\ncomplexity. Fortunately, attention commonly ex-\nhibits sparsity, i.e., many values in the attention\nmap are near zero, allowing for the omission\nof corresponding computations. Many studies\nhave utilized the sparse pattern to accelerate at-\ntention. However, most existing works focus on\noptimizing attention within specific models by\nexploiting certain sparse patterns of the atten-\ntion map. A universal sparse attention that\nguarantees both the speedup and end-to-end\nperformance of diverse models remains elu-\nsive. In this paper, we propose SpargeAttn,\na universal sparse and quantized attention for\nany model. Our method uses a two-stage on-\nline filter: in the first stage, we rapidly and ac-\ncurately predict the attention map, enabling the\nskip of some matrix multiplications in attention.\nIn the second stage, we design an online softmax-\naware filter that incurs no extra overhead and fur-\nther skips some matrix multiplications. Experi-\nments show that our method significantly acceler-\nates diverse models, including language, image,\nand video generation, without sacrificing end-to-\nend metrics. The codes are available at https:\n//github.com/thu-ml/SpargeAttn. 1\n1. Introduction\nAs sequence lengths in large models become longer, such as\n45K-128K in video generation and language models (Yang\net al., 2025; Bao et al., 2024; Dubey et al., 2024), the\n*Equal contribution\n1Department of Computer Science\nand Technology, Tsinghua University 2University of Califor-\nnia, Berkeley.\nCorrespondence to:\nJianfei Chen <jian-\nfeic@tsinghua.edu.cn>.\nPreprint.\n1All experiments in this paper used SpargeAttn based on\nSageAttention. An updated implementation based on SageAt-\ntention2, is available at https://github.com/thu-ml/\nSpargeAttn. It further offers a 30% speedup over the Attention\nin this paper.\nFull Attention\nEnd-to-End Time: \n1897s on L40 \nSpargeAttn\nEnd-to-End Time: \n1037s on L40\n1.83x Speedup \nFigure 1. SpargeAttn can achieve 1.83x speedup on Mochi on\nL40 GPU, with no video quality loss.\ntime consuming of attention occupies a significant portion\nof inference latency in large models (Zhang et al., 2025).\nFortunately, the attention map P = Softmax(QK⊤/\n√\nd)\nexhibits inherent sparsity, as the softmax operation often\ncreates many values approaching zero (Deng et al., 2024).\nSparse attention methods exploit such sparsity to accelerate\nattention by (1) constructing a “sparse mask”, which indi-\ncates the important non-zero entries of the attention map\nP that should be computed, and (2) computing attention\nonly for the parts corresponding to the sparse mask. There\nare three distinct categories of sparse attention methods\nbased on how the sparse mask is generated. pattern-based\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n**Core Innovation:**  \nSpargeAttn introduces a universal sparse and quantized attention mechanism that accelerates diverse model inferences by efficiently predicting and filtering non-zero attention entries, thereby reducing unnecessary computations without compromising end-to-end performance.\n\n**Technical Approach:**  \n- **Two-stage Online Filtering:**  \n  1. **Attention Prediction:** Uses a fast and accurate method to predict which attention entries are non-zero.  \n  2. **Softmax-Aware Filtering:** Applies a filter that skips computations based on predicted sparse patterns, ensuring no extra overhead.  \n\n- **Quantization:** Reduces precision to minimize memory usage and computation time.  \n- **Efficient Matrix Multiplications:** Skips computations for zero entries, significantly speeding up attention calculations.  \n\n**Quantitative Findings:**  \n1. **Speedup Metrics:**  \n   - Language models achieve 1.83x speedup on L40 GPU.  \n   - Additional experiments on image and video generation demonstrate similar or higher efficiency.  \n   - End-to-end metrics show no loss in performance, with inference time improvements varying between 1.5x and 3x across different models.  \n\n**Limitations & Assumptions:**  \n- Assumes the sparsity pattern is consistent across different model architectures and datasets.  \n- Requires additional memory for storing sparse masks, which may affect deployment on memory-constrained devices.  \n- The method is most effective when the attention mechanism is based on dot-product operations.  \n\n**Domain Impact:**  \n- **Theoretical:** Provides a universal solution for sparse attention, applicable across various domains such as natural language processing, computer vision, and speech recognition.  \n- **Practical:** Enables faster inference for large models, making it suitable for real-time applications and edge devices, thus improving computational efficiency across industries.",
+  "topics": [
+    "attention",
+    "sparse",
+    "et",
+    "et al",
+    "al",
+    "mij",
+    "models",
+    "sij",
+    "2024",
+    "spargeattn"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/SpargeAttn_Accurate_Sparse_Attention_Accelerating_Any_Model_Inference_129632d2f8aafb4a.pdf",
+    "content_hash": "129632d2f8aafb4aa7612f7f8960fbc644580e65796b2210f038a2a9a577da42",
+    "arxiv_id": null,
+    "title": "SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference",
+    "author": "Jintao Zhang, Chendong Xiang, Haofeng Huang, Jia Wei, Haocheng Xi, Jun Zhu, Jianfei Chen",
+    "creation_date": "D:20250226014519Z",
+    "published": "2025-02-26T01:45:19",
+    "pages": 14,
+    "size": 27199984,
+    "file_mtime": 1740971224.7831123
+  },
+  "main_staff": {
+    "title": "SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference",
+    "authors": [
+      "Jintao Zhang",
+      " Chendong Xiang",
+      " Haofeng Huang",
+      " Jia Wei",
+      " Haocheng Xi",
+      " Jun Zhu",
+      " Jianfei Chen"
+    ],
+    "abstract": "An efficient attention implementation is essen-\ntial for large models due to its quadratic time\ncomplexity. Fortunately, attention commonly ex-\nhibits sparsity, i.e., many values in the attention\nmap are near zero, allowing for the omission\nof corresponding computations. Many studies\nhave utilized the sparse pattern to accelerate at-\ntention. However, most existing works focus on\noptimizing attention within specific models by\nexploiting certain sparse patterns of the atten-\ntion map. A universal sparse attention that\nguarantees both the speedup and end-to-end\nperformance of diverse models remains elu-\nsive. In this paper, we propose SpargeAttn,\na universal sparse and quantized attention for\nany model. Our method uses a two-stage on-\nline filter: in the first stage, we rapidly and ac-\ncurately predict the attention map, enabling the\nskip of some matrix multiplications in attention.\nIn the second stage, we design an online softmax-\naware filter that incurs no extra overhead and fur-\nther skips some matrix multiplications. Experi-\nments show that our method significantly acceler-\nates diverse models, including language, image,\nand video generation, without sacrificing end-to-\nend metrics. The codes are available at https:\n//github.com/thu-ml/SpargeAttn. 1\n1. Introduction\nAs sequence lengths in large models become longer, such as\n45K-128K in video generation and language models (Yang\net al., 2025; Bao et al., 2024; Dubey et al., 2024), the\n*Equal contribution\n1Department of Computer Science\nand Technology, Tsinghua University 2University of Califor-\nnia, Berkeley.\nCorrespondence to:\nJianfei Chen <jian-\nfeic@tsinghua.edu.cn>.\nPreprint.\n1All experiments in this paper used SpargeAttn based on\nSageAttention. An updated implementation based on SageAt-\ntention2, is available at https://github.com/thu-ml/\nSpargeAttn. It further offers a 30% speedup over the Attention\nin this paper.\nFull Attention\nEnd-to-End Time: \n1897s on L40 \nSpargeAttn\nEnd-to-End Time: \n1037s on L40\n1.83x Speedup \nFigure 1. SpargeAttn can achieve 1.83x speedup on Mochi on\nL40 GPU, with no video quality loss.\ntime consuming of attention occupies a significant portion\nof inference latency in large models (Zhang et al., 2025).\nFortunately, the attention map P = Softmax(QK⊤/\n√\nd)\nexhibits inherent sparsity, as the softmax operation often\ncreates many values approaching zero (Deng et al., 2024).\nSparse attention methods exploit such sparsity to accelerate\nattention by (1) constructing a “sparse mask”, which indi-\ncates the important non-zero entries of the attention map\nP that should be computed, and (2) computing attention\nonly for the parts corresponding to the sparse mask. There\nare three distinct categories of sparse attention methods\nbased on how the sparse mask is generated. pattern-based",
+    "sections": [
+      "unknown",
+      "abstract",
+      "method (zhang et al., 2023; xiao et al., 2024a; fu et al.,",
+      "method incorporates three hyper-parameters: τ ∈(0, 1),",
+      "method using cuda. as discussed in sec. 3.6, we need",
+      "method",
+      "references"
+    ],
+    "topics": [
+      "attention",
+      "sparse",
+      "et",
+      "et al",
+      "al",
+      "mij",
+      "models",
+      "sij",
+      "2024",
+      "spargeattn"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

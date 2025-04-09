@@ -1,0 +1,67 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Study is limited to BERT, restricting generalizability to other transformer models.",
+    "**Assumptions:** SAEs are assumed to effectively capture essential features for fine-tuning, though this may vary with different architectures.",
+    "#### 5. Domain Impact",
+    "**Theoretical Impact:** Enhances understanding of how transformers adapt to specific tasks through mechanism studies.",
+    "**Practical Impact:** Provides a framework for designing fine-tuning strategies that leverage SAEs to balance general and task-specific feature retention, potentially improving efficiency and effectiveness in downstream applications.",
+    "This structured approach highlights the key contributions, methodologies, and implications of the paper, emphasizing the use of SAEs in analyzing fine-tuning mechanisms within transformer models."
+  ],
+  "impact": "** Provides a framework for designing fine-tuning strategies that leverage SAEs to balance general and task-specific feature retention, potentially improving efficiency and effectiveness in downstream applications.\n\nThis structured approach highlights the key contributions, methodologies, and implications of the paper, emphasizing the use of SAEs in analyzing fine-tuning mechanisms within transformer models.",
+  "topics": [
+    "fine",
+    "model",
+    "tuning",
+    "layers",
+    "fine tuning",
+    "layer",
+    "specific",
+    "features",
+    "task",
+    "activations"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Layer-Wise_Evolution_of_Representations_in_Fine-Tuned_Transformers__Insights_from_Sparse_AutoEncoders_652d048607b52c83.pdf",
+    "content_hash": "652d048607b52c83fb4b9e567f76d29e33b409dcc846b34c425d3e17a593043e",
+    "arxiv_id": null,
+    "title": "Layer-Wise Evolution of Representations in Fine-Tuned Transformers: Insights from Sparse AutoEncoders",
+    "author": "",
+    "creation_date": "",
+    "published": "",
+    "pages": 14,
+    "size": 959614,
+    "file_mtime": 1740972227.480761
+  },
+  "main_staff": {
+    "title": "Layer-Wise Evolution of Representations in Fine-Tuned Transformers: Insights from Sparse AutoEncoders",
+    "authors": [
+      ""
+    ],
+    "abstract": " \nFine-tuning pre-trained transformers is a powerful \ntechnique for enhancing the performance of base \nmodels on specific tasks. From early applications in \nmodels like BERT to fine-tuning Large Language \nModels (LLMs), this approach has been instrumental in \nadapting general-purpose architectures for specialized \ndownstream tasks. Understanding the fine-tuning \nprocess is crucial for uncovering how transformers \nadapt \nto \nspecific \nobjectives, \nretain \ngeneral \nrepresentations, and acquire task-specific features. This \npaper \nexplores \nthe \nunderlying \nmechanisms \nof \nfine-tuning, specifically in the BERT transformer, by \nanalyzing \nactivation \nsimilarity, \ntraining \nSparse \nAutoEncoders (SAEs), and visualizing token-level \nactivations \nacross \ndifferent \nlayers. \nBased \non ",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments conducted across multiple datasets and",
+      "experiments on the extracted features and interpret",
+      "methodologies to tasks where fine-tuning results in",
+      "references"
+    ],
+    "topics": [
+      "fine",
+      "model",
+      "tuning",
+      "layers",
+      "fine tuning",
+      "layer",
+      "specific",
+      "features",
+      "task",
+      "activations"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

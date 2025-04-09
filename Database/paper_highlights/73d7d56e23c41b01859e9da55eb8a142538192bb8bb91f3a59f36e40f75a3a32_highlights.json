@@ -1,0 +1,75 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Provides a more efficient solution for ODMDS, making it suitable for real-world applications requiring rapid response.\n\n---\n\nThis structured format captures the essence of the paper, focusing on key innovations, methods, and outcomes while acknowledging the limitations and practical implications.",
+  "topics": [
+    "passages",
+    "retrieval",
+    "lightpal",
+    "question",
+    "summary",
+    "passage",
+    "answer",
+    "query",
+    "al",
+    "et"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/LightPAL_Lightweight_Passage_Retrieval_for_Open_Domain_Multi-Document__Summarization_73d7d56e23c41b01.pdf",
+    "content_hash": "73d7d56e23c41b01859e9da55eb8a142538192bb8bb91f3a59f36e40f75a3a32",
+    "arxiv_id": null,
+    "title": "LightPAL_Lightweight_Passage_Retrieval_for_Open_Domain_Multi-Document__Summarization_73d7d56e23c41b01",
+    "author": "",
+    "creation_date": "D:20241018004434Z",
+    "published": "2024-10-18T00:44:34",
+    "pages": 15,
+    "size": 882429,
+    "file_mtime": 1741158343.8018625
+  },
+  "main_staff": {
+    "title": "LightPAL_Lightweight_Passage_Retrieval_for_Open_Domain_Multi-Document__Summarization_73d7d56e23c41b01",
+    "authors": [
+      ""
+    ],
+    "abstract": "Open-Domain Multi-Document Summariza-\ntion (ODMDS) is the task of generating sum-\nmaries from large document collections in\nresponse to user queries.\nThis task is cru-\ncial for efficiently addressing diverse informa-\ntion needs from users.\nTraditional retrieve-\nthen-summarize approaches fall short for open-\nended queries in ODMDS tasks. These queries\noften require broader context than initially re-\ntrieved passages provide, making it challenging\nto retrieve all relevant information in a single\nsearch. While iterative retrieval methods has\nbeen explored for multi-hop question answer-\ning (MQA), it’s impractical for ODMDS due to\nhigh latency from repeated LLM inference. Ac-\ncordingly, we propose LightPAL, a lightweight\npassage retrieval method for ODMDS. Light-\nPAL leverages an LLM to pre-construct a graph\nrepresenting passage relationships, then em-\nploys random walk during retrieval, avoiding\niterative LLM inference. Experiments demon-\nstrate that LightPAL outperforms naive sparse\nand pre-trained dense retrievers in both retrieval\nand summarization metrics, while achieving\nhigher efficiency compared to iterative MQA",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approaches.",
+      "introduction",
+      "method for mqa, while achieving about 1,000",
+      "related works",
+      "approach enables low-latency retrieval of relevant",
+      "experiments",
+      "methods as naive baselines: a pre-trained dense",
+      "evaluation metric. to first confirm that our pro-",
+      "method",
+      "evaluation metric. to evaluate the generated sum-",
+      "results.",
+      "method to enhance retrieval performance. but does",
+      "conclusion",
+      "method, developing criteria for when to apply",
+      "references",
+      "evaluation using gpt-4 with better human alignment. in",
+      "evaluation criteria:",
+      "evaluation steps:",
+      "evaluation form (scores only):"
+    ],
+    "topics": [
+      "passages",
+      "retrieval",
+      "lightpal",
+      "question",
+      "summary",
+      "passage",
+      "answer",
+      "query",
+      "al",
+      "et"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

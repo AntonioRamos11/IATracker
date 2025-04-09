@@ -1,0 +1,78 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**",
+    "Focus on persuasive dialogue context may not generalize to other social interactions.",
+    "Limited dataset size and diversity in mental state scenarios.",
+    "**Assumptions:**",
+    "Mental states can be reliably inferred from dialogue context.",
+    "Performance metrics correlate with ToM reasoning ability.",
+    "**Domain Impact:**",
+    "**Theoretical:** Advances understanding of LLM ToM capabilities.",
+    "**Practical:** Enhances evaluation of persuasive dialogue strategies and mental state tracking.",
+    "**Broader Impact:** Facilitates development of more human-like ToM in LLMs, improving social interaction modeling.",
+    "**Key Equations/Figures:**",
+    "The benchmark framework introduces metrics for mental state evolution and strategy effectiveness, visualized in Figures 1 and 2, showing model performance across tasks."
+  ],
+  "impact": "",
+  "topics": [
+    "llms",
+    "al",
+    "et",
+    "et al",
+    "tom",
+    "arxiv",
+    "persuadee",
+    "reasoning",
+    "cot",
+    "questions"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/PersuasiveToM_A_Benchmark_for_Evaluating_Machine_Theory_of_Mind_in__Persuasive_Dialogues_4eb099161299f150.pdf",
+    "content_hash": "4eb099161299f150286507c48c3ae0927d72f346da8c3dc80eb1491fa79f312c",
+    "arxiv_id": null,
+    "title": "PersuasiveToM_A_Benchmark_for_Evaluating_Machine_Theory_of_Mind_in__Persuasive_Dialogues_4eb099161299f150",
+    "author": "",
+    "creation_date": "D:20250303014907Z",
+    "published": "2025-03-03T01:49:07",
+    "pages": 14,
+    "size": 648485,
+    "file_mtime": 1740976225.0257168
+  },
+  "main_staff": {
+    "title": "PersuasiveToM_A_Benchmark_for_Evaluating_Machine_Theory_of_Mind_in__Persuasive_Dialogues_4eb099161299f150",
+    "authors": [
+      ""
+    ],
+    "abstract": "The ability to understand and predict the mental\nstates of oneself and others, known as the The-\nory of Mind (ToM), is crucial for effective so-\ncial interactions. Recent research has emerged\nto evaluate whether Large Language Models\n(LLMs) exhibit a form of ToM. Although recent\nstudies have evaluated ToM in LLMs, existing\nbenchmarks focus predominantly on physical\nperception with principles guided by the Sally-\nAnne test in synthetic stories and conversations,\nfailing to capture the complex psychological\nactivities of mental states in real-life social in-\nteractions. To mitigate this gap, we propose\nPERSUASIVETOM, a benchmark designed to\nevaluate the ToM abilities of LLMs in persua-\nsive dialogues. Our framework introduces two\ncategories of questions: (1) ToM Reasoning, as-\nsessing the capacity of LLMs to track evolving\nmental states (e.g., desire shifts in persuadees),\nand (2) ToM Application, evaluating whether\nLLMs can take advantage of inferred mental\nstates to select effective persuasion strategies\n(e.g., emphasize rarity) and evaluate the effec-\ntiveness of persuasion strategies. Experiments\nacross eight state-of-the-art LLMs reveal that\nwhile models excel on multiple questions, they\nstruggle to answer questions that need tracking\nthe dynamics and shifts of mental states and\nunderstanding the mental states in the whole\ndialogue comprehensively. Our aim with PER-\nSUASIVETOM is to allow an effective evalua-\ntion of the ToM reasoning ability of LLMs with\nmore focus on complex psychological activities.\nOur code is available at https://github.com/Yu-\nFangxu/PersuasiveToM.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related works",
+      "evaluation benchmarks for llms are mainly text",
+      "results and analysis",
+      "results in table 4 indicate that llms",
+      "conclusion",
+      "experiments and analysis to evaluate the perfor-",
+      "evaluation of the theory of mind in real-life social",
+      "references"
+    ],
+    "topics": [
+      "llms",
+      "al",
+      "et",
+      "et al",
+      "tom",
+      "arxiv",
+      "persuadee",
+      "reasoning",
+      "cot",
+      "questions"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

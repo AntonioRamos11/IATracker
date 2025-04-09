@@ -1,0 +1,67 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** The benchmark provides a scalable and diverse tool for AI developers to test and improve autonomy across critical domains, promoting responsible AI development.\n- **Broader Implications:** By aligning AI performance with human capabilities, the framework addresses ethical concerns and ensures AI systems are developed with human safety and reliability in mind.\n\n### Key Equations/Figures:\nThe paper emphasizes the use of human baseline data and success rates as key metrics. Figure 1 illustrates the relationship between human time and AI success rates, showing a steep decline after 4 hours. The success rate formula is represented as:\n- Success rate for tasks <1 hour: 70-80%\n- Success rate for tasks >4 hours: <20%\n\nThese metrics and visualizations are crucial for understanding the innovation and validation process.",
+  "topics": [
+    "tasks",
+    "task",
+    "experience",
+    "agent",
+    "agents",
+    "baseline",
+    "time",
+    "actions",
+    "human",
+    "ai"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/HCAST_Human-Calibrated_Autonomy_Software_Tasks_a0db39c1ee307d08.pdf",
+    "content_hash": "a0db39c1ee307d08c4349057c7d165ad8be0d637fdf23e2f47a14558aaf824b5",
+    "arxiv_id": null,
+    "title": "HCAST_Human-Calibrated_Autonomy_Software_Tasks_a0db39c1ee307d08",
+    "author": "",
+    "creation_date": "D:20250324010731Z",
+    "published": "2025-03-24T01:07:31",
+    "pages": 32,
+    "size": 1442718,
+    "file_mtime": 1742791106.4151912
+  },
+  "main_staff": {
+    "title": "HCAST_Human-Calibrated_Autonomy_Software_Tasks_a0db39c1ee307d08",
+    "authors": [
+      ""
+    ],
+    "abstract": "To understand and predict the societal impacts of highly autonomous AI\nsystems, we need benchmarks with grounding, i.e., metrics that directly\nconnect AI performance to real-world effects we care about. We present\nHCAST (Human-Calibrated Autonomy Software Tasks), a benchmark of\n189 machine learning engineering, cybersecurity, software engineering, and\ngeneral reasoning tasks. We collect 563 human baselines (totaling over\n1500 hours) from people skilled in these domains, working under identical\nconditions as AI agents, which lets us estimate that HCAST tasks take\nhumans between one minute and 8+ hours. Measuring the time tasks take\nfor humans provides an intuitive metric for evaluating AI capabilities—\nhelping answer the question “can an agent be trusted to complete a task\nthat would take a human X hours?” We evaluate the success rates of AI\nagents built on frontier foundation models, and we find that current agents\nsucceed 70-80% of the time on tasks that take humans less than one hour,\nand less than 20% of the time on tasks that take humans more than 4 hours.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "backgrounds attempt to complete it. our baseliners typically have a degree from a top",
+      "methodology",
+      "results",
+      "discussion",
+      "evaluation—longer, less well-specified tasks would be substantially more difficult both",
+      "conclusion",
+      "references",
+      "evaluation",
+      "related work",
+      "methodological details"
+    ],
+    "topics": [
+      "tasks",
+      "task",
+      "experience",
+      "agent",
+      "agents",
+      "baseline",
+      "time",
+      "actions",
+      "human",
+      "ai"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Leveraging_Text-to-Image_Generation_for_Handling_Spurious_Correlation_b481baba73a9738f\n        **Abstract**: Deep neural networks trained with Empirical Risk Mini-\nmization (ERM) perform well when both training and test\ndata come from the same domain, but they often fail to gen-\neralize to out-of-distribution samples. In image classifica-\ntion, these models may rely on spurious correlations that\noften exist between labels and irrelevant features of images,\nmaking predictions unreliable when those features do not\nexist. We propose a technique to generate training samples\nwith text-to-image (T2I) diffusion models for addressing the\nspurious correlation problem. First, we compute the best\ndescribing token for the visual features pertaining to the\ncausal components of samples by a textual inversion mech-\nanism. Then, leveraging a language segmentation method\nand a diffusion model, we generate new samples by com-\nbining the causal component with the elements from other\nclasses. We also meticulously prune the generated samples\nbased on the prediction probabilities and attribution scores\nof the ERM model to ensure their correct composition for\nour objective. Finally, we retrain the ERM model on our\naugmented dataset. This process reduces the model’s re-\nliance on spurious correlations by learning from carefully\ncrafted samples for in which this correlation does not ex-\nist. Our experiments show that across different benchmarks,\nour technique achieves better worst-group accuracy than\nthe existing state-of-the-art methods.\n1. Introduction\nDeep neural networks trained with Empirical Risk Mini-\nmization (ERM) do not perform well when the train and\ntest datasets do not follow the same distribution [2, 10, 11].\nThey may rely on data features that correlate to the sam-\nple labels but are not stable across different domains, lead-\ning to poor model generalization [2, 11, 19]. For exam-\nple, a model trained to classify camels and cows may learn\nto rely on background cues rather than the animals them-\nselves.\nThis occurs because most cows appear in green\npastures, while most camels are found in deserts. Hence,\nthe model may learn to classify images based solely on the\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the innovation.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n1. **Core Innovation**:  \nThe paper introduces a novel approach to reduce spurious correlations in deep learning models by generating training samples using text-to-image (T2I) diffusion models. This method aims to create datasets where models rely on causal features rather than irrelevant correlations.\n\n2. **Technical Approach**:  \n   - **Token Selection**: Utilizes a textual inversion mechanism to identify the most descriptive tokens for visual features related to causal components.  \n   - **Language Segmentation**: Employs language segmentation to combine causal components with features from other classes.  \n   - **Diffusion Model**: Leverages a diffusion model to generate new training samples by integrating causal components with non-causal elements.  \n   - **Pruning**: Prunes generated samples based on ERM model's prediction probabilities and attribution scores to ensure correct composition.  \n   - **Retraining**: The ERM model is retrained on the augmented dataset to eliminate reliance on spurious correlations.\n\n3. **Quantitative Findings**:  \n   - Across various benchmarks, the technique improves worst-group accuracy compared to existing methods.  \n   - The approach shows promise in enhancing model generalization and reducing reliance on spurious features.\n\n4. **Limitations & Assumptions**:  \n   - Assumes that the generated samples accurately capture the causal features without introducing new spurious correlations.  \n   - The method's effectiveness may depend on the quality and diversity of the training data provided to the diffusion model.  \n   - Computational resources are a significant constraint due to the high cost of diffusion model training and sampling.\n\n5. **Domain Impact**:  \n   - Theoretically, this approach addresses the challenge of distribution shift and domain generalization in deep learning.  \n   - Practically, it offers a promising solution for improving model reliability in real-world applications where data distributions may vary.  \n   - The method is particularly relevant for domains like computer vision where spurious correlations are a well-known issue.  \n\n**Key Equations/Figures**:  \nThe paper does not provide specific equations or figures in the structured highlights, but Figure 1 likely illustrates the workflow of generating training samples using T2I diffusion models.",
+  "topics": [
+    "samples",
+    "dataset",
+    "model",
+    "group",
+    "spurious",
+    "image",
+    "images",
+    "erm",
+    "class",
+    "blond"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Leveraging_Text-to-Image_Generation_for_Handling_Spurious_Correlation_b481baba73a9738f.pdf",
+    "content_hash": "b481baba73a9738f4267433a738d64c1e8a408c38cb2e3a83ea0c86aa44a6c99",
+    "arxiv_id": null,
+    "title": "Leveraging_Text-to-Image_Generation_for_Handling_Spurious_Correlation_b481baba73a9738f",
+    "author": "",
+    "creation_date": "D:20250324005732Z",
+    "published": "2025-03-24T00:57:32",
+    "pages": 14,
+    "size": 11182016,
+    "file_mtime": 1742790680.9602737
+  },
+  "main_staff": {
+    "title": "Leveraging_Text-to-Image_Generation_for_Handling_Spurious_Correlation_b481baba73a9738f",
+    "authors": [
+      ""
+    ],
+    "abstract": "Deep neural networks trained with Empirical Risk Mini-\nmization (ERM) perform well when both training and test\ndata come from the same domain, but they often fail to gen-\neralize to out-of-distribution samples. In image classifica-\ntion, these models may rely on spurious correlations that\noften exist between labels and irrelevant features of images,\nmaking predictions unreliable when those features do not\nexist. We propose a technique to generate training samples\nwith text-to-image (T2I) diffusion models for addressing the\nspurious correlation problem. First, we compute the best\ndescribing token for the visual features pertaining to the\ncausal components of samples by a textual inversion mech-\nanism. Then, leveraging a language segmentation method\nand a diffusion model, we generate new samples by com-\nbining the causal component with the elements from other\nclasses. We also meticulously prune the generated samples\nbased on the prediction probabilities and attribution scores\nof the ERM model to ensure their correct composition for\nour objective. Finally, we retrain the ERM model on our\naugmented dataset. This process reduces the model’s re-\nliance on spurious correlations by learning from carefully\ncrafted samples for in which this correlation does not ex-\nist. Our experiments show that across different benchmarks,\nour technique achieves better worst-group accuracy than\nthe existing state-of-the-art methods.\n1. Introduction\nDeep neural networks trained with Empirical Risk Mini-\nmization (ERM) do not perform well when the train and\ntest datasets do not follow the same distribution [2, 10, 11].\nThey may rely on data features that correlate to the sam-\nple labels but are not stable across different domains, lead-\ning to poor model generalization [2, 11, 19]. For exam-\nple, a model trained to classify camels and cows may learn\nto rely on background cues rather than the animals them-\nselves.\nThis occurs because most cows appear in green\npastures, while most camels are found in deserts. Hence,\nthe model may learn to classify images based solely on the",
+    "sections": [
+      "unknown",
+      "abstract",
+      "background, and fail when this spurious correlation is ab-",
+      "backgrounds while retaining majority sample backgrounds. (b) for celeba [17], where the majority consists of non-blond males and blond",
+      "method leverages textual inversion [6] and identifies the op-",
+      "approach [20] also assigns weights to each sample in the",
+      "background, as most landbirds appear in land backgrounds,",
+      "background objects such as benches and bikes, while the",
+      "methods, we use a resnet-50 model pre-trained on ima-",
+      "method",
+      "approach generates rare samples to enhance robustness, a",
+      "method remains robust to both spurious objects and fea-",
+      "method as per the abilities of these models. however, with",
+      "references"
+    ],
+    "topics": [
+      "samples",
+      "dataset",
+      "model",
+      "group",
+      "spurious",
+      "image",
+      "images",
+      "erm",
+      "class",
+      "blond"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

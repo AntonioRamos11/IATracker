@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: SuPreME_A_Supervised_Pre-training_Framework_for_Multimodal_ECG__Representation_Learning_dec83cb19e3a238a\n        **Abstract**: Cardiovascular diseases are a leading cause of\ndeath and disability worldwide. Electrocardio-\ngram (ECG) recordings are critical for diagnos-\ning and monitoring cardiac health, but obtain-\ning large-scale annotated ECG datasets is labor-\nintensive and time-consuming. Recent ECG\nSelf-Supervised Learning (eSSL) methods mit-\nigate this by learning features without extensive\nlabels but fail to capture fine-grained clinical\nsemantics and require extensive task-specific\nfine-tuning. To address these challenges, we\npropose SuPreME, a Supervised Pre-training\nframework for Multimodal ECG representa-\ntion learning. SuPreME applies Large Lan-\nguage Models (LLMs) to extract structured clin-\nical entities from free-text ECG reports, filter\nout noise and irrelevant content, enhance clin-\nical representation learning, and build a high-\nquality, fine-grained labeled dataset. By using\ntext-based cardiac queries instead of traditional\ncategorical labels, SuPreME enables zero-shot\nclassification of unseen diseases without addi-\ntional fine-tuning. We evaluate SuPreME on\nsix downstream datasets covering 127 cardiac\nconditions, achieving superior zero-shot AUC\nperformance over state-of-the-art eSSL and\nmultimodal methods by over 1.96%1. Results\ndemonstrate the effectiveness of SuPreME in\nleveraging structured, clinically relevant knowl-\nedge for high-quality ECG representations.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n\n        Generate structured highlights for this research paper\n</think>\n\n### Research Paper Highlights: SuPreME_A_Supervised_Pre-training_Framework_for_Multimodal_ECG__Representation_Learning\n\n---\n\n#### 1. Core Innovation\nSuPreME introduces a Supervised Pre-training Framework that leverages Large Language Models (LLMs) to extract structured clinical entities from free-text ECG reports, enhancing the quality and relevance of ECG data representation for effective disease classification.\n\n---\n\n#### 2. Technical Approach\n- **LLM-Based Structured Entity Extraction**: Utilizes LLMs to identify and structure relevant clinical entities from ECG reports, ensuring noise reduction and focus on pertinent information.\n- **Multimodal Representation Learning**: Integrates ECG signals with text-based data to create comprehensive, context-aware representations.\n- **Zero-Shot Classification**: Employs text-based cardiac queries to enable classification of unseen diseases without additional fine-tuning.\n- **High-Quality Labeling**: Generates a high-quality, labeled dataset by focusing on fine-grained clinical semantics, improving downstream model performance.\n\n---\n\n#### 3. Quantitative Findings\n- **Superior Performance**: Achieves 1.96% higher zero-shot AUC compared to state-of-the-art eSSL and multimodal methods across six datasets.\n- **Comprehensive Analysis**: The framework effectively utilizes structured, clinically relevant knowledge to enhance ECG representation learning.\n\n---\n\n#### 4. Limitations & Assumptions\n- **Dependence on Textual Data**: Performance may be limited by reliance on high-quality text-based ECG reports.\n- **Assumption of LLM Accuracy**: The framework assumes the effectiveness of LLMs in extracting structured clinical entities, which may vary across different datasets or contexts.\n\n---\n\n#### 5. Domain Impact (Theoretical/Practical)\n- **Theoretical Impact**: Advances multimodal representation learning by integrating multimodal data with structured clinical knowledge, offering a novel approach to ECG analysis.\n- **Practical Impact**: Provides a scalable solution for healthcare professionals to classify cardiac conditions without extensive label creation, improving diagnostic efficiency and patient outcomes.",
+  "topics": [
+    "ecg",
+    "al",
+    "et al",
+    "learning",
+    "et",
+    "supreme",
+    "cardiac",
+    "ptb",
+    "ptb xl",
+    "xl"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/SuPreME_A_Supervised_Pre-training_Framework_for_Multimodal_ECG__Representation_Learning_dec83cb19e3a238a.pdf",
+    "content_hash": "dec83cb19e3a238a1f838afe1af11e44792f4677e0d7c1c0104b1161499b3646",
+    "arxiv_id": null,
+    "title": "SuPreME_A_Supervised_Pre-training_Framework_for_Multimodal_ECG__Representation_Learning_dec83cb19e3a238a",
+    "author": "",
+    "creation_date": "D:20250228011744Z",
+    "published": "2025-02-28T01:17:44",
+    "pages": 18,
+    "size": 5326041,
+    "file_mtime": 1740970334.834122
+  },
+  "main_staff": {
+    "title": "SuPreME_A_Supervised_Pre-training_Framework_for_Multimodal_ECG__Representation_Learning_dec83cb19e3a238a",
+    "authors": [
+      ""
+    ],
+    "abstract": "Cardiovascular diseases are a leading cause of\ndeath and disability worldwide. Electrocardio-\ngram (ECG) recordings are critical for diagnos-\ning and monitoring cardiac health, but obtain-\ning large-scale annotated ECG datasets is labor-\nintensive and time-consuming. Recent ECG\nSelf-Supervised Learning (eSSL) methods mit-\nigate this by learning features without extensive\nlabels but fail to capture fine-grained clinical\nsemantics and require extensive task-specific\nfine-tuning. To address these challenges, we\npropose SuPreME, a Supervised Pre-training\nframework for Multimodal ECG representa-\ntion learning. SuPreME applies Large Lan-\nguage Models (LLMs) to extract structured clin-\nical entities from free-text ECG reports, filter\nout noise and irrelevant content, enhance clin-\nical representation learning, and build a high-\nquality, fine-grained labeled dataset. By using\ntext-based cardiac queries instead of traditional\ncategorical labels, SuPreME enables zero-shot\nclassification of unseen diseases without addi-\ntional fine-tuning. We evaluate SuPreME on\nsix downstream datasets covering 127 cardiac\nconditions, achieving superior zero-shot AUC\nperformance over state-of-the-art eSSL and\nmultimodal methods by over 1.96%1. Results\ndemonstrate the effectiveness of SuPreME in\nleveraging structured, clinically relevant knowl-\nedge for high-quality ECG representations.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods typically rely on large-scale, high-quality",
+      "related work",
+      "methods like merl (liu et al., 2024) and ecg-",
+      "methodology",
+      "evaluation with pre-trained supreme. during",
+      "experiments",
+      "evaluation with mainstream essls",
+      "evaluation",
+      "approach",
+      "evaluation of supreme architecture",
+      "conclusion",
+      "references",
+      "approach used by (liu et al., 2024), which ran-"
+    ],
+    "topics": [
+      "ecg",
+      "al",
+      "et al",
+      "learning",
+      "et",
+      "supreme",
+      "cardiac",
+      "ptb",
+      "ptb xl",
+      "xl"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

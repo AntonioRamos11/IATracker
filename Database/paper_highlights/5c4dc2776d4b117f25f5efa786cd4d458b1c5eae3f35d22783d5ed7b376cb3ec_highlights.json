@@ -1,0 +1,68 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: FLEKE_Federated_Locate-then-Edit_Knowledge_Editing_5c4dc2776d4b117f\n        **Abstract**: Locate-then-Edit Knowledge Editing (LEKE)\nis a key technique for updating large language\nmodels (LLMs) without full retraining. How-\never, existing methods assume a single-user\nsetting and become inefficient in real-world\nmulti-client scenarios, where decentralized or-\nganizations (e.g., hospitals, financial institu-\ntions) independently update overlapping knowl-\nedge, leading to redundant mediator knowledge\nvector (MKV) computations and privacy con-\ncerns. To address these challenges, we intro-\nduce Federated Locate-then-Edit Knowledge\nEditing (FLEKE), a novel task that enables mul-\ntiple clients to collaboratively perform LEKE\nwhile preserving privacy and reducing com-\nputational overhead. To achieve this, we pro-\npose FedEdit, a two-stage framework that op-\ntimizes MKV selection and reuse.\nIn the\nfirst stage, clients locally apply LEKE and\nupload the computed MKVs. In the second\nstage, rather than relying solely on server-\nbased MKV sharing, FLEKE allows clients\nretrieve relevant MKVs based on cosine sim-\nilarity, enabling knowledge re-edit and mini-\nmizing redundant computations. Experimen-\ntal results on two benchmark datasets demon-\nstrate that FedEdit retains over 96% of the\nperformance of non-federated LEKE while\nsignificantly outperforming a FedAvg-based\nbaseline by approximately twofold. Besides,\nwe find that MEMIT performs more consis-\ntently than PMET in the FLEKE task with our\nFedEdit framework. Our code is available at\nhttps://github.com/zongkaiz/FLEKE.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical.\n        1. **Key Innovation**: \n        2. **Technical Approach**:\n        3. **Quantitative Findings**:\n        4. **Limitations & Assumptions**:\n        5. **Domain Impact**:\n\n        **Note**: The user wants this structured highlight in a **think** section, so the formatting should be natural, without markdown. The content should be coherent and flow logically, as if someone is thinking through the problem.\n\nOkay, I need to help the user by structuring the research paper they provided into a think section with specific sections: Core Innovation, Technical Approach, Quantitative Findings, Limitations & Assumptions, and Domain Impact. They also want key equations or figures where critical. \n\nFirst, I'll read through the abstract carefully to understand the main points. The paper is about FLEKE, which stands for Federated Locate-then-Edit Knowledge Editing. It's a method for updating large language models without full retraining. The key issue addressed is the inefficiency and privacy concerns in multi-client scenarios where existing methods assume a single-user setting. \n\nThe main problem is that in real-world scenarios with decentralized organizations, each having their own overlapping knowledge, the current methods lead to redundant computations and privacy issues. So, the solution is FLEKE, which allows multiple clients to collaborate on LEKE (Locate-then-Edit Knowledge Editing) while preserving privacy and reducing computational overhead.\n\nLooking at the structure they want, starting with the Core Innovation. The innovation here is introducing a federated approach to LEKE, which allows multiple clients to work together without a central server, thereby reducing redundant MKV computations and enhancing privacy. So, that's the core idea.\n\nNext, the Technical Approach. The framework is called FedEdit, which has two stages. The first stage is clients applying LEKE locally and uploading their computed MKVs. The second stage allows clients to retrieve relevant MKVs based on cosine similarity, which helps in re-editing knowledge and minimizing redundant computations. So, the technical approach involves these two stages, using cosine similarity for retrieval.\n\nMoving on to Quantitative Findings. The experiments show that FedEdit retains over 96% of the performance compared to non-federated LEKE. It also outperforms a FedAvg-based baseline by about twice. Additionally, MEMIT is more consistent than PMET in the FLEKE task with FedEdit. So, these are the key metrics.\n\nLimitations and Assumptions: The paper probably assumes that the cosine similarity metric works well for retrieval in their specific datasets and scenarios. It might also assume that the clients are honest or have access to the necessary computational resources. Additionally, the setup might not cover all possible organizational structures, so there could be limitations in generalizability.\n\nDomain Impact: Theoretically, this impacts large language models by enabling decentralized updates without full retraining, which is efficient and preserves privacy. Practically, it can be applied in sectors like healthcare and finance where multiple decentralized organizations need to collaborate on model updates without sharing sensitive data. This could lead to cost savings and improved model quality through collaborative efforts.\n\nI need to make sure each section is concise, flows logically, and includes the necessary details without being too verbose. Also, where applicable, I should note any equations or figures mentioned, though in this case, the abstract doesn't provide specific metrics beyond the ones mentioned, so I'll focus on the text provided.\n\nNow, putting it all together in a natural, flowing manner, as if someone is thinking through the problem step by step. I'll structure each section with bullet points or concise sentences as required, ensuring that all key points are covered without missing anything important.\n</think>\n\n**Think:**\n\n1. **Key Innovation**:  \n   The core innovation is the introduction of a federated approach to LEKE (Locate-then-Edit Knowledge Editing), enabling multiple clients to collaboratively update large language models without full retraining. This addresses inefficiencies and privacy concerns in decentralized settings by reducing redundant computations and ensuring data privacy.\n\n2. **Technical Approach**:  \n   - **FedEdit Framework**: A two-stage framework where clients locally apply LEKE and upload computed MKVs (median vector).  \n   - **Knowledge Retrieval**: Clients retrieve relevant MKVs based on cosine similarity, facilitating re-editing and minimizing redundant computations.  \n\n3. **Quantitative Findings**:  \n   - FedEdit retains **>96% performance** compared to non-federated LEKE.  \n   - It outperforms a FedAvg-based baseline by **~2x**.  \n   - MEMIT shows **more consistent performance** than PMET in the FLEKE task with FedEdit.  \n\n4. **Limitations & Assumptions**:  \n   - Assumes effective cosine similarity for MKV retrieval in specific datasets.  \n   - Relies on clients having access to computational resources for local LEKE operations.  \n   - Limited generalizability to all organizational structures but focuses on decentralized scenarios.  \n\n5.",
+  "topics": [
+    "editing",
+    "knowledge",
+    "al",
+    "client",
+    "et",
+    "et al",
+    "clients",
+    "federated",
+    "model",
+    "fedmemit"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/FLEKE_Federated_Locate-then-Edit_Knowledge_Editing_5c4dc2776d4b117f.pdf",
+    "content_hash": "5c4dc2776d4b117f25f5efa786cd4d458b1c5eae3f35d22783d5ed7b376cb3ec",
+    "arxiv_id": null,
+    "title": "FLEKE_Federated_Locate-then-Edit_Knowledge_Editing_5c4dc2776d4b117f",
+    "author": "",
+    "creation_date": "D:20250224015817Z",
+    "published": "2025-02-24T01:58:17",
+    "pages": 12,
+    "size": 3285324,
+    "file_mtime": 1740973092.7860556
+  },
+  "main_staff": {
+    "title": "FLEKE_Federated_Locate-then-Edit_Knowledge_Editing_5c4dc2776d4b117f",
+    "authors": [
+      ""
+    ],
+    "abstract": "Locate-then-Edit Knowledge Editing (LEKE)\nis a key technique for updating large language\nmodels (LLMs) without full retraining. How-\never, existing methods assume a single-user\nsetting and become inefficient in real-world\nmulti-client scenarios, where decentralized or-\nganizations (e.g., hospitals, financial institu-\ntions) independently update overlapping knowl-\nedge, leading to redundant mediator knowledge\nvector (MKV) computations and privacy con-\ncerns. To address these challenges, we intro-\nduce Federated Locate-then-Edit Knowledge\nEditing (FLEKE), a novel task that enables mul-\ntiple clients to collaboratively perform LEKE\nwhile preserving privacy and reducing com-\nputational overhead. To achieve this, we pro-\npose FedEdit, a two-stage framework that op-\ntimizes MKV selection and reuse.\nIn the\nfirst stage, clients locally apply LEKE and\nupload the computed MKVs. In the second\nstage, rather than relying solely on server-\nbased MKV sharing, FLEKE allows clients\nretrieve relevant MKVs based on cosine sim-\nilarity, enabling knowledge re-edit and mini-\nmizing redundant computations. Experimen-\ntal results on two benchmark datasets demon-\nstrate that FedEdit retains over 96% of the\nperformance of non-federated LEKE while\nsignificantly outperforming a FedAvg-based\nbaseline by approximately twofold. Besides,\nwe find that MEMIT performs more consis-\ntently than PMET in the FLEKE task with our\nFedEdit framework. Our code is available at\nhttps://github.com/zongkaiz/FLEKE.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "method",
+      "method. in this paper, we select memit (meng",
+      "experiments",
+      "experiments on two datasets:",
+      "approach that applies weight decay to prevent for-",
+      "results are weighted averages across clients.",
+      "results of counterfact",
+      "results in only 73.3% and 41.6%, respectively. this",
+      "method mend.",
+      "methods in generalization. this may be due to our",
+      "results of zsre",
+      "results demonstrate that our method performs very",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "editing",
+      "knowledge",
+      "al",
+      "client",
+      "et",
+      "et al",
+      "clients",
+      "federated",
+      "model",
+      "fedmemit"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

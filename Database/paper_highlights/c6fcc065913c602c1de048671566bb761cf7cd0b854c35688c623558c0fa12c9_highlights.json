@@ -1,0 +1,81 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Not sure about the limitations, maybe the dataset is small, or it's specific to certain tasks.",
+    "Domain Impact: Theoretically important for understanding model learning, practically useful for model compression and interpretability.",
+    "I need to make sure each section is clear and concise, focusing on the key points without too much detail.",
+    "</think>",
+    "**Structured Highlights for the Research Paper**",
+    "**Title:** Capability_Localization_Capabilities_Can_be_Localized_rather_than__Individual_Knowledge_c6fcc065913c602c",
+    "**Core Innovation:** The research shifts focus from individual knowledge storage to capability localization, demonstrating that commonalities among capability neurons can be effectively localized.",
+    "**Technical Approach:**",
+    "Utilized fidelity and reliability evaluations to assess knowledge localization.",
+    "Constructed a decoupling dataset to identify commonalities.",
+    "Introduced the Commonality Neuron Localization (CNL) method for precise localization.",
+    "**Quantitative Findings:**"
+  ],
+  "impact": "",
+  "topics": [
+    "knowledge",
+    "neurons",
+    "model",
+    "et",
+    "al",
+    "et al",
+    "data",
+    "parameters",
+    "localization",
+    "ωl"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Capability_Localization_Capabilities_Can_be_Localized_rather_than__Individual_Knowledge_c6fcc065913c602c.pdf",
+    "content_hash": "c6fcc065913c602c1de048671566bb761cf7cd0b854c35688c623558c0fa12c9",
+    "arxiv_id": null,
+    "title": "Capability_Localization_Capabilities_Can_be_Localized_rather_than__Individual_Knowledge_c6fcc065913c602c",
+    "author": "",
+    "creation_date": "D:20250303014639Z",
+    "published": "2025-03-03T01:46:39",
+    "pages": 17,
+    "size": 4084743,
+    "file_mtime": 1740976257.2158968
+  },
+  "main_staff": {
+    "title": "Capability_Localization_Capabilities_Can_be_Localized_rather_than__Individual_Knowledge_c6fcc065913c602c",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large scale language models have achieved superior performance in tasks related\nto natural language processing, however, it is still unclear how model parameters\naffect performance improvement. Previous studies assumed that individual knowl-\nedge is stored in local parameters, and the storage form of individual knowledge is\ndispersed parameters, parameter layers, or parameter chains, which are not unified.\nWe found through fidelity and reliability evaluation experiments that individual\nknowledge cannot be localized. Afterwards, we constructed a dataset for decou-\npling experiments and discovered the potential for localizing data commonalities.\nTo further reveal this phenomenon, this paper proposes a Commonality Neuron\nLocalization (CNL) method, which successfully locates commonality neurons\nand achieves a neuron overlap rate of 96.42% on the GSM8K dataset. Finally, we\nhave demonstrated through cross data experiments that commonality neurons are a\ncollection of capability neurons that possess the capability to enhance performance.\nOur code is available at https://github.com/nlpkeg/Capability-Neuron-Localization.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methods were not faithful to the same individual knowledge. the answer to question a is: the",
+      "experiments will evaluate the reliability of these methods. firstly, to verify that individual knowledge",
+      "experiments indicate that increasing or zeroing activation does not necessarily lead to an enhancement",
+      "methods cannot support parameter localization with individual knowledge.",
+      "background",
+      "experiments are uniformly set as follows: base model is gptj (achiam et al., 2023) model.",
+      "experiments are uniformly set as follows: base model is gptj (achiam et al., 2023) model, dataset is",
+      "experiments to decouple different factors of knowledge and explore the corresponding relationships",
+      "method",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "knowledge",
+      "neurons",
+      "model",
+      "et",
+      "al",
+      "et al",
+      "data",
+      "parameters",
+      "localization",
+      "ωl"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

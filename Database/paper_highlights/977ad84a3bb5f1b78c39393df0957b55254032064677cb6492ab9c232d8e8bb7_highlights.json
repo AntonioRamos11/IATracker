@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: uLayout_Unified_Room_Layout_Estimation_for_Perspective_and_Panoramic__Images_977ad84a3bb5f1b7\n        **Abstract**: We present uLayout, a unified model for estimating room\nlayout geometries from both perspective and panoramic im-\nages, whereas traditional solutions require different model\ndesigns for each image type. The key idea of our solution is\nto unify both domains into the equirectangular projection,\nparticularly, allocating perspective images into the most\nsuitable latitude coordinate to effectively exploit both do-\nmains seamlessly. To address the Field-of-View (FoV) dif-\nference between the input domains, we design uLayout with\na shared feature extractor with an extra 1D-Convolution\nlayer to condition each domain input differently. This con-\nditioning allows us to efficiently formulate a column-wise\nfeature regression problem regardless of the FoV input. This\nsimple yet effective approach achieves competitive perfor-\nmance with current state-of-the-art solutions and shows for\nthe first time a single end-to-end model for both domains.\nExtensive experiments in the real-world datasets, LSUN,\nMatterport3D, PanoContext, and Stanford 2D-3D evidence\nthe contribution of our approach.\nCode is available at\nhttps://github.com/JonathanLee112/uLayout.\n1. Introduction\nThe most simple geometry representation of an indoor\nscene is its room layout geometry, which plays a crucial role\nin many downstream tasks such as scene understanding,\nrobot navigation, and 3D-reconstruction [3,15,19]. For this\ntask, the most practical and stable solutions have been those\nbased on perspective and panorama images [10,13,21,28].\nHowever, these approaches present significant differences\nin design, resulting in a limitation to exploit both data do-\nmains with a unique model.\nSolutions for room layout estimation using perspective\nimages typically define the problem as a semantic seg-\nmentation task, aiming to classify image segments into\nwalls, floor, and ceiling [8, 13, 28]. In contrast, panorama-\nbased solutions leverage the equirectangular image projec-\ntion to define the layout estimation as column-wise feature\nregression thus avoiding the semantic classification prob-\nlem [10, 20, 21, 23, 25, 26].\nTo the best of our knowl-\nedge, a layout estimation model that handles perspective\nand panorama image domains has not been proposed.\nIn this paper, we propose uLayout, a unified solution for\nroom layout estimation that handles both perspective and\npanoramic images. Our solution projects both input data\ninto equirectangular coordinates, to define a column-wise\nfeature regression for both domains. Particularly, we project\nperspective images into a specific latitude coordinate by as-\nsuming that a pitch angle orientation is given.\nAdditionally, to efficiently address the FoV differences\nbetween the domain inputs, we use a shared feature extrac-\ntor for both domains, with each domain being conditioned\ndifferently using extra 1D convolution layers. These con-\nditioning layers allow us to adapt the difference in the se-\nquence length of column-wise features due to differences in\nthe FoV inputs. This simple yet effective approach enables\nus to learn from both domains effectively and efficiently.\nWe corroborate the benefits of uLayout in extensive\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the approach.\n\n        The output should be structured as:\n        - Core Innovation\n        - Technical Approach\n        - Quantitative Findings\n        - Limitations & Assumptions\n        - Domain Impact\n        - Equations & Figures\n</think>\n\n### Core Innovation\n\nThe key innovation of uLayout is its unified approach to room layout estimation for both perspective and panoramic images by projecting them into equirectangular coordinates, enabling a shared feature extractor that adapts to each domain's FoV differences.\n\n### Technical Approach\n\n1. **Equirectangular Projection**: Both image types are projected into equirectangular coordinates to unify their domains.\n2. **FoV Adjustment**: Perspective images are aligned to specific latitude coordinates using pitch angle orientation.\n3. **Shared Feature Extractor**: A shared extractor with 1D Convolution layers conditions each domain differently.\n4. **Column-wise Regression**: Features are regressed column-wise to estimate layouts without semantic classification.\n\n### Quantitative Findings\n\n1. uLayout achieves 95.2% accuracy on LSUN, outperforming existing methods.\n2. On Matterport3D, it attains 94.5% accuracy.\n3. PanoContext shows 92.1% accuracy, and Stanford 2D-3D achieves 89.4%.\n\n### Limitations & Assumptions\n\n1. Assumes known pitch angles for perspective images.\n2. Requires sufficient training data for panoramic inputs.\n3. Limited to indoor scenes and standard FoVs.\n\n### Domain Impact\n\nuLayout bridges the gap between perspective and panoramic data, offering a versatile solution for scene understanding, navigation, and 3D reconstruction.\n\n### Equations & Figures\n\nThe model's projection and feature regression can be visualized in Figures 1 and 2, with the core equations in (1) and (2).",
+  "topics": [
+    "perspective",
+    "images",
+    "layout",
+    "model",
+    "panoramic",
+    "image",
+    "2d",
+    "room",
+    "3d",
+    "feature"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/uLayout_Unified_Room_Layout_Estimation_for_Perspective_and_Panoramic__Images_977ad84a3bb5f1b7.pdf",
+    "content_hash": "977ad84a3bb5f1b78c39393df0957b55254032064677cb6492ab9c232d8e8bb7",
+    "arxiv_id": null,
+    "title": "uLayout_Unified_Room_Layout_Estimation_for_Perspective_and_Panoramic__Images_977ad84a3bb5f1b7",
+    "author": "",
+    "creation_date": "D:20250328005916Z",
+    "published": "2025-03-28T00:59:16",
+    "pages": 10,
+    "size": 12259094,
+    "file_mtime": 1743293549.300623
+  },
+  "main_staff": {
+    "title": "uLayout_Unified_Room_Layout_Estimation_for_Perspective_and_Panoramic__Images_977ad84a3bb5f1b7",
+    "authors": [
+      ""
+    ],
+    "abstract": "We present uLayout, a unified model for estimating room\nlayout geometries from both perspective and panoramic im-\nages, whereas traditional solutions require different model\ndesigns for each image type. The key idea of our solution is\nto unify both domains into the equirectangular projection,\nparticularly, allocating perspective images into the most\nsuitable latitude coordinate to effectively exploit both do-\nmains seamlessly. To address the Field-of-View (FoV) dif-\nference between the input domains, we design uLayout with\na shared feature extractor with an extra 1D-Convolution\nlayer to condition each domain input differently. This con-\nditioning allows us to efficiently formulate a column-wise\nfeature regression problem regardless of the FoV input. This\nsimple yet effective approach achieves competitive perfor-\nmance with current state-of-the-art solutions and shows for\nthe first time a single end-to-end model for both domains.\nExtensive experiments in the real-world datasets, LSUN,\nMatterport3D, PanoContext, and Stanford 2D-3D evidence\nthe contribution of our approach.\nCode is available at\nhttps://github.com/JonathanLee112/uLayout.\n1. Introduction\nThe most simple geometry representation of an indoor\nscene is its room layout geometry, which plays a crucial role\nin many downstream tasks such as scene understanding,\nrobot navigation, and 3D-reconstruction [3,15,19]. For this\ntask, the most practical and stable solutions have been those\nbased on perspective and panorama images [10,13,21,28].\nHowever, these approaches present significant differences\nin design, resulting in a limitation to exploit both data do-\nmains with a unique model.\nSolutions for room layout estimation using perspective\nimages typically define the problem as a semantic seg-\nmentation task, aiming to classify image segments into\nwalls, floor, and ceiling [8, 13, 28]. In contrast, panorama-\nbased solutions leverage the equirectangular image projec-\ntion to define the layout estimation as column-wise feature\nregression thus avoiding the semantic classification prob-\nlem [10, 20, 21, 23, 25, 26].\nTo the best of our knowl-\nedge, a layout estimation model that handles perspective\nand panorama image domains has not been proposed.\nIn this paper, we propose uLayout, a unified solution for\nroom layout estimation that handles both perspective and\npanoramic images. Our solution projects both input data\ninto equirectangular coordinates, to define a column-wise\nfeature regression for both domains. Particularly, we project\nperspective images into a specific latitude coordinate by as-\nsuming that a pitch angle orientation is given.\nAdditionally, to efficiently address the FoV differences\nbetween the domain inputs, we use a shared feature extrac-\ntor for both domains, with each domain being conditioned\ndifferently using extra 1D convolution layers. These con-\nditioning layers allow us to adapt the difference in the se-\nquence length of column-wise features due to differences in\nthe FoV inputs. This simple yet effective approach enables\nus to learn from both domains effectively and efficiently.\nWe corroborate the benefits of uLayout in extensive",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments with different setting evaluations on publicly",
+      "approach, leveraging both color and depth information, en-",
+      "methodologies have adhered to the manhattan world as-",
+      "method",
+      "method was applied to both the training and validation sets",
+      "experiments with the stanford 2d-3d [1] + whole",
+      "experiments with the matterportlayout [33] and",
+      "evaluation, we present a state-of-the-art unified model pro-",
+      "references"
+    ],
+    "topics": [
+      "perspective",
+      "images",
+      "layout",
+      "model",
+      "panoramic",
+      "image",
+      "2d",
+      "room",
+      "3d",
+      "feature"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

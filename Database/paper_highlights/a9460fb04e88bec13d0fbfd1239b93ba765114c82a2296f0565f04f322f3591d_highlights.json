@@ -1,0 +1,70 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [],
+  "impact": "** Significant for applications requiring long-context understanding, such as document summarization, question answering, and text generation.\n   - **Theoretical Impact:** Advances the efficiency and scalability of autoregressive models, potentially enabling broader deployment in real-world applications.\n\n### Highlighted Key Equations/Figures:\n- The paper likely presents figures demonstrating inference speed improvements and memory usage reductions, as well as equations detailing the attention aggregation method and KV cache implementation.\n\nThis structured overview provides a concise yet comprehensive understanding of the paper's contributions, technical details, and implications for the NLP domain.",
+  "topics": [
+    "model",
+    "attention",
+    "decoding",
+    "long",
+    "context",
+    "00",
+    "speculative",
+    "long context",
+    "al",
+    "2024"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/LongSpec_Long-Context_Speculative_Decoding_with_Efficient_Drafting_and__Verification_a9460fb04e88bec1.pdf",
+    "content_hash": "a9460fb04e88bec13d0fbfd1239b93ba765114c82a2296f0565f04f322f3591d",
+    "arxiv_id": null,
+    "title": "  LongSpec: Long-Context Speculative Decoding with Efficient Drafting and Verification  ",
+    "author": "Penghui Yang, Cunxiao Du, Fengzhuo Zhang, Haonan Wang, Tianyu Pang, Chao Du, Bo An",
+    "creation_date": "D:20250225030853Z",
+    "published": "2025-02-25T03:08:53",
+    "pages": 19,
+    "size": 5096140,
+    "file_mtime": 1740971681.5415356
+  },
+  "main_staff": {
+    "title": "  LongSpec: Long-Context Speculative Decoding with Efficient Drafting and Verification  ",
+    "authors": [
+      "Penghui Yang",
+      " Cunxiao Du",
+      " Fengzhuo Zhang",
+      " Haonan Wang",
+      " Tianyu Pang",
+      " Chao Du",
+      " Bo An"
+    ],
+    "abstract": "Speculative decoding has become a promising\ntechnique to mitigate the high inference latency\nof autoregressive decoding in Large Language\nModels (LLMs). Despite its promise, the effec-\ntive application of speculative decoding in LLMs\nstill confronts three key challenges: the increasing\nmemory demands of the draft model, the distribu-\ntion shift between the short-training corpora and\nlong-context inference, and inefficiencies in atten-\ntion implementation. In this work, we enhance\nthe performance of speculative decoding in long-\ncontext settings by addressing these challenges.\nFirst, we propose a memory-efficient draft model\nwith a constant-sized Key-Value (KV) cache. Sec-\nond, we introduce novel position indices for short-\ntraining data, enabling seamless adaptation from\nshort-context training to long-context inference.\nFinally, we present an innovative attention ag-\ngregation method that combines fast implemen-\ntations for prefix computation with standard at-\ntention for tree mask handling, effectively re-\nsolving the latency and memory inefficiencies\nof tree decoding. Our approach achieves strong",
+    "sections": [
+      "unknown",
+      "abstract",
+      "results on various long-context tasks, including",
+      "experiments, adopting these indices in the target model only",
+      "method. before the statement of our results, we would like",
+      "approach.",
+      "approach achieves 2.25× higher speed compared to the baseline.",
+      "method is particularly well-suited for addressing these chal-",
+      "method in the longcot task but also provide new insights",
+      "references"
+    ],
+    "topics": [
+      "model",
+      "attention",
+      "decoding",
+      "long",
+      "context",
+      "00",
+      "speculative",
+      "long context",
+      "al",
+      "2024"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

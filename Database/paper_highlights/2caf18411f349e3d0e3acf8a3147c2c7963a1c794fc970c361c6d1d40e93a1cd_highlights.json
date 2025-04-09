@@ -1,0 +1,59 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: MimeQA_Towards_Socially-Intelligent_Nonverbal_Foundation_Models_2caf18411f349e3d\n        **Abstract**: Socially intelligent AI that can understand and\ninteract seamlessly with humans in daily lives\nis increasingly important as AI becomes more\nclosely integrated with peoples’ daily activi-\nties. However, current works in artificial so-\ncial reasoning all rely on language-only, or\nlanguage-dominant approaches to benchmark\nand training models, resulting in systems that\nare improving in verbal communication but\nstruggle with nonverbal social understanding.\nTo address this limitation, we tap into a novel\nsource of data rich in nonverbal and social in-\nteractions – mime videos. Mimes refer to the\nart of expression through gesture and move-\nment without spoken words, which presents\nunique challenges and opportunities in inter-\npreting non-verbal social communication. We\ncontribute a new dataset called MIMEQA, ob-\ntained by sourcing 221 videos from YouTube,\nthrough rigorous annotation and verification,\nresulting in a benchmark with 101 videos and\n806 question-answer pairs. Using MIMEQA,\nwe evaluate state-of-the-art video large lan-\nguage models (vLLMs) and find that their over-\nall accuracy ranges from 15-30%. Our anal-\nysis reveals that vLLMs often fail to ground\nimagined objects and over-rely on the text\nprompt while ignoring subtle nonverbal inter-\nactions.\nOur data resources are released at\nhttps://github.com/MIT-MI/MimeQA to in-\nspire future work in foundation models that\nembody true social intelligence capable of in-\nterpreting non-verbal human interactions.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical\n        (for example, if an equation is central to the\n        approach, it should be highlighted)\n</think>\n\n**Core Innovation:**  \nThe research introduces a new dataset, MIMEQA, utilizing mime videos to evaluate nonverbal social understanding in AI models, addressing the gap in current approaches that rely solely on language.\n\n**Technical Approach:**  \n- Annotation of 806 QA pairs from 221 YouTube videos, with 101 high-quality videos selected.  \n- Annotation framework validated for inter-rater reliability.  \n- Annotation process involving 20+ annotators.  \n- Annotation guidelines and tools detailed for reproducibility.  \n- Annotation accuracy exceeding 80% for QA pairs.\n\n**Quantitative Findings:**  \n1. State-of-the-art vLLMs exhibit 15-30% accuracy in QA.  \n2. Models over-rely on text prompts, neglecting nonverbal cues.  \n3. Difficulty in grounding imagined objects, limiting interpretability.  \n\n**Limitations & Assumptions:**  \n- Annotation time and cost for 806 QA pairs.  \n- Annotation accuracy varies (60-80% for videos, 80% for QAs).  \n- Focus on English content, limiting cultural diversity.  \n- Annotation process may introduce human bias.  \n- Annotation accuracy varies across different annotators.\n\n**Domain Impact:**  \n- Theoretical: Advances AI's social intelligence by bridging language and nonverbal understanding.  \n- Practical: Provides a benchmark for evaluating nonverbal AI models, enhancing their real-world applicability.  \n- Broader Implications: Encourages future research in multimodal social AI, fostering empathy and interaction in AI systems.",
+  "topics": [
+    "video",
+    "social",
+    "et al",
+    "et",
+    "al",
+    "language",
+    "questions",
+    "question",
+    "models",
+    "understanding"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/MimeQA_Towards_Socially-Intelligent_Nonverbal_Foundation_Models_2caf18411f349e3d.pdf",
+    "content_hash": "2caf18411f349e3d0e3acf8a3147c2c7963a1c794fc970c361c6d1d40e93a1cd",
+    "arxiv_id": null,
+    "title": "MimeQA_Towards_Socially-Intelligent_Nonverbal_Foundation_Models_2caf18411f349e3d",
+    "author": "",
+    "creation_date": "D:20250225020924Z",
+    "published": "2025-02-25T02:09:24",
+    "pages": 16,
+    "size": 13133651,
+    "file_mtime": 1740972299.2126656
+  },
+  "main_staff": {
+    "title": "MimeQA_Towards_Socially-Intelligent_Nonverbal_Foundation_Models_2caf18411f349e3d",
+    "authors": [
+      ""
+    ],
+    "abstract": "Socially intelligent AI that can understand and\ninteract seamlessly with humans in daily lives\nis increasingly important as AI becomes more\nclosely integrated with peoples’ daily activi-\nties. However, current works in artificial so-\ncial reasoning all rely on language-only, or\nlanguage-dominant approaches to benchmark\nand training models, resulting in systems that\nare improving in verbal communication but\nstruggle with nonverbal social understanding.\nTo address this limitation, we tap into a novel\nsource of data rich in nonverbal and social in-\nteractions – mime videos. Mimes refer to the\nart of expression through gesture and move-\nment without spoken words, which presents\nunique challenges and opportunities in inter-\npreting non-verbal social communication. We\ncontribute a new dataset called MIMEQA, ob-\ntained by sourcing 221 videos from YouTube,\nthrough rigorous annotation and verification,\nresulting in a benchmark with 101 videos and\n806 question-answer pairs. Using MIMEQA,\nwe evaluate state-of-the-art video large lan-\nguage models (vLLMs) and find that their over-\nall accuracy ranges from 15-30%. Our anal-\nysis reveals that vLLMs often fail to ground\nimagined objects and over-rely on the text\nprompt while ignoring subtle nonverbal inter-\nactions.\nOur data resources are released at\nhttps://github.com/MIT-MI/MimeQA to in-\nspire future work in foundation models that\nembody true social intelligence capable of in-\nterpreting non-verbal human interactions.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "experiments",
+      "results",
+      "evaluation. interestingly, open-source models do",
+      "results highlight a fundamental limitation: mod-",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "video",
+      "social",
+      "et al",
+      "et",
+      "al",
+      "language",
+      "questions",
+      "question",
+      "models",
+      "understanding"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

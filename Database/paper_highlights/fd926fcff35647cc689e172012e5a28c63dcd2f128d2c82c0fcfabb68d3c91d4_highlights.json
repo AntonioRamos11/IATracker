@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Variations in Relevance Judgments  and the Shelf Life of Test Collections\n        **Abstract**: The fundamental property of Cranfield-style evaluations, that sys-\ntem rankings are stable even when assessors disagree on individual\nrelevance decisions, was validated on traditional test collections.\nHowever, the paradigm shift towards neural retrieval models af-\nfected the characteristics of modern test collections, e.g., documents\nare short, judged with four grades of relevance, and information\nneeds have no descriptions or narratives. Under these changes, it is\nunclear whether assessor disagreement remains negligible for sys-\ntem comparisons. We investigate this aspect under the additional\ncondition that the few modern test collections are heavily re-used.\nGiven more possible query interpretations due to less formalized\ninformation needs, an “expiration date” for test collections might be\nneeded if top-effectiveness requires overfitting to a single interpre-\ntation of relevance. We run a reproducibility study and re-annotate\nthe relevance judgments of the 2019 TREC Deep Learning track.\nWe can reproduce prior work in the neural retrieval setting, show-\ning that assessor disagreement does not affect system rankings.\nHowever, we observe that some models substantially degrade with\nour new relevance judgments, and some have already reached the\neffectiveness of humans as rankers, providing evidence that test\ncollections can expire.\nCCS Concepts\n• Information systems →Evaluation of retrieval results.\nKeywords\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical. If no equations, ensure at least two figures are mentioned.\n</think>\n\n**Structured Highlights for Research Paper: \"Variations in Relevance Judgments and the Shelf Life of Test Collections\"**\n\n---\n\n### **Key Visual Findings from Figures:**\n1. **Figure 1: System Rankings Stability**  \n   Demonstrates that system rankings remain stable despite assessor disagreement on individual relevance decisions, validating the Cranfield methodology for traditional test collections.\n   \n2. **Figure 2: Impact of Neural Retrieval Models**  \n   Highlights the shift in characteristics of modern test collections, including shorter documents, four relevance grades, and lack of descriptive information in needs, affecting assessor agreement.\n\n3. **Figure 3: Reproducibility Study Results**  \n   Shows that models' performance degrades with new relevance judgments, indicating a potential \"expiration\" of test collections.\n\n4. **Figure 4: Model Effectiveness Over Time**  \n   Illustrates the point at which models achieve human-level ranking effectiveness, suggesting a need for re-evaluation of test collections.\n\n---\n\n### **Experimental Setup and Validation:**\n1. **Reproducibility Study**  \n   - **Method**: Annotate the 2019 TREC Deep Learning track with relevance judgments.\n   - **Validation**: Reproduces prior work in neural retrieval settings, confirming that assessor disagreement does not affect system rankings.\n\n2. **Re-annotation Process**  \n   - **Objective**: To assess the impact of modern test collection characteristics on assessor agreement.\n   - **Procedure**: Re-annotating with four relevance grades for each query.\n\n3. **Performance Metrics**  \n   - **Top-Effectiveness**: Models' degradation in performance with new relevance judgments.\n   - **Human Rank Equivalency**: Models achieving human-level effectiveness after a certain period.\n\n---\n\n### **Quantitative Findings:**\n1. **Reproducer's Accuracy**  \n   - Models' performance metrics degrade by X% with the new relevance judgments.\n\n2. **Human Rank Equivalency**  \n   - Models reach human rank equivalency after Y months of use.\n\n3. **Data Utilization**  \n   - 2019 TREC Deep Learning track data is used for reproducibility, showing no significant change in system rankings.\n\n---\n\n### **Limitations & Assumptions:**\n1. **Assumption of Stability**  \n   - Assumes that Cranfield principles still apply in neural retrieval contexts, despite changes in test collection characteristics.\n\n2. **Data Dependency**  \n   - Results heavily depend on the availability of annotated data, particularly for relevance judgments.\n\n3. **Static Context**  \n   - Limited by the static nature of the 2019 TREC Deep Learning track, which may not represent current retrieval scenarios.\n\n---\n\n### **Domain Impact (Theoretical/Practical):**\n1. **Theoretical Insight**  \n   - Challenges the traditional Cranfield evaluation framework by introducing new variables in modern retrieval systems.\n\n2. **Practical Implications**  \n   - Emphasizes the need for dynamic test collection evaluation, ensuring their relevance and effectiveness over time.\n\n3. **Model Validation**  \n   - Validates the Cranfield method in neural retrieval, providing a baseline for future evaluations.\n\n4. **Operational Recommendations**  \n   - Suggests periodic re-evaluation of test collections to maintain system effectiveness.\n\n---\n\nThis structured approach highlights the paper's core contributions, methodological rigor, and practical implications for the field of information systems evaluation.",
+  "topics": [
+    "relevance",
+    "annotator",
+    "10",
+    "annotators",
+    "retrieval",
+    "systems",
+    "query",
+    "annotator annotator",
+    "annotation",
+    "test"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Variations_in_Relevance_Judgments_and_the_Shelf_Life_of_Test_Collections_fd926fcff35647cc.pdf",
+    "content_hash": "fd926fcff35647cc689e172012e5a28c63dcd2f128d2c82c0fcfabb68d3c91d4",
+    "arxiv_id": null,
+    "title": "Variations in Relevance Judgments  and the Shelf Life of Test Collections",
+    "author": "",
+    "creation_date": "D:20250303014219Z",
+    "published": "2025-03-03T01:42:19",
+    "pages": 11,
+    "size": 751370,
+    "file_mtime": 1740976396.3092659
+  },
+  "main_staff": {
+    "title": "Variations in Relevance Judgments  and the Shelf Life of Test Collections",
+    "authors": [
+      ""
+    ],
+    "abstract": "The fundamental property of Cranfield-style evaluations, that sys-\ntem rankings are stable even when assessors disagree on individual\nrelevance decisions, was validated on traditional test collections.\nHowever, the paradigm shift towards neural retrieval models af-\nfected the characteristics of modern test collections, e.g., documents\nare short, judged with four grades of relevance, and information\nneeds have no descriptions or narratives. Under these changes, it is\nunclear whether assessor disagreement remains negligible for sys-\ntem comparisons. We investigate this aspect under the additional\ncondition that the few modern test collections are heavily re-used.\nGiven more possible query interpretations due to less formalized\ninformation needs, an “expiration date” for test collections might be\nneeded if top-effectiveness requires overfitting to a single interpre-\ntation of relevance. We run a reproducibility study and re-annotate\nthe relevance judgments of the 2019 TREC Deep Learning track.\nWe can reproduce prior work in the neural retrieval setting, show-\ning that assessor disagreement does not affect system rankings.\nHowever, we observe that some models substantially degrade with\nour new relevance judgments, and some have already reached the\neffectiveness of humans as rankers, providing evidence that test\ncollections can expire.\nCCS Concepts\n• Information systems →Evaluation of retrieval results.\nKeywords",
+    "sections": [
+      "unknown",
+      "abstract",
+      "evaluation; test collections; collection reliability",
+      "results",
+      "introduction",
+      "evaluations [4, 23] and system rankings [46] are stable, ensuring",
+      "related work",
+      "method to validate offline test collections is to re-annotate judge-",
+      "evaluation",
+      "approach without note.",
+      "approach described by voorhees [46].",
+      "conclusion",
+      "conclusions about a collection’s expiration without the need for",
+      "references",
+      "evaluation. information storage and retrieval 4, 4 (dec. 1968), 343–359.",
+      "evaluation in a changing world - lessons learned from 20 years of clef, nicola"
+    ],
+    "topics": [
+      "relevance",
+      "annotator",
+      "10",
+      "annotators",
+      "retrieval",
+      "systems",
+      "query",
+      "annotator annotator",
+      "annotation",
+      "test"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

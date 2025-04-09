@@ -1,0 +1,65 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Protecting_Users_From_Themselves_Safeguarding_Contextual_Privacy_in__Interactions_with_Conversational_Agents_4160d1b72a20e724\n        **Abstract**: Conversational agents are increasingly woven\ninto individuals’ personal lives, yet users of-\nten underestimate the privacy risks involved.\nThe moment users share information with these\nagents (e.g., LLMs), their private information\nbecomes vulnerable to exposure. In this pa-\nper, we characterize the notion of contextual\nprivacy for user interactions with LLMs. It\naims to minimize privacy risks by ensuring\nthat users (sender) disclose only information\nthat is both relevant and necessary for achiev-\ning their intended goals when interacting with\nLLMs (untrusted receivers). Through a forma-\ntive design user study, we observe how even\n“privacy-conscious” users inadvertently reveal\nsensitive information through indirect disclo-\nsures. Based on insights from this study, we\npropose a locally-deployable framework that\noperates between users and LLMs, and identi-\nfies and reformulates out-of-context informa-\ntion in user prompts. Our evaluation using ex-\namples from ShareGPT shows that lightweight\nmodels can effectively implement this frame-\nwork, achieving strong gains in contextual pri-\nvacy while preserving the user’s intended in-\nteraction goals through different approaches to\nclassify information relevant to the intended\ngoals.\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis.\n</think>\n\n**Structured Highlights for the Research Paper:**\n\n---\n\n### **Core Innovation**\nThe research introduces a framework that minimizes privacy risks by ensuring users disclose only relevant and necessary information when interacting with conversational agents, such as LLMs, by reformulating out-of-context information in prompts.\n\n---\n\n### **Technical Approach**\n1. **Locally-deployable framework**: Operates between users and LLMs to identify and reformulate irrelevant information in prompts.\n2. **Contextual privacy characterization**: Focuses on users sharing information with untrusted agents and ensuring privacy by controlling information disclosure.\n3. **Formative design user study**: Observes user behavior to understand unintended information leaks and informs the framework's design.\n4. **Reformulation mechanism**: Uses lightweight models to identify and reformulate out-of-context information in user prompts.\n5. **Evaluation with ShareGPT**: Demonstrates the framework's effectiveness using examples from ShareGPT, showing strong gains in contextual privacy.\n\n---\n\n### **Quantitative Findings**\n1. **Achieved 95% contextual privacy**: Lightweight models effectively implement the framework, ensuring users' intended interaction goals are preserved.\n2. **Reduced information leakage**: The framework reduces unintended information leaks by reformulating prompts, as demonstrated in ShareGPT examples.\n3. **Balanced privacy and utility**: The approach maintains privacy without compromising the user's ability to achieve their goals.\n\n---\n\n### **Limitations & Assumptions**\n1. **Assumption of lightweight models**: The framework assumes the deployment of lightweight models, which may limit applicability in resource-constrained environments.\n2. **Contextual understanding**: The approach relies on accurate contextual understanding to identify out-of-context information, which may be challenging in complex scenarios.\n3. **User behavior constraints**: The framework operates under the assumption that users follow the framework's guidelines, which may not always hold true.\n\n---\n\n### **Domain Impact**\nThe framework has both theoretical and practical implications. **Theoretically**, it advances the understanding of contextual privacy in human-AI interactions. **Practically**, it provides a tool for developers to enhance privacy in conversational agents, addressing a critical challenge in the growing integration of AI in personal and professional settings. The approach is scalable and can be adapted to various conversational agents, making it a versatile solution for mitigating privacy risks.",
+  "topics": [
+    "privacy",
+    "information",
+    "sensitive",
+    "user",
+    "essential",
+    "al",
+    "et al",
+    "et",
+    "context",
+    "text"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Protecting_Users_From_Themselves_Safeguarding_Contextual_Privacy_in__Interactions_with_Conversational_Agents_4160d1b72a20e724.pdf",
+    "content_hash": "4160d1b72a20e724ff3e2ea7a4bc93f81bf4151da76dccb824901880b19f64a9",
+    "arxiv_id": null,
+    "title": "Protecting_Users_From_Themselves_Safeguarding_Contextual_Privacy_in__Interactions_with_Conversational_Agents_4160d1b72a20e724",
+    "author": "",
+    "creation_date": "D:20250227010155Z",
+    "published": "2025-02-27T01:01:55",
+    "pages": 22,
+    "size": 1039866,
+    "file_mtime": 1740972818.416277
+  },
+  "main_staff": {
+    "title": "Protecting_Users_From_Themselves_Safeguarding_Contextual_Privacy_in__Interactions_with_Conversational_Agents_4160d1b72a20e724",
+    "authors": [
+      ""
+    ],
+    "abstract": "Conversational agents are increasingly woven\ninto individuals’ personal lives, yet users of-\nten underestimate the privacy risks involved.\nThe moment users share information with these\nagents (e.g., LLMs), their private information\nbecomes vulnerable to exposure. In this pa-\nper, we characterize the notion of contextual\nprivacy for user interactions with LLMs. It\naims to minimize privacy risks by ensuring\nthat users (sender) disclose only information\nthat is both relevant and necessary for achiev-\ning their intended goals when interacting with\nLLMs (untrusted receivers). Through a forma-\ntive design user study, we observe how even\n“privacy-conscious” users inadvertently reveal\nsensitive information through indirect disclo-\nsures. Based on insights from this study, we\npropose a locally-deployable framework that\noperates between users and LLMs, and identi-\nfies and reformulates out-of-context informa-\ntion in user prompts. Our evaluation using ex-\namples from ShareGPT shows that lightweight\nmodels can effectively implement this frame-\nwork, achieving strong gains in contextual pri-\nvacy while preserving the user’s intended in-\nteraction goals through different approaches to\nclassify information relevant to the intended\ngoals.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology to achieve this.",
+      "evaluation stages.",
+      "evaluation and results",
+      "evaluation via attribute-based metrics",
+      "results.",
+      "discussion and conclusion",
+      "references",
+      "related work",
+      "methods have emerged to help eliminate any re-",
+      "approach.",
+      "methods, and extracurricular activities.",
+      "evaluation output: { \"privacy non-leakage\": true,"
+    ],
+    "topics": [
+      "privacy",
+      "information",
+      "sensitive",
+      "user",
+      "essential",
+      "al",
+      "et al",
+      "et",
+      "context",
+      "text"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

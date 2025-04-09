@@ -1,0 +1,77 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "** Evaluation focuses on specific scenarios, and the models' generalization to diverse environments remains to be tested.",
+    "",
+    "### 5. Domain Impact",
+    "**Theoretical:** Advances the integration of video understanding into autonomous systems.",
+    "**Practical:** Enhances safety and decision-making in self-driving technologies, offering a scalable solution for perception and action.",
+    "",
+    "### Additional Notes",
+    "**Key Equations/Figures:** While specific details are not provided, the models' architectures and training processes likely involve complex networks and attention mechanisms, as detailed in the full paper.",
+    "This structured approach highlights the key contributions, methodologies, and implications of the research, providing a clear overview of its significance in the field of autonomous driving."
+  ],
+  "impact": "",
+  "topics": [
+    "model",
+    "vavim",
+    "video",
+    "driving",
+    "models",
+    "training",
+    "action",
+    "vavam",
+    "data",
+    "pre"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/VaViM_and_VaVAM_Autonomous_Driving_through_Video_Generative_Modeling_1a794642eaa61c2d.pdf",
+    "content_hash": "1a794642eaa61c2d67884b67a7b280ce3eedbfda435d3daefaeb88c99702d0dc",
+    "arxiv_id": null,
+    "title": "VaViM_and_VaVAM_Autonomous_Driving_through_Video_Generative_Modeling_1a794642eaa61c2d",
+    "author": "",
+    "creation_date": "D:20250224015805Z",
+    "published": "2025-02-24T01:58:05",
+    "pages": 26,
+    "size": 22394800,
+    "file_mtime": 1740973095.0342965
+  },
+  "main_staff": {
+    "title": "VaViM_and_VaVAM_Autonomous_Driving_through_Video_Generative_Modeling_1a794642eaa61c2d",
+    "authors": [
+      ""
+    ],
+    "abstract": "We explore the potential of large-scale generative video models for autonomous\ndriving, introducing an open-source auto-regressive video model (VaViM) and its\ncompanion video-action model (VaVAM) to investigate how video pre-training\ntransfers to real-world driving. VaViM is a simple auto-regressive video model that\npredicts frames using spatio-temporal token sequences. We show that it captures\nthe semantics and dynamics of driving scenes. VaVAM, the video-action model,\nleverages the learned representations of VaViM to generate driving trajectories\nthrough imitation learning. Together, the models form a complete perception-to-\naction pipeline. We evaluate our models in open- and closed-loop driving scenarios,\nrevealing that video-based pre-training holds promise for autonomous driving. Key\ninsights include the semantic richness of the learned representations, the benefits\nof scaling for video synthesis, and the complex relationship between model size,\ndata, and safety metrics in closed-loop evaluations. We release code and model\nweights at github.com/valeoai/VideoActionModel.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methods such as video diffusion model (vdm) [41], make-a-video [80], or align your latents [9]",
+      "methods such as lmdrive [79], gpt-driver [61], llm-driver [19] or language-mpc [78] lever-",
+      "evaluation",
+      "evaluation with realistic traffic data without simulation, it has key limitations: most critically, it fails to",
+      "evaluation with dynamic agents, but their synthetic nature introduces significant domain gaps when",
+      "results in a codebook of size 12.6m, 16.8m, and 33.65m respectively. we keep the dimensionality",
+      "experiments and results",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "model",
+      "vavim",
+      "video",
+      "driving",
+      "models",
+      "training",
+      "action",
+      "vavam",
+      "data",
+      "pre"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Challenges like computational cost, dataset dependency, etc."
+  ],
+  "impact": "",
+  "topics": [
+    "color",
+    "image",
+    "hvi",
+    "space",
+    "light",
+    "cidnet",
+    "low",
+    "low light",
+    "color space",
+    "enhancement"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/HVI_A_New_Color_Space_for_Low-light_Image_Enhancement_adde29acc9847094.pdf",
+    "content_hash": "adde29acc98470946146fd1cc3e0b8692ef3fa4f6aa1dcdbb255ab5bc47aa9db",
+    "arxiv_id": null,
+    "title": "HVI_A_New_Color_Space_for_Low-light_Image_Enhancement_adde29acc9847094",
+    "author": "",
+    "creation_date": "D:20250303014410Z",
+    "published": "2025-03-03T01:44:10",
+    "pages": 30,
+    "size": 33873817,
+    "file_mtime": 1740970019.4130309
+  },
+  "main_staff": {
+    "title": "HVI_A_New_Color_Space_for_Low-light_Image_Enhancement_adde29acc9847094",
+    "authors": [
+      ""
+    ],
+    "abstract": "Low-Light Image Enhancement (LLIE) is a crucial computer\nvision task that aims to restore detailed visual information\nfrom corrupted low-light images. Many existing LLIE meth-\nods are based on standard RGB (sRGB) space, which often\nproduce color bias and brightness artifacts due to inherent\nhigh color sensitivity in sRGB. While converting the images\nusing Hue, Saturation and Value (HSV) color space helps\nresolve the brightness issue, it introduces significant red and\nblack noise artifacts. To address this issue, we propose a new\ncolor space for LLIE, namely Horizontal/Vertical-Intensity\n(HVI), defined by polarized HS maps and learnable inten-\nsity. The former enforces small distances for red coordinates\nto remove the red artifacts, while the latter compresses the\nlow-light regions to remove the black artifacts. To fully lever-\nage the chromatic and intensity information, a novel Color\nand Intensity Decoupling Network (CIDNet) is further in-\ntroduced to learn accurate photometric mapping function\nunder different lighting conditions in the HVI space. Com-\nprehensive results from benchmark and ablation experiments\nshow that the proposed HVI color space with CIDNet out-\nperforms the state-of-the-art methods on 10 datasets. The\ncode is available at https://github.com/Fediory/HVI-CIDNet.\n1. Introduction\nUnder low-light conditions, imaging sensors often cap-\nture weak light signals with severe noise, resulting in poor\nvisual quality for low-light images. Obtaining high-quality\nimages from such degraded images necessitates Low-Light\nImage Enhancement (LLIE) that aims at improving the im-\nage brightness while simultaneously reducing the impact of\nnoise and color bias [38].\nThe majority of existing LLIE approaches [19, 25, 29, 52,\n75, 80] focus on finding an appropriate image brightness,\nwhich is typically done by employing deep neural networks\nto learn a mapping relationship between low-light images\n*These authors contributed equally to this work.\n†Corresponding author.\nand normal-light images within the standard RGB (sRGB)\nspace. However, the image brightness exhibits a strong\ncoupling with the color from the three sRGB channels, a.k.a.\nhigh color sensitivity in [17, 36], causing an obvious color\ndistortion of the restored image in these LLIE methods [6,\n29], as shown in Fig. 1 (a).\nInspired by Kubelka-Munk theory [17], recent methods\n[39, 76, 81] have sought to transform images from the sRGB\ncolor space to the Hue, Saturation and Value (HSV) color\nspace. These methods help achieve the brightness enhance-\nment more accurately, but they amplify local color space\nnoise [17], introducing severe artifacts in the results. As\nillustrated in Fig. 1 (b), the transformation from sRGB to the\nHSV disrupts the continuity of the red (①Red Discontinuity\nNoise) and black (②Black Plane Noise) color, resulting in\nincreased Euclidean distances for similar color and the in-\ntroduction of artifacts in the final images (see the zoomed\nin images of ①and ②). These two types of noise can cause\nsevere artifacts in the enhancement of red-dominated or ex-\ntremely dark images.\nTo address these issues, we introduce a new color space\nnamed Horizontal/Vertical-Intensity (HVI), designed specif-\nically for the LLIE task. The key intuition is that minimizing\ncolor space noise, by reducing Euclidean distances in similar\ncolors. To this end, we polarize in the Hue and Saturation\n(HS) plane to enforce smaller distances for similar red point\ncoordinates, which eliminates the red discontinuity noise\nin the primary HSV space (see Fig. 1 (c)). For the black\nplane noise issue, we introduce a trainable darkness density\nparameter k and its corresponding adaptive intensity col-\nlapse function Ck, which compresses the radius of low-light\nregions to zero, with the flexibility to gradually expand to\nthe value of one as the intensity increases, as illustrated in\nFig. 1 (d). This helps remove the black noise artifacts while\nmaintaining the primary image appearance.\nWe further propose an LLIE network, named Color and\nIntensity Decoupling Network (CIDNet), to leverage the\nchromatic and intensity information for optimizing the color\nand intensity in the HVI space. After transforming the im-\nage into the HVI space, CIDNet leverages two network\narXiv:2502.20272v2  [cs.CV]  28 Feb 2025\n\nFigure 1. The top row illustrates the process of transforming images from the sRGB color space, via HSV, to the HVI color space. The\nbottom row presents the corresponding test results. The sRGB color space is known for its high color sensitivity, often causing color\ndistortions in test images. By decoupling brightness and color to obtain the HSV color space, the illumination enhancement appears\nnormalized. However, this transformation introduces varying levels of red discontinuities and black regions, which subsequently cause\nartifacts in the enhanced images. Introducing polarization to HSV ensures continuity in the red regions. Introducing a learnable intensity\nfunction Ck, on the other hand, helps collapse the black regions, yielding the HVI color space with optimal image enhancement.\nbranches, namely HV-branch and intensity-branch, to respec-\ntively model decoupled color and brightness information\nfor learning accurate photometric mapping under different\nlighting conditions and restoring more natural colors.\nOur contributions can be summarized as follows:\n• We introduce a new HVI color space for the LLIE task,\nwhich is uniquely defined by polarized HS and trainable\nintensity. This offers an effective tool that eliminates the\ncolor space noise arising from the HSV space, largely\nenhancing the brightness of the low-light images.\n• We further propose a novel LLIE network, CIDNet, to con-\ncurrently model the intensity and chromatic of low-light\nimages in the HVI space. Despite being lightweight and\ncomputationally-efficient with relatively small parameters\n(1.88M) and computational loads (7.57GFLOPs), it en-\nables the learning of accurate photometric mapping under\ndifferent lighting conditions.\n• Comprehensive results from quantitative and qualitative",
+    "sections": [
+      "unknown",
+      "abstract",
+      "experiments show that our approach outperforms various",
+      "results in the llie task. it has shown the capability to",
+      "evaluation metrics. for the paired datasets, we adopt",
+      "methods",
+      "results on lol datasets. in tab. 1, it can be found that",
+      "results on sice and sony-total-dark. to validate the",
+      "results are presented in table 2, where it is clear that cidnet",
+      "results on unpaired datasets. we evaluate the effec-",
+      "method with the other methods. more visual comparison can be found in the supplementary materials.",
+      "methods compared to the results in the srgb color space.",
+      "results (figs. 5 and 6). the experiments are all performed on",
+      "results in improved psnr and lpips in tab. 4. however,",
+      "approaches. by encapsulating polarized hs maps and a",
+      "references",
+      "approaches, their performance often falls short on the train-",
+      "methodology. for problem 1, we consider that the sensi-",
+      "experiments on generalization ability. to verify the",
+      "method in other tasks, we utilized the lol-blur dataset to",
+      "methods are zero-shot approaches, which prioritize cross-",
+      "approach yields sharper edges, leading to a more visually",
+      "method in the denoising task as fig. 18, further elucidating",
+      "methods. they are shown in fig. 23, fig. 24, fig. 25, fig.",
+      "methods had poorer results."
+    ],
+    "topics": [
+      "color",
+      "image",
+      "hvi",
+      "space",
+      "light",
+      "cidnet",
+      "low",
+      "low light",
+      "color space",
+      "enhancement"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

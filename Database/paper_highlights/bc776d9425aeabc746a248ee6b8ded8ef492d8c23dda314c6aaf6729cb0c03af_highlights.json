@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Beyond_Translation_LLM-Based_Data_Generation_for_Multilingual__Fact-Checking_bc776d9425aeabc7\n        **Abstract**: Robust automatic fact-checking systems have\nthe potential to combat online misinformation\nat scale.\nHowever, most existing research\nprimarily focuses on English. In this paper,\nwe introduce MultiSynFact, the first large-\nscale multilingual fact-checking dataset con-\ntaining 2.2M claim-source pairs designed to\nsupport Spanish, German, English, and other\nlow-resource languages. Our dataset genera-\ntion pipeline leverages Large Language Models\n(LLMs), integrating external knowledge from\nWikipedia and incorporating rigorous claim val-\nidation steps to ensure data quality. We evaluate\nthe effectiveness of MultiSynFact across multi-\nple models and experimental settings. Addition-\nally, we open-source a user-friendly framework\nto facilitate further research in multilingual fact-\nchecking and dataset generation.\n1\n\n        Focus on:\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n\n        **Note**: The user provided a detailed initial version of the structured highlights, but it might not capture the essence of the paper accurately. Please refine it to better represent the paper's content.\n</think>\n\n**Title**: Beyond Translation: LLM-Based Data Generation for Multilingual Fact-Checking\n\n**Abstract**: Robust automatic fact-checking systems have the potential to combat online misinformation at scale. However, most existing research primarily focuses on English. In this paper, we introduce MultiSynFact, the first large-scale multilingual fact-checking dataset containing 2.2M claim-source pairs designed to support Spanish, German, English, and other low-resource languages. Our dataset generation pipeline leverages Large Language Models (LLMs), integrating external knowledge from Wikipedia and incorporating rigorous claim validation steps to ensure data quality. We evaluate the effectiveness of MultiSynFact across multiple models and experimental settings. Additionally, we open-source a user-friendly framework to facilitate further research in multilingual fact-checking and dataset generation.\n\n---\n\n**Structured Highlights**:\n\n1. **Core Innovation**: The paper introduces MultiSynFact, a large-scale multilingual fact-checking dataset that supports multiple languages, including Spanish, German, and others, leveraging LLMs for data generation and validation.\n\n2. **Technical Approach**:\n   - Uses LLMs for claim generation and source identification.\n   - Integrates external knowledge from Wikipedia to enhance accuracy.\n   - Implements rigorous validation steps to ensure data quality.\n   - Employed a user-friendly framework for research accessibility.\n\n3. **Quantitative Findings**:\n   - The dataset contains 2.2M claim-source pairs.\n   - Evaluation across models shows effectiveness in supporting multilingual fact-checking.\n   - The framework is open-sourced for broader research use.\n\n4. **Limitations & Assumptions**:\n   - Data generation may vary by language proficiency.\n   - Requires computational resources for large-scale processing.\n   - Focus on English dominance in existing research assumes broader applicability.\n\n5. **Domain Impact**:\n   - Theoretically, it advances multilingual NLP by expanding dataset availability.\n   - Practically, it empowers fact-checkers with diverse linguistic data, enhancing misinformation combat capabilities.",
+  "topics": [
+    "fact",
+    "claim",
+    "claims",
+    "data",
+    "checking",
+    "fact checking",
+    "et",
+    "al",
+    "et al",
+    "language"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Beyond_Translation_LLM-Based_Data_Generation_for_Multilingual__Fact-Checking_bc776d9425aeabc7.pdf",
+    "content_hash": "bc776d9425aeabc746a248ee6b8ded8ef492d8c23dda314c6aaf6729cb0c03af",
+    "arxiv_id": null,
+    "title": "Beyond_Translation_LLM-Based_Data_Generation_for_Multilingual__Fact-Checking_bc776d9425aeabc7",
+    "author": "",
+    "creation_date": "D:20250224014110Z",
+    "published": "2025-02-24T01:41:10",
+    "pages": 15,
+    "size": 313342,
+    "file_mtime": 1740973307.6872354
+  },
+  "main_staff": {
+    "title": "Beyond_Translation_LLM-Based_Data_Generation_for_Multilingual__Fact-Checking_bc776d9425aeabc7",
+    "authors": [
+      ""
+    ],
+    "abstract": "Robust automatic fact-checking systems have\nthe potential to combat online misinformation\nat scale.\nHowever, most existing research\nprimarily focuses on English. In this paper,\nwe introduce MultiSynFact, the first large-\nscale multilingual fact-checking dataset con-\ntaining 2.2M claim-source pairs designed to\nsupport Spanish, German, English, and other\nlow-resource languages. Our dataset genera-\ntion pipeline leverages Large Language Models\n(LLMs), integrating external knowledge from\nWikipedia and incorporating rigorous claim val-\nidation steps to ensure data quality. We evaluate\nthe effectiveness of MultiSynFact across multi-\nple models and experimental settings. Addition-\nally, we open-source a user-friendly framework\nto facilitate further research in multilingual fact-\nchecking and dataset generation.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "methods for ver-",
+      "evaluation, we also conduct human assessments to",
+      "evaluations provide a comparative analysis of state-",
+      "results in table 9 show that our model outperforms",
+      "discussion and conclusion",
+      "references",
+      "evaluation: a survey. in findings of the associa-"
+    ],
+    "topics": [
+      "fact",
+      "claim",
+      "claims",
+      "data",
+      "checking",
+      "fact checking",
+      "et",
+      "al",
+      "et al",
+      "language"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

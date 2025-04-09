@@ -1,0 +1,98 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Only one dataset, Icelandic context, potential bias in the dataset, and limitations of GPT-4's capabilities.",
+    "Domain impact: Provides tools for content moderation, automated detection of harmful behaviors, and advancing research on online behavior.",
+    "I should structure this into the required sections, making each point concise. Also, since the user mentioned including key equations or figures, but the provided info doesn't have specific metrics or equations, I'll focus on the structure and avoid that unless more info is provided.",
+    "I need to make sure each section is clear and directly addresses the aspects the user is interested in. Since the user is a researcher, they might be looking for how this dataset can apply to their work, so highlighting the practical applications and the dataset's comprehensiveness would be key.",
+    "I should also ensure that each bullet point is brief and to the point, avoiding unnecessary details. The goal is to make the highlights informative yet concise, so the researcher can quickly grasp the dataset's value and how it might fit into their existing work.",
+    "Let me draft each section, making sure to cover all the required parts without exceeding the user's instructions.",
+    "</think>",
+    "### Structured Highlights for the Research Paper: \"Hotter and Colder: A New Approach to Annotating Sentiment, Emotions, and Bias in Icelandic Blog Comments\"",
+    "",
+    "#### **1. Core Innovation**",
+    "The paper introduces **Hotter and Colder**, a novel dataset designed to analyze online behaviors in Icelandic blog comments by annotating sentiment, emotions, hate speech, and group generalizations. The dataset leverages GPT-4 to label 800,000 comments across 25 tasks, using a 5-point Likert scale for sentiment analysis and emotion detection. Manual annotation is applied to high/low probability comments to ensure quality, resulting in 12,232 annotated comments and 19,301 annotations.",
+    "",
+    "#### **2. Technical Approach**",
+    "**Model Utilization**: GPT-4 is employed for automated annotation of 25 tasks, including sentiment analysis, emotion detection, hate speech detection, and group generalization.",
+    "**Annotation Methodology**: Comments are labeled on a 5-point Likert scale for sentiment and emotion. Manual review focuses on high/low probability comments to enhance accuracy.",
+    "**Data Processing**: Tools are used for data annotation, ensuring efficient and scalable processing of the dataset.",
+    "",
+    "#### **3. Quantitative Findings**",
+    "**Annotated Data**: The dataset includes 12,232 uniquely annotated comments and 19,301 annotations across 25 tasks.",
+    "**Coverage**: Tasks include sentiment analysis, emotion detection, hate speech detection, and group generalization, with a focus on comprehensive online behavior analysis.",
+    "",
+    "#### **4. Limitations & Assumptions**",
+    "**Single Dataset**: The dataset is specific to Icelandic blog comments, limiting generalizability to other contexts.",
+    "**Contextual Bias**: Potential bias in the dataset may reflect the Icelandic context, affecting representativeness.",
+    "**Model Constraints**: GPT-4's capabilities and limitations influence the dataset's scope and accuracy.",
+    "",
+    "#### **5. Domain Impact**",
+    "**Theoretical Contribution**: The dataset advances research"
+  ],
+  "impact": "",
+  "topics": [
+    "comments",
+    "tasks",
+    "task",
+    "human",
+    "annotators",
+    "model",
+    "annotation",
+    "analysis",
+    "sentiment",
+    "speech"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Hotter_and_Colder_A_New_Approach_to_Annotating_Sentiment_Emotions_and__Bias_in_Icelandic_Blog_Comments_72e702a883aeff38.pdf",
+    "content_hash": "72e702a883aeff38d9a3fd90dd141748b75ea2a196a68cd0beafb83e1be106a4",
+    "arxiv_id": null,
+    "title": "Hotter_and_Colder_A_New_Approach_to_Annotating_Sentiment_Emotions_and__Bias_in_Icelandic_Blog_Comments_72e702a883aeff38",
+    "author": "",
+    "creation_date": "D:20250225023518Z",
+    "published": "2025-02-25T02:35:18",
+    "pages": 11,
+    "size": 1097332,
+    "file_mtime": 1740972014.4329524
+  },
+  "main_staff": {
+    "title": "Hotter_and_Colder_A_New_Approach_to_Annotating_Sentiment_Emotions_and__Bias_in_Icelandic_Blog_Comments_72e702a883aeff38",
+    "authors": [
+      ""
+    ],
+    "abstract": "This paper presents Hotter and Colder, a\ndataset designed to analyze various types\nof online behavior in Icelandic blog com-\nments.\nBuilding on previous work, we\nused GPT-4o mini to annotate approxi-\nmately 800,000 comments for 25 tasks, in-\ncluding sentiment analysis, emotion detec-\ntion, hate speech, and group generaliza-\ntions. Each comment was automatically\nlabeled on a 5-point Likert scale. In a sec-\nond annotation stage, comments with high\nor low probabilities of containing each ex-\namined behavior were subjected to man-\nual revision. By leveraging crowdworkers\nto refine these automatically labeled com-\nments, we ensure the quality and accuracy\nof our dataset resulting in 12,232 uniquely\nannotated comments and 19,301 annota-\ntions. Hotter and Colder provides an es-\nsential resource for advancing research in\ncontent moderation and automatically de-\ntectiong harmful online behaviors in Ice-\nlandic. We release both the dataset1 and\nannotation interface2.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology combining gpt-4o mini silver",
+      "methodology",
+      "discussions from klein and majdoubi (2024), de-",
+      "discussion. annotators were instructed to identify",
+      "results",
+      "results varied considerably across tasks, with some",
+      "discussion",
+      "approach, particularly one that integrates sarcasm",
+      "conclusion",
+      "references"
+    ],
+    "topics": [
+      "comments",
+      "tasks",
+      "task",
+      "human",
+      "annotators",
+      "model",
+      "annotation",
+      "analysis",
+      "sentiment",
+      "speech"
+    ],
+    "sections_text": {
+      "results": ""
+    },
+    "citations": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "**"
+  ],
+  "impact": "",
+  "topics": [
+    "energy",
+    "power",
+    "digital",
+    "dt",
+    "data",
+    "systems",
+    "smart",
+    "time",
+    "renewable",
+    "model"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/PINN-DT_Optimizing_Energy_Consumption_in_Smart_Building_Using_Hybrid__Physics-Informed_Neural_Networks_and_Digital_Twin_Framework_with_Blockchain__Security_4b858e5c0c.pdf",
+    "content_hash": "39b1ab5eb26e8ccbd8b3f037228470e81e0d7eb18396784cdbe58635caeb845f",
+    "arxiv_id": null,
+    "title": "PINN-DT_Optimizing_Energy_Consumption_in_Smart_Building_Using_Hybrid__Physics-Informed_Neural_Networks_and_Digital_Twin_Framework_with_Blockchain__Security_4b858e5c0c",
+    "author": "Mohsen Ahmadi",
+    "creation_date": "D:20250228223519-05'00'",
+    "published": "20250228223519-05'00'",
+    "pages": 48,
+    "size": 2566770,
+    "file_mtime": 1741419608.7072814
+  },
+  "main_staff": {
+    "title": "PINN-DT_Optimizing_Energy_Consumption_in_Smart_Building_Using_Hybrid__Physics-Informed_Neural_Networks_and_Digital_Twin_Framework_with_Blockchain__Security_4b858e5c0c",
+    "authors": [
+      "Mohsen Ahmadi"
+    ],
+    "abstract": "The advancement of smart grid technologies necessitates the integration of cutting-edge \ncomputational methods to enhance predictive energy optimization. This study proposes a \nmulti-faceted approach by incorporating (1) Deep Reinforcement Learning (DRL) agents \ntrained using data from Digital Twins (DTs) to optimize energy consumption in real time, (2) \nPhysics-Informed Neural Networks (PINNs) to seamlessly embed physical laws within the \noptimization process, ensuring model accuracy and interpretability, and (3) Blockchain (BC) \ntechnology to facilitate secure and transparent communication across the smart grid \ninfrastructure. The model was trained and validated using comprehensive datasets, \nincluding smart meter energy consumption data, renewable energy outputs, dynamic \npricing, and user preferences collected from IoT devices. The proposed framework achieved \nsuperior predictive performance with a Mean Absolute Error (MAE) of 0.237 kWh, Root \nMean Square Error (RMSE) of 0.298 kWh, and an R-squared (R²) value of 0.978, indicating a \n97.8% explanation of data variance. Classification metrics further demonstrated the model's \nrobustness, achieving 97.7% accuracy, 97.8% precision, 97.6% recall, and an F1 Score of \n97.7%. Comparative analysis with traditional models like Linear Regression, Random Forest, \nSVM, LSTM, and XGBoost revealed the superior accuracy and real-time adaptability of the \nproposed method.  In addition to enhancing energy efficiency, the model reduced energy \ncosts by 35%, maintained a 96% user comfort index, and increased renewable energy \nutilization to 40%. This study demonstrates the transformative potential of integrating \nPINNs, DT, and Blockchain technologies to optimize energy consumption in smart grids, \npaving the way for sustainable, secure, and efficient energy management systems. \n \nKeywords: Smart Grids, Digital Twin, Physics-Informed Neural Networks, Deep \nReinforcement Learning, Blockchain, Energy Optimization \n \n\n1. Introduction \nCurrent energy system development, coupled with enhanced emphasis on sustainability, \nunderscores the necessity for novel strategies towards the enhancement of energy efficiency \nin smart grids and buildings. Buildings and smart grids are central elements in the mitigation \nof the global energy crisis, a situation worsened by escalating greenhouse gas emissions and \nmounting energy demands. In this regard, the integration of Machine Learning (ML) and \nDigital Twin (DT) technologies shows much potential for energy conservation, cost saving, \nand better environmental sustainability. Household appliances (HAs), in particular, energy-\nintensive appliances like washing machines (WMs) and air conditioners (ACs), account for \napproximately 30% of overall energy consumption in the United States [1]. Effective \nmanagement of energy consumption by residential energy management (REM) systems is \nnecessary to save energy costs as well as to maintain grid stability. REM systems are made \nmore complex by integrating distributed energy resources (DERs) like solar photovoltaic \n(PV) panels, electric vehicles (EVs), and energy storage systems (ESS). The above \ndevelopments call for the development of sophisticated Home Energy Management Systems \n(HEMS) that can improve energy consumption while being mindful of user preferences and \ncomfort levels. In general, HEMS rely on two fundamental aspects: monitoring energy \nconsumption through smart meters and scheduling energy usage of individual appliances in \nan optimized way. Traditionally, these systems have been implemented using deterministic \noptimization methods, such as mixed-integer nonlinear programming (MINLP) and mixed-\ninteger linear programming (MILP) [2-4]. While effective, these methods are limited by their \nhigh computational complexity and challenges associated with managing uncertainties in \nboth user behavior and energy supply. The fast development of data-driven technologies, \nsuch as Machine Learning (ML) and Artificial Intelligence (AI), has introduced new \nopportunities for the advancement of Renewable Energy Management (REM) systems. \nReinforcement Learning (RL), a branch of ML, has become an effective approach to \noptimizing energy use in smart buildings. Google DeepMind showed the promise of \nreinforcement learning (RL) in slashing data center energy expenses by 40% through \ninnovative energy management techniques [5]. Furthermore, techniques like Deep Q-\nNetworks (DQN) and policy gradient techniques have been used to improve building energy \n\nefficiency [6, 7]. Although promising, current techniques frequently overlook appliances' and \ndistributed energy resources' (DERs') constant and diverse operation, along with user \ncomfort. Moreover, the rising penetration of Renewable Energy Sources (RESs) and the \ngrowing system complexity have necessitated the demand for more scalable and flexible \nsolutions. It is here that Digital Twin (DT) technology, in conjunction with Machine Learning \n(ML), has the potential to effect revolutionary change. \nDigital Twin (DT) technology, first defined by Grieves in 2002, provides a virtual \nrepresentation of physical systems for real-time monitoring, evaluation, and control [1]. DT \nsystems leverage data from sensors, Internet of Things (IoT) devices, and advanced \ncomputational models to create dynamic, virtual representations of physical assets. In the \nenergy industry, DT technology promises significant potential to address issues related to \noptimization, reliability, and sustainability. The integration of DT systems in smart grids \nenables high-level functions such as fault detection, load forecasting, operator behavior, and \nhealth monitoring of the energy system [3]. DTs also assist in real-time decision-making \nthrough the bridge established between physical and digital twins. This role is particularly \ncrucial in managing complex systems such as microgrids, transport systems, and distributed \nenergy systems.  \nWithin the context of transportation infrastructures, digital twins (DTs) have the \ncapability to improve energy systems by providing timely data on electric vehicle charging \nstations, traffic flow, and power needs [4]. In microgrids, DTs ensure remote monitoring, \nprediction maintenance, and efficient electricity distribution, thus strengthening system \nresilience and reliability. The incorporation of Machine Learning (ML) technologies in DT \nsystems enhances their capabilities through enhanced data analytics, forecasting, and data-\ndriven decisions. In ML, diverse algorithmic models, including their application in neural \nnetworks, reinforcement learning, and deep learning, have capabilities to handle massive \namounts of both current and historical data, ultimately to optimize power consumption, \npredict power demands, and improve system efficiencies. An excellent case in point is \napplication in DT systems through the use of reinforcement learning (RL) to optimize power \nuse. RL is designed to optimize power use in response to constantly changing dynamics in \nthe power industry, including power price volatility, variability in renewable power \ngeneration, and shifts in power-user behavior. Using insights derived through current and \n\nhistorical data, RL-powered DT systems can develop optimal power use strategies to \noptimize cost savings, efficiencies, and power-user satisfaction. In addition, deep learning \n(DL) technologies, in the form of convolutional neural networks (CNNs) and recurrent neural \nnetworks (RNNs), have found application in power forecasting and power faults in smart \ngrids [10-12].  \n \nFigure 1: Architecture of a Software-Defined Networking (SDN)-Based Digital Twin for Smart \nEnergy Systems. \n\nThese technologies allow for accurate power needs forecasting and power supplies, thus \nenabling forward planning for power management. In spite of their potential to optimize \npower systems through application, several challenges have remained. The successful \nimplementation of DT systems demands seamless data fusion of data gathered through \nvarious means, including sensors, IoT systems, and historical data. The data collection and \ndata-processing steps in such contexts bring serious challenges. This study explores the \npotential of The Hybrid PINNs-DT framework aims to address the limitations of existing \ndeterministic and ML-based methods by incorporating physical laws into the learning \nprocess. This fusion enables better handling of uncertainties in user behavior, renewable \nenergy availability, and dynamic grid conditions while maintaining computational efficiency. \nThe specific objectives of this study are as follows: \n1. To review the current state of research on integrating  PINNs-DT technologies into \nenergy systems. \n2. To identify the challenges and opportunities associated with implementing PINNs-DT \nsystems in smart grids, particularly in the context of secure, real-time data exchange \nand scalable energy optimization. \n3. To propose and validate innovative methods for combining PINNs-DT, and \nBlockchain technologies to enhance energy efficiency, reliability, and sustainability in \nsmart grids. \nThese objectives, the proposed method aims to contribute to the development of intelligent \nenergy management systems that balance economic efficiency with user comfort, enhance \ncybersecurity, and support the transition toward sustainable and carbon-neutral energy \ninfrastructures. \n2. Related work \nA thorough evaluation of real-time analytic techniques in digital twins was given by Haghi \net al. [14], who focused on physics-informed modeling, data-driven simulations, and machine \nlearning applications to speed up and minimize delays in digital twin calculations.  The \nfunction of digital twins in optical networks was studied by Wang et al. [15], who described \n\ntheir architecture for automated control, mirror modeling, and real-time monitoring.  Future \nresearch directions and developments in intelligent network automation are highlighted in \nthis paper.  A microgrid digital twin framework that integrates IoT, AI, and big data analytics \nwas presented by Utama et al. [16] and is based on the Smart Grid Architectural Model \n(SGAM).  Their case study showed enhanced energy management effectiveness and \ninteroperability.  \nIn their discussion of digital twin applications in the wind energy sector, Stadtmann et al. \n[17] identified important industry issues such regulatory requirements, modeling \nlimitations, and data dependability.  They put up a plan for upcoming developments and \nindustry adoption.  For hydropower management, Zeng et al. [18] suggested a hybrid system \nthat combines neural networks, digital twins, and type-2 fuzzy logic controllers.  Their ",
+    "sections": [
+      "unknown",
+      "abstract",
+      "approach reduced maintenance costs, increased operating efficiency, and enhanced defect",
+      "method",
+      "methodology",
+      "approach, focusing on optimizing energy efficiency in smart building systems. the dataset",
+      "approach to modeling. these metrics offer an in-depth overview of prediction, model",
+      "approach effectively produced savings in baseline power charges while optimizing",
+      "methodology proved to have better performance than standard machine learning models,",
+      "references",
+      "approaches in smart cities: a state-of-the-art review. arxiv preprint arxiv:2011.14732.",
+      "approach for managing reverse warehouse system capacity across diverse"
+    ],
+    "topics": [
+      "energy",
+      "power",
+      "digital",
+      "dt",
+      "data",
+      "systems",
+      "smart",
+      "time",
+      "renewable",
+      "model"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

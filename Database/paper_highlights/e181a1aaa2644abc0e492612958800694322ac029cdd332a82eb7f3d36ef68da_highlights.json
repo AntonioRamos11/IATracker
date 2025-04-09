@@ -1,0 +1,74 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "Small dataset, controlled environment, YOLOv8's limitations in accuracy vs speed."
+  ],
+  "impact": "",
+  "topics": [
+    "detection",
+    "training",
+    "dataset",
+    "images",
+    "workpieces",
+    "red",
+    "object",
+    "results",
+    "image",
+    "factory"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Object_detection_characteristics_in_a_learning_factory_environment_using__YOLOv8_e181a1aaa2644abc.pdf",
+    "content_hash": "e181a1aaa2644abc0e492612958800694322ac029cdd332a82eb7f3d36ef68da",
+    "arxiv_id": null,
+    "title": "Object_detection_characteristics_in_a_learning_factory_environment_using__YOLOv8_e181a1aaa2644abc",
+    "author": "",
+    "creation_date": "D:20250314005800Z",
+    "published": "2025-03-14T00:58:00",
+    "pages": 18,
+    "size": 9302476,
+    "file_mtime": 1742113517.818978
+  },
+  "main_staff": {
+    "title": "Object_detection_characteristics_in_a_learning_factory_environment_using__YOLOv8_e181a1aaa2644abc",
+    "authors": [
+      ""
+    ],
+    "abstract": "AI-based object detection, and efforts to explain and investigate their char-\nacteristics, is a topic of high interest. The impact of, e.g., complex background\nstructures with similar appearances as the objects of interest, on the detection\naccuracy and, beforehand, the necessary dataset composition are topics of ongo-\ning research. In this paper, we present a systematic investigation of background\ninfluences and different features of the object to be detected. The latter includes\nvarious materials and surfaces, partially transparent and with shiny reflections\nin the context of an Industry 4.0 learning factory. Different YOLOv8 models\nhave been trained for each of the materials on different sized datasets, where the\nappearance was the only changing parameter. In the end, similar characteris-\ntics tend to show different behaviours and sometimes unexpected results. While\nsome background components tend to be detected, others with the same features\nare not part of the detection. Additionally, some more precise conclusions can\nbe drawn from the results. Therefore, we contribute a challenging dataset with\ndetailed investigations on 92 trained YOLO models, addressing some issues on\nthe detection accuracy and possible overfitting.\nKeywords: object detection, dataset construction, complex background, YOLO\ncharacteristics, YOLO heatmaps, learning factory\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "results in potentially very high accuracy at the expense of computational time. in",
+      "results of the trained yolov8 single- and multi-class models are presented and dis-",
+      "background and dataset",
+      "method, the output result is propagated backwards using local derivation rules. this",
+      "evaluation dataset composition, together with information about the applied image",
+      "results in the final dataset sizes given in tab. 1. therefore, e.g., the tiny training",
+      "experiments and results",
+      "evaluation results",
+      "evaluation (solid) for yolov8n (blue) and yolov8x (red). although the training",
+      "discussion of workpiece appearance",
+      "evaluation are displayed in fig. 14 (yolov8n) and fig. 15 (yolov8x).",
+      "references"
+    ],
+    "topics": [
+      "detection",
+      "training",
+      "dataset",
+      "images",
+      "workpieces",
+      "red",
+      "object",
+      "results",
+      "image",
+      "factory"
+    ],
+    "sections_text": {
+      "results": ""
+    },
+    "citations": []
+  }
+}

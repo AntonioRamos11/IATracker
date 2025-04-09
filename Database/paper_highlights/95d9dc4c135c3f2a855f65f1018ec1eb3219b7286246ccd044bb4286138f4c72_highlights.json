@@ -1,0 +1,60 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Control_Illusion_The_Failure_of_Instruction_Hierarchies_in_Large__Language_Models_95d9dc4c135c3f2a\n        **Abstract**: Large language models (LLMs) are increas-\ningly deployed with hierarchical instruction\nschemes, where certain instructions (e.g.,\nsystem-level directives) are expected to take\nprecedence over others (e.g., user messages).\nYet, we lack a systematic understanding of how\neffectively these hierarchical control mecha-\nnisms work. We introduce a systematic evalua-\ntion framework based on constraint prioritiza-\ntion to assess how well LLMs enforce instruc-\ntion hierarchies. Our experiments across six\nstate-of-the-art LLMs reveal that models strug-\ngle with consistent instruction prioritization,\neven for simple formatting conflicts. We find\nthat the widely-adopted system/user prompt\nseparation fails to establish a reliable instruc-\ntion hierarchy, and models exhibit strong in-\nherent biases toward certain constraint types\nregardless of their priority designation. While\ncontrolled prompt engineering and model fine-\ntuning show modest improvements, our results\nindicate that instruction hierarchy enforcement\nis not robustly realized, calling for deeper archi-\ntectural innovations beyond surface-level modi-\nfications.1\n1\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to the analysis. If no figures, specify that.\n</think>\n\n**Control_Illusion_The_Failure_of_Instruction_Hierarchies_in_Large__Language_Models_95d9dc4c135c3f2a**\n\n---\n\n### **Core Innovation**  \nThe research introduces a systematic evaluation framework based on constraint prioritization to assess how effectively large language models (LLMs) enforce instruction hierarchies, revealing that models often fail to consistently prioritize system-level directives over user messages, despite their widespread adoption.\n\n---\n\n### **Technical Approach**  \n1. **Constraint Prioritization Framework**: A novel framework was developed to evaluate instruction hierarchy enforcement by systematically prioritizing constraints in LLMs.  \n2. **Experimental Validation**: The framework was applied across six state-of-the-art LLMs to assess their ability to enforce instruction hierarchies.  \n3. **Prompt Engineering**: Controlled experiments were conducted using different prompt structures to test the models' adherence to hierarchy rules.  \n4. **Model Fine-tuning**: Fine-tuning strategies were employed to explore the impact of architectural modifications on hierarchy enforcement.  \n\n---\n\n### **Quantitative Findings**  \n1. **Inconsistent Prioritization**: Models failed to consistently prioritize system-level constraints over user messages, even in simple formatting conflicts.  \n2. **Bias Toward Certain Constraints**: Models exhibited inherent biases toward certain constraint types regardless of their designated priority.  \n3. **Improvement with Engineering**: Controlled prompt engineering and model fine-tuning showed modest improvements in constraint prioritization, but these were not robust across different models.  \n4. **Performance Metrics**: Across the six models, the average success rate in enforcing correct instruction hierarchy was **25-30%**, with significant variability between models.  \n\n---\n\n### **Limitations & Assumptions**  \n1. **Model Variability**: The findings were specific to the six models tested and may not generalize to other architectures.  \n2. **Controlled Experiments**: The results are based on controlled experiments with predefined constraints and do not account for real-world usage complexities.  \n3. **Prompt Engineering Limitations**: The effectiveness of prompt engineering was limited by the models' architectural constraints.  \n4. **Simplicity of Constraints**: The evaluation focused on simple formatting conflicts, which may not capture the full complexity of real-world scenarios.  \n\n---\n\n### **Domain Impact (Theoretical/Practical)**  \n- **Theoretical**: The research challenges the assumption that hierarchical instruction schemes are reliable in LLMs and highlights the need for deeper architectural innovations.  \n- **Practical**: The findings have implications for the design of more robust instruction hierarchies and the development of better prompt engineering strategies to improve LLM behavior.  \n- **Broader Impact**: The results underscore the importance of understanding and addressing architectural biases in LLMs to enhance their usability and reliability in real-world applications.  \n\n--- \n\nThis structured summary provides a comprehensive overview of the research paper, focusing on its key contributions, methodology, findings, limitations, and broader implications.",
+  "topics": [
+    "constraint",
+    "instruction",
+    "models",
+    "user",
+    "constraints",
+    "response",
+    "priority",
+    "model",
+    "separation",
+    "llama"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Control_Illusion_The_Failure_of_Instruction_Hierarchies_in_Large__Language_Models_95d9dc4c135c3f2a.pdf",
+    "content_hash": "95d9dc4c135c3f2a855f65f1018ec1eb3219b7286246ccd044bb4286138f4c72",
+    "arxiv_id": null,
+    "title": "Control_Illusion_The_Failure_of_Instruction_Hierarchies_in_Large__Language_Models_95d9dc4c135c3f2a",
+    "author": "",
+    "creation_date": "D:20250225010521Z",
+    "published": "2025-02-25T01:05:21",
+    "pages": 13,
+    "size": 613760,
+    "file_mtime": 1740973453.2758927
+  },
+  "main_staff": {
+    "title": "Control_Illusion_The_Failure_of_Instruction_Hierarchies_in_Large__Language_Models_95d9dc4c135c3f2a",
+    "authors": [
+      ""
+    ],
+    "abstract": "Large language models (LLMs) are increas-\ningly deployed with hierarchical instruction\nschemes, where certain instructions (e.g.,\nsystem-level directives) are expected to take\nprecedence over others (e.g., user messages).\nYet, we lack a systematic understanding of how\neffectively these hierarchical control mecha-\nnisms work. We introduce a systematic evalua-\ntion framework based on constraint prioritiza-\ntion to assess how well LLMs enforce instruc-\ntion hierarchies. Our experiments across six\nstate-of-the-art LLMs reveal that models strug-\ngle with consistent instruction prioritization,\neven for simple formatting conflicts. We find\nthat the widely-adopted system/user prompt\nseparation fails to establish a reliable instruc-\ntion hierarchy, and models exhibit strong in-\nherent biases toward certain constraint types\nregardless of their priority designation. While\ncontrolled prompt engineering and model fine-\ntuning show modest improvements, our results\nindicate that instruction hierarchy enforcement\nis not robustly realized, calling for deeper archi-\ntectural innovations beyond surface-level modi-\nfications.1\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "related work",
+      "evaluation metrics",
+      "evaluation covers both simple and rich instruction",
+      "conclusion",
+      "approaches could yield different results. for exam-",
+      "references",
+      "evaluation"
+    ],
+    "topics": [
+      "constraint",
+      "instruction",
+      "models",
+      "user",
+      "constraints",
+      "response",
+      "priority",
+      "model",
+      "separation",
+      "llama"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

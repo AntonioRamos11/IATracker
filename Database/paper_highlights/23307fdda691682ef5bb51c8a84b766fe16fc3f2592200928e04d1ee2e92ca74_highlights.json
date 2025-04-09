@@ -1,0 +1,81 @@
+{
+  "contribution": "",
+  "methods": [],
+  "results": [],
+  "limitations": [
+    "They used their own datasets, which might not be as diverse. Also, they didn't test on real-world tasks.",
+    "Domain Impact: The approach is theoretically sound but might not scale well for industrial use. It's practically useful for contexts where data is scarce.",
+    "I think I need to make sure each section is concise and hits all the points from the abstract. Maybe include equations if there are any, but since the abstract doesn't mention specific metrics beyond the benchmarks, perhaps just focus on the text.",
+    "Wait, the abstract mentions metrics like 8.5M and 1.5M, but I'm not sure if there are specific numbers in the quantitative findings. The user didn't provide the paper, so I can't extract exact numbers. So, I'll have to rely on the abstract for quantitative points.",
+    "I should also make sure that each bullet point in the Technical Approach is clear and concise, maybe like data sources, vocabulary size, curriculum learning, etc.",
+    "Limitations: They didn't use other datasets, maybe didn't test on industrial tasks, so that's important.",
+    "Overall, I think I have a good structure, but I need to ensure that each section is well-explained and fits the required format.",
+    "</think>",
+    "**Core Innovation**",
+    "The research introduces a child-inspired approach to language modeling, utilizing significantly less data than traditional large language models (LLMs) while mimicking human learning processes. This is achieved by curating datasets and implementing strategies that reflect how children acquire language.",
+    "**Technical Approach**"
+  ],
+  "impact": "",
+  "topics": [
+    "data",
+    "language",
+    "dataset",
+    "model",
+    "learning",
+    "training",
+    "al",
+    "et al",
+    "et",
+    "models"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Towards_Data-Efficient_Language_Models_A_Child-Inspired_Approach_to__Language_Learning_12695f1923.pdf",
+    "content_hash": "23307fdda691682ef5bb51c8a84b766fe16fc3f2592200928e04d1ee2e92ca74",
+    "arxiv_id": null,
+    "title": "Towards_Data-Efficient_Language_Models_A_Child-Inspired_Approach_to__Language_Learning_12695f1923",
+    "author": "",
+    "creation_date": "D:20250307020313Z",
+    "published": "2025-03-07T02:03:13",
+    "pages": 6,
+    "size": 176330,
+    "file_mtime": 1741416446.3716936
+  },
+  "main_staff": {
+    "title": "Towards_Data-Efficient_Language_Models_A_Child-Inspired_Approach_to__Language_Learning_12695f1923",
+    "authors": [
+      ""
+    ],
+    "abstract": "In this work, we explain our approach em-\nployed in the BabyLM Challenge, which uses\nvarious methods of training language models\n(LMs) with significantly less data compared\nto traditional large language models (LLMs)\nand are inspired by how human children learn.\nWhile a human child is exposed to far less lin-\nguistic input than an LLM, they still achieve\nremarkable language understanding and gener-\nation abilities. To this end, we develop a model\ntrained on a curated dataset consisting of 10\nmillion words, primarily sourced from child-\ndirected transcripts. The 2024 BabyLM Chal-\nlenge initial dataset of 10M words is filtered to\n8.5M. Next, it is supplemented with a randomly\nselected subset of TVR dataset consisting of\n1.5M words of television dialogues. The lat-\nter dataset ensures that similar to children, the\nmodel is also exposed to language through me-\ndia. Furthermore, we reduce the vocabulary\nsize to 32,000 tokens, aligning it with the lim-\nited vocabulary of children in the early stages of\nlanguage acquisition. We use curriculum learn-\ning and is able to match the baseline on certain\nbenchmarks while surpassing the baseline on\nothers. Additionally, incorporating common\nLLM training datasets, such as MADLAD-400,\ndegrades performance. These findings under-\nscore the importance of dataset selection, vo-\ncabulary scaling, and curriculum learning in\ncreating more data-efficient language models\nthat better mimic human learning processes.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology",
+      "experiments",
+      "experiments’ setup",
+      "experiments designed to test various aspects of our",
+      "results",
+      "experiments pertains to the optimal vocabulary size",
+      "discussion",
+      "approaches like tracin (pruthi et al., 2020) and",
+      "methods might guide more targeted and efficient",
+      "conclusion",
+      "references",
+      "methods, analysis & insights from training gopher."
+    ],
+    "topics": [
+      "data",
+      "language",
+      "dataset",
+      "model",
+      "learning",
+      "training",
+      "al",
+      "et al",
+      "et",
+      "models"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

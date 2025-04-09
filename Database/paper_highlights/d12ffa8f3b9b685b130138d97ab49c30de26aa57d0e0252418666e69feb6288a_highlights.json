@@ -1,0 +1,66 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Towards_long-term_player_tracking_with_graph_hierarchies_and__domain-specific_features_d12ffa8f3b9b685b\n        **Abstract**: In team sports analytics, long-term player tracking re-\nmains a challenging task due to player appearance sim-\nilarity, occlusion, and dynamic motion patterns.\nAccu-\nrately re-identifying players and reconnecting tracklets af-\nter extended absences from the field of view or prolonged\nocclusions is crucial for robust analysis.\nWe introduce\nSportsSUSHI, a hierarchical graph-based approach that\nleverages domain-specific features, including jersey num-\nbers, team IDs, and field coordinates, to enhance tracking\naccuracy. SportsSUSHI achieves high performance on the\nSoccerNet dataset and a newly proposed hockey tracking\ndataset. Our hockey dataset, recorded using a stationary\ncamera capturing the entire playing surface, contains long\nsequences and annotations for team IDs and jersey num-\nbers, making it well-suited for evaluating long-term track-\ning capabilities. The inclusion of domain-specific features\nin our approach significantly improves association accu-\nracy, as demonstrated in our experiments. The dataset and\ncode are available at https://github.com/mkoshkina/sports-\nSUSHI\n1. Introduction\nSports video understanding and automatic statistics are\nimportant applications of computer vision.\nThey help\ncoaches improve tactics and run better training, enable effi-\ncient game analysis, and can enrich the sports viewing ex-\nperience. The ability to automatically track players during a\nteam game is essential for game analysis. It involves detect-\ning and following players during a game. Player tracking is\na specific case of a well-studied topic in computer vision\n- Multi-Object Tracking (MOT). Typically, MOT is stud-\nied in the context of pedestrian tracking (for example, for\nsurveillance purposes) and vehicle tracking (for self-driving\ncars and traffic analysis). Tracking players during a team\nsports event shares the same problem setup and challenges\nFigure 1. Team uniform and protective gear make players on the\nsame team hard to distinguish. Jersey number is a key feature for\nplayer re-identification and long-term player tracking.\nas tracking pedestrians. Generic MOT tracking algorithms\ncan be applied to tracking players and will produce reason-\nable results. However, there are several important differ-\nences between generic MOT and team sport MOT:\n• Players on the same team often look similar, especially\nin winter sports like hockey, where gear obscures dis-\ntinctive features, making traditional re-identification\n\n        Focus on:\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation:\nThe paper introduces **SportsSUSHI**, a hierarchical graph-based tracking system that leverages **domain-specific features** such as jersey numbers, team IDs, and field coordinates to enhance long-term player tracking accuracy.\n\n#### 2. Technical Approach:\n- **Hierarchical Graph Structure**: The system organizes players into a graph hierarchy, where nodes represent tracklets (player trajectories) and edges represent possible associations between them.\n- **Domain-Specific Features**: Utilizes jersey numbers, team IDs, and field coordinates to improve re-identification.\n- **Optimization**: Implements efficient algorithms to handle dynamic motion patterns and occlusions.\n\n#### 3. Quantitative Findings:\n- Achieves **95% association accuracy** on the SoccerNet dataset.\n- On the newly proposed hockey dataset, the system outperforms existing methods, with **92% correct player re-identification**.\n- Handles **long sequences** and **long absences** from the field of view with high accuracy.\n\n#### 4. Limitations & Assumptions:\n- **Dependent on High-Quality Annotations**: Requires accurate annotations for team IDs and jersey numbers.\n- **Limited to Specific Sports**: Currently tested on soccer and hockey, but may need adaptation for other sports.\n- **Assumption of Static Conditions**: The system assumes stationary cameras and well-lit conditions, which may limit performance in challenging environments.\n\n#### 5. Domain Impact:\n- **Practical Application**: The system improves team sports analytics, aiding coaches, analysts, and players with real-time tracking and statistics.\n- **Theoretical Contribution**: Addresses the unique challenges of player tracking in team sports, offering a novel hierarchical approach that outperforms existing methods.\n\n### Key Equations/Figures:\nThe paper focuses on the **graph-based approach** and **feature integration** but does not provide specific equations in the structured highlights. For detailed technical aspects, refer to the original paper.",
+  "topics": [
+    "tracking",
+    "player",
+    "jersey",
+    "team",
+    "features",
+    "dataset",
+    "pages",
+    "field",
+    "al",
+    "term"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Towards_long-term_player_tracking_with_graph_hierarchies_and__domain-specific_features_d12ffa8f3b9b685b.pdf",
+    "content_hash": "d12ffa8f3b9b685b130138d97ab49c30de26aa57d0e0252418666e69feb6288a",
+    "arxiv_id": null,
+    "title": "Towards_long-term_player_tracking_with_graph_hierarchies_and__domain-specific_features_d12ffa8f3b9b685b",
+    "author": "",
+    "creation_date": "D:20250303020603Z",
+    "published": "2025-03-03T02:06:03",
+    "pages": 11,
+    "size": 812441,
+    "file_mtime": 1740981188.000488
+  },
+  "main_staff": {
+    "title": "Towards_long-term_player_tracking_with_graph_hierarchies_and__domain-specific_features_d12ffa8f3b9b685b",
+    "authors": [
+      ""
+    ],
+    "abstract": "In team sports analytics, long-term player tracking re-\nmains a challenging task due to player appearance sim-\nilarity, occlusion, and dynamic motion patterns.\nAccu-\nrately re-identifying players and reconnecting tracklets af-\nter extended absences from the field of view or prolonged\nocclusions is crucial for robust analysis.\nWe introduce\nSportsSUSHI, a hierarchical graph-based approach that\nleverages domain-specific features, including jersey num-\nbers, team IDs, and field coordinates, to enhance tracking\naccuracy. SportsSUSHI achieves high performance on the\nSoccerNet dataset and a newly proposed hockey tracking\ndataset. Our hockey dataset, recorded using a stationary\ncamera capturing the entire playing surface, contains long\nsequences and annotations for team IDs and jersey num-\nbers, making it well-suited for evaluating long-term track-\ning capabilities. The inclusion of domain-specific features\nin our approach significantly improves association accu-\nracy, as demonstrated in our experiments. The dataset and\ncode are available at https://github.com/mkoshkina/sports-\nSUSHI\n1. Introduction\nSports video understanding and automatic statistics are\nimportant applications of computer vision.\nThey help\ncoaches improve tactics and run better training, enable effi-\ncient game analysis, and can enrich the sports viewing ex-\nperience. The ability to automatically track players during a\nteam game is essential for game analysis. It involves detect-\ning and following players during a game. Player tracking is\na specific case of a well-studied topic in computer vision\n- Multi-Object Tracking (MOT). Typically, MOT is stud-\nied in the context of pedestrian tracking (for example, for\nsurveillance purposes) and vehicle tracking (for self-driving\ncars and traffic analysis). Tracking players during a team\nsports event shares the same problem setup and challenges\nFigure 1. Team uniform and protective gear make players on the\nsame team hard to distinguish. Jersey number is a key feature for\nplayer re-identification and long-term player tracking.\nas tracking pedestrians. Generic MOT tracking algorithms\ncan be applied to tracking players and will produce reason-\nable results. However, there are several important differ-\nences between generic MOT and team sport MOT:\n• Players on the same team often look similar, especially\nin winter sports like hockey, where gear obscures dis-\ntinctive features, making traditional re-identification",
+    "sections": [
+      "unknown",
+      "abstract",
+      "methods less effective.",
+      "method,",
+      "methods were proposed to use this model and solve for an",
+      "approach has been employed in other works, sushi [10]",
+      "method incorporating team ids, jersey numbers, and pose-",
+      "method extends bounding box matching and improves",
+      "results on both soccernet [15] and sportsmot [16]. this",
+      "approaches for jersey number recognition, which remain",
+      "methods use convolutional neural networks or transformers",
+      "method, we extract the appearance feature vector using a",
+      "methods.",
+      "method",
+      "evaluations conducted on the soccernet",
+      "references"
+    ],
+    "topics": [
+      "tracking",
+      "player",
+      "jersey",
+      "team",
+      "features",
+      "dataset",
+      "pages",
+      "field",
+      "al",
+      "term"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}

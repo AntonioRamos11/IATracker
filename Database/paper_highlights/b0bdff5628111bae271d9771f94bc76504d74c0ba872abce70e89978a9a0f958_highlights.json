@@ -1,0 +1,61 @@
+{
+  "full_response": "Generate structured highlights for this research paper:\n        **Title**: Overleaf Example\n        **Abstract**: Recent advances in Large Language Models\n(LLMs) have raised interest in their formal\nreasoning capabilities, particularly in mathe-\nmatics. While closed LLMs like GPT-4 per-\nform well on mathematical benchmarks, e.g.,\nGSM8K (Cobbe et al., 2021a), it remains\nunclear whether small to medium-sized open\nLLMs can achieve similar performance, ques-\ntioning their reliability. To close this gap, we\npropose a post-training approach leveraging a\nmixture of opinions (MoO) from weaker ancil-\nlary LLMs to enhance a (relatively) stronger\nLLM’s reasoning. For that, each post-training\nsample is augmented with Chain-of-Thought\n(CoT) reasoning steps and answers from ancil-\nlary LLMs, enabling the main LLM to learn\nfrom diverse perspectives. We compare MoO\nwith standard supervised fine-tuning (SFT),\nfew-shot prompting, and the Mixture of Agents\n(MoA) method (Wang et al., 2024a) on math-\nematical reasoning benchmarks. Our results\nshow that incorporating weaker LLMs’ opin-\nions improves mathematical reasoning by an\naverage of 5%, highlighting the value of diverse\nperspectives in reasoning tasks.\n1\n\n        Focus on:\n- Mathematical models/theorems\n- Key visual findings from figures\n- Experimental setup and validation\n        **Required Format:**\n        1. Core Innovation (1-2 sentences)\n        2. Technical Approach (3-5 bullet points)\n        3. Quantitative Findings (numbered list with metrics)\n        4. Limitations & Assumptions\n        5. Domain Impact (theoretical/practical)\n\n        Include key equations/figures where critical to understanding the innovation.\n</think>\n\n### Structured Highlights for the Research Paper\n\n#### 1. Core Innovation\nThe research introduces a novel post-training approach called \"Mixture of Opinions (MoO)\" to enhance the reasoning capabilities of small to medium-sized open Large Language Models (LLMs). This method leverages the diverse perspectives of weaker auxiliary LLMs to improve the performance of a stronger base model through Chain-of-Thought (CoT) reasoning.\n\n#### 2. Technical Approach\n- **Mixture of Opinions (MoO)**: Each training sample is augmented with reasoning steps and outputs from multiple weaker LLMs, allowing the base model to learn diverse viewpoints.\n- **Chain-of-Thought (CoT)**: Reasoning steps are appended to training samples to provide structured reasoning paths.\n- **Comparison with Baselines**: The method is compared against standard supervised fine-tuning (SFT), few-shot prompting, and MoA (Wang et al., 2024a).\n\n#### 3. Quantitative Findings\n- **Performance Improvement**: MoO enhances mathematical reasoning by an average of 5% compared to baseline methods.\n- **Mathematical Benchmarks**: Tested on GSM8K, the results demonstrate improved performance in mathematical reasoning tasks.\n\n#### 4. Limitations & Assumptions\n- **Assumption of Auxiliary Models**: The effectiveness relies on the quality and diversity of auxiliary LLMs.\n- **Training Data**: Performance may vary with the availability and representativeness of training data.\n- **Computational Resources**: The approach requires sufficient computational power for processing diverse perspectives.\n\n#### 5. Domain Impact\n- **Theoretical Impact**: Offers insights into enhancing reasoning capabilities in open LLMs, contributing to understanding diverse perspectives in reasoning tasks.\n- **Practical Impact**: Provides a method to improve mathematical reasoning in small to medium-sized LLMs, potentially enhancing reliability and performance in real-world applications.\n\n### Key Equations/Visual Findings\nWhile the specific equations are not detailed, the study likely includes metrics on model performance, such as accuracy on GSM8K, which would be visually represented in figures showing performance comparisons across different methods.",
+  "topics": [
+    "llms",
+    "al",
+    "et",
+    "et al",
+    "arxiv",
+    "moo",
+    "reasoning",
+    "flight",
+    "12",
+    "20"
+  ],
+  "metadata": {
+    "source_path": "papers/arxiv/Weaker_LLMs_Opinions_Also_Matter_Mixture_of_Opinions_Enhances_LLMs__Mathematical_Reasoning_b0bdff5628111bae.pdf",
+    "content_hash": "b0bdff5628111bae271d9771f94bc76504d74c0ba872abce70e89978a9a0f958",
+    "arxiv_id": null,
+    "title": "Overleaf Example",
+    "author": "",
+    "creation_date": "D:20250228011359Z",
+    "published": "2025-02-28T01:13:59",
+    "pages": 12,
+    "size": 1042819,
+    "file_mtime": 1740970375.8684025
+  },
+  "main_staff": {
+    "title": "Overleaf Example",
+    "authors": [
+      ""
+    ],
+    "abstract": "Recent advances in Large Language Models\n(LLMs) have raised interest in their formal\nreasoning capabilities, particularly in mathe-\nmatics. While closed LLMs like GPT-4 per-\nform well on mathematical benchmarks, e.g.,\nGSM8K (Cobbe et al., 2021a), it remains\nunclear whether small to medium-sized open\nLLMs can achieve similar performance, ques-\ntioning their reliability. To close this gap, we\npropose a post-training approach leveraging a\nmixture of opinions (MoO) from weaker ancil-\nlary LLMs to enhance a (relatively) stronger\nLLM’s reasoning. For that, each post-training\nsample is augmented with Chain-of-Thought\n(CoT) reasoning steps and answers from ancil-\nlary LLMs, enabling the main LLM to learn\nfrom diverse perspectives. We compare MoO\nwith standard supervised fine-tuning (SFT),\nfew-shot prompting, and the Mixture of Agents\n(MoA) method (Wang et al., 2024a) on math-\nematical reasoning benchmarks. Our results\nshow that incorporating weaker LLMs’ opin-\nions improves mathematical reasoning by an\naverage of 5%, highlighting the value of diverse\nperspectives in reasoning tasks.\n1",
+    "sections": [
+      "unknown",
+      "abstract",
+      "introduction",
+      "methodology: mixture of opinions",
+      "experiments",
+      "method",
+      "discussion",
+      "conclusion and future work",
+      "references",
+      "related works",
+      "methods use multiple task-specific llms (guo"
+    ],
+    "topics": [
+      "llms",
+      "al",
+      "et",
+      "et al",
+      "arxiv",
+      "moo",
+      "reasoning",
+      "flight",
+      "12",
+      "20"
+    ],
+    "sections_text": {},
+    "citations": []
+  }
+}
