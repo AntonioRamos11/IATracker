@@ -6,9 +6,8 @@ import mimetypes
 import logging
 import time
 import random
-import ratelimiter as ratelimiter
 import undetected_chromedriver as uc
-from ratelimiter import RateLimiter
+from Scrapers.rate_limiter import RateLimiter
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 from fake_useragent import UserAgent

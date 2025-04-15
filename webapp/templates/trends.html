@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block title %}IAResearchAggregator - Trending Topics{% endblock %}
+
+{% block additional_head %}
+<style>
+    .viz-container {
+        margin-bottom: 30px;
+    }
+    .topic-card {
+        transition: all 0.3s ease;
+    }
+    .topic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Trending Research Topics</h1>
+
+{% if last_updated %}
+<div class="alert alert-info">
+    Data last updated: {{ last_updated.strftime('%Y-%m-%d %H:%M') }}
+    {% if source == 'local' %}
+        <span class="badge bg-success">Local Papers</span>
+    {% elif source == 'arxiv' %}
+        <span class="badge bg-primary">ArXiv API</span>
+    {% endif %}
+    <form class="d-inline float-end" action="{{ url_for('trends') }}" method="get">
+        <input type="hidden" name="refresh" value="true">
+        <button type="submit" class="btn btn-sm btn-primary">Refresh Data</button>
+    </form>
+</div>
+{% endif %}
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Topic Visualizations</h4>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="vizTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="trends-tab" data-bs-toggle="tab" data-bs-target="#trends-pane">Top Trends</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="wordcloud-tab" data-bs-toggle="tab" data-bs-target="#wordcloud-pane">Word Cloud</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="distribution-tab" data-bs-toggle="tab" data-bs-target="#distribution-pane">Distribution</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="by-year-tab" data-bs-toggle="tab" data-bs-target="#by-year-pane">By Year</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content p-3" id="vizTabContent">
+                    <div class="tab-pane fade show active" id="trends-pane" role="tabpanel">
+                        {% if visualizations.top_trends %}
+                            <img src="{{ visualizations.top_trends }}" class="img-fluid" alt="Top trending topics">
+                        {% else %}
+                            <div class="alert alert-warning">No visualization available</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="tab-pane fade" id="wordcloud-pane" role="tabpanel">
+                        {% if visualizations.wordcloud %}
+                            <img src="{{ visualizations.wordcloud }}" class="img-fluid" alt="Topic word cloud">
+                        {% else %}
+                            <div class="alert alert-warning">No visualization available</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="tab-pane fade" id="distribution-pane" role="tabpanel">
+                        {% if visualizations.distribution %}
+                            <img src="{{ visualizations.distribution }}" class="img-fluid" alt="Topic distribution">
+                        {% else %}
+                            <div class="alert alert-warning">No visualization available</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="tab-pane fade" id="by-year-pane" role="tabpanel">
+                        {% if visualizations.by_year %}
+                            <img src="{{ visualizations.by_year }}" class="img-fluid" alt="Papers by year">
+                        {% else %}
+                            <div class="alert alert-warning">No visualization available</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="mb-4">Top Trending Topics</h2>
+
+<div class="row">
+    {% if papers_by_topic %}
+        {% for topic_key, papers in papers_by_topic.items() %}
+            <div class="col-md-4 mb-4">
+                <div class="card topic-card h-100">
+                    <div class="card-body">
+                        {% if papers and papers|length > 0 and papers[0].get('metadata') %}
+                            <h5 class="card-title">{{ papers[0].metadata.topic_description }}</h5>
+                        {% else %}
+                            <h5 class="card-title">{{ topic_key }}</h5>
+                        {% endif %}
+                        
+                        <p class="card-text">
+                            <span class="badge bg-success">Papers: {{ papers|length }}</span>
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="{{ url_for('papers', topic_key=topic_key) }}" class="btn btn-sm btn-primary">
+                            View Papers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% elif trend_data and trend_data.top_trends %}
+        {% for topic in trend_data.top_trends[:12] %}
+            <div class="col-md-4 mb-4">
+                <div class="card topic-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ topic.term|title }}</h5>
+                        <p class="card-text">
+                            <span class="badge bg-success">Score: {{ "%.2f"|format(topic.score) }}</span>
+                            <span class="badge bg-info">Growth: {{ "%.2f"|format(topic.growth) }}x</span>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Recent mentions: {{ topic.recent_count }}, 
+                                Older: {{ topic.older_count }}
+                            </small>
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        {% set topic_key = 'emerging_trend_' ~ loop.index ~ '_' ~ topic.term|replace(' ', '_') %}
+                        {% if papers_by_topic and topic_key in papers_by_topic %}
+                            <a href="{{ url_for('papers', topic_key=topic_key) }}" class="btn btn-sm btn-primary">
+                                View {{ papers_by_topic[topic_key]|length }} Papers
+                            </a>
+                        {% else %}
+                            <button class="btn btn-sm btn-secondary" disabled>No papers</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No trend data available. Please refresh the data.
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+<h2 class="mt-5 mb-4">Topic Coverage</h2>
+
+<div class="row">
+    {% if coverage_data %}
+        {% for topic_key, data in coverage_data.items() %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card topic-card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">{{ data.description }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <strong>Total papers:</strong> {{ data.total }}
+                        </p>
+                        
+                        {% if data.by_year %}
+                            <p class="card-text">
+                                <strong>Years:</strong> 
+                                {% for year, count in data.by_year.items() %}
+                                    <span class="badge bg-primary">{{ year }}: {{ count }}</span>
+                                {% endfor %}
+                            </p>
+                        {% endif %}
+                        
+                        {% if data.sample_titles %}
+                            <p class="card-text">
+                                <strong>Sample titles:</strong>
+                                <ul class="list-group list-group-flush">
+                                    {% for title in data.sample_titles[:2] %}
+                                        <li class="list-group-item p-1">{{ title }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="{{ url_for('papers', topic_key=topic_key) }}" class="btn btn-sm btn-primary">
+                            View All Papers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No coverage data available. Please refresh the data.
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

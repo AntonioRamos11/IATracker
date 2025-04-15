@@ -118,7 +118,7 @@ if [ -z "$QUESTION" ]; then
     exit 1
 fi
 
-# Build Python command for CLI mode
+# source ~/.bashrcBuild Python command for CLI mode
 PYTHON_CMD="python3 $(dirname "$0")/ResearchQuestionAnswerer.py --question \"$QUESTION\" --top_k $TOP_K --temperature $TEMP"
 
 if [ "$QUICK" = true ]; then

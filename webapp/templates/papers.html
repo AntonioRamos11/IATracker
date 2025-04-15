@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}IAResearchAggregator - Papers for {{ topic_info.description }}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="mb-4">{{ topic_info.description }}</h1>
+    <a href="{{ url_for('trends') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left"></i> Back to Trends
+    </a>
+</div>
+
+<div class="alert alert-info">
+    <strong>Topic:</strong> {{ topic_info.description }}<br>
+    <strong>Papers found:</strong> {{ papers|length }}<br>
+    {% if topic_info.confidence %}
+    <strong>Confidence:</strong> {{ (topic_info.confidence * 100)|round(1) }}%
+    {% endif %}
+</div>
+
+{% if papers and papers|length > 0 %}
+    <div class="mb-3">
+        <button class="btn btn-outline-secondary btn-sm" id="toggleAbstracts">
+            Toggle All Abstracts
+        </button>
+    </div>
+
+    <div class="list-group mb-4">
+        {% for paper in papers %}
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ paper.title }}</h5>
+                    <small>{{ paper.published.strftime('%Y-%m-%d') if paper.published else 'Unknown date' }}</small>
+                </div>
+                
+                <p class="mb-1">
+                    <strong>Authors:</strong> 
+                    {% for author in paper.authors[:3] %}
+                        {{ author }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% if paper.authors|length > 3 %}et al.{% endif %}
+                </p>
+                
+                <div class="mt-2 collapse paper-abstract">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Abstract</h6>
+                            <p class="card-text">{{ paper.summary }}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary toggle-abstract">
+                        <i class="fas fa-chevron-down"></i> Toggle Abstract
+                    </button>
+                    
+                    {% if paper.pdf %}
+                        <a href="{{ paper.pdf }}" class="btn btn-sm btn-outline-danger" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                    {% endif %}
+                    
+                    {% if paper.link %}
+                        <a href="{{ paper.link }}" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> arXiv
+                        </a>
+                    {% endif %}
+                    
+                    {% if paper.get('categories') %}
+                        <div class="mt-2">
+                            {% for category in paper.get('categories', [])|sort %}
+                                <span class="badge bg-info">{{ category }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-warning">
+        <h4 class="alert-heading">No Papers Available</h4>
+        <p>No papers were found for this topic. This could be due to:</p>
+        <ul>
+            <li>The topic is very new or niche</li>
+            <li>There was an error fetching papers from arXiv</li>
+            <li>The cache needs to be refreshed</li>
+        </ul>
+        <hr>
+        <p class="mb-0">
+            <a href="{{ url_for('trends') }}?refresh=true" class="btn btn-primary">
+                Refresh Trend Data
+            </a>
+        </p>
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+    $(document).ready(function() {
+        // Toggle individual abstract
+        $('.toggle-abstract').click(function() {
+            $(this).closest('.list-group-item').find('.paper-abstract').collapse('toggle');
+            
+            // Change the icon
+            const icon = $(this).find('i');
+            if (icon.hasClass('fa-chevron-down')) {
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+        
+        // Toggle all abstracts
+        $('#toggleAbstracts').click(function() {
+            const allAbstracts = $('.paper-abstract');
+            const firstAbstract = allAbstracts.first();
+            const isVisible = firstAbstract.is(':visible');
+            
+            if (isVisible) {
+                allAbstracts.collapse('hide');
+                $('.toggle-abstract i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            } else {
+                allAbstracts.collapse('show');
+                $('.toggle-abstract i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            }
+        });
+    });
+</script>
+{% endblock %}

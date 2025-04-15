@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}IAResearchAggregator - Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron p-4 bg-light rounded-3">
+    <h1 class="display-4">AI Research Aggregator</h1>
+    <p class="lead">Track, analyze, and visualize emerging research trends in artificial intelligence.</p>
+    <hr class="my-4">
+    <p>Discover the latest papers, identify trending topics, and stay on the cutting edge of AI research.</p>
+    <div class="d-flex gap-2">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('search') }}">
+            <i class="fas fa-search"></i> Search Papers
+        </a>
+        <a class="btn btn-success btn-lg" href="{{ url_for('trends') }}">
+            <i class="fas fa-chart-line"></i> Explore Trends
+        </a>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-search"></i> Search</h5>
+                <p class="card-text">Search arXiv for papers on specific topics or within categories. Filter by date, authors, and more.</p>
+                <a href="{{ url_for('search') }}" class="btn btn-primary">Go to Search</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-chart-line"></i> Trend Analysis</h5>
+                <p class="card-text">Identify emerging research trends and hot topics in AI research with advanced analytics.</p>
+                <a href="{{ url_for('trends') }}" class="btn btn-primary">Explore Trends</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-info-circle"></i> About</h5>
+                <p class="card-text">Learn more about this project, its capabilities, and how to contribute.</p>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

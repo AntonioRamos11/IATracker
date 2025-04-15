@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}IAResearchAggregator - Search Papers{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Search arXiv Papers</h1>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <form action="{{ url_for('search') }}" method="post">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="query" class="form-label">Search Query</label>
+                    <input type="text" class="form-control" id="query" name="query" 
+                           placeholder="e.g., transformer attention mechanism" value="{{ query }}">
+                </div>
+                
+                <div class="col-md-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="category" name="category">
+                        {% for category in categories %}
+                            <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <label for="max_results" class="form-label">Max Results</label>
+                    <select class="form-select" id="max_results" name="max_results">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if results %}
+    <h2 class="mb-3">Search Results</h2>
+    
+    <div class="mb-3">
+        <button class="btn btn-outline-secondary btn-sm" id="toggleAbstracts">
+            Toggle All Abstracts
+        </button>
+    </div>
+    
+    <div class="list-group">
+        {% for paper in results %}
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ paper.title }}</h5>
+                    <small>{{ paper.published.strftime('%Y-%m-%d') if paper.published else 'Unknown date' }}</small>
+                </div>
+                
+                <p class="mb-1">
+                    <strong>Authors:</strong> 
+                    {% for author in paper.authors[:3] %}
+                        {{ author }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% if paper.authors|length > 3 %}et al.{% endif %}
+                </p>
+                
+                <div class="mt-2 collapse paper-abstract">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Abstract</h6>
+                            <p class="card-text">{{ paper.summary }}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary toggle-abstract">
+                        <i class="fas fa-chevron-down"></i> Toggle Abstract
+                    </button>
+                    
+                    <a href="{{ paper.pdf }}" class="btn btn-sm btn-outline-danger" target="_blank">
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </a>
+                    
+                    <a href="{{ paper.link }}" class="btn btn-sm btn-outline-secondary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> arXiv
+                    </a>
+                    
+                    {% if paper.get('categories') %}
+                        <div class="mt-2">
+                            {% for category in paper.get('categories', [])|sort %}
+                                <span class="badge bg-info">{{ category }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% elif query %}
+    <div class="alert alert-info">No results found for "{{ query }}"</div>
+{% endif %}
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+    $(document).ready(function() {
+        // Toggle individual abstract
+        $('.toggle-abstract').click(function() {
+            $(this).closest('.list-group-item').find('.paper-abstract').collapse('toggle');
+            
+            // Change the icon
+            const icon = $(this).find('i');
+            if (icon.hasClass('fa-chevron-down')) {
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+        
+        // Toggle all abstracts
+        $('#toggleAbstracts').click(function() {
+            const allAbstracts = $('.paper-abstract');
+            const firstAbstract = allAbstracts.first();
+            const isVisible = firstAbstract.is(':visible');
+            
+            if (isVisible) {
+                allAbstracts.collapse('hide');
+                $('.toggle-abstract i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            } else {
+                allAbstracts.collapse('show');
+                $('.toggle-abstract i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            }
+        });
+    });
+</script>
+{% endblock %}

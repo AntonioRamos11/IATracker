@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}{{ paper.title }} - Highlights{% endblock %}
+
+{% block additional_head %}
+<style>
+    .highlight-section {
+        margin-bottom: 2rem;
+    }
+    
+    .highlight-section h4 {
+        color: #2c3e50;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+    
+    .topic-badge {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .paper-section {
+        background: #f8f9fa;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .paper-metadata {
+        font-size: 0.9rem;
+    }
+    
+    blockquote {
+        border-left: 4px solid #ccc;
+        padding-left: 1rem;
+        color: #555;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ paper.title }}</h1>
+    <a href="{{ url_for('database') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left"></i> Back to Database
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Paper Information</h5>
+            </div>
+            <div class="card-body">
+                {% if paper.authors %}
+                    <p><strong>Authors:</strong> 
+                        {% for author in paper.authors %}
+                            {% if author %}{{ author }}{% if not loop.last %}, {% endif %}{% endif %}
+                        {% endfor %}
+                    </p>
+                {% endif %}
+                
+                {% if paper.published %}
+                    <p><strong>Published:</strong> {{ paper.published[:10] }}</p>
+                {% endif %}
+                
+                {% if paper.pages %}
+                    <p><strong>Pages:</strong> {{ paper.pages }}</p>
+                {% endif %}
+                
+                {% if paper.source_path %}
+                    <p><strong>Source:</strong> {{ paper.source_path.split('/')[-1] }}</p>
+                {% endif %}
+                
+                {% if paper.topics %}
+                    <div class="mb-3">
+                        <h6>Topics:</h6>
+                        <div>
+                            {% for topic in paper.topics %}
+                                <span class="badge bg-info topic-badge">{{ topic }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                
+                {% if paper.sections %}
+                    <div class="mb-3">
+                        <h6>Paper Sections:</h6>
+                        <div class="paper-sections">
+                            {% for section in paper.sections %}
+                                <div class="paper-section">{{ section }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                
+                {% if paper.processed_pdf %}
+                    <a href="{{ paper.processed_pdf }}" class="btn btn-danger btn-block mt-3" target="_blank">
+                        <i class="fas fa-file-pdf"></i> View Full PDF
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        {% if paper.abstract %}
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Abstract</h5>
+                </div>
+                <div class="card-body">
+                    <p>{{ paper.abstract }}</p>
+                </div>
+            </div>
+        {% endif %}
+        
+        {% if paper.structured_highlights %}
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Research Highlights</h5>
+                </div>
+                <div class="card-body">
+                    {% for highlight in paper.structured_highlights %}
+                        <div class="highlight-section">
+                            <h4>{{ highlight.title }}</h4>
+                            <div>{{ highlight.content|safe }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% elif paper.full_response %}
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Research Analysis</h5>
+                </div>
+                <div class="card-body">
+                    {{ paper.full_response|safe|replace('\n', '<br>')|replace('#### ', '<h4>')|replace('### ', '<h3>') }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+    $(document).ready(function() {
+        // Highlight search functionality
+        $("#highlightSearch").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".highlight-item").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+<!-- In the navbar section of base.html -->
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for('database') }}"><i class="fas fa-database"></i> Processed Papers</a>
+</li>

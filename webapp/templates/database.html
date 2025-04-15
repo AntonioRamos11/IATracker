@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block title %}IAResearchAggregator - Processed Papers Database{% endblock %}
+
+{% block additional_head %}
+<style>
+    .topic-badge {
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
+    
+    .paper-card {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .paper-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .highlight-preview {
+        max-height: 150px;
+        overflow-y: hidden;
+        position: relative;
+    }
+    
+    .highlight-preview::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: linear-gradient(transparent, white);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Processed Papers Database</h1>
+
+<div class="alert alert-info">
+    <p>This section contains papers that have been processed and analyzed, with extracted highlights and summaries.</p>
+    <p><strong>Total Papers:</strong> {{ papers|length }}</p>
+</div>
+
+{% if papers %}
+    <div class="mb-3">
+        <div class="input-group">
+            <input type="text" class="form-control" id="paperSearch" placeholder="Search papers by title, topic, or content...">
+            <button class="btn btn-outline-secondary" type="button">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        
+        <div class="mt-2">
+            <button class="btn btn-sm btn-outline-primary toggle-all-abstracts">
+                <i class="fas fa-eye"></i> Toggle All Abstracts
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for paper in papers %}
+            <div class="col-lg-6 mb-4 paper-card">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">{{ paper.title }}</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if paper.abstract %}
+                            <div class="mb-3 abstract-container collapse">
+                                <h6>Abstract:</h6>
+                                <p>{{ paper.abstract }}</p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if paper.authors %}
+                            <div class="mb-3">
+                                <h6>Authors:</h6>
+                                <p>
+                                {% for author in paper.authors %}
+                                    {% if author %}{{ author }}{% if not loop.last %}, {% endif %}{% endif %}
+                                {% endfor %}
+                                </p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if paper.topics %}
+                            <div class="mb-3">
+                                <h6>Topics:</h6>
+                                <div>
+                                {% for topic in paper.topics %}
+                                    <span class="badge bg-info topic-badge">{{ topic }}</span>
+                                {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
+                        
+                        {% if paper.structured_highlights %}
+                            <div class="mt-4">
+                                <h6>Key Insights:</h6>
+                                <div class="highlight-preview">
+                                    {% for highlight in paper.structured_highlights %}
+                                        {% if loop.index <= 2 %}
+                                            <p><strong>{{ highlight.title }}:</strong> {{ highlight.content|truncate(100) }}</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% elif paper.full_response %}
+                            <div class="mt-4">
+                                <h6>Highlights Preview:</h6>
+                                <div class="highlight-preview">
+                                    {{ paper.full_response|truncate(150) }}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer bg-light">
+                        <div class="d-flex justify-content-between">
+                            {% if paper.processed_pdf %}
+                                <a href="{{ paper.processed_pdf }}" class="btn btn-sm btn-danger" target="_blank">
+                                    <i class="fas fa-file-pdf"></i> View PDF
+                                </a>
+                            {% endif %}
+                            <a href="{{ url_for('paper_highlight', paper_id=paper.id) }}" class="btn btn-sm btn-primary">
+                                <i class="fas fa-search-plus"></i> Full Analysis
+                            </a>
+                            <button class="btn btn-sm btn-outline-secondary toggle-abstract">
+                                <i class="fas fa-chevron-down"></i> Abstract
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-warning">
+        <h4 class="alert-heading">No Processed Papers Found</h4>
+        <p>There are no processed papers in the database yet.</p>
+        <hr>
+        <p class="mb-0">
+            Papers need to be processed and highlights extracted before they appear here.
+        </p>
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+    $(document).ready(function() {
+        // Paper search functionality
+        $("#paperSearch").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".paper-card").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+        
+        // Toggle individual abstract
+        $(".toggle-abstract").on("click", function() {
+            var btn = $(this);
+            var card = btn.closest('.card');
+            var abstract = card.find('.abstract-container');
+            
+            abstract.collapse('toggle');
+            
+            if (btn.find('i').hasClass('fa-chevron-down')) {
+                btn.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                btn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+        
+        // Toggle all abstracts
+        $(".toggle-all-abstracts").on("click", function() {
+            var btn = $(this);
+            var abstracts = $('.abstract-container');
+            var isVisible = abstracts.first().is(':visible');
+            
+            if (isVisible) {
+                abstracts.collapse('hide');
+                $('.toggle-abstract i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+                btn.find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+            } else {
+                abstracts.collapse('show');
+                $('.toggle-abstract i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+                btn.find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -210,14 +210,19 @@ class ResearchQuestionAnswerer:
             raise
     
     def answer_question(self, question, top_k=5, temperature=0.7):
-        """Answer a research question based on paper highlights"""
+        """Answer a research question based on papers"""
         # Find relevant papers
         relevant_papers = self.find_relevant_papers(question, top_k=top_k)
         
-        if not relevant_papers:
-            return "I couldn't find any relevant papers to answer this question."
+        # Add debugging
+        logger.info(f"Found {len(relevant_papers)} relevant papers for question: {question}")
+        for i, paper in enumerate(relevant_papers):
+            logger.info(f"Paper {i+1}: {paper['title']} (Score: {paper['score']:.3f})")
         
-        # Initialize model if needed
+        if not relevant_papers:
+            logger.warning("No relevant papers found - returning generic response")
+            return f"I couldn't find specific research papers about '{question}' in my database. Please try a different question or add relevant papers to the collection."
+        
         if self.model is None:
             self.initialize_model()
         
