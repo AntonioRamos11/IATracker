@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block title %}{{ paper.title }} - Highlights{% endblock %}
@@ -106,6 +107,14 @@
                         <a href="{{ paper.original_pdf }}" class="btn btn-outline-danger mb-2" target="_blank">
                             <i class="fas fa-file-pdf"></i> View Original PDF
                         </a>
+                    {% endif %}
+                    
+                    {% if paper.source_path and paper.source_path.startswith('papers/') %}
+                        <div class="mb-3">
+                            <a href="/{{ paper.source_path }}" class="btn btn-danger" target="_blank">
+                                <i class="fas fa-file-pdf"></i> View Original PDF
+                            </a>
+                        </div>
                     {% endif %}
                 </div>
             </div>

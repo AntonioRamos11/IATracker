@@ -61,6 +61,12 @@
                         </a>
                     {% endif %}
                     
+                    {% if paper.source_path and paper.source_path.startswith('papers/') %}
+                        <a href="/{{ paper.source_path }}" class="btn btn-sm btn-danger" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Original PDF
+                        </a>
+                    {% endif %}
+                    
                     {% if paper.link %}
                         <a href="{{ paper.link }}" class="btn btn-sm btn-outline-secondary" target="_blank">
                             <i class="fas fa-external-link-alt"></i> arXiv
