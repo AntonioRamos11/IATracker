@@ -118,17 +118,29 @@
                     </div>
                     <div class="card-footer bg-light">
                         <div class="d-flex justify-content-between">
-                            {% if paper.processed_pdf %}
-                                <a href="{{ paper.processed_pdf }}" class="btn btn-sm btn-danger" target="_blank">
-                                    <i class="fas fa-file-pdf"></i> View PDF
+                            <div>
+                                {% if paper.processed_pdf %}
+                                    <a href="{{ paper.processed_pdf }}" class="btn btn-sm btn-danger" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> Processed
+                                    </a>
+                                {% endif %}
+                                
+                                {% if paper.original_pdf %}
+                                    <a href="{{ paper.original_pdf }}" class="btn btn-sm btn-outline-danger" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> Original
+                                    </a>
+                                {% endif %}
+                            </div>
+                            
+                            <div>
+                                <a href="{{ url_for('paper_highlight', paper_id=paper.id) }}" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-search-plus"></i> Full Analysis
                                 </a>
-                            {% endif %}
-                            <a href="{{ url_for('paper_highlight', paper_id=paper.id) }}" class="btn btn-sm btn-primary">
-                                <i class="fas fa-search-plus"></i> Full Analysis
-                            </a>
-                            <button class="btn btn-sm btn-outline-secondary toggle-abstract">
-                                <i class="fas fa-chevron-down"></i> Abstract
-                            </button>
+                                
+                                <button class="btn btn-sm btn-outline-secondary toggle-abstract">
+                                    <i class="fas fa-chevron-down"></i> Abstract
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

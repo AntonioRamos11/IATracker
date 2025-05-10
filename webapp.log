@@ -251,3 +251,84 @@
 2025-04-15 00:41:49,216 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 00:41:49] "GET /database HTTP/1.1" 200 -
 2025-04-15 00:41:49,239 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 00:41:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-04-15 00:41:49,300 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 00:41:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:14:32,671 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.49:5000
+2025-04-22 00:14:32,672 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-22 00:14:36,876 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:36] "GET / HTTP/1.1" 200 -
+2025-04-22 00:14:36,935 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:14:36,936 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:14:38,757 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:38] "GET /search HTTP/1.1" 200 -
+2025-04-22 00:14:38,792 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:14:38,794 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-22 00:14:40,291 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "GET /about HTTP/1.1" 200 -
+2025-04-22 00:14:40,320 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:14:40,321 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:14:40,794 - webapp.app - INFO - Loaded 2 existing visualizations
+2025-04-22 00:14:40,842 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "GET /trends HTTP/1.1" 200 -
+2025-04-22 00:14:40,872 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:14:40,875 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:14:40,876 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/trend_visualizations/topic_coverage_20250414_233206.png HTTP/1.1[0m" 304 -
+2025-04-22 00:14:40,877 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:14:40] "[36mGET /static/trend_visualizations/papers_by_year_20250414_233207.png HTTP/1.1[0m" 304 -
+2025-04-22 00:15:02,953 - webapp.app - INFO - Scanning highlights directory: /home/p0wden/Documents/IAResearchAgregator/Database/paper_highlights
+2025-04-22 00:15:03,341 - webapp.app - INFO - Loaded 2088 processed papers with highlights
+2025-04-22 00:15:04,385 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:04] "GET /database HTTP/1.1" 200 -
+2025-04-22 00:15:04,409 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:15:04,467 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:15:24,438 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:24] "GET /about HTTP/1.1" 200 -
+2025-04-22 00:15:24,477 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:15:24,479 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:15:25,887 - webapp.app - INFO - Scanning highlights directory: /home/p0wden/Documents/IAResearchAgregator/Database/paper_highlights
+2025-04-22 00:15:26,008 - webapp.app - INFO - Loaded 2088 processed papers with highlights
+2025-04-22 00:15:27,046 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:27] "GET /database HTTP/1.1" 200 -
+2025-04-22 00:15:27,072 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:15:27,171 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:15:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 00:16:28,914 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:16:28] "GET /paper/19912592121b018c600f42ca8965a27dede254edb8508e963784e0450680be23 HTTP/1.1" 200 -
+2025-04-22 00:16:28,956 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:16:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-22 00:16:28,958 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 00:16:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:46:39,688 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.49:5000
+2025-05-09 14:46:39,689 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-09 14:46:45,458 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:45] "GET / HTTP/1.1" 200 -
+2025-05-09 14:46:45,682 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:45] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-09 14:46:45,683 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:45] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-05-09 14:46:45,851 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-09 14:46:50,980 - webapp.app - INFO - Loaded 2 existing visualizations
+2025-05-09 14:46:51,036 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:51] "GET /trends HTTP/1.1" 200 -
+2025-05-09 14:46:51,050 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:51] "GET /static/trend_visualizations/topic_coverage_20250414_233206.png HTTP/1.1" 200 -
+2025-05-09 14:46:51,051 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:51] "GET /static/trend_visualizations/papers_by_year_20250414_233207.png HTTP/1.1" 200 -
+2025-05-09 14:46:51,053 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:46:51,055 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:46:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:47:03,112 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:03] "GET /papers/local_topic_arxiv HTTP/1.1" 200 -
+2025-05-09 14:47:03,123 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:47:03,453 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:47:17,525 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:17] "GET /search HTTP/1.1" 200 -
+2025-05-09 14:47:17,541 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:47:17,543 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:47:58,379 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:47:58,386 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:47:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-09 14:52:42,331 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:42] "GET / HTTP/1.1" 200 -
+2025-05-09 14:52:42,342 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:52:42,345 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,103 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "GET /search HTTP/1.1" 200 -
+2025-05-09 14:52:44,120 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,122 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,312 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "GET /trends HTTP/1.1" 200 -
+2025-05-09 14:52:44,323 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,325 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/trend_visualizations/topic_coverage_20250414_233206.png HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,329 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/trend_visualizations/papers_by_year_20250414_233207.png HTTP/1.1[0m" 304 -
+2025-05-09 14:52:44,331 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:52:46,864 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:46] "GET /papers/local_topic_arxiv HTTP/1.1" 200 -
+2025-05-09 14:52:46,882 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:52:47,241 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:52:50,281 - webapp.app - INFO - Scanning highlights directory: /home/p0wden/Documents/IAResearchAgregator/Database/paper_highlights
+2025-05-09 14:52:50,738 - webapp.app - INFO - Loaded 2088 processed papers with highlights
+2025-05-09 14:52:51,830 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:51] "GET /database HTTP/1.1" 200 -
+2025-05-09 14:52:51,846 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:52:52,598 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:52:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-09 14:53:16,326 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:53:16] "GET /paper/0b3eb437577eebbd7546edc3e99f707b75fe0ef2e97f5221951b41e4479a1a93 HTTP/1.1" 200 -
+2025-05-09 14:53:16,343 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:53:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-09 14:53:16,345 - werkzeug - INFO - 127.0.0.1 - - [09/May/2025 14:53:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -

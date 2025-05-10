@@ -14,8 +14,23 @@ sys.path.append(project_root)
 modules_imported = True
 try:
     # Try to import from Scrapers package
-    from Scrapers import get_arxiv_papers, TopicProcessor
-    from Scrapers import identify_emerging_trends, get_emerging_topics, scrape_trending_topics, analyze_topic_coverage
+    from AnalyzingPhase.TopicAnalysis import TrendAnalyzer
+
+
+    db_config = {
+        "dbname": "ai_papers",
+        "user": "postgres",
+        "password": "Chappie1101",
+        "host": "localhost",
+        "port": 5432
+    }
+    analyzer = TrendAnalyzer(db_config)
+
+    # Now you can call the method
+    emerging_topics = analyzer.get_emerging_topics(threshold=0.5)
+    from Scrapers.topic_processor import get_emerging_topics,identify_emerging_trends,scrape_trending_topics
+    
+    from Scrapers.visualize_trends import TrendVisualizer
     
     # This might be a separate import if not included in __init__.py
     try:
@@ -70,26 +85,10 @@ except ImportError as e:
         print(f"Alternative import also failed: {e2}")
         print("Starting app with limited functionality")
         
-        # Define minimal fallback implementations
-        def get_arxiv_papers(*args, **kwargs):
-            return []
+       
             
-        class TopicProcessor:
-            def __init__(self):
-                pass
-        
-        def identify_emerging_trends(*args, **kwargs):
-            return {"top_trends": []}
-            
-        def get_emerging_topics(*args, **kwargs):
-            return {}
-            
-        def scrape_trending_topics(*args, **kwargs):
-            return {}
-            
-        def analyze_topic_coverage(*args, **kwargs):
-            return {}
-            
+
+         
         class TrendVisualizer:
             def __init__(self, *args, **kwargs):
                 pass
@@ -119,6 +118,8 @@ app.secret_key = os.urandom(24)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
 
 # Global variables
+
+from Scrapers.topic_processor import TopicProcessor
 topic_processor = TopicProcessor()
 static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
                          'webapp', 'static', 'trend_visualizations')
@@ -160,10 +161,28 @@ def load_existing_visualizations():
     logger.info(f"Loaded {len(visualizations)} existing visualizations")
     return visualizations
 
+# Simple in-memory cache for search results
+search_cache = {}
+
 @app.route('/')
 def index():
     """Homepage with project overview and quick links"""
     return render_template('index.html')
+
+@app.route('/papers/<path:paper_path>')
+def serve_original_paper(paper_path):
+    """Serve an original paper PDF from the papers directory"""
+    papers_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "papers")
+    # Split the path to get directory and filename
+    path_parts = paper_path.split('/')
+    if len(path_parts) > 1:
+        # If there are subdirectories
+        filename = path_parts[-1]
+        directory = os.path.join(papers_dir, *path_parts[:-1])
+        return send_from_directory(directory, filename)
+    else:
+        # If file is directly in papers directory
+        return send_from_directory(papers_dir, paper_path)
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
@@ -176,16 +195,38 @@ def search():
         category = request.form.get('category', 'cs.AI')
         max_results = int(request.form.get('max_results', 20))
         
-        try:
-            results = get_arxiv_papers(
-                query=query,
-                category=category,
-                max_results=max_results
-            )
-            flash(f"Found {len(results)} papers matching your query", "success")
-        except Exception as e:
-            logger.error(f"Search error: {e}")
-            flash(f"Error searching papers: {str(e)}", "danger")
+        # Create a cache key
+        cache_key = f"{query}_{category}_{max_results}"
+        
+        # Check if results are in cache and not expired (1 hour)
+        if cache_key in search_cache and (datetime.now() - search_cache[cache_key]['time']).seconds < 3600:
+            results = search_cache[cache_key]['results']
+            flash(f"Found {len(results)} papers (from cache)", "success")
+        else:
+            try:
+                results = analyzer.get_arxiv_papers(
+                    query=query,
+                    category=category,
+                    max_results=max_results
+                )
+                print("found")
+                flash(f"Found {len(results)} papers matching your query", "success")
+                
+                # Cache the results
+                search_cache[cache_key] = {
+                    'results': results,
+                    'time': datetime.now()
+                }
+                
+                # Limit cache size to avoid memory issues
+                if len(search_cache) > 100:
+                    # Remove oldest entries
+                    oldest = sorted(search_cache.items(), key=lambda x: x[1]['time'])[0:50]
+                    for key, _ in oldest:
+                        del search_cache[key]
+            except Exception as e:
+                logger.error(f"Search error: {e}")
+                flash(f"Error searching papers: {str(e)}", "danger")
     
     categories = [
         'cs.AI', 'cs.LG', 'cs.CL', 'cs.CV', 'cs.NE', 'cs.IR',
@@ -674,6 +715,9 @@ def load_processed_papers():
                     }
                     
                     # Add processed PDF path if exists
+                    if paper['source_path'] and paper['source_path'].startswith('papers/'):
+                        # Convert to URL format
+                        paper['original_pdf'] = '/' + paper['source_path']
                     if pdf_exists:
                         paper['processed_pdf'] = f"/database/processed_pdf/{content_hash}.pdf"
                     

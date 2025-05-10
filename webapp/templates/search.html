@@ -38,10 +38,20 @@
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-search"></i> Search
                     </button>
+                    <a href="{{ url_for('search') }}" class="btn btn-outline-secondary ms-2">
+                        <i class="fas fa-times"></i> Clear
+                    </a>
                 </div>
             </div>
         </form>
     </div>
+</div>
+
+<div id="loading-indicator" class="text-center my-4 d-none">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Searching arXiv... This may take a few moments.</p>
 </div>
 
 {% if results %}
@@ -136,6 +146,18 @@
                 allAbstracts.collapse('show');
                 $('.toggle-abstract i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
             }
+        });
+
+        // Add to the existing $(document).ready function
+        $('form').on('submit', function() {
+            // Show loading indicator
+            $('#loading-indicator').removeClass('d-none');
+            
+            // Disable the search button
+            $(this).find('button[type="submit"]').prop('disabled', true)
+                .html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Searching...');
+            
+            return true; // Allow form submission to continue
         });
     });
 </script>
